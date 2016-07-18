@@ -1,0 +1,290 @@
+<div class="modal-header">
+	<h4 class="modal-title">定单详情</h4>
+</div>
+<div class="modal-body">
+	<div class="col-md-12">
+		<div class="row">
+			<nav id="orderdetails-nav" class="navbar navbar-default navbar-static" role="navigation">
+				<div class="container-fluid">
+		            <div id="orderdetails-tabs" class="collapse navbar-collapse">
+						<ul class="nav nav-pills nav-stacked">
+							<li id="orderdetails-tabs-a-li"  class="">
+							<a id="orderdetails-tabs-a-link" data-target="#orderdetails-tabs-a">
+								基本信息</a>
+							</li>
+							<li id="orderdetails-tabs-b-li"  class="" >
+								<a id="orderdetails-tabs-b-link" data-target="#orderdetails-tabs-b">工单信息</a>
+							</li>
+							<li id="orderdetails-tabs-c-li"   class="ui-state-default" role="tab">
+								<a id="orderdetails-tabs-c-link" data-target="#orderdetails-tabs-c">执行信息</a>
+							</li>
+							<li id="orderdetails-tabs-d-li"  class="ui-state-default" role="tab">
+								<a id="orderdetails-tabs-d-link" data-target="#orderdetails-tabs-d">挂起信息</a>
+							</li>
+							<li id="orderdetails-tabs-e-li"  class="ui-state-default" role="tab">
+								<a id="orderdetails-tabs-e-link" data-target="#orderdetails-tabs-e">催单信息</a>
+							</li>
+							<li id="orderdetails-tabs-f-li"  class="ui-state-default" role="tab">
+								<a id="orderdetails-tabs-f-link" data-target="#orderdetails-tabs-f">流程信息</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div data-spy="scroll" id="orderdetails-scrollspy" data-target="#orderdetails-tabs" data-offset="0" class="scrollspy-orderdetails">
+				<!-- 基本信息 -->
+				<div id="orderdetails-tabs-a" class="orderdetails-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12">
+									基本信息：
+								</h5>
+								<div class="col-md-12">
+									<form class="form-horizontal" id="faultorderbase_info_form">
+										<div class="col-md-12">
+											<div class="form-group">
+												<input type="hidden" name="order_basicsinfo_baseOrderId" id="order_basicsinfo_baseOrderId"/>
+												<input type="hidden" name="order_basicsinfo_processinstanceid" id="order_basicsinfo_processinstanceid"/>
+												<label class="col-md-2 control-label">故障标题：</label>
+												<div class="input-group col-md-10">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="order_basicsinfo_orderTitle" id="order_basicsinfo_orderTitle"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">受理人员：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="order_basicsinfo_acceptStaffName" id="order_basicsinfo_acceptStaffName"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">受理时间：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="order_basicsinfo_acceptDate" id="order_basicsinfo_acceptDate" />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">受理渠道：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="order_basicsinfo_faultSource" id="order_basicsinfo_faultSource" />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">紧急程度：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="order_basicsinfo_faultErmgLevel" id="order_basicsinfo_faultErmgLevel"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">故障分类：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="order_basicsinfo_faultPhenomena" id="order_basicsinfo_faultPhenomena"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">产品分类：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="order_basicsinfo_faultKind" id="order_basicsinfo_faultKind"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">故障发生时间：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="order_basicsinfo_happenTime" id="order_basicsinfo_happenTime" />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">故障级别：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="order_basicsinfo_faultLevel" id="order_basicsinfo_faultLevel"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">资源池：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="order_basicsinfo_faultResPool" id="order_basicsinfo_faultResPool"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-12">
+							                <div class="form-group">
+							                    <label class="col-md-4 col-sm-4 control-label">设备类型：</label>
+							                    <div class="input-group col-md-8 col-sm-8">
+							                    	<input class="form-control" type="text" readonly="readonly"
+							                    	id="order_basicsinfo_faultDevTypeId" name="faultDevTypeId"/>
+							                    </div>
+							                </div>
+							            </div>
+							            
+							            <div class="col-md-6 col-sm-12">
+							                <div class="form-group">
+							                    <label class="col-md-4 col-sm-4 control-label">主机ip：</label>
+							                    <div class="input-group col-md-8 col-sm-8">
+							                    	<input class="form-control" type="text" id="order_basicsinfo_hostIp" name="order_basicsinfo_hostIp" readonly="readonly"/>
+							                    </div>
+							                </div>
+							            </div>
+							            
+							            <div class="col-md-6 col-sm-12">
+							                <div class="form-group">
+							                    <label class="col-md-4 col-sm-4 control-label">设备信息：</label>
+							                    <div class="input-group col-md-8 col-sm-8">
+							                    	<input class="form-control" type="text" id="order_basicsinfo_devInfo" name="order_basicsinfo_devInfo" readonly="readonly"/>
+							                    </div>
+							                </div>
+							            </div>
+							            
+							            <div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">故障编号：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="orderCode" id="order_basicsinfo_orderCode"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">故障影响客户：</label>
+												<div class="input-group col-md-10">
+												 	<textarea readonly="readonly" class="form-control" style="height:80px"  
+												 	name="order_basicsinfo_influenceCust" id="order_basicsinfo_influenceCust"></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">故障影响业务：</label>
+												<div class="input-group col-md-10">
+												 	<textarea readonly="readonly" class="form-control" style="height:80px"
+												 	 name="order_basicsinfo_influenceBusiness"   id="order_basicsinfo_influenceBusiness" ></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">故障内容：</label>
+												<div class="input-group col-md-10">
+												 	<textarea readonly="readonly" class="form-control" style="height:80px"
+												 	 name="order_basicsinfo_faultDesc" id="order_basicsinfo_faultDesc"  ></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">附件：</label>
+												<div class="col-md-10">
+													<!-- 显示上传结果 -->
+													<div class="attachmentResult"></div>
+												</div>
+											</div>
+										</div>
+										
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 工单信息-->
+				<div id="orderdetails-tabs-b" class="orderdetails-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12">
+									工单信息：
+								</h5>
+								<div class="col-md-12">
+									<div id="isa_sto_ope_ord_grid_workOrderInfo"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 执行信息-->
+				<div id="orderdetails-tabs-c" class="orderdetails-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12">
+									执行信息：
+								</h5>
+								<div class="col-md-12">
+									<div id="isa_sto_ope_ord_grid_implementInfo"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 挂起信息-->
+				<div id="orderdetails-tabs-d" class="orderdetails-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12">
+									挂起信息：
+								</h5>
+								<div class="col-md-12">
+									<div id="isa_sto_ope_ord_grid_hangInfo"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 催单信息-->
+				<div id="orderdetails-tabs-e" class="orderdetails-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12">
+									催单信息：
+								</h5>
+								<div class="col-md-12">
+									<div id="isa_sto_ope_ord_grid_reminderInfo"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 流程信息-->
+				<div id="orderdetails-tabs-f" class="orderdetails-tabs">
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+

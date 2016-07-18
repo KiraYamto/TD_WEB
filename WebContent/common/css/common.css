@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+.x-toolbar {
+	margin: 5px;
+}
+
+.x-form {
+	padding: 5px;
+}
+
+.x-form .labeled.input  .x-dropdown {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.x-form .ui.mini .label, .x-form .ui.mini .selection.dropdown {
+	height: 32px;
+	min-height: 32px;
+	line-height: 0.9;
+}
+.x-input i.icon{
+	pointer-events: all !important;
+}
+.x-input i.icon.right{
+	right: 0px !important;
+    left: auto !important;
+}
+
+/* .x-valid i.icon.warning:not(first-of-type){
+	display: none;
+} 
+
+.x-warning i.icon.warning:not(first-of-type){
+	display: none;
+}*/
+
+.x-scroller {
+	overflow: auto;
+}
+
+.x-scroller::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	background-color: #D62929;
+	overflow: auto;
+}
+
+.x-scroller::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+	background-color: #F5F5F5;
+}

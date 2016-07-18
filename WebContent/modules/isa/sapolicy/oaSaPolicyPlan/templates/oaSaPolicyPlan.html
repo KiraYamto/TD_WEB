@@ -1,0 +1,108 @@
+<div class="col-md-12">
+	<div class="row" >
+		<!-- 左边组织树目录-->
+		<div class="col-md-3" id="divLeft">
+			<div class="panel  panel-default">
+				<div class="panel-heading" style="height: 50px;">
+					<div id="isa_sap_oas_carousel" style="height: 40px;" >
+					     <ul class="ui-tabs-nav  " role="tablist">
+							<li  class="ui-state-default ui-tabs-active" id="isa_sap_oas_sendplanName_tabs_li"
+								role="tab" aria-controls="tabs-a" aria-labelledby="ui_isa_sap_oas_sendplanName" 
+								aria-selected="false"  >
+								<a id="isa_sap_oas_sendplanName_tabs_link" class="ui-tabs-anchor" role="presentation" 
+									 >派单</a>
+							</li>
+						</ul>
+					     <ul class="ui-tabs-nav" role="tablist" >
+							<li  class="ui-state-default"  id="isa_sap_oas_tachetimeplanName_tabs_li"
+								role="tab"  aria-controls="tabs-b" aria-labelledby="ui_isa_sap_oas_tachetimeplanName" 
+								aria-selected="false"  >
+								<a id="isa_sap_oas_tachetimeplanName_tabs_link" class="ui-tabs-anchor" role="presentation" 
+								 >环节时限</a>
+							</li>
+						</ul>
+					     <ul class="ui-tabs-nav" role="tablist" >
+							<li  class="ui-state-default" id="isa_sap_oas_proctimeplanName_tabs_li" 
+								role="tab"  aria-controls="tabs-c" aria-labelledby="ui_isa_sap_oas_proctimeplanName" 
+								aria-selected="false"  >
+								<a id="isa_sap_oas_proctimeplanName_tabs_link" class="ui-tabs-anchor" role="presentation" 
+									 >流程时限</a>
+							</li>
+						</ul>
+				    </div>
+				</div>
+				<div style=" overflow: auto" id="isa_sap_oas_sendplanName_leftTree"  >
+					<div class="isa_sap_oas_sendplanName_tree" id="isa_sap_oas_sendplanName_tree"></div>
+				</div>
+				
+				<div style=" overflow: auto" id="isa_sap_oas_tachetimeplanName_leftTree" style="display:none" >
+					<div class="isa_sap_oas_tachetimeplanName_tree" id="isa_sap_oas_tachetimeplanName_tree"></div>
+				</div>
+				<div style=" overflow: auto" id="isa_sap_oas_proctimeplanName_leftTree" style="display:none"   >
+					<div class="isa_sap_oas_proctimeplanName_tree" id="isa_sap_oas_proctimeplanName_tree" ></div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<!-- 右边区域-->
+		<div class="col-md-9" id="isa_sap_oas_sendplanName_rightDiv">
+			<div class="panel  panel-default" id="isa_sap_oas_sendplanName_panel">
+				<div class="panel-heading">
+					<h3 class="panel-title ">策略方案管理</h3>
+				</div>
+				<div class="row">
+					<div class="col-md-12"  text-align:right">
+						<button type="button" class="btn btn-primary pull-left" id = "isa_sap_oas_sendplanName_panel_addbtn" style="margin-right:10px;">添加</button>
+						<button type="button" class="btn btn-primary pull-left" id = "isa_sap_oas_sendplanName_panel_modbtn" style="margin-right:10px;">编辑</button>
+						<button type="button" class="btn btn-primary pull-left" id = "isa_sap_oas_sendplanName_panel_delbtn" style="margin-right:10px;">删除</button>
+					</div>
+				</div>
+				<div style="height: 200px;">
+					<input type="hidden" id="isa_sap_oas_area_id"  name="isa_sap_oas_area_id" />
+					<input type="hidden" id="isa_sap_oas_area_name"  name="isa_sap_oas_area_name" />
+					<input type="hidden" id="isa_sap_oas_plan_id"  name="isa_sap_oas_plan_id" />
+					<input type="hidden" id="isa_sap_oas_plan_plan_type"  name="isa_sap_oas_plan_plan_type" />
+					<div id="isa_sap_oas_sendplanName_grid"></div>
+				</div>
+			</div>
+	  		<!-- 环节TAB页 -->
+			<div id="operation-tabs"
+				class="ui-tabs ui-tabs ui-tabs-collapsible">
+				<ul class="ui-tabs-nav" role="tablist">
+					<li id="tache-tabs-function-li"
+						class="ui-state-default ui-tabs-active" role="tab" tabindex="0"
+						aria-controls="tabs-a" aria-labelledby="ui-id-pending"
+						aria-selected="true" aria-expanded="true" style="display: list-item;">
+						<a id="tache-tabs-function-link" class="ui-tabs-anchor" role="presentation" tabindex="-1">策略方案映射管理</a>
+					</li>
+					
+				</ul>
+				<div class="row">
+				<div class="col-md-12" style="padding: 5px;">
+					<div class="btn-group" style="margin-left: 15px">
+						<!-- <button type="button" class="btn btn-primary pull-left" id = "isa_sap_oas_sendplanName_panel_map_qrybtn">查询</button> -->
+						<button type="button" class="btn btn-primary pull-left" id = "isa_sap_oas_sendplanName_panel_map_addbtn">添加</button>
+						<button type="button" class="btn btn-primary pull-left" id = "isa_sap_oas_sendplanName_panel_map_modbtn">编辑</button>
+						<button type="button" class="btn btn-primary pull-left" id = "isa_sap_oas_sendplanName_panel_map_delbtn">删除</button>
+					</div>
+				</div>
+				</div>
+				<!--  策略方案映射功能-->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12">
+								<div id="isa_sap_oas_sendplanName_panel_map_grid"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+	</div>
+		
+	
+	
+	
+</div>
+</div>

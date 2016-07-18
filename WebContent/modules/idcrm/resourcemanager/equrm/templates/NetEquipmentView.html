@@ -1,0 +1,176 @@
+<div class="row equipment-mana-view-container">
+
+	<div class="col-md-3">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="查找..."
+				id="netEquip-nodeName"> <span class="input-group-btn">
+				<button class="btn btn-default" type="button"
+					id="netEquip-treeQry-btn">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				</button> </span>
+		</div>
+		<!-- 
+		<div id="equipNetDiv" style="padding: 0;overflow: auto">
+			<div id="equip_net_tree" style="padding-bottom: 5px;"></div>
+		</div> -->
+		<div id="equipNetDiv">
+			<ul id="equip_net_tree"></ul>
+		</div>
+	</div>
+
+	<div class="col-md-9">
+		<form id="net-equip-query-cond">
+			<div class="row">
+				<div class="col-md-6" style="padding: 5px;">
+					<div class="btn-group" style="margin-left: 15px">
+						<!-- <button type="button" class="btn btn-primary pull-left"
+							id="equip-net-board-btn">槽位管理</button>
+						<button type="button" class="btn btn-primary pull-left"
+							id="equip-net-port-btn" style="margin-left: 5px">端口管理</button> -->
+						<button type="button" class="btn btn-primary pull-left"
+							id="equip-net-add-btn" style="margin-left: 5px">新建</button>
+						<button type="button" class="btn btn-primary pull-left"
+							id="equip-net-mod-btn" style="margin-left: 5px">修改</button>
+						<button type="button" class="btn btn-primary pull-left"
+							id="equip-net-del-btn" style="margin-left: 5px">删除</button>
+						<button type="button" class="btn btn-primary pull-left"
+							id="equip-net-query-btn" style="margin-left: 5px">查询</button>
+						<button type="button" class="btn btn-primary pull-left"
+							id="equip-net-export-btn" style="margin-left: 5px">导出</button>
+					</div>
+				</div>
+				<div class="col-md-6" style="padding: 5px;">
+					<div class="form-group">
+						<div class="col-md-4 padding-lr-1">
+							<div class="input-group">
+			                    <input id="equip_net_room_cond" name="condOp.roomId" value="EQUALS" type="hidden" />
+			                    <!-- <input type="hidden" id="equip_net_room">-->
+			                    <input class="form-control" type="text" placeholder="请选择机房" id="equip_net_room_id" name="condName.roomId" data-url="#equipment_SelRoom-dialog" style="margin-left: 0px;">
+			                </div>
+                
+						</div>
+						<div class="col-md-4 padding-lr-1">
+							<input id="equip_net_code_cond" name="condOp.eqCode" value="LIKE" type="hidden" /> 
+							<input id="equip_net_code" class="form-control" value="" name="condName.eqCode" placeholder="请输入设备编码" />
+						</div>
+						<div class="btn-group" style="margin-left: 15px">
+							<button type="button" class="btn btn-primary pull-left"
+								id="equip-net-query-btn" style="margin-left: 5px">查询</button>
+							<button type="button" class="btn btn-primary pull-left"
+								id="equip-more-btn" style="margin-left: 5px">更多查询</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="display:none" id="equip_more_div">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-2 equip-qry-title">
+							<span>设备名称：</span>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class="col-md-4 padding-lr-1">
+									<select id="equip_net_name_cond" class="form-control"
+										name="condOp.eqName">
+										<option value="EQUALS" selected>等于</option>
+										<option value="LIKE">包含</option>
+										<option value="NOT_LIKE">不包含</option>
+									</select>
+									<!-- <input id="equip_net_name_cond" name="condOp.eqName" /> -->
+								</div>
+								<div class="col-md-8 padding-lr-1">
+									<input id="equip_net_name" class="form-control" value=""
+										name="condName.eqName" />
+								</div>
+							</div>
+
+						</div>
+						<div class="col-md-2 equip-qry-title">
+							<span>设备类型：</span>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class="col-md-4 padding-lr-1">
+									<select id="equip_net_type_cond" class="form-control"
+										name="condOp.resTypeId">
+										<option value="EQUALS" selected>等于</option>
+										<option value="LIKE">包含</option>
+										<option value="NOT_LIKE">不包含</option>
+									</select>
+								</div>
+								<div class="col-md-8 padding-lr-1">
+									<input id="equip_net_type" name="condName.resTypeId"
+										attrCode='EQU_RS_TYPE' />
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-2 equip-qry-title">
+							<span>设备厂家：</span>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class="col-md-4 padding-lr-1">
+									<select id="equip_net_vendor_cond" class="form-control"
+										name="condOp.vender">
+										<option value="EQUALS" selected>等于</option>
+										<option value="LIKE">包含</option>
+										<option value="NOT_LIKE">不包含</option>
+									</select>
+								</div>
+								<div class="col-md-8 padding-lr-1">
+									<input id="equip_net_vendor" name="condName.vender"
+										attrCode='EQU_RS_VENDOR' />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 equip-qry-title">
+							<span>设备型号：</span>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class="col-md-4 padding-lr-1">
+									<select id="equip_net_model_cond" class="form-control"
+										name="condOp.model">
+										<option value="EQUALS" selected>等于</option>
+										<option value="LIKE">包含</option>
+										<option value="NOT_LIKE">不包含</option>
+									</select>
+								</div>
+								<div class="col-md-8 padding-lr-1">
+									<input id="equip_net_model" name="condName.model"
+										/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div id="equip-net-grid"></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div id="equipment_SelRoom-dialog" class="ui-dialog">
+    <div class="modal-header">
+        <h4 class="modal-title">选择机房</h4>
+    </div>
+    <div class="modal-body" style="overflow: auto">
+        <div id="equipment-selRoomTree"></div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-info" id="equipment-selRoomConfirm">确定</button>
+        <button type="button" class="btn btn-default" id="equipment-selRoomClose">取消</button>
+    </div>
+</div>

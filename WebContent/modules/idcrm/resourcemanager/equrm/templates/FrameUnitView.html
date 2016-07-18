@@ -1,0 +1,178 @@
+<div class="modal-header">
+    <h4 class="modal-title">机位管理</h4>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal" id="frameUnit-form">
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">机柜名称：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="机柜名称"
+                               id="frameUnit_name" name="name">
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">所属机房：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="所属机房"
+                               id="frameUnit_roomId" name="roomName">
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">生产日期：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="生产日期"
+                               id="frameUnit_productionDate" name="productionDate">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">机柜编码：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="机柜编码"
+                               id="frameUnit_code" name="code">
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">机柜型号：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="机柜型号"
+                               id="frameUnit_model" name="model">
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">机柜功率：</label>
+
+                    <div class="input-group col-md-8">
+                        <select id="frameUnit_unitPower1" name="unitPower" class="form-control">
+                            <option value="406001">2KW</option>
+                            <option value="406002">4KW</option>
+                            <option value="406003">6KW</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">占用状态：</label>
+
+                    <div class="input-group col-md-8">
+                        <select class="form-control" type="text" placeholder="占用状态"
+                                id="frameUnit_useState" name="useState">
+                            <option value="102001">空闲</option>
+                            <option value="102002">预占</option>
+                            <option value="102003">占用</option>
+                            <option value="102004">占空</option>
+                            <option value="102005">预释放</option>
+                            <option value="102006">保留</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">分配状态：</label>
+
+                    <div class="input-group col-md-8">
+                        <select id="equip_allocationStateId" name="allocationStateId" class="form-control">
+                            <option value="417001">整柜分配</option>
+                            <option value="417002">机位分配</option>
+                            <option value="417003">未分配</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">占用客户：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="占用客户"
+                               id="frameUnit_user" name="user">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">租用性质：</label>
+
+                    <div class="input-group col-md-8">
+                        <select class="form-control" type="text" placeholder="租用性质"
+                                id="frameUnit_rentingMode" name="rentingMode">
+                            <option value="408001">出租</option>
+                            <option value="408002">自用</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">机位数：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="机位数"
+                               id="frameUnit_unitNum" name="unitNum">
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">状态：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="状态"
+                               id="frameUnit_state" name="state">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">行号：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="行号"
+                               id="frameUnit_rowId" name="rowId">
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label">列号：</label>
+
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" placeholder="列号"
+                               id="frameUnit_columnId" name="columnId">
+
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label class="col-md-1 control-label">备注：</label>
+
+                    <div class="input-group col-md-11">
+                        <textarea class="form-control" type="text" placeholder="备注" id="frameUnit_notes" name="notes"
+                                  rows="4"></textarea>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="col-md-12" style="height: 200px">
+            <div id="frameUnit-grid"></div>
+        </div>
+    </form>
+</div>

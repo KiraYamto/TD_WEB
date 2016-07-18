@@ -1,0 +1,103 @@
+/*
+ * Skin: Blue
+ * ----------
+ */
+
+.skin-blue-light {
+	//@import  "../bootstrap/less/buttons.less";
+	.btn {
+  
+  .button-size(3px; 6px; @common-font-size; @line-height-base; (@common-radius+1));
+  
+}
+	
+	
+	.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+
+.btn-primary {
+  .button-variant(#fff; #2C8FE9; transparent);
+}
+	
+  .first-sidebar(@light-blue; #fff);
+  //Navbar
+  .main-header {
+    .sidebar-toggle{
+    .sidebar-toggle(@light-blue);
+    }
+    .navbar {
+      .navbar-variant(@light-blue; #fff;#f6f6f6;lighten(@light-blue, 5%));
+
+
+      .navbar-custom-menu{
+        a{
+          &:hover {
+            background: lighten(@light-blue, 5%);
+          }
+        }
+      }
+      @media (max-width: @screen-header-collapse) {
+        .dropdown-menu {
+          li {
+            &.divider {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+            a {
+              color: #fff;
+              &:hover {
+                background: lighten(@light-blue, 5%);
+              }
+            }
+          }
+        }
+      }
+    }
+    //Logo
+    .logo {
+      .logo-variant(@light-blue);
+    }
+
+    li.user-header {
+      background-color: @light-blue;
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+  }
+
+  //Create the sidebar skin
+  .skin-light-sidebar(@light-blue);
+  .main-footer {
+    border-top-color: @gray;
+  }
+  .ui-dialog{
+  		.modal-title{
+		color: #ffffff;
+		font-weight: normal;
+		}
+	}
+	.ui-dialog{
+		.modal-header,.modal-title{
+ 			background: @light-blue;
+		}
+	}	
+
+	.ui-dialog .modal-header .close{
+		opacity: 1;
+	}
+}
+
+.skin-blue.layout-top-nav .main-header > .logo {
+  .logo-variant(@light-blue);
+}

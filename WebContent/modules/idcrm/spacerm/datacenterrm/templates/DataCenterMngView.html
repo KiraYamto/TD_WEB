@@ -1,0 +1,50 @@
+<div class="row spacerm-dc-container">
+	<div class="col-md-3" >	
+		<div class="input-group">
+		  <input type="text" class="form-control" placeholder="{{SEARCH_FOR}}" id="spacerm-dc-nav-dcname" >
+		  <span class="input-group-btn">
+		    <button class="btn btn-default" type="button" id="spacerm-dc-srnt-search-btn">
+		         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+		    </button>
+		  </span>
+		</div>
+		<ul id="spacerm-dc-spaceres-navtree" ></ul>
+	</div>
+	<div class="col-md-9">	
+		<div class="row">
+			<div class="col-md-5 text-left">	
+				<button type="button" class="btn btn-primary " id = "spacerm-dc-create-btn">新增</button>
+				<button type="button" class="btn btn-primary " id = "spacerm-dc-update-btn">修改</button>
+				<button type="button" class="btn btn-primary " id = "spacerm-dc-del-btn">删除</button>
+				<button type="button" class="btn btn-primary " id = "spacerm-dc-detail-btn">详情</button>
+				<button type="button" class="btn btn-primary hide" id = "spacerm-dc-export-btn">导出</button>			
+			</div>
+			<div class="col-md-7">
+			    <form class="form-horizontal" id="spacerm-dc-Qryform">
+				   <div class="col-md-4 spacerm-dc-oper-input">	
+				      <div class="input-group">
+				          <input type="hidden" name="condOp.areaId" value="EQUALS">
+				          <input class="form-control" type="text" id="spacerm-dcqry-areaId" name="condName.areaId"  placeholder="   {{dataCenterQry.areaName}}" >
+				      </div>
+				   </div>
+				   <div class="col-md-3 spacerm-dc-oper-input">
+				       <input type="hidden" name="condOp.dcName" value="LIKE">
+				       <input class="form-control" type="text" id="spacerm-dcqry-dcname" name="condName.dcName"  placeholder="{{dataCenterQry.name}}" >
+				   </div>
+				   <div class="col-md-3 spacerm-dc-oper-input">
+				       <input type="hidden" name="condOp.dcCode" value="LIKE">
+				       <input class="form-control" type="text" id="spacerm-dcqry-dccode" name="condName.dcCode" placeholder="{{dataCenterQry.code}}" >
+				   </div>
+				   <div class="col-md-2 spacerm-dc-oper-input">
+				       <button type="button" class="btn btn-primary " id = "spacerm-dc-search-btn">查询</button>		
+				   </div>
+			    </form>
+			</div>
+		</div>
+		<div class="row spacerm-dc-row">
+	    	<div class="col-md-12">
+			   <div id="spacerm-dc-grid"></div>			
+		    </div>
+		</div>			
+	</div>
+</div>

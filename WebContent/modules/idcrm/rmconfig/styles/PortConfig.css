@@ -1,0 +1,11 @@
+.rmconfig-port-row{
+	margin-top:10px;
+}
+.rmconfig-port-side{
+  padding-left: 5px;
+  padding-right: 0px;
+  padding-top: 15px;
+}
+.rmconfig-port-form .form-group>label{
+  padding-right: 5px;	
+}

@@ -1,0 +1,80 @@
+<div class="modal-header">
+	<h4 class="modal-title">{{title.dialog}}</h4>
+</div>
+<div class="modal-footer">
+    <div class="col-md-12 text-left" >	
+	    <button type="button" class="btn btn-default" id="rmconfig-port-savebtn">{{operBtn.ok}}</button>
+	    <button type="button" class="btn btn-default" data-dismiss="modal">{{operBtn.cancle}}</button>
+	</div>
+</div>
+<div class="modal-body">
+	<div class="row">
+	    <div class="col-md-12">
+			<div class="panel panel-default">
+			    <div class="panel-heading">
+                    <h3 class="panel-title">{{title.cfgRequire}}</h3>
+                </div>
+				<div class="panel-body">
+					<form class="form-horizontal rmconfig-port-form" id="rmconfig-port-form">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="col-md-4 control-label">{{configRequire.roomName}}：</label>
+
+								<div class="input-group col-md-8">
+										<input class="form-control" type="text"  id="rmconfig-port-roomname" name="roomName" >
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+						    <div class="form-group">
+								<label class="col-md-4 control-label">{{configRequire.unitPowerName}}：</label>
+								<div class="input-group col-md-8">
+									<input class="form-control" type="text" 
+											id="rmconfig-port-unitPowerName" name="unitPowerName" >
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="col-md-4 control-label">{{configRequire.rateName}}：</label>
+								<div class="input-group col-md-8">
+									<input class="form-control" type="text" 
+											id="rmconfig-port-rateName" name="rateName" >
+								</div>
+							</div>
+						</div>
+		            
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="col-md-4 control-label">{{configRequire.requireNum}}：</label>
+								<div class="input-group col-md-8">
+									<input class="form-control" type="text" 
+											id="rmconfig-port-requireNum" name="requireNum" >
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+		    </div>
+	    </div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 rmconfig-port-side" >	
+		    <ul id="rmconfig-port-navtree" ></ul>
+		</div>
+		<div class="col-md-9">		
+			<div class="row">
+				<div class="col-md-12 text-left">	
+				    <button type="button" class="btn btn-primary"  id = "rmconfig-port-showbtn">{{operBtn.showPort}}</button>		
+					<button type="button" class="btn btn-primary" id = "rmconfig-port-delPortbtn">{{operBtn.deletePort}}</button>
+					<button type="button" class="btn btn-primary hide" id = "rmconfig-port-resetPortbtn">{{operBtn.resetPort}}</button>
+				</div>
+			</div>
+			<div class="row rmconfig-port-row">
+		    	<div class="col-md-12">
+				   <div id="rmconfig-port-cfgresult"></div>			
+			    </div>
+			</div>			
+		</div>
+	</div>
+</div>

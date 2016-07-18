@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>资源仓库视图</title>
+		<script type="text/javascript" src="../../resources/echarts/echarts.min.js"></script>
+		<script type="text/javascript" src="../../resources/echarts/map/js/province/liaoning.js"></script>
+		<script type="text/javascript" src="../../resources/fish/fish-desktop/js/fish-desktop-all.min.js"></script>
+		<script type="text/javascript" src="../../resources/fish/fish-desktop/js/fish-desktop-require.js"></script>
+		<script src="../js/resourceWarehouse.js"></script>
+		<script type="../text/javascript">
+			//echart路径配置
+			require.config({
+				paths : {
+					echarts : '../../resources/echarts'
+				}
+			});
+		</script>
+	
+		<link rel="stylesheet" href="../../resources/fish/fish-desktop/css/fish-desktop-portal.min.css" />
+		<link rel="stylesheet" href="../css/resourceWarehouse.css" />
+	</head>
+	
+	<body>
+		<div id="resourceWarehouse-container">
+			<!-- 左半屏 -->
+			<div id="resourceWarehouse-leftPanels" class="col-md-6">
+				
+				<!-- radio按钮 -->
+				<div class="col-md-12 resourceWarehouse-radioGroup">
+					<div class="row">
+						<label class="radio-inline">
+		                   	<input type="radio" name="resourceWarehouse-radio" class="resourceWarehouse-radio" value="provWarehouseRadio" checked="true">
+		                   	省仓库视图
+		                </label>
+		                <label class="radio-inline">
+		                    <input type="radio" name="resourceWarehouse-radio" class="resourceWarehouse-radio" value="cityWarehouseRadio">
+		                  	市仓库视图
+		                </label>
+		                <label class="radio-inline">
+		                    <input type="radio" name="resourceWarehouse-radio" class="resourceWarehouse-radio" value="districtWarehouseRadio">
+		                  	区县仓库视图
+		                </label>
+					</div>
+				</div>
+				
+				<!-- 地图 -->
+				<div id="resourceWarehouse-mapPanel" class="col-md-12 resourceWarehouse-panel">
+					<div class="row resourceWarehouse-100Height">
+						<div id="resourceWarehouse-map" class="col-md-12 resourceWarehouse-100Height"></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 右半屏 -->
+			<div id="resourceWarehouse-rightPanels" class="col-md-6">
+			
+				<!-- 管理按钮 -->
+				<div class="col-md-12 resourceWarehouse-btnGroup">
+					<div class="row">
+						<button id="resourceWarehouse-lightModemManage" class="btn btn-primary resourceWarehouse-btn" type="button">光猫管理</button>
+						<button id="resourceWarehouse-MbhManage" class="btn btn-primary resourceWarehouse-btn" type="button">魔百和管理</button>
+						<button id="resourceWarehouse-consumablesManage" class="btn btn-primary resourceWarehouse-btn" type="button">耗材管理</button>
+					</div>
+				</div>
+				
+				<!-- 告警类型统计 -->
+				<div id="resourceWarehouse-alertTypePanel" class="col-md-12 resourceWarehouse-panel">
+					<div class="row resourceWarehouse-panelHeader-container">
+						<div class="col-md-12 resourceWarehouse-panelHeader">
+							<span class="glyphicon glyphicon-stats"></span>
+							告警类型统计
+						</div>
+					</div>
+					<div class="row resourceWarehouse-chart-container">
+						<div id="resourceWarehouse-alertTypePieChart" class="col-md-12 resourceWarehouse-100Height"></div>
+					</div>
+				</div>
+				
+				<!-- 告警级别统计 -->
+				<div id="resourceWarehouse-alertLevelPanel" class="col-md-12 resourceWarehouse-panel">
+					<div class="row resourceWarehouse-panelHeader-container">
+						<div class="col-md-12 resourceWarehouse-panelHeader">
+							<span class="glyphicon glyphicon-stats"></span>
+							告警级别统计
+						</div>
+					</div>
+					<div class="row resourceWarehouse-chart-container">
+						<div id="resourceWarehouse-alertLevelBarChart" class="col-md-12 resourceWarehouse-100Height"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

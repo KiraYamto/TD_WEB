@@ -1,0 +1,22 @@
+	div#rMenu {
+	position:absolute; 
+	visibility:hidden; 
+	top:0;
+	background-color: #E0E0E0;
+	text-align: left;
+	padding: 2px;
+	}
+	div#rMenu ul {
+		margin: 0;
+		padding: 0;
+	}
+	div#rMenu ul li{
+		margin: 1px 0;
+		padding: 0 5px;
+		cursor: pointer;
+		list-style: none outside none;
+		background-color: #E2E8EC;
+	}
+	#iom-product-productCatalog .curSelectedNode{
+		background-color: #e2e8ec;
+	}

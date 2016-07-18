@@ -1,0 +1,1 @@
+var gWebAbsPath="/BUSI2IOM",gLangCode="zh_cn",gWebDebug=true,gTimeout=-1;//window.onerror=ViewError;

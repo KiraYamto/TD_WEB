@@ -1,0 +1,18 @@
+.frameView-qry-title {
+    padding: 5px;
+    text-align: right;
+}
+.frameView-qry-select {
+    padding-left:0px;
+    padding-right:0px;
+}
+.frameView-value-select {
+    margin-left: 15px;
+    width: 174px;
+}
+#rMenu>.popover-content ul li{
+    color: red;
+}
+#rMenu>.popover.right > .arrow {
+    top: 15%;
+}

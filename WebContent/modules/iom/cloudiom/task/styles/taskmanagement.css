@@ -1,0 +1,58 @@
+.iomTaskManagement-btn-row {
+	margin-bottom: 20px;
+}
+.iomTaskManagement-advSearchFields-row {
+	margin-right: 5px;
+}
+#iomTaskManagement-panel-body .btn {
+    padding: 3px 8px;
+    font-size: 13px;
+    line-height: 1.4285;
+    border-radius: 4px;
+}
+#iomTaskManagement-operBtnDiv button {
+	margin-right: 3px;
+}
+#iomTaskManagement-searchBtn {
+	margin-left: -20px;
+}
+#iomTaskManagement-advSearchBtn {
+	margin-left: 10px;
+}
+#iomTaskManagement-workOrderCode-container {
+	margin-left: 15px;
+}
+.iomTaskManagement-btn-row input {
+	border-radius: 4px;
+}
+.iomTaskManagement-severeOT-icon {
+	margin-left: 20px;
+	color: #ea421b;
+}
+.iomTaskManagement-overtime-icon {
+	margin-left: 5px;
+	color: #dbaa00;
+}
+.iomTaskManagement-alert-icon {
+	margin-left: 5px;
+	color: #abca02;
+}
+.iomTaskManagement-normal-icon {
+	margin-left: 5px;
+	color: #0085ff;
+}
+#iomTaskManagement-grid {
+	margin-top: -10px;
+}
+#iomTaskManagement-grid * {
+	text-align: center;
+}
+#iomTaskManagement-panel {
+	border-top: none;
+}
+#iomTaskManagement-tab .ui-tabs-nav {
+	border-bottom: none;
+}
+#iomTaskManagement_finishWorkOrder_workOrderCodes_multi span {
+	max-width: none;
+}

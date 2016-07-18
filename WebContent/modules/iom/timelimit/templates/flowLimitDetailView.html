@@ -1,0 +1,72 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">流程时限详情</h4>
+</div>
+<div class="modal-body">
+	<div id="iomFlowLimit-applyRule-tabs" class="ui-tabs">
+		<ul class="ui-tabs-nav">
+			<li>
+				<a id="iomFlowLimit-applyRule-tabs-a-link" class="ui-tabs-anchor" data-target="iomFlowLimit-tabs-a">流程时限适用规则</a>
+			</li>
+		</ul>
+		
+		<div id="iomFlowLimit-applyRule-tabs-a" class="ui-tabs-panel">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="iomFlowLimit-applyRule-grid"></div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-horizontal" id="iomFlowLimit-applyRule-form">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-md-6 control-label">定单处理等级：</label>
+									<div class="input-group col-md-6">
+										<input class="form-control" type="text"
+											name="iomFlowLimit-applyRule-orderPriority" id="iomFlowLimit-applyRule-orderPriority"
+											data-rule="定单处理等级:required;"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-md-6 control-label">客户类型：</label>
+									<div class="input-group col-md-6">
+										<input class="form-control" type="text"
+											name="iomFlowLimit-applyRule-custType" id="iomFlowLimit-applyRule-custType"
+											data-rule="客户类型:required;"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label class="col-md-3 control-label">其他条件：</label>
+									<div class="input-group col-md-9">
+										<textarea class="form-control" type="text"
+											name="iomFlowLimit-applyRule-otherConds" id="iomFlowLimit-applyRule-otherConds">
+										</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div id="iomFlowLimit-applyRule-btnGroup" class="col-md-12">
+					<button id="iomFlowLimit-applyRule-add" class="btn btn-success" type="button"><span class="glyphicon glyphicon-plus"></span> 添加</button>
+					<button id="iomFlowLimit-applyRule-save" class="btn btn-success" type="button"><span class="glyphicon glyphicon-save"></span>保存修改</button>
+					<button id="iomFlowLimit-applyRule-del" class="btn btn-success" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>

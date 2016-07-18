@@ -1,0 +1,145 @@
+/* 整体布局 */
+#iomIndex {
+	padding-left: 0px;
+	padding-right: 10px;
+}
+#iomIndex-leftContainer {
+	height: 100%;
+	padding: 0px 10px 0px 0px;
+	/* width: 560px; */
+}
+#iomIndex-topRightContainer {
+	height: 30%;
+	padding: 0px 0px 0px 0px;
+}
+#iomIndex-bottomRightContainer {
+	height: 70%;
+	padding: 10px 0px 0px 0px;
+}
+
+/* 模块边框与背景颜色 */
+#iomIndex-leftPanel {
+	height: 100%;
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+	background-color: #f5f5f5;
+}
+#iomIndex-topRightPanel {
+	height: 100%;
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+}
+#iomIndex-bottomRightPanel {
+	height: 100%;
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+	background-color: #f5f5f5;
+}
+
+/* 模块标题样式 */
+.iomIndex-panelHeader {
+	font-size: 16px;
+	padding: 10px 0px 10px 10px;
+	background-color: #f5f5f5;
+}
+
+/* 常用按钮样式 */
+#iomIndex-btnGroup {
+	margin-top: 10px;
+}
+.iomIndex-btnIcon {
+	height: 60px;
+	width: 60px;
+	border-radius: 5px;
+	background-color: #0085ff;
+	line-height: 60px;
+	color: #ffffff;
+	font-size: 30px;
+	margin-bottom: 10px;
+	margin-left: auto;
+    margin-right: auto;
+}
+.iomIndex-btnIcon:hover {
+	background-color: #0a7be2;
+}
+.iomIndex-btn {
+	text-align: center;
+}
+.iomIndex-btn span {
+	display: block;
+}
+
+/* 表格样式 */
+#iomIndex-grid * {
+	text-align: center;
+}
+#iomIndex-grid .jqgrow {
+    background-color: transparent;
+}
+#iomIndex-grid .jqgrow:hover {
+    background-color: #ffffff;
+}
+#iomIndex-grid .ui-jqgrid-view .ui-jqgrid-bdiv .ui-jqgrid-btable tr.jqgrow td {
+    border: none;
+}
+
+/* 统计方块样式 */
+#iomIndex-statSquareGroup {
+	margin-left: -5px;
+	margin-top: 0px;
+	height: 13.3%;
+}
+.iomIndex-statSquareValue {
+	font-size:22px;
+}
+.iomIndex-statSquare {
+	height: 100%;
+	width: 21%;
+	color: #ffffff;
+	text-align: center;
+	margin-right: 20px;
+}
+.iomIndex-statSquare:last-child {
+	margin-right: 0px;
+}
+#iomIndex-statSquareNormal {
+	background-color: #0085ff;
+}
+#iomIndex-statSquareAlert {
+	background-color: #abca02;
+}
+#iomIndex-statSquareOvertime {
+	background-color: #dbaa00;
+}
+#iomIndex-statSquareSevereOT {
+	background-color: #ea421b;
+}
+
+/* 饼图样式 */
+#iomIndex-pieChartGroup {
+	margin-top: 10%;
+	height: 25%;
+}
+#iomIndex-iomOrder, .iomIndex-pieChartRow {
+	height: 100%;
+}
+#iomIndex-cloudHostChart, #iomIndex-physicalMachineChart, #iomIndex-idcChart {
+	height: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: -20px;
+}
+
+/* 折线图样式 */
+#iomIndex-lineChartGroup {
+	margin-top: 3%;
+	height: 50%;
+}
+.iomIndex-100Height {
+	height: 100%;
+}
+#iomIndex-newOrdersChart {
+	height: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+}

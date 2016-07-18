@@ -1,0 +1,64 @@
+<div class="container-fluid" >
+	<div class="row" >
+		<div class="col-md-2" style="padding:0;" id="nms_treeDiv">
+			<div class="panel  panel-default"  style="margin:0;border:1;padding:0;">
+				<div class="panel-heading" style="height:39px;">
+					<h3 class="panel-title">资源</h3>
+				</div>
+				<div  id="leftTree" style="height:485px;overflow:scroll;" >
+					<ul class="ztree" id="resourceTree" style="display:table;"></ul>
+				</div>
+			</div>			
+		</div>	
+		
+		<div class="col-md-10" style="margin:0;border:0;padding:0;">
+				<div id="contentLayout" class="panel  panel-default" style="border:0" >
+					<div class="panel-heading" style="height:39px;">
+						<h3 class="panel-title">性能指标列表</h3>
+					</div>
+					<div id="kpiInfoArea"   style="border-bottom:1px solid #D4D4D4;overflow:auto;">
+						<div id="kpiInfoGrid"></div>	
+					</div>
+
+					<div id="chartArea" style="border:0">
+						<div class="panel-heading " style="height:35px;">
+					         <h3 class="panel-title">趋势图</h3>
+				         </div>
+						<div  style="padding:5px;" style="height:52px;">
+							<form id ="timeForm" class="row">
+								<div class="form-group col-md-3" >
+									<div class="control-label col-md-4" style="padding-right:0">周期:</div>
+									<div class="input-group col-md-8">
+										<input id = "timeCircle" />
+									</div>
+								</div>
+								<div class="form-group col-md-4" >
+									<div class="control-label col-md-4">时间范围:</div>
+									<div class="input-group col-md-8">
+										<input id="startDate" name="startDate" class="form-control" />  
+									</div>
+								</div>
+								<div class="form-group col-md-3" >
+									<div class="control-label col-md-3" >至:</div>
+									<div class="input-group col-md-8" >
+										<input id="endDate" name="endDate"  />  
+									</div>
+								</div>
+								
+								<div class="form-group col-md-2">
+									<div class="form-group col-md-12">
+										<button id="nms_rs_search_btn" type="button" class="btn btn-primary">查询
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div style="padding:2px;" id="nms_echartDiv">
+						 	<div id="nms_chartMap" style="height:220px;margin:1px;width:auto;" ></div> 
+						</div>
+					</div>
+				</div>				
+	    </div>
+	</div>
+
+</div>

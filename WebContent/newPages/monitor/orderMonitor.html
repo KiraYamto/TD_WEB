@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>定单监控</title> 
+<link rel="stylesheet" href="../../resources/fish_v2.1.2/css/fish-desktop-default.css" id="themesCss"><!-- fish样式文件 -->
+<link rel="stylesheet" href="../../resources/css/pretty-json.css"><!--json格式化样式文件 -->
+<link rel="stylesheet" href="../../common/css/common.css"><!-- 项目公共样式文件 -->
+<style type="text/css">
+       #navigate{
+       	background-color:#FFFFFF;
+       } 
+	.ui.tabular.menu .active.item {
+	    background-color: #F1221E !important;
+	    color: #FFFFFF !important;
+	}
+</style>
+
+<script type="text/javascript" src="../../resources/fish_v2.1.2/js/fish-desktop-all.js"></script><!-- fish框架Js文件 -->
+<script type="text/javascript" src="../../resources/fish_v2.1.2/locale/fish-desktop-locale.zh.js"></script><!-- fish框架语言包Js文件 -->
+<script type="text/javascript" src="../../resources/js/mycommon.js"></script><!-- 项目公共Js文件1 -->
+<script type="text/javascript" src="../../resources/js/json2.js"></script><!--json工具包Js文件 -->
+<script type="text/javascript" src="../../resources/js/common.js"></script><!-- 项目公共Js文件1 -->
+<script type="text/javascript" src="../../resources/js/underscore-min.js"></script><!-- underscore-js扩展包文件 -->
+<script type="text/javascript" src="../../resources/js/backbone-min.js"></script><!-- backbone mvc包文件 -->
+<script type="text/javascript" src="../../resources/js/fomatXml.js"></script><!-- xml格式化工具包文件 -->
+<script type="text/javascript" src="../../resources/js/pretty-json-min.js"></script><!--json格式化js文件 -->
+<script src="../../resources/layer/layer.js"></script><!--layer消息提示组件包 js文件 --> 
+</head>
+
+<body>
+	<div id="vertical">
+		<div id="top-pane" style="overflow: hidden">
+			<div class="pane-content" style="overflow: hidden">
+				<!-- 查询条件 -->
+				<div class="form-horizontal marginleft">
+					<div class="form-group">
+						<div class="col-md-2 col-md-marginright">
+							<input id="orderCode" class="form-control round input-sm"
+								placeholder="定单编码" title="查询条件：定单编码">
+						</div>
+						<div class="col-md-2 col-md-marginright">
+							<input id="custOrderCode" class="form-control round input-sm"
+								placeholder="客户订单编码" title="查询条件：客户订单编码">
+						</div>
+						<div class="col-md-2 col-md-marginright">
+							<input id="startDate" type="text"
+								class="form-control round input-sm" placeholder="开始时间"
+								title="查询条件：开始时间">
+						</div>
+						<div class="col-md-2 col-md-marginright">
+							<input id="endDate" type="text"
+								class="form-control round input-sm" placeholder="结束时间"
+								title="查询条件：结束时间">
+						</div>
+						<div class="col-md-2 col-md-marginright">
+							<select name="combobox2" id="stateCombo"
+								class="form-control round input-sm" placeholder="定单状态">
+								<option value="" selected="selected">全部</option>
+								<option value="10I">流程未启动</option>
+								<option value="10N">正常执行中</option>
+								<option value="10F">已竣工</option>
+								<option value="10E">调度异常</option>
+								<option value="10R">定单退单</option>
+								<option value="1RC">退单到CRM</option>
+								<option value="10C">已撤单</option>
+								<option value="10A">作废</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal marginleft">
+					<div class="form-group">
+						<div class="col-md-2 col-md-marginright">
+							<input id="accNbr" class="form-control round input-sm"
+								placeholder="业务号码" title="查询条件：业务号码">
+						</div>
+						<div class="col-md-2 col-md-marginright">
+							<div class="input-group popedit">
+								<input class="form-control round input-sm" type="text"
+									id="areaName" placeholder="区域" title="查询条件：区域"
+									data-url="#areaSel">
+							</div>
+						</div>
+						<div class="col-md-2 col-md-marginright">
+							  <button id="search" class="btn btn-primary btn-sm"><i class="search icon"></i>查询</button>
+							  <button id="reset" class="btn btn-primary btn-sm"><i class="erase icon"></i>重置</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="middle-pane">
+			<div class="pane-content">
+				<!-- 定单详情、定单流程、重新跑单、定单作废、工单信息 -->
+				<div>
+					<button id="openOrderDetail" class="btn btn-primary btn-sm"><i class="browser icon"></i>定单详情</button>
+					<button id="showActivityInstance" class="btn btn-primary btn-sm"><i class="random icon"></i>定单流程</button>
+					<button id="reDispatchOrder" class="btn btn-primary btn-sm"><i class="repeat icon"></i>重新跑单</button>
+					<button id="orderAbolish" class="btn btn-primary btn-sm"><i class="trash icon"></i>定单作废</button>
+					<button id="workOrderInfo" class="btn btn-primary btn-sm"><i class="file text icon"></i>工单信息</button>
+					 <button id="excelReport" class="btn btn-primary btn-sm"><i class="search icon"></i>excel导出</button>
+					<div style="float: right;">
+						<a class="ui red label mini">正常定单</a>
+						<a class="ui blue label mini">预警定单</a>
+						<a class="ui yellow label mini">超时单</a>
+					</div>
+				</div>
+				<!-- 定单列表显示表格 -->
+				<div style="margin-top: 15px;">
+<!-- 					<table id="orderGrid" style="font-size: 10pt"
+						class="ui selectable striped table"></table> -->
+						<table id="orderGrid" style="font-size:10pt"></table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<!-- 选择区域 -->
+	<div id="areaSel" class="ui-dialog">
+		<div class="modal-header">
+			<h5 class="modal-title">选择区域</h5>
+		</div>
+		<div class="modal-body">
+			<div style="width: 400px; height: 348px; border: 1px solid #E80500; background: beige; overflow: auto">
+				<ul id="areaTree" class="ztree" style="padding-left: 40px"></ul>
+			</div>
+		</div>
+		<div class="modal-footer" style="text-align: center;">
+			<button id="submitBtn" class="btn btn-primary btn-sm"><i class="checkmark icon"></i>确认</button>
+			<button id="cancelBtn" class="btn btn-primary btn-sm"><i class="remove icon"></i>取消</button>
+		</div>
+	</div>
+	<!--工单信息对话框-->
+	<div id="workOrderInfoDialog" class="ui-dialog">
+		<div class="modal-header">
+			<h5 class="modal-title">工单信息</h5>
+		</div>
+		<div class="modal-body">
+			<div style="margin-top: -8px;">
+				<button id="finishWorkOrder" class="btn btn-primary btn-sm"><i class="reply all icon"></i>强制回单</button>
+				<button id="resetWorkOrder" class="btn btn-primary btn-sm"><i class="retweet icon"></i>重新执行</button>
+			</div>
+			<div id="container1"
+				style="height: 90%; margin-left: -8px; margin-right: -8px; margin-top: 4px; margin-bottom: 10px">
+				<table id="workOrderGrid" style="font-size: 9pt;">
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- 定单详情对话框 -->
+	<div id="openOrderDetailDialog" class="ui-dialog"
+		style="overflow: hidden;">
+		<div class="modal-header">
+			<h5 class="modal-title">定单详情</h5>
+		</div>
+		<div class="modal-body">
+			<iframe style="width: 100%; height: 100%; border: 0;"
+				id="orderDetailFrame"></iframe>
+		</div>
+	</div>
+
+	<!-- 定单流程对话框 -->
+	<div id="ActivityInstanceDialog" class="ui-dialog">
+		<div class="modal-header">
+			<h5 class="modal-title">ZTEsoft服务开通定单进程查询</h5>
+		</div>
+		<div class="modal-body">
+			<iframe style="width: 100%; height: 100%; border: 0;"
+				id="ActivityInstanceFrame"></iframe>
+		</div>
+	</div>
+
+	<div id="xmlDialog" class="ui-dialog modal">
+		<div class="modal-header">
+			<h5 class="modal-title">工单信息</h5>
+		</div>
+		<div class="modal-body">
+			<div class="ui tabular menu" id ="navigate">
+			   <a class = "active item" data-tab="dispatchWorkOrder">发送的报文</a>
+			   <a class = "item" data-tab="responseWorkOrder">接收的报文</a>
+			</div>
+			<div class="ui tab" data-tab ="dispatchWorkOrder" >
+			 	<div class="panel panel-no-border">
+					<div class="panel-heading"></div>
+					<div class="panel-body">
+						<div id="dispatchWorkOrder" style="width: 230px; height: 355px;"></div>
+					</div>
+				</div>
+		  	</div>
+		  	<div class="ui tab" data-tab ="responseWorkOrder" >
+			 	<div class="panel panel-no-border">
+					<div class="panel-heading"></div>
+					<div class="panel-body">
+						<div id="responseWorkOrder" style="width: 230px; height: 355px;"></div>
+					</div>
+				</div>
+		  	</div>
+		</div>
+<!-- 		<ul>
+			<li id="dispatchWorkOrderTab"><a href="#dispatchWorkOrder">发送报文</a></li>
+			<li id="responseWorkOrderTab"><a href="#responseWorkOrder">接收报文</a></li>
+		</ul>
+		<div id="dispatchWorkOrder"
+			style="width: 500px; height: 600px; border: 1px solid #00ddff; background: beige; overflow: auto"></div>
+		<div id="responseWorkOrder"
+			style="width: 500px; height: 600px; border: 1px solid #00ddff; background: beige; overflow: auto"></div> -->
+	</div>
+
+	<!-- 发送异常到CRM弹出对话框(营业差错) -->
+	<div id="sendExceptionDialog" class="modal">
+		<div class="modal-header">
+			<h5 class="modal-title">异常派发界面</h5>
+		</div>
+		<div class="modal-body">
+			<div>
+				<table style="font-size: 10pt; border: 1px; text-align: right">
+					<tr>
+						<td><label>异常原因：</label></td>
+						<td><select id="exceptionReason"
+							style="width: 500px; height: 22px" required>
+								<option value="-1">请选择</option>
+						</select></td>
+					</tr>
+					<tr style="padding-top: 10px">
+						<td><label>异常描述：</label></td>
+						<td><textarea id="exceptionDesc" style="width: 500px"
+								rows="13"></textarea></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary" id="yyccSubmitBtn">确认</button>
+			<button type="button" class="btn btn-primary" id="yyccCancelBtn">取消</button>
+		</div>
+	</div>
+</body>
+<script>
+<!--tab标签切换-->
+$('.tabular.menu .item').tab();
+</script>
+<script type="text/javascript" src="../../newPages/monitor/js/orderMonitor2.js"></script><!-- 本页面Js文件的引入 -->
+</html>

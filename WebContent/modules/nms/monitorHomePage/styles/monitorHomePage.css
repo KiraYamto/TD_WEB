@@ -1,0 +1,156 @@
+#nms_mointor_hp_container.container-fluid{
+	padding:0px;
+}
+
+#nms_mointor_hp_container .border-radius{
+	-webkit-border-radius:6px 6px 6px 6px;
+	border-radius:6px 6px 6px 6px;	
+}
+
+#nms_mointor_hp_container .content {
+	padding:0px;
+	border:1px solid #E8E8E8;	
+	background-color: #F5F5F5;
+	/* outline-color: #EFEFEF; 
+	outline-width:5px; */
+}
+
+#nms_mointor_hp_container .content .leftArea{
+	border:0px solid red;
+}
+
+#nms_mointor_hp_container .content .rightArea{
+	border:0px solid red; 
+	padding:0px;
+}
+
+#nms_mointor_hp_container #nms_monitor_statisArea .statisArea{
+	border:1px solid #d0d0d0;
+	background-color: #FFFFFF;
+	margin-top:20px;
+	margin-right:58px;
+}
+
+#nms_mointor_hp_container #nms_monitor_statisArea .alarmStatis{
+	display:block;
+}
+
+#nms_mointor_hp_container #nms_monitor_statisArea .pfStatis{
+	display:none;
+}
+
+#nms_mointor_hp_container .leftArea .monitorMaptoolbar{
+	overflow:hidden;
+	margin-top:10px;
+	height:42px;
+	border:0px solid yellow;
+}
+
+#nms_mointor_hp_container .monitorMap{
+	border:0px solid blue;
+}
+
+#nms_mointor_hp_container #mms_monitor_alarmCount{
+	overflow:hidden;
+}
+
+#nms_mointor_hp_container #mms_monitor_alarmCount .alarmStaticWidget{
+	overflow:hidden;
+	border:0px solid yellow;
+	padding:0px;
+	transition: all 0.3s linear;
+}
+
+#nms_mointor_hp_container #mms_monitor_alarmCount .alarmStaticWidget .nms_monitor_alarm_count_label{
+	/* margin-top:13px; */
+	margin-left:22px;
+	margin-right:10px;
+	float:left;
+	font-family:'微软雅黑';
+	font-size:18px;
+	font-weight:bold;
+	/* height:35px; */
+	line-height:45px;
+/* 	vertical-align: middle; */
+	border:0px solid red;
+}
+
+#nms_mointor_hp_container #mms_monitor_alarmCount .alarmStaticWidget .alarmCount{
+	/* margin-top:13px; */
+	margin-left:5px;
+	float:left;
+	display: inline;
+	font-family:'Arial';
+	font-size:30px;
+	color:#DD0000;
+	text-overflow:ellipsis;
+/* 	height:35px; */
+	 line-height:45px;
+	/*vertical-align: middle; */
+	border:0px solid red;
+}
+
+#nms_mointor_hp_container #mms_monitor_alarmCount .alarmStaticWidget .alarm_order_Count{
+	font-size:30px;
+	color:#2673d7;	
+}
+
+#nms_mointor_hp_container #nms_monitor_statis_1{
+	
+	padding:0px;
+	margin:0px;
+	/* overflow:hidden; */
+}
+
+#nms_mointor_hp_container #nms_monitor_statis_2{
+	
+	padding:0px;
+	margin:0px;
+   /*  overflow:hidden */
+	
+}
+
+#nms_mointor_hp_container .staticTypeWrap{
+	border:0px solid red;
+	height:40px;
+}
+
+#nms_mointor_hp_container .staticTypeWrap input{
+	border:1px solid blue;
+}
+
+#nms_mointor_hp_container .staticTypeWrap > label{
+	font-family:'微软雅黑';
+	font-size:12px;
+	font-weight:normal;
+	color: #666;
+	margin: 0px 40px 0px 3px;
+}
+
+
+/*修改fish样式*/
+#nms_mointor_hp_container .form-control{
+	border:0px;
+	box-shadow: 0px 0px rgba(0, 0, 0, 0.075);
+	background-color:#FFFFFF;
+}
+
+#nms_mointor_hp_container .input-group-addon{
+	border:0px;	
+}
+
+#nms_mointor_hp_container .form-control[disabled],
+#nms_mointor_hp_container .form-control[readonly],
+#nms_mointor_hp_container fieldset[disabled] .form-control,
+#nms_mointor_hp_container .form-control[disabled] ~ .input-group-addon {
+  background-color: #FFFFFF;
+  cursor: not-allowed;
+}
+#nms_mointor_hp_container .dropdown-list > .active,
+#nms_mointor_hp_container .dropdown-list > .active:hover,
+#nms_mointor_hp_container .dropdown-list > .active:focus {
+  color: #ffffff;
+  background-color: #F5F5F5;
+}
+
+

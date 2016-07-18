@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas {
+            height: 1000px;
+            width: 1100px;
+        }
+    </style>
+    <script src="./js/draw.js"></script>
+</head>
+<body>
+<div id="canvas"></div>
+
+<script language="JavaScript">
+
+
+    var paper = Raphael("canvas", 1100, 1000);
+    var pc = image(paper, pc_normal, 50, 100, "PC");
+    var onu = image(paper, ONU_normal, 150, 100, "ONU");
+    var sputter = image(paper, SPUTTER_normal, 250, 100, "SPUTTER");
+    var olt = image(paper, OLT_normal, 350, 100, "OLT");
+    var upe = image(paper, UPE_normal, 450, 100, "UPE");
+    var network1 = image(paper, network_normal, 550, 100, "NETWORK");
+    var bras = image(paper, BRAS_normal, 650, 100, "BRAS");
+    var network2 = image(paper, network_normal, 750, 100, "NETWORK");
+
+
+    var aaa = image(paper, AAA_normal, 850, 50, "AAA");
+    var dns = image(paper, DNS_normal, 850, 150, "DNS");
+
+
+
+    link(paper, pc, onu);
+    link(paper, onu, sputter);
+    link(paper, sputter, olt);
+    link(paper, olt, upe);
+    link(paper, upe, network1);
+    link(paper, network1, bras);
+    link(paper, bras, network2);
+
+</script>
+</body>
+</html>

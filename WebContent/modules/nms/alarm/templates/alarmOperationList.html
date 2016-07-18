@@ -1,0 +1,128 @@
+<div id="nms_alarm_operation_view" class="container-fluid">
+	<form id="nms_alarm_operation_searchForm">
+	<div id="nms_alarm_operation_toolbar" class="row" style="margin-top:0px; margin-bottom:10px; border:0px solid red;">
+	<div class="col-xs-12 form-inline" style="padding: 0 2px 0 4px;">
+		<div class="pull-left">
+		<div class="form-group">
+			<button id="alarmConfirm" type="button" class="btn btn-primary">
+				<!-- <i class="glyphicon glyphicon-asterisk" style="font-size:5px;margin-top:2px;"></i> -->
+				告警确认
+			</button>
+			<button id="nms_alarm_operation_redefineBtn" type="button" class="btn btn-primary">告警重定义</button>
+			<button id="nms_alarm_operation_sendOrderBtn" type="button" class="btn btn-primary">告警派单</button>
+            <button id="alarmDetail" type="button" class="btn btn-primary">告警详情</button>			
+			<!-- <button id="alarmClear" type="button" class="btn btn-primary">告警清除</button> -->
+			<!-- 	
+			<div
+				style="float: right; border: 0px solid red; padding-left: 0px; padding-right: 0px; width: 86px; text-align: right;">
+				<button type="button" class="btn btn-success" id="searchBtn">查询</button>
+				<button type="reset" class="btn btn-danger" id="resetBtn">重置</button>
+			</div> 
+			-->
+		</div>
+		</div>
+			
+		<div class="pull-right">
+			<div class="form-group" style="margin-right:5px;">
+				<input id="nms_alarm_operation_searchForm_emsId" name="emsId" class="form-control" type="text" placeholder="EMS名称" />
+			</div>
+			<div class="form-group" style="margin-right:5px;">
+				<input id="nms_alarm_operation_searchForm_elementName" name="elementName" class="form-control" type="text" placeholder="网元名称" />
+			</div>
+			<button id="nms-alarm-alarmOperation-search" type="button" class="btn btn-primary"  style="margin:0px 20px 0px 0px;">
+				<span class="glyphicon glyphicon-search"></span>{{COMMON_SEARCH}}
+			</button>
+			<button id="nms-alarm-operation-searchform-expand" type="button" class="btn btn-success">
+				{{COMMON_EXPAND}}<span class="glyphicon glyphicon-chevron-down"></span>
+			</button>
+			<button id="nms-alarm-operation-searchform-collapse" type="button" class="btn btn-success" style="display:none;"> 
+				{{COMMON_COLLAPSE}}<span class="glyphicon glyphicon-chevron-up"></span>
+			</button>
+		</div>
+		</div>
+	</div>
+	
+	<div id="nms_alarm_operation_moreSearch_block" class="row" style="margin-top:0px; margin-bottom:10px; border:0px solid red; display:none;">
+		<div class="col-xs-12">
+			<div class="form-horizontal">			
+			<div class="row">
+			<div class="col-xs-4" style="border: 0px solid red;">
+				<div class="form-group">
+					<label class="col-xs-5 control-label search_form_label" for="alarmTitle" style="border: 0px solid red;">告警名称：</label>
+					<div class="input-group col-xs-7 text-left">
+						<input id="nms_alarm_operation_searchForm_alarmTitle" name="alarmTitle" class="form-control">
+					</div>
+				</div>
+			</div>		
+			<div class="col-xs-4" style="border: 0px solid red;">
+				<div class="form-group required">
+					<label class="col-xs-5 control-label search_form_label"
+						for="alarmLevelId" style="border: 0px solid red;">告警级别：</label>
+					<div class="input-group col-xs-7">
+						<input id="nms_alarm_operation_searchForm_alarmLevelId" name="alarmLevelId" class="combobox form-control">
+					</div>
+				</div>
+			</div>				
+			<div class="col-xs-4" style="border: 0px solid red;">
+				<div class="form-group required">
+					<label class="col-xs-5 control-label search_form_label"	for="specialtyId" style="border: 0px solid red;">告警大类：</label>
+					<div class="input-group col-xs-7 search_form_field" style="border: 0px solid red;">
+						<input id="nms_alarm_operation_searchForm_alarmBigTypeId" name="alarmBigTypeId" class="combobox form-control">
+					</div>
+				</div>
+			</div>		
+			</div>
+			
+			<div class="row">
+			<div class="col-xs-4" style="border:0px solid red;">
+				<div class="form-group">
+					<label class="col-xs-5 control-label search_form_label"	for="beginTime" style="border: 0px solid red;">开始时间：</label>
+					<div class="input-group col-xs-7 search_form_field"	style="border: 0px solid red;">
+						<input id="nms_alarm_operation_searchForm_beginTime" name="beginTime" class=" form-control">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4" style="border: 0px solid red;">
+				<div class="form-group">
+					<label class="col-xs-5 control-label search_form_label" for="endTime" style="border: 0px solid red;">结束时间：</label>
+					<div class="input-group col-xs-7 search_form_field"	style="border: 0px solid red;">
+						<input id="nms_alarm_operation_searchForm_endTime" name="endTime" class="form-control">
+					</div>
+				</div>
+			</div>		
+				
+			<div class="col-xs-4" style="border: 0px solid red;">
+				<div class="form-group">
+					<label class="col-xs-5 control-label search_form_label" for="areaId" style="border: 0px solid red;">归属区域：</label>
+					<div id="nms_alarm_operation_areaTree_group" class="input-group col-xs-7 search_form_field">				
+						<input id="nms_alarm_operation_searchForm_area_label"  type="text" class="form-control" placeholder="地区">
+						<input id="nms_alarm_operation_searchForm_area_id" type="hidden" name="areaId" >
+						
+						<span id="menuBtn" class="input-group-addon">
+							<a href="javascript:void(0);" class="inforeport-add-triangle">
+								<span class="glyphicon glyphicon-triangle-bottom"></span>
+							</a>
+						</span>
+						<div id="tree_select_menu_checkbox_html" class="menuContent" style="position:absolute; z-index:99; border:1px solid #B3B3B3; background-color:#FFFFFF; height:300px; overflow-x:hidden; overflow-y:auto;">
+							<ul id="nms_alarm_operation_searchForm_areaTree" class="ztree"  style="display:table; margin-top: 0px; overflow-y:auto;"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			</div>
+			</div>
+		</div>
+	</div>
+	</form>
+	<div class="row">
+		<div class="col-xs-12"  style="border: 0px solid yellow; padding: 0 1px 0 1px;">
+			<div id="alarmGrid"></div>
+		</div>
+	</div>		
+	
+</div>
+
+
+

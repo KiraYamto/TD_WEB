@@ -1,0 +1,26 @@
+.equip-qry-title {
+    padding: 5px;
+    text-align: right;
+}
+.equip-qry-select {
+    width: 120px;
+}
+.equip-qry-select-cond {
+    width: 60px;
+}
+.frameView-qry-select {
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.frameView-value-select {
+    margin-left: 15px;
+    width: 174px;
+}
+.padding-lr-1 {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+.padding-0{
+	padding:0px;
+}

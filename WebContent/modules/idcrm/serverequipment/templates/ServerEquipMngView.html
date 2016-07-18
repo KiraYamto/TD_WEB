@@ -1,0 +1,193 @@
+<div class="row serverequipment-mng-container">
+	<div class="col-md-3" >	
+		<div class="input-group">
+		  <input type="text" class="form-control" placeholder="{{searchFor}}" id="serverequipment-nav-name" >
+		  <span class="input-group-btn">
+		    <button class="btn btn-default" type="button" id="serverequipment-srnt-search-btn">
+		         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+		    </button>
+		  </span>
+		</div>
+		<div id="serverequipment-spacers-navtreeDiv" >
+		   <ul id="serverequipment-spacers-navtree" ></ul>
+		</div>
+	</div>
+	<div class="col-md-9" >	   		
+		<div class="row">
+			<div class="col-md-4 text-left">
+				<button type="button" class="btn btn-primary " id = "serverequipment-create-btn">{{btn.newBtn}}</button>
+				<button type="button" class="btn btn-primary " id = "serverequipment-update-btn">{{btn.updateBtn}}</button>
+				<button type="button" class="btn btn-primary " id = "serverequipment-del-btn">{{btn.deleteBtn}}</button>
+				<button type="button" class="btn btn-primary " id = "serverequipment-detail-btn">{{btn.detailBtn}}</button>
+				<button type="button" class="btn btn-primary " id = "serverequipment-export-btn">{{btn.exportBtn}}</button>
+			</div>
+			<div class="col-md-8">
+			    <form class="form-horizontal" id="serverequipment-Qryform">
+				    <div class="col-md-5 serverequipment-oper-input">	
+				        <div class="input-group">
+				            <input type="hidden" name="condOp.roomId" value="EQUALS"  >
+				            <input class="form-control" type="text" id="serverequipmentqry-roomId" name="condName.roomId"  placeholder="{{serverEquipQryTip.roomId}}" >
+				        </div>
+				    </div>
+				    <div class="col-md-4 serverequipment-oper-input">
+				       <input type="hidden" name="condOp.eqCode" value="LIKE" >
+				       <input class="form-control" type="text" id="serverequipmentqry-eqCode" name="condName.eqCode"  placeholder="{{serverEquipQryTip.eqCode}}"> 
+				    </div>
+				    <div class="col-md-3 serverequipment-oper-input">
+				        <button type="button" class="btn btn-primary " id = "serverequipment-search-btn">{{btn.queryBtn}}</button>	
+				        <button type="button" class="btn btn-primary" id="serverequipment-morequery-btn">{{btn.moreBtn}}</button>	
+				    </div>
+				</form>
+			</div>
+		</div>
+		<div class="row serverequipment-row" id="serverequipment-morequery-div" data-show="false">
+	        <div class="col-md-12">
+			        <form class="form-horizontal" id="serverequipment-QryformMore">
+			    	    <div class="col-md-6">
+				    		<div class="form-group">
+				    			<label class="col-md-3 control-label">{{serverEquipQryLabel.eqName}}:</label> 	    			
+							    <div class="input-group col-md-9">
+							        <div class="col-md-4 serverequipment-oper-input">
+						      	    	<select class="form-control" id="serverequipmentqry-eqName-oper" name="condOp.eqName">
+							                <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+							                <option value="LIKE">包含</option>
+							                <option value="NOT_LIKE">不包含</option>
+							            </select>
+					                </div>
+					                <div class="col-md-8">
+							          <input class="form-control" type="text"
+			    	    						id="serverequipmentqry-eqName" name="condName.eqName"  placeholder="{{serverEquipQryTip.eqName}}" >  
+			    	    			</div>       
+				    			</div>   
+			    	    	</div>
+			    	    </div>
+			    	    <div class="col-md-6">
+			    	    	<div class="form-group">
+			    	    		<label class="col-md-3 control-label">{{serverEquipQryLabel.chassisTypeId}}:</label>
+			    	    		<div class="input-group col-md-9">
+			    	    		    <div class="col-md-4 serverequipment-oper-input">
+			    	    				<select class="form-control" id="serverequipmentqry-chassisTypeId-oper" name="condOp.chassisTypeId">
+			    	    		            <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+			    	    		        </select>
+			    	    			</div>
+			    	    			<div class="col-md-8">
+			    	    		      <input class="form-control" type="text"
+			    	    						id="serverequipmentqry-chassisTypeId" name="condName.chassisTypeId"  placeholder="{{serverEquipQryTip.chassisTypeId}}" > 
+			    	    		   	</div>       
+			    	    		</div>
+			    	    	</div>
+			    	    </div>
+			    	    <div class="col-md-6">
+			    	    	<div class="form-group">
+			    	    		<label class="col-md-3 control-label">{{serverEquipQryLabel.productionMode}}:</label>
+			    	    		<div class="input-group col-md-9">
+			    	    		    <div class="col-md-4 serverequipment-oper-input">
+			    	    				<select class="form-control" id="serverequipmentqry-productionMode-oper" name="condOp.productionMode">
+			    	    		            <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+			    	    		        </select>
+			    	    			</div>
+			    	    			<div class="col-md-8">
+			    	    		      <input class="form-control" type="text"
+			    	    						id="serverequipmentqry-prodMode" name="condName.productionMode"  placeholder="{{serverEquipQryTip.productionMode}}" > 
+			    	    		   	</div>       
+			    	    		</div>
+			    	    	</div>
+			    	    </div>
+			    	    <div class="col-md-6">
+			    	    	<div class="form-group">
+			    	    		<label class="col-md-3 control-label">{{serverEquipQryLabel.businessType}}:</label>
+			    	    		<div class="input-group col-md-9">
+			    	    		    <div class="col-md-4 serverequipment-oper-input">
+			    	    				<select class="form-control" id="serverequipmentqry-businessType-oper" name="condOp.businessType">
+			    	    		            <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+			    	    		        </select>
+			    	    			</div>
+			    	    			<div class="col-md-8">
+			    	    		      <input class="form-control" type="text"
+			    	    						id="serverequipmentqry-businessType" name="condName.businessType"  placeholder="{{serverEquipQryTip.businessType}}" > 
+			    	    		   	</div>       
+			    	    		</div>
+			    	    	</div>
+			    	    </div>
+			    	    <div class="col-md-6">
+			    	    	<div class="form-group">
+			    	    		<label class="col-md-3 control-label">{{serverEquipQryLabel.projectCode}}:</label>
+			    	    		<div class="input-group col-md-9">
+			    	    		    <div class="col-md-4 serverequipment-oper-input">
+			    	    				<select class="form-control" id="serverequipmentqry-projectCode-oper" name="condOp.projectCode">
+			    	    		            <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+			    	    		        </select>
+			    	    			</div>
+			    	    			<div class="col-md-8">
+			    	    		      <input class="form-control" type="text"
+			    	    						id="serverequipmentqry-projectCode" name="condName.projectCode"  placeholder="{{serverEquipQryTip.projectCode}}" > 
+			    	    		   	</div>       
+			    	    		</div>
+			    	    	</div>
+			    	    </div>
+			    	    <div class="col-md-6">
+			    	    	<div class="form-group">
+			    	    		<label class="col-md-3 control-label">{{serverEquipQryLabel.engineeringCode}}:</label>
+			    	    		<div class="input-group col-md-9">
+			    	    		    <div class="col-md-4 serverequipment-oper-input">
+			    	    				<select class="form-control" id="serverequipmentqry-engineeringCode-oper" name="condOp.engineeringCode">
+			    	    		            <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+			    	    		        </select>
+			    	    			</div>
+			    	    			<div class="col-md-8">
+			    	    		      <input class="form-control" type="text"
+			    	    						id="serverequipmentqry-engineeringCode" name="condName.engineeringCode"  placeholder="{{serverEquipQryTip.engineeringCode}}" > 
+			    	    		   	</div>       
+			    	    		</div>
+			    	    	</div>
+			    	    </div>
+			    	    <div class="col-md-6">
+			    	    	<div class="form-group">
+			    	    		<label class="col-md-3 control-label">{{serverEquipQryLabel.vendor}}:</label>
+			    	    		<div class="input-group col-md-9">
+			    	    		    <div class="col-md-4 serverequipment-oper-input">
+			    	    				<select class="form-control" id="serverequipmentqry-vendor-oper" name="condOp.vendor">
+			    	    		            <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+			    	    		        </select>
+			    	    			</div>
+			    	    			<div class="col-md-8">
+			    	    		      <input class="form-control" type="text"
+			    	    						id="serverequipmentqry-vendor" name="condName.vendor"  placeholder="{{serverEquipQryTip.vendor}}" > 
+			    	    		   	</div>       
+			    	    		</div>
+			    	    	</div>
+			    	    </div>
+			    	    <div class="col-md-6">
+			    	    	<div class="form-group">
+			    	    		<label class="col-md-3 control-label">{{serverEquipQryLabel.model}}:</label>
+			    	    		<div class="input-group col-md-9">
+			    	    		    <div class="col-md-4 serverequipment-oper-input">
+			    	    				<select class="form-control" id="serverequipmentqry-model-oper" name="condOp.model">
+			    	    		            <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+			    	    		        </select>
+			    	    			</div>
+			    	    			<div class="col-md-8">
+			    	    		      <input class="form-control" type="text"
+			    	    						id="serverequipmentqry-model" name="condName.model"  placeholder="{{serverEquipQryTip.model}}" > 
+			    	    		   	</div>       
+			    	    		</div>
+			    	    	</div>
+			    	    </div>
+				    </form> 
+		    </div>
+		</div>
+		<div class="row serverequipment-row">
+	    	<div class="col-md-12">
+			   <div id="serverequipment-grid"></div>			
+		    </div>
+		</div>			
+	</div>
+</div>

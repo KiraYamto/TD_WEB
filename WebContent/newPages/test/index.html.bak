@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="css/rest.css" />
+<style type="text/css">
+body{ background:#f9f9f9;}
+.out{width:400px;height:auto;padding:5px 0;border-bottom:1px solid #ddd;}
+.out p.title{font-size:12px;line-height:20px;cursor:pointer;margin:5px 0 7px 0;}
+.out p.title img{margin-right:6px; vertical-align:middle;}
+ul{margin-left:22px; display:none;}
+.normal{color:#0099cd;}
+.success{color:#00cd32;}
+.error{color:#ff9900;}
+li{height:auto;background:url(images/line.png) left repeat-y;line-height:16px;font-size:12px;cursor:pointer;padding-bottom:5px;}
+span{margin:0 6px 0 0;}
+li p{line-height:16px;color:#000;margin:7px 0; text-indent:22px; display:none;}
+li img{margin-right:6px; vertical-align:middle;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var img = "images/icon_";   //图片路径
+	$("li").on("click",function(){
+	   var $this = $(this);
+	   var color = $this.attr("class");
+	   $this.find("p").slideToggle("fast",function(){
+		   if($this.find("p").is(":hidden")){
+		  	   $this.find("img").attr("src",img+color+"_open.png");	  
+		   }else{
+			   $this.find("img").attr("src",img+color+"_stop.png");	
+		   }
+	   });
+	});
+	
+	$(".title").on("click",function(){
+		var $this = $(this);
+	    var color = $this.find("span").attr("class");
+		$this.next("ul").slideToggle("fast",function(){
+		   if($this.next("ul").is(":hidden")){
+		  	   $this.find("img").attr("src",img+color+"_open.png");	  
+		   }else{
+			   $this.find("img").attr("src",img+color+"_stop.png");	
+		   }
+	   });
+    });
+});
+</script>
+</head>
+
+<body>
+<div class="out">
+   <p class="title"><img src="images/icon_error_stop.png" /><span class="error">[异常]</span>基本信息</p>
+   <ul style="display:block;">
+      <li class="success"><img src="images/icon_success_open.png" />检查是否有关联事件通知
+         <p>当前无此用户设备关联事件通知</p>
+      </li>
+      <li class="error"><img src="images/icon_error_open.png" /><span>[离线]</span>检查用户终端是否在线
+         <p>终端在线状态：离线</p>
+      </li>
+   </ul>
+</div>
+
+<div class="out">
+   <p class="title"><img src="images/icon_error_open.png" /><span class="error"></span>诊断信息</p>
+   <ul>
+      <li class="success"><img src="images/icon_success_open.png" />检查是否有关联事件通知
+         <p>当前无此用户设备关联事件通知</p>
+      </li>
+      <li class="error"><img src="images/icon_error_open.png" /><span>[离线]</span>检查用户终端是否在线
+         <p>终端在线状态：离线</p>
+      </li>
+   </ul>
+</div>
+</body>
+</html>

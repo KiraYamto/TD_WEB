@@ -1,0 +1,28 @@
+<div class="ui-dialog staffOrg-dialog">
+	<div class="modal-header">
+		<h4 class="modal-title">选择代理人</h4>
+	</div>
+	<div class="modal-body" style="overflow: auto">
+	
+		<div class="col-md-12">
+			<div class="input-group">
+				<span class="input-group-btn" style="width:25%">            
+					<select name="type" class="form-control isa_select_type">
+						<option value="STA">人员名称</option>
+						<option value="ORG" selected="selected">组织名称</option>
+					</select>
+				</span> 
+				<input type="text" class="form-control isa_select_content" placeholder="Search for...">
+				<span class="input-group-btn">
+					<button class="btn btn-default isa_select_qryBtn" type="button">查询</button>
+				</span>
+			</div>
+		</div>
+		
+		<div class="com-staffbyOrg-tree" id="com-orgJobStaff-tree"></div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-info com-choose-staff">选择</button>
+		<button type="button" class="btn btn-default com-close-staff">关闭</button>
+	</div>
+</div>

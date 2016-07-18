@@ -1,0 +1,23 @@
+	div#iom-service-rMenu {
+	position:absolute; 
+	visibility:hidden; 
+	top:0;
+	background-color: #E0E0E0;
+	text-align: left;
+	padding: 2px;
+	}
+	div#iom-service-rMenu ul {
+		margin: 0;
+		padding: 0;
+	}
+	div#iom-service-rMenu ul li{
+		margin: 1px 0;
+		padding: 0 5px;
+		cursor: pointer;
+		list-style: none outside none;
+		background-color: #E2E8EC;
+	}
+	
+	#iom-service-serviceCatalog .curSelectedNode{
+		background-color: #e2e8ec;
+	}

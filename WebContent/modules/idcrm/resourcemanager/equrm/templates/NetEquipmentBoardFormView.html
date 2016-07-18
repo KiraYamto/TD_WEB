@@ -1,0 +1,145 @@
+<div class="modal-header">
+    <h4 id="ne_equip_board_title" class="modal-title">设备信息</h4>
+</div>
+<div class="modal-body">    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">               
+                <div class="panel-body">
+                    <form class="form-horizontal" id="net-equip-board-form">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0 ">槽位序号：</label>
+								<input type="hidden" name="id">
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text" placeholder="槽位序号"  name="positionNum">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">槽位编号：</label>
+
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text" placeholder="槽位编号" name="seriesNo">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">槽位类型：</label>
+
+                                <div class="input-group col-md-8">
+                                	<input name="model" attrCode="EQU_RS_BOARD_MODEL" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                        	<div class="col-md-4">
+                        		<label class="col-md-4 control-label padding-0">是否母卡：</label>
+                        		<div class="input-group col-md-8">
+                        			<input id="isParentEquip" name="isParentEquip" />
+                        		</div>
+                        	</div>
+                        	<div class="col-md-4">
+                        		<label class="col-md-4 control-label padding-0">子槽位数：</label>
+                        		<div class="input-group col-md-8">
+                        			<input class="form-control" type="text" placeholder="子槽位数" name="childBoardNum">
+                        		</div>
+                        	</div>
+                            
+                        	<div class="col-md-3" style="padding-right:0px;">
+                                <label class="col-md-5 control-label padding-0">母卡：</label>
+
+                                <div class="input-group col-md-7">
+                                    <input class="form-control" type="text" placeholder="上级槽位"
+                                           id="net_equip_board_detail_parentName" disabled name="parentName">                                           
+									<input  type="hidden" id="net_equip_board_detail_parentId" name="parentId">
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+	                                <button type="button" class="btn btn-primary  "
+										id="equip-net-board-detail-parent-btn">选择</button>
+							</div>
+                        </div>
+                        
+                        <!-- 
+                        <div class="form-group">
+                            
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0 ">端口数：</label>
+
+                                <div class="input-group col-md-8">
+									 <input class="form-control" type="text" placeholder="端口数" name="portNum">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">母卡：</label>
+
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text" placeholder="上级板卡 "
+                                           id="net_equip_board_detail_parentName" disabled name="parentName">                                           
+									<input  type="hidden" id="net_equip_board_detail_parentId" name="parentId">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-primary" id="equip-net-board-detail-parent-btn">选择</button>
+                            </div>
+                        </div>   -->                       
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-md-1 control-label padding-0">备注：</label>
+                                <div class="input-group col-md-11">
+                                    <textarea class="form-control" type="text" placeholder="备注" id="net_equip_notes" name="comments"
+                                              rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="equipBoardPortDiv">
+                        <hr>
+                        
+                        <div class="form-group">
+                        	<div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0 ">端口数：</label>
+
+                                <div class="input-group col-md-8">
+									 <input class="form-control" type="text" placeholder="端口数" name="portNum">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0 ">开始序号：</label>
+
+                                <div class="input-group col-md-8">
+									 <input class="form-control" type="text" placeholder="开始序号" name="portNumStartPos">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                        		<label class="col-md-4 control-label padding-0">共享方式：</label>
+                        		<div class="input-group col-md-8">
+                        			<input id="portShareStyle" name="portShareStyle" attrCode="ALLOCATION_TYPE"/>
+                        		</div>
+                        	</div>
+                        </div>
+                        
+                        <div class="form-group">
+                        	<div class="col-md-4">
+                        		<label class="col-md-4 control-label padding-0">速率：</label>
+                        		<div class="input-group col-md-8">
+                        			<input id="portRate" name="portRate" attrCode="RATE" />
+                        		</div>
+                        	</div>
+                        </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" id="save-button">确定</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>
+</div>

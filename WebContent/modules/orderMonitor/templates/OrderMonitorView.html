@@ -1,0 +1,84 @@
+<div class="col-md-12">
+	<div class="row">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">查询条件</h3>
+					</div>
+					<div class="panel-body">
+						<form class="form-horizontal" id="orderMonitor-Qryform">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="" >定单编码:</label>
+										<div class="input-group col-md-8">
+											<div class="col-md-9">
+												<input class="form-control" type="text"
+													   id="orderMonitor-orderCode" name="orderMonitor-orderCode"  placeholder="{{dataCenterQry.name}}" >
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="" >客户订单编码:</label>
+										<div class="input-group col-md-8">
+											<div class="col-md-9">
+												<input class="form-control" type="text"
+													   id="orderMonitor-custOrderCode" name="orderMonitor-custOrderCode"  placeholder="{{dataCenterQry.name}}" >
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="btn-group" style="margin-right: 15px">
+
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="btn-group" style="margin-right: 15px">
+										<button type="button" class="btn btn-primary pull-left" id = "orderMonitor-search-btn">查询</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="panel panel-default" style="border:0px;">
+						<div class="col-md-12">
+							<div class="panel-heading" style="height:30px;border:0px;">
+								<p class="panel-title">定单列表</p>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div id="orderMonitor-order-grid"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12" style="padding: 5px;">
+				<div class="btn-group" style="margin-left: 15px">
+					<button type="button" class="btn btn-primary pull-left" id = "orderMonitor-workOrder-feedback-btn">回单</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="orderMonitor-workOrder-grid"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+
+.isa-btn-row {
+	margin-bottom: 20px;
+} 
+.isa-btn-row input {
+	border-radius: 4px;
+}
+
+.isa-advSearchFields-row {
+	margin-right: 5px;
+}
+
+#isaQry-panel-body .btn {
+    padding: 3px 8px;
+    font-size: 13px;
+    line-height: 1.4285;
+    border-radius: 4px;
+} 
+#isa-BtnDiv button {
+	margin-right: 3px;
+}
+#isa_fault_query_queryBtn {
+	margin-left: -20px;
+}
+#isa_sto_ope_qry_advSearchBtn {
+	margin-left: 10px;
+}
+#isa_fault_query_orderCode {
+	margin-left: 15px;
+}
+
+
+#isa_fault_query_queryGrid * {
+	text-align: center;
+}

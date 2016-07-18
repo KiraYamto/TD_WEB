@@ -1,0 +1,52 @@
+<div class="col-md-12">
+
+    <div class="row"> 
+        <div class="col-md-12" style="padding: 5px;">
+        <div class="row">
+              <div class="col-md-4" style="padding: 5px;">
+                  <div class="btn-group" style="margin-left: 15px">
+                      <button type="button" class="btn btn-primary pull-left" id="cust-resource-btn" >客户资源详情</button>
+                      <button type="button" class="btn btn-primary pull-left" id="cust-add-btn"style="margin-left: 5px">新增</button>
+                      <button type="button" class="btn btn-primary pull-left" id="cust-mod-btn" style="margin-left: 5px">修改</button>
+                      <button type="button" class="btn btn-primary pull-left" id="cust-del-btn" style="margin-left: 5px">删除</button>
+                  </div>
+              </div>
+              <div class="col-md-8" style="padding: 5px;">
+              	   <input id="cust_name" value="" name="cust_name" placeholder="请输入客户名称"/>
+              	   <input id="cust_code" value="" name="cust_code"  placeholder="请输入客户编码"/>
+                  <div class="btn-group" style="margin-left: 15px">
+                      <button type="button" class="btn btn-primary pull-left" id="cust-query-btn" style="margin-left: 5px">查询</button>
+                      <button type="button" class="btn btn-primary pull-left" id="cust-more-btn" style="margin-left: 5px">更多查询</button>
+                  </div>
+              </div>
+        </div>
+        <div class="row" style="display:none" id="cust_more_div">
+         <div class="col-md-12">        
+			 <form id="cust-query-cond">
+		            <div class="row">
+		                <div class="col-md-2 equip-qry-title">
+		                    <span>客户类型：</span>
+		                </div>
+		                <div class="col-md-2" style="padding: 5px;">		                    
+		                    <input id="cust_type"   attrCode='CUST_TYPE' name="custType" /> 
+		                </div>
+		               <div class="col-md-2 equip-qry-title">
+		                    <span>客户等级：</span>
+		                </div>
+		                <div class="col-md-2" style="padding: 5px;">		                  
+		                    <input id="cust_grade_id" attrCode='CUST_GRADE' name="custGradeId" />
+		                </div>
+		                <div class="col-md-4" style="padding: 5px;">		
+		                </div>
+		            </div>	           
+	            </form>
+			  </div>
+		</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="cust-grid"></div>
+            </div>
+         </div>
+        </div>
+  </div>
+</div>

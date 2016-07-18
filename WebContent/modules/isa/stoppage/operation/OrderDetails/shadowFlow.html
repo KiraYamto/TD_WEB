@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>全流程监控</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<script type="text/javascript" src="../../../../iom/cloudiom/flowMonitor/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../../../iom/cloudiom/flowMonitor/js/raphael-min.js"></script>
+    <script type="text/javascript" src="../../../../iom/cloudiom/flowMonitor/js/jquery.color.js"></script>
+    <script type="text/javascript" src="../../../../iom/cloudiom/flowMonitor/js/jquery.zflow.js"></script>
+    <script type="text/javascript" src="../../../../iom/cloudiom/flowMonitor/js/jquery.zflow.node.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../iom/cloudiom/flowMonitor/js/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../iom/cloudiom/flowMonitor/js/icon.css">
+	<link href="../../../../iom/cloudiom/flowMonitor/js/showLoading.css" rel="stylesheet" media="screen" /> 
+	<script type="text/javascript" src="../../../../iom/cloudiom/flowMonitor/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../../../../iom/cloudiom/flowMonitor/js/jquery.showLoading.js"></script>
+	<script type="text/javascript" src="../../../../iom/cloudiom/flowMonitor/js/CJL.0.1.min.js"></script>
+	<script type="text/javascript" src="../../../../iom/cloudiom/flowMonitor/js/AlertBox.js"></script>
+    <style type="text/css">
+	   *{
+	   		font-family:sans-serif;
+	   }
+        tspan,div{
+            -moz-user-select: none; /*火狐*/
+            -webkit-user-select: none;  /*webkit浏览器*/
+            -ms-user-select: none;   /*IE10*/
+            -khtml-user-select: none; /*早期浏览器*/
+            user-select: none;
+        }
+       	.direction .direction-node{
+        	cursor:pointer;
+        	float:left;
+        	padding:5px;
+        	margin:5px;
+        }
+        .direction .direction-node:hover{
+        	background-color: #e6d67c;
+        }
+        .direction .node-checked
+        {
+        	background-color:#b7f0e7;
+        }
+        .toolbar .tool-node{
+        	cursor:pointer;
+        	float:left;
+        	padding:5px;
+        	margin:5px;
+        }
+        .toolbar .tool-node:hover{
+        	background-color: #e6d67c;
+        }
+        .toolbar .node-checked
+        {
+        	background-color:#b7f0e7;
+        }
+        #def,.toolbar,.direction
+        {
+        	clear:both;
+        }
+        .title
+        {
+        	font-size:18px;
+        	font-weight:bold;
+        }
+		.lightbox{
+			visibility: hidden;
+			  position: absolute; 
+			  left: 50%;
+			  z-index: 999;
+			  margin-left: -127px;
+			  padding: 10px;
+			  border: 2px solid #ccc;
+			  opacity: .9;
+			  background-color: #ddd;                     
+			  background-image: -webkit-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+			  background-image: -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+			  background-image: -ms-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+			  background-image: -o-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+			  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));  
+			  -moz-border-radius: 4px;
+			  border-radius: 4px;  
+			  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+			  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+			  box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;  
+			  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+			width:350px;
+			filter:alpha(opacity=85);
+			opacity: 0.85;
+			border:1px solid #A5CFE9;
+			line-height:20px;
+			display:none; 
+			margin:0;
+			border-color: #59add4;
+		    background-color: #EAF2FD;
+			border-top-color: #EAF2FD;
+			border-top-color: #59add4;
+
+		}
+		.lightbox dt{background:#D5EBF9;padding:5px;}
+		.lightbox dd{ padding:10px; margin:0;}
+		.poplayer{
+			position: fixed; right: 0px; bottom:0px; z-index: 10001;border: 1px solid blue;
+		}
+		
+		
+		.poplayer h2{
+			width:240px;
+			height:25px;
+    		line-height: 25px;
+    		padding-left: 10px;
+    		font-size: 12px;
+    		color: #333;
+    		background: url(../webos/images/title_bg.jpg) repeat-x;
+    		border-bottom: 1px solid #aaaaaa;
+    		position: relative;
+    		margin-bottom:0px;
+    		margin-top:0px;
+		}
+		
+		.poplayer .close {
+		    width: 21px;
+		    height: 20px;
+		    background: url(../webos/images/close.gif) no-repeat 0 bottom;
+		    position: absolute;
+		    top: 2px;
+		    right: 3px;
+		}
+		
+		.poplayer .close:hover { background: url(../webos/images/close.gif) no-repeat 0 0; }
+		.poplayer .content {
+		    height: 150px;
+		    width: 250px;
+		    overflow: hidden;
+		    font-size: 14px;
+		    line-height: 18px;
+		    color: #666;
+		    background-color: #ECF5FF;
+		}
+
+    </style>
+</head>
+<body style="background:#fafafa;" class="easyui-layout">
+	<div data-options="region:'center'" title="透明化视图" style="padding:10px;width:90%;">
+		<div>
+			
+			<div id="state" style="height:50px;float:right;width:550px;"></div>
+		</div>
+		<div style = "float:center;width:90%;">&nbsp;</div>
+		<div id = "shadowFlowMainPanel"  style = "float:center;width:90%;">
+			
+		</div>
+		<div style = "float:left;width:100%;">&nbsp;</div>
+	</div>
+	<!-- <div id="tacheGridPanel" title = '流程监控' data-options="region:'south',split:true" style="height:300px;padding:5px;">
+		<table id="tacheGrid"></table>
+	</div> -->
+	<dl id="floatDiv" class="lightbox" style="top:10%;left:5%;">
+		<dd>
+			<span id = "floatDivTitleSpan"></span>
+		</dd>
+	</dl>
+	<div id="poplayer" class="poplayer" style="display:none; ">
+		<h2><b id="poplayerTitle">超时预警</b>
+		<a id="poplayerClose" class="close" href="#"></a>
+		</h2>
+		<div id="poplayerContent" class="content">
+			<div  style="font-size: 12px; font-family: 宋体;color:red;text-indent:2em;">
+				<p id="poplayerWrap" style="text-indent:2em;margin-top;"></p>
+			</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+
+
+	function ajax(bean, method) {
+		/* 调用bean的某个方法
+		 * bean
+		 * method
+		 * p0...px
+		 */
+		var param = {};
+		param.bean = bean;
+		param.method = method;
+
+		for ( var i = 2; i < arguments.length; i++) {
+			param["p" + (i - 2).toString()] = JSON.stringify(arguments[i]);
+		}
+		return $.post("../../../../../callRemoteFunction/exec", param);
+
+	}
+
+	function getQueryString(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null)
+			return decodeURI(r[2]);
+		return null;
+	}
+
+	var tacheGridData = null;
+	var processInstanceId = getQueryString("processInstanceId");
+
+	//描绘图例        	
+	$(function() {
+		if (!processInstanceId) {
+			return;
+		}
+		
+		$.zflow.initState($("#state"));
+		ajax('isaFlowDubboServiceInf', 'getFlowGraphXml', processInstanceId)
+				 .done(function(ret) {
+					ret = JSON.parse(ret);
+					var xml = ret.flowXml;
+					$('#shadowFlowMainPanel').zflow(xml, {
+						mode : "inst",
+						direction : "horizontal"
+					}, {
+						nodeWidth : 35,//节点的宽度-----垂直排版时生效
+						nodeHeight : 35,//节点的高度-----水平排版时生效
+						space : 90,//节点之间连线的长度
+						offsetX : 30,//整个流程图的水平偏移
+						offsetY : 20,//整个流程图的垂直偏移
+						hLine : 10
+					//跳转线条之间的高度间隔
+					});
+					
+					//tacheGridData = ret.rowList;
+					//加载表格数据
+					//$('#tacheGrid').datagrid('loadData', tacheGridData);
+				})
+				.always(function(ret) {
+					$('body').layout();
+					$('body').hideLoading();
+				});
+				
+		//表格渲染
+		
+		//重新设置南部的高度
+		$('body').layout('panel', 'south').panel(
+				"resize",
+				{
+					height : $(document).height()
+							- $('#shadowFlowMainPanel').height()
+							- $('#circuitInfo').height() - 120 * 2
+				});
+		$('body').layout();
+		//$('body').showLoading();
+	});
+
+	//浮动
+	var floatDiv = new AlertBox("floatDiv"), lock = false;
+</script>

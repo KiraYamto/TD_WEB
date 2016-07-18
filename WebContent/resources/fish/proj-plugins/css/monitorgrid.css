@@ -1,0 +1,109 @@
+@CHARSET "UTF-8";
+
+
+.panel-header {
+  background-color: #F2F2F2;
+  background: -webkit-linear-gradient(top,#ffffff 0,#F2F2F2 100%);
+  background: -moz-linear-gradient(top,#ffffff 0,#F2F2F2 100%);
+  background: -o-linear-gradient(top,#ffffff 0,#F2F2F2 100%);
+  background: linear-gradient(to bottom,#ffffff 0,#F2F2F2 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#F2F2F2,GradientType=0);
+}
+
+.grid-wrap{
+	overflow-y:hidden;
+}
+
+.div-grid {
+	overflow-y:hidden;
+}
+
+.div-grid .head-row{
+	height:25px;
+	border-top:1px solid #D4D4D4;
+	border-bottom:1px solid #E6E6E6;
+	background-color: #F2F2F2;
+	background: -webkit-linear-gradient(top, #ffffff 0, #F2F2F2 100%);
+	background: -moz-linear-gradient(top, #ffffff 0, #F2F2F2 100%);
+	background: -o-linear-gradient(top, #ffffff 0, #F2F2F2 100%);
+	background: linear-gradient(to bottom, #ffffff 0, #F2F2F2 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#F2F2F2, GradientType=0);
+}
+
+.div-grid .head-row .head-cell,
+.div-grid .grid-cell {
+	float: left;
+	text-align: center;
+	font-size:12px;
+	font-family: 宋体;
+	font-weight:bold;
+	margin-top:1px;
+	border-right: 1px dotted #cccccc;
+	/*border:1px solid red;*/
+	border-collapse:separate;
+	height:25px;
+	line-height:25px;
+	vertical-align:middle;
+	padding:0px 2px 0 2px;
+}
+
+.div-grid .grid-cell{
+	font-weight:normal;
+	text-align:left;
+
+/* 	padding-top:6px;
+	overflow:hidden; */
+  margin: 0;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  height: 25px;
+  	line-height:25px;
+  font-size: 12px;	
+}
+
+
+.div-grid .grid-body{
+	margin: 0;
+  	padding: 0;
+  	overflow-y: auto;
+  	overflow-x:hidden;
+  	zoom: 1;
+  	border-bottom:1px solid #D4D4D4;
+}
+
+.div-grid .grid-row{
+	height:25px;
+	border-bottom: 1px dotted #cccccc;
+}
+
+
+.div-grid .grid-body .grid-row-click{
+	/*background-color: #F5F5F5;*/
+	background-color: #FFFF7F;
+}
+
+.toolbar-alarm-level-label{
+	float: left;
+	width: 60px;
+	height: 20px;
+	color: rgb(0, 0, 0);
+	font-size: 12px;
+	margin:4px 6px 0 0px;
+	padding-top:3px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.alarm-level-opacity{
+	filter:alpha(opacity=20); -moz-opacity:0.2; -khtml-opacity: 0.2; opacity: 0.2;
+	
+}
+
+.alarm-level-emergency{background-color:#FF0000;} /*紧急告警背景颜色*/
+.alarm-level-important{background-color: #FFA500;} /*重要告警背景颜色*/
+.alarm-level-minor{background-color:#FFFF00;} 	/*次要告警背景颜色*/
+.alarm-level-prompt{background-color:#00FFFF;} 	/*提示告警背景颜色*/
+.alarm-level-unknow{background-color: #800080;} 	/*未知告警背景颜色*/

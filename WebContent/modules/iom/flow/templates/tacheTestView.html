@@ -1,0 +1,58 @@
+
+<div class="modal-header">
+	<h4 class="modal-title" >入库分册测试</h4>
+</div>
+<div class="modal-body">
+	<div class="row"><div class="col-md-12">
+	<div id="iom-flowTache-tabs" class="ui-tabs ui-tabs ui-tabs-collapsible">
+		<div id="iom-flowTache-tabs-a" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+			<div class="row">
+					<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="iom-flowTestTransData-form">  
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">BSS工单报文：</label>
+										<div class="input-group col-md-10">
+											<textarea name="iom-bssOrderInfo" id="iom-bssOrderInfo" class="form-control" rows="10" data-rule="required;"></textarea>
+										</div>
+									</div>
+								</div> 
+								<div class="modal-footer">
+								<div class="col-md-12">
+									<button type="button" style="margin-left: 350px;" class="btn btn-success" id="iom-testBssOrderInfo-trans-button">转换报文</button>
+								</div>
+								</div>
+							</form>	
+							<form class="form-horizontal" id="iom-flowTestSaveData-form">  	
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">入库内部报文：</label>
+										<div class="input-group col-md-10">
+											<textarea name="iom-dataInfo" id="iom-dataInfo" class="form-control" rows="10" data-rule="required;"></textarea>
+										</div>
+									</div>
+								</div> 
+								 
+							</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		</div>
+	</div>
+		<div class="modal-footer">
+		<div class="row"><div class="col-md-12">
+			<button type="button" class="btn btn-success" id="iom-flowTacheAdd-save-button">入库</button>
+			<button type="button" class="btn btn-success" id="iom-flowTacheAdd-cancel-button" data-dismiss="modal">取消</button>
+		</div></div>
+		</div>
+</div>

@@ -1,0 +1,104 @@
+<div class="container col-md-12">
+	<div class="row">
+		<div id="isaIndex" class="col-md-12">
+
+			<div id="isaIndex-leftContainer" class="col-md-6">
+				<div id="isaIndex-leftPanel">
+					<div class="isaIndex-panelHeader col-md-2">在途单</div>
+					<div class="col-md-10" id="isaIndex-radioBtns">
+						<label class="radio-inline">
+	                    	<input type="radio" name="isaIndex-radio" class="isaIndex-radio" value="operRadio" checked="true">
+	                     	运营故障单
+	                    </label>
+	                    <label class="radio-inline">
+	                    	<input type="radio" name="isaIndex-radio" class="isaIndex-radio" value="custRadio">
+	                     	客户故障单
+	                    </label>
+					</div>
+					
+					<div id="isaIndex-statSquareGroup" class="row">
+						<div class="col-md-12 isaIndex-100Height">
+							<div id="isaIndex-statSquareNormal" class="isaIndex-statSquare col-md-3">
+								<h5>正常</h5>
+								<div id="isaIndex-statSquareNormalValue" class="isaIndex-statSquareValue">0</div>
+							</div>
+							<div id="isaIndex-statSquareAlert" class="isaIndex-statSquare col-md-3">
+								<h5>预警</h5>
+								<div id="isaIndex-statSquareAlertValue" class="isaIndex-statSquareValue">0</div>
+							</div>
+							<div id="isaIndex-statSquareOvertime" class="isaIndex-statSquare col-md-3">
+								<h5>超时</h5>
+								<div id="isaIndex-statSquareOvertimeValue" class="isaIndex-statSquareValue">0</div>
+							</div>
+							<div id="isaIndex-statSquareSevereOT" class="isaIndex-statSquare col-md-3">
+								<h5>严重超时</h5>
+								<div id="isaIndex-statSquareSevereOTValue" class="isaIndex-statSquareValue">0</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="isaIndex-pieChartGroup">
+						<div id="isaIndex-planOrder" class="col-md-8">
+							<div class="row">
+								<div class="isaIndex-panelHeader col-md-12">作业计划任务单</div>
+							</div>
+							<div class="isaIndex-pieChartRow row">
+								<div id="isaIndex-planOrderCompleteChart" class="col-md-6"></div>
+								<div id="isaIndex-planOrderNotCompleteChart" class="col-md-6"></div>
+							</div>
+						</div>
+						<div id="isaIndex-maintenanceOrder" class="col-md-4">
+							<div class="row">
+								<div class="isaIndex-panelHeader col-md-12">运维任务单</div>
+							</div>
+							<div class="isaIndex-pieChartRow row">
+								<div id="isaIndex-maintenanceOrderChart" class="col-md-12"></div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="isaIndex-lineChartGroup">
+						<div class="isaIndex-100Height col-md-12">
+							<div class="isaIndex-100Height row">
+								<div id="isaIndex-patrolCheckChart" class="col-md-12"></div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div id="isaIndex-topRightContainer" class="col-md-6">
+				<div id="isaIndex-topRightPanel">
+					<div class="isaIndex-panelHeader" class="col-md-12">常用功能</div>
+					<div id="isaIndex-btnGroup" class="col-md-12">
+						<div class="isaIndex-btn col-md-3">
+							<span target="#/isaManagement/isaStoppage/isaStoppageOperationArtiAccept" class="glyphicon glyphicon-inbox isaIndex-btnIcon"></span>
+							<span>运营故障受理</span>
+						</div>
+						<div class="isaIndex-btn col-md-3">
+							<span target="#/isaManagement/isaStoppage/isa" class="glyphicon glyphicon-wrench isaIndex-btnIcon"></span>
+							<span>故障待办</span>
+						</div>
+						<div class="isaIndex-btn col-md-3">
+							<span target="#/isaManagement/isaStoppage/isaMonitor" class="glyphicon glyphicon-list isaIndex-btnIcon"></span>
+							<span>故障单监控</span>
+						</div>
+						<div class="isaIndex-btn col-md-3">
+							<span target="#/isaManagement/isaStoppage/isaFaultQuery" class="glyphicon glyphicon-search isaIndex-btnIcon"></span>
+							<span>故障单查询</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="isaIndex-bottomRightContainer" class="col-md-6">
+				<div id="isaIndex-bottomRightPanel">
+					<div class="isaIndex-panelHeader">即时待办信息</div>
+					<div id="isaIndex-grid"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

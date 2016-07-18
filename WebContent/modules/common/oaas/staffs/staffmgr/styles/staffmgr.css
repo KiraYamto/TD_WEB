@@ -1,0 +1,30 @@
+#com-staffmgr-staffjoborg-joborg-joblist .close{
+	
+	position: absolute;right: 5px;top: 20px;cusor:pointer;
+	opacity: 0.5;
+}
+
+#com-staffmgr-staffjoborg-joborg-joblist .close:hover{
+	
+	opacity: 1;
+	
+}
+
+
+#com-staffmgr-staffjoborg-joborg-joblist .list-group-item.active .badge{
+	background-color: #777777;color: #ffffff;
+	margin-right: 5px;
+	
+}
+
+#com-staffmgr-staffjoborg-joborg-joblist .list-group-item:hover{
+	cursor:pointer;
+}
+
+#com-staffmgr-staffjoborg-joborg-joblist .list-group-item .isdefault{
+	display:none;
+}
+
+#com-staffmgr-staffjoborg-joborg-joblist .list-group-item.active .isdefault{
+	display: inline-block;
+}

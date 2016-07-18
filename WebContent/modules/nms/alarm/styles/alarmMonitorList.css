@@ -1,0 +1,72 @@
+.search_form_label{
+	padding-right:0px;
+}
+
+.search_form_field{
+	padding-left:0px;
+}
+
+
+.normal_font{
+	font-size: 12px; 
+	font-weight:normal;
+}
+
+.form-separation{
+	margin-top:10px;
+}
+
+
+.btn-separator {
+	float: left;
+	height: 23px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #fff;
+	margin: 4px 1px 0px 6px;
+}
+
+.toolbar-label {
+	font-size: 12px;
+	float: left;
+	height: 26px;
+	margin: 3px 3px 1px 3px;
+	padding: 3px 5px 1px 5px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #D4D1D1;
+	vertical-align: center;
+	text-align: center;
+	width: auto;
+	cursor: pointer;
+}
+
+.toolbar-label-select-bg {
+	color: #FFFFFF;
+	background-color: #72b4fa;
+}
+
+.toolbar-label-normar-bg {
+	color: #666666;
+	background-color: #F5F5F5;
+}
+
+.toolbar-alarm-level-label{
+	float: left;
+	width: 60px;
+	height: 23px;
+	color: rgb(0, 0, 0);
+	font-size: 12px;
+	margin:4px 6px 0 0px;
+	padding-top:4px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.alarm-level-opacity{
+	filter:alpha(opacity=20); -moz-opacity:0.2; -khtml-opacity: 0.2; opacity: 0.2;
+	
+}
+.alarm-level-emergency{background-color:#FF0000;} /*紧急告警背景颜色*/
+.alarm-level-important{background-color: #FFA500;} /*重要告警背景颜色*/
+.alarm-level-minor{background-color:#FFFF00;} 	/*次要告警背景颜色*/
+.alarm-level-prompt{background-color:#00FFFF;} 	/*提示告警背景颜色*/
+.alarm-level-unknow{background-color: #800080;} 	/*未知告警背景颜色*/

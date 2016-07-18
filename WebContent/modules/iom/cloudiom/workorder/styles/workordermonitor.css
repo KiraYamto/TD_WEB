@@ -1,0 +1,65 @@
+.iomWorkOrderMonitor-btn-row {
+	margin-bottom: 20px;
+}
+.iomWorkOrderMonitor-advSearchFields-row {
+	margin-right: 5px;
+}
+#iomWorkOrderMonitor-panel-body .btn {
+    padding: 3px 8px;
+    font-size: 13px;
+    line-height: 1.4285;
+    border-radius: 4px;
+}
+#iomWorkOrderMonitor-operBtnDiv button {
+	margin-right: 3px;
+}
+#iomWorkOrderMonitor-searchBtn {
+	margin-left: -20px;
+}
+#iomWorkOrderMonitor-advSearchBtn {
+	margin-left: 10px;
+}
+#iomWorkOrderMonitor-workOrderCode-container {
+	margin-left: 15px;
+}
+.iomWorkOrderMonitor-btn-row input {
+	border-radius: 4px;
+}
+.iomWorkOrderMonitor-severeOT-icon {
+	margin-left: 20px;
+	color: #ea421b;
+}
+.iomWorkOrderMonitor-overtime-icon {
+	margin-left: 5px;
+	color: #dbaa00;
+}
+.iomWorkOrderMonitor-alert-icon {
+	margin-left: 5px;
+	color: #abca02;
+}
+.iomWorkOrderMonitor-normal-icon {
+	margin-left: 5px;
+	color: #0085ff;
+}
+#iomWorkOrderMonitor-grid {
+	margin-top: -28px;
+}
+#iomWorkOrderMonitor-grid * {
+	text-align: center;
+}
+
+
+/* 统计图表 */
+.iomWorkOrderMonitor-100Height {
+	height: 100%;
+}
+#iomWorkOrderMonitor-charts {
+	border: 1px solid #e3e3e3;
+	height: 32%;
+	margin-bottom:-1px;
+}
+#iomWorkOrderMonitor-productBarChart,#iomWorkOrderMonitor-notFinishedPieChart,#iomWorkOrderMonitor-finishedPieChart {
+	padding-left: 0px;
+	padding-right: 0px;
+	height: 100%;
+}

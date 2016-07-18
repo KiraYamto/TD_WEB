@@ -1,0 +1,143 @@
+<div class="modal-header">
+    <h4 class="modal-title">2D展示</h4>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal" id="frame-show2d">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="framediv" style="margin-left: 10px;">
+                    <canvas width="300" height="510" id="canvas"
+                            style=" background-color:white; border:1px solid #444;">
+                    </canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">所在机房：</label>
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" name="dcName">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">行列号：</label>
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" name="rowColId">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">机柜名称：</label>
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" name="name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">机柜编号：</label>
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" name="code">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">生产厂商：</label>
+                    <div class="input-group col-md-8">
+                        <select id="frame_vendor" name="vendor" class="form-control">
+                            <option value=""></option>
+                            <option value="418001">中兴</option>
+                            <option value="418002">华三</option>
+                            <option value="418003">华为</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">出厂日期：</label>
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" name="productionDate">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">型号：</label>
+                    <div class="input-group col-md-8">
+                        <select id="frame_model" name="model" class="form-control">
+                            <option value="419001">NE5000E</option>
+                            <option value="419002">S12510</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">功率：</label>
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" name="unitPowerName">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">U位数：</label>
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" name="unitNum">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">状态：</label>
+                    <div class="input-group col-md-8">
+                        <select class="form-control" type="text" name="state">
+                            <option value="101001">新建</option>
+                            <option value="101002">在网</option>
+                            <option value="101003">故障</option>
+                            <option value="101004">封网</option>
+                            <option value="101005">退网</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">租用状态：</label>
+                    <div class="input-group col-md-8">
+                        <select class="form-control" type="text" name="rentingMode">
+                            <option value="408001">出租</option>
+                            <option value="408002">自用</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">分配状态：</label>
+                    <div class="input-group col-md-8">
+                        <select class="form-control" type="text" name="allocationStateId">
+                            <option value=""></option>
+                            <option value="417001">整柜分配</option>
+                            <option value="417002">机位分配</option>
+                            <option value="417003">空闲</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">整租客户：</label>
+                    <div class="input-group col-md-8">
+                        <input class="form-control" type="text" name="fusecus">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">备注：</label>
+                    <div class="input-group col-md-8">
+                        <textarea class="form-control" type="text" name="notes" rows="4"></textarea>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+</div>

@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+
+/* @import "base.css"; */
+body{
+	color:#333;
+/* 	font-family:"Microsoft YaHei" ;
+ */	font-size:12px;
+}
+table.resourcesInfo{
+	width: 99.8%;
+	background-color: #DDD;
+	margin:auto;
+	margin-top: 0px;
+	color:#333;
+	font-family:"Microsoft YaHei" ;
+	font-size:12px;
+	height: auto;
+	border-collapse:collapse;
+	border-spacing:0;
+	/* overflow:hidden; */
+}
+table.resourcesInfo tr.resourcesRow{
+	height:28px;
+}
+
+table.resourcesInfo td.expandBtn{
+	width: 30px;
+	border: 1px #dcdcdc solid;
+}
+table.resourcesInfo td.expandBtn div.expandBtnIcon{
+	background-image: url(../images/button-shrink.png);
+	width: 12px;
+	height: 12px;
+	margin-left:9px;
+	cursor:pointer;
+}
+
+table.resourcesInfo td.resourcesName{
+	width:135px;
+	text-align:center;
+	border: 1px #dcdcdc solid;
+}
+
+table.resourcesInfo td.resourcesTitle{
+	width: 150px;
+	text-align:right;
+	border: 1px #dcdcdc solid;
+	background-color: #DDD;
+	
+}
+
+table.resourcesInfo td.resourcesContent{
+	width: 237px;
+	text-align: left;
+	text-indent: 5px;
+	border: 1px #dcdcdc solid;
+	color:#808080;
+	word-break:break-all;
+}
+
+
+table.resourcesInfo tr.serviceTitle td{
+	height: 32px;
+	border:1px solid #dcdcdc;
+	background-color: #f1f1f1;
+	text-align: left;
+	text-indent:10px;
+	font-size: 14px;
+	color: #808080;
+}
+

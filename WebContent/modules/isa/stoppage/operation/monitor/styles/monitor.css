@@ -1,0 +1,53 @@
+.monitor-normal-icon {
+	margin-left: 5px;
+	color: #0085FF;
+}
+.monitor-warming-icon {
+	margin-left: 5px;
+	color: #ABCA02;
+}
+.monitor-overtime-icon {
+	margin-left: 5px;
+	color: #DBAA00;
+}
+.monitor-timeout-icon {
+	margin-left: 20px;
+	color: #EA421B;
+}
+
+
+
+.isa-btn-row {
+	margin-bottom: 20px;
+} 
+.isa-btn-row input {
+	border-radius: 4px;
+}
+
+.isa-advSearchFields-row {
+	margin-right: 5px;
+}
+
+#isaMon-panel-body .btn {
+    padding: 3px 8px;
+    font-size: 13px;
+    line-height: 1.4285;
+    border-radius: 4px;
+} 
+#isa-BtnDiv button {
+	margin-right: 3px;
+}
+#isa-sto-ope-mon-submitBtn {
+	margin-left: -20px;
+}
+#isa_sto_ope_mon_advSearchBtn {
+	margin-left: 10px;
+}
+#operation_fault_number {
+	margin-left: 15px;
+}
+
+
+#isa_sto_ope_mon_monitorGrid * {
+	text-align: center;
+}

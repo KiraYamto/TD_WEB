@@ -1,0 +1,51 @@
+<div class="modal-header">
+	<h4 class="modal-title" id="ip_cust_title" >客户选择</h4>
+</div>
+<div class="col-md-12">
+    <div class="row"> 
+        <div class="col-md-12" style="padding: 5px;">
+        <div class="row">
+              <div class="col-md-8" style="padding: 5px;">
+              	   &nbsp;&nbsp;&nbsp;<input id="ipmage_cust_name" value="" name="cust_name" placeholder="请输入客户名称"/>
+              	   <input id="ipmage_cust_code" value="" name="cust_code"  placeholder="请输入客户编码"/>
+                  <div class="btn-group" style="margin-left: 15px">
+                      <button type="button" class="btn btn-primary pull-left" id="ipmage-cust-query-btn" style="margin-left: 5px">查询</button>
+                      <button type="button" class="btn btn-primary pull-left" id="ipmage-cust-more-btn" style="margin-left: 5px">更多查询</button>
+                  </div>
+              </div>
+        </div>
+        <div class="row" style="display:none" id="cust_more_div">
+         <div class="col-md-12">        
+			 <form id="cust-query-cond">
+		            <div class="row">
+		                <div class="col-md-2 equip-qry-title">
+		                    <span>客户类型：</span>
+		                </div>
+		                <div class="col-md-2" style="padding: 5px;">		                    
+		                    <input id="ipmage_cust_type"   attrCode='CUST_TYPE' name="custType" /> 
+		                </div>
+		               <div class="col-md-2 equip-qry-title">
+		                    <span>客户等级：</span>
+		                </div>
+		                <div class="col-md-2" style="padding: 5px;">		                  
+		                    <input id="ipmage_cust_grade_id" attrCode='CUST_GRADE' name="custGradeId" />
+		                </div>
+		                <div class="col-md-4" style="padding: 5px;">		
+		                </div>
+		            </div>	           
+	            </form>
+			  </div>
+		</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="ipmage_cust-grid"></div>
+            </div>
+         </div>
+        </div>
+  </div>
+  <div class="modal-footer">
+	<button type="button" class="btn btn-default" id="ipmage-cust-save-button">确定</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+  </div>
+</div>
+

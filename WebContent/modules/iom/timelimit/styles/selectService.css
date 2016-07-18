@@ -1,0 +1,10 @@
+#iom-selectService-searchInput {
+	color:black;border:1px solid #00b2db;
+	width:125px;
+	border-radius:100px;
+	padding-left:28px;
+}
+#iom-selectService-tree {
+	height: 200px;
+	overflow: auto;
+}

@@ -1,0 +1,43 @@
+<div class="modal-header">
+	<h4 class="modal-title">故障升级通知</h4>
+</div>
+<form class="form-horizontal" id='isa_sto_ope_myw_upGradeForm'>
+        <div class="panel-body">
+        		
+			<div class="col-md-12">
+				<div class="form-group  required">
+					<label class="col-md-3 control-label">通知人:</label>
+				    <div class="input-group col-md-4">
+				    	<input class="form-control" id="isa_sto_ope_myw_notePerson" readonly  data-rule="required"> 
+				    </div>
+				</div>
+			</div>
+			
+            <div class="col-md-12">
+				<div class="form-group">
+					<label class="col-md-3 control-label">通知方式:</label>
+				    <div class="input-group col-md-4">
+				    	<select name="sendType" id="isa_sto_ope_myw_noticeWay" class="form-control">
+				        	<option value="1" selected="selected">短信</option>
+				            <option value="2">Email</option>
+				        </select>
+				    </div>
+				</div>
+			</div>
+			
+			 <div class="col-md-12">
+			 	<div class="form-group">
+			         <label class="col-md-3 control-label">通知内容：</label>
+			         <div class="col-md-9 input-group clear-white">
+                     	<textarea name="content" class="form-control" style="height:60px"></textarea>
+                	 </div>
+			     </div>
+			 </div>
+			 
+        	<div class="col-md-12 text-center">
+	            <button type="button" class="btn btn-success" id="isa_sto_ope_myw_upGrade_btn"><b>确定</b></button>
+	            <button type="reset" class="btn btn-danger btn-default" data-dismiss="modal" id="cancel-button"><b>取消</b></button>
+        	</div>
+        	
+        </div>
+</form>

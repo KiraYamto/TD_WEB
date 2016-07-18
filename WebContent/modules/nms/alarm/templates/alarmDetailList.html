@@ -1,0 +1,589 @@
+<div class="modal-header">
+	<h4 class="modal-title">告警详情</h4>
+</div>
+<div class="modal-body">
+	<div class="col-md-12">
+		<div class="row">
+			<nav id="nms_alarm_alarmdetails_nav" class="navbar navbar-default navbar-static" role="navigation">
+				<div class="container-fluid">
+		            <div id="nms_alaram_alarmDetails-tabs" class="collapse navbar-collapse">
+						<ul class="nav nav-pills nav-stacked">
+							<li id="nms_alarm_alarmDetails_tabs_a_li"  class="ui-state-default" role="tab">
+							<a id="nms_alarm_alarmDetails_tabs_a_link" data-target="#nms_alarmDetail_tabs_a">
+								告警详情</a>
+							</li>
+
+							<li id="nms_alarm_alarmDetails_tabs_b_li"  class="ui-state-default" role="tab">
+							<a id="nms_alarm_alarmDetails_tabs_b_link" data-target="#nms_alarmDetail_tabs_b">
+								资源信息</a>
+							</li>
+
+							<li id="nms_alaram_alarmDetails_tabs_c_li"   class="ui-state-default" role="tab">
+								<a id="nms_alaram_alarmDetails_tabs_c_link" data-target="#nms_alarmDetail_tabs_c">告警扩展</a>
+							</li>
+							<li id="nms_alaram_alarmDetails_tabs_d_li"   class="ui-state-default" role="tab" >
+								<a id="nms_alaram_alarmDetails_tabs_d_link" data-target="#nms_alarmDetail_tabs_d">操作日志</a>
+							</li>							
+							<li id="nms_alaram_alarmDetails_tabs_e_li"   class="ui-state-default" role="tab" >
+								<a id="nms_alaram_alarmDetails_tabs_e_link" data-target="#nms_alarmDetail_tabs_e">派单信息</a>
+							</li>	
+													
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div data-spy="scroll" id="nms_alarm_alarmDetail_scrollspy"  data-target="#nms_alaram_alarmDetails-tabs" data-offset="0" class="scrollspy-alarmDetails">
+
+			<div id="nms_alarmDetail_tabs_a" class="alarmDetail-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12" id="nms_alarm_alarmDetail_h1">
+									告警详情：
+								</h5>
+								<div class="col-md-12">
+								    <form class="form-horizontal" id="nms_alarm_alarmDetail_alarmInfoform">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">告警标题：</label>
+												<div class="input-group col-md-10">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="title" />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">告警流水号：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="meAlarmNo"  />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">告警大类：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="alarmBigTypeValue"  />
+												</div>
+											</div>
+										</div>		
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">告警类型：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="alarmTypeName"  />
+												</div>
+											</div>
+										</div>			
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">告警级别：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="alarmLevelName"  />
+												</div>
+											</div>
+										</div>																							
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">告警描述：</label>
+												<div class="input-group col-md-10">
+													<textArea class="form-control" rows="3" style="height:80px;resize:none;" readonly="readonly"	name="description"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">告警对象：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="objectName"  />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">对象类型：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="objectTypeValue"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">网管标志：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="objectInfo"  />
+												</div>
+											</div>
+										</div>																		
+	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">告警时间：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="firstAlarmTimeStr"  />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">EMS名称：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="emsName"  />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">网元名称：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="elementName"  />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">区域：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="areaName"  />
+												</div>
+											</div>
+										</div>																		
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">处理状态：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="dealWithStatusValue"  />
+												</div>
+											</div>
+										</div>	
+																																																						
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+
+
+				<!-- 资源信息 -->
+				<div id="nms_alarmDetail_tabs_b" class="alarmDetail-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12" id="nms_alarm_alarmDetail_h2">
+									资源信息：
+								</h5>
+								<div class="col-md-12">
+									<form class="form-horizontal" id="nms_alarm_alarmDetail_resourceform">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">设备名称：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="name" />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">归属站点：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="stationName"  />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">管理ip：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="managementIp"  />
+												</div>
+											</div>
+										</div>							
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">CPU信息：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="cpu"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">归属机房：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="roomName"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">内存信息：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="memory"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">归属机架：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="rack"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">硬盘信息：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="hdd"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">归属机框：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="frame"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">存储信息：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="capacity"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">归属机槽：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="slotCount"  />
+												</div>
+											</div>
+										</div>																		
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">物理带宽：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="bandwidth"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">网管标示：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="objId"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">工作状态：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="serviceState"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">操作系统：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="operateSystem"  />
+												</div>
+											</div>
+										</div>	
+									</form>
+                                 <!--端口信息-->
+									<form class="form-horizontal" id="nms_alarm_alarmDetail_tpform">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">端口名称：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="name" />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">端口编码：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="tpCode"  />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">网管标示：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="objId"  />
+												</div>
+											</div>
+										</div>							
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">速率：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="tpRate"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">连接状态：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="connectionState"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">传输类别名：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="tpType"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">虚实属性值：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="virtualRealName"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">方向属性值：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="directionName"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">网元名称：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="meName"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">传输类型：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="trafficTypeName"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">归属机房：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="domainRoom"  />
+												</div>
+											</div>
+										</div>											
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">归属地市：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="domainCity"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">MAC地址：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="macAddress"  />
+												</div>
+											</div>
+										</div>																											
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">通道化属性：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="channelTypeName"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">成帧方式：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="frameTypeName"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">工作模式：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="workingTypeName"  />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">时隙：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly"
+													 name="timeslot"  />
+												</div>
+											</div>
+										</div>	
+									</form>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<!-- 告警扩展信息-->
+				<div id="nms_alarmDetail_tabs_c" class="alarmDetail-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12" id="nms_alarm_alarmDetail_h3">
+									告警扩展信息：
+								</h5>
+								<div class="col-md-12">
+									<div id="nms_alarm_alarmDetail_extInfo"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <!--操作日志-->
+				<div id="nms_alarmDetail_tabs_d" class="alarmDetail-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12" id="nms_alarm_alarmDetail_h4">
+									操作日志：
+								</h5>
+								<div class="col-md-12">
+	                                  <div id="nms_alarm_alarmDetail_operationLog"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 派单信息-->
+				<div id="nms_alarmDetail_tabs_e" class="alarmDetail-tabs">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<h5 class="col-md-12" id="nms_alarm_alarmDetail_h5">
+									派单信息：
+								</h5>
+								<div class="col-md-12">
+									<form class="form-horizontal" id="nms_alarm_alarmDetail_groupform">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">派单状态：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="sengStateName" />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">派单时间：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="sengTimeStr" />
+												</div>
+											</div>
+										</div>		
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">派单人：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="senderName" />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">派单号：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="id" />
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-4 control-label">备注：</label>
+												<div class="input-group col-md-8">
+													<input class="form-control" type="text" readonly="readonly" 
+													name="comments" />
+												</div>
+											</div>
+										</div>																										
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+

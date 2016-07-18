@@ -1,0 +1,8 @@
+#serverequip-main-tabs .ui-tabs-nav.serverequip-main-tabs-nav{
+	width:150px;
+}
+#serverequip-main-tabs.ui-tabs-left > .ui-tabs-panel {
+  float: left;
+  width: 88%;
+  width: calc(100% -  150px);
+}

@@ -1,0 +1,159 @@
+<div class="col-md-12">
+	<div class="row">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div id="isaMon-panel-body" class="panel-body">
+						<form class="form-horizontal" id="isa-sto-ope-mon-queryForm">
+							<div class="row isa-btn-row">
+									<div class="col-md-4" id="isa-BtnDiv">
+										<button type="button" class="btn btn-success" id = "isa_sto_ope_mon_detailBtn">详情</button>
+										<button type="button" class="btn btn-success" id = "isa_sto_ope_mon_hangUpBtn">挂起</button>
+										<button type="button" class="btn btn-success" id = "isa_sto_ope_mon_unPauseBtn">解挂</button>
+										<button type="button" class="btn btn-success" id = "isa_sto_ope_mon_UrgeBtn" >催单</button>
+										<button type="button" class="btn btn-success" id = "isa_sto_ope_mon_cancleBtn" >撤单</button>
+									</div>
+									
+									<div class="col-md-4">
+										<div class="col-md-5">
+											<label class="control-label"><a id="iso_sto_ope_mon_applyHangWorkOrder">申请挂起工单数：0</a></label>
+										</div>
+								    	<div class="col-md-7">
+									    	<div class="checkbox">
+											    <label>
+											      <input type="checkbox" id="isa-sto-ope-mon-autoQryOrder">每
+											    </label>
+											    <input type="text" style="width:50px;height:20px" value='5' id="isa-sto-mon-minuteRefresh">分钟自动刷新
+											 </div>
+								    	</div>
+							    	</div>
+									
+									<div class="col-md-2">
+										<div class="row">
+											<div class="col-md-10">
+												<div class="row">
+													<input id="operation_fault_number" name="orderCode" class="form-control" type="text" placeholder="输入故障编号"></input>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="row">
+											<button id="isa-sto-ope-mon-submitBtn" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> 查询</button>
+											<button id="isa_sto_ope_mon_advSearchBtn" class="btn btn-success" type="button" expand="false">高级查询 <span class="glyphicon glyphicon-chevron-down"></span></button>
+										</div>
+									</div>
+							</div>
+							
+							<div class="row isa-advSearchFields-row">
+								<div class="col-md-4">
+									<div class="form-group">
+									  	<label class="col-md-5 control-label">开始时间：</label>
+										<div class="input-group col-md-7">
+									        <input class="form-control" type="text" id="isa_sto_ope_mon_startTime"
+									        	 name="startTime" data-rule="required;">
+								    	</div>
+							    	</div>
+						    	</div>
+						    	<div class="col-md-4">
+						    		<div class="form-group">
+								    	<label class="col-md-5 control-label">结束时间：</label>
+										<div class="input-group col-md-7">
+									        <input class="form-control" type="text" id="isa_sto_ope_mon_endTime"
+									        	 name="endTime" data-rule="required;">
+								    	</div>
+							    	</div>
+						    	</div>
+						    	<div class="col-md-4">
+						    		<div class="form-group">
+								    	<label class="col-md-5 control-label">产品类型：</label>
+										<div class="input-group col-md-7 combobox">
+									        <input class="combobox form-control" type="text" id="isa_sto_ope_mon_faultKind"
+									        	 name="faultKindId" data-rule="required;">
+								    	</div>
+								    </div>
+						    	</div>
+							</div>
+							
+							<div class="row isa-advSearchFields-row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-5 control-label">故障分类：</label>
+										<div class="input-group col-md-7 combobox">
+									        <input class="form-control" type="text" id="isa_sto_ope_mon_faultPhenomena"
+									        	 name="faultPhenomenaId" data-rule="required;">
+								    	</div>
+								    </div>
+						    	</div>
+						    	<div class="col-md-4">
+						    		<div class="form-group">
+								    	<label class="col-md-5 control-label">受理渠道：</label>
+										<div class="input-group col-md-7  combobox">
+									        <input class="form-control" type="text" id="isa_sto_ope_mon_faultSource"
+									        	 name="faultSourceId" data-rule="required;">
+								    	</div>
+								    </div>
+						    	</div>
+						    	<div class="col-md-4">
+						    		<div class="form-group">
+								    	<label class="col-md-5 control-label">故障级别：</label>
+										<div class="input-group col-md-7">
+									        <input class="form-control" type="text" id="isa_sto_ope_mon_alarmSource"
+									        	 name="faultGradeId" data-rule="required;">
+								    	</div>
+								    </div>
+						    	</div>
+							</div>
+							
+							<div class="row isa-advSearchFields-row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-5 control-label">故障标题：</label>
+										<div class="input-group col-md-7">
+									        <input class="form-control" type="text" id="operation_fault_title"
+									        	 name="orderTitle" data-rule="required;">
+								    	</div>
+								    </div>
+						    	</div>
+						    	<div class="col-md-4">
+						    		<div class="form-group">
+										<label class="col-md-5 control-label">时限状态：</label>
+										<div class="input-group col-md-7">
+									        <select name="timeState" id="isa_sto_ope_mon_timeState" class="form-control">
+								                 <option value="1" selected="selected">全部</option>
+								                 <option value="2">未超时</option>
+								                 <option value="3">已告警</option>
+								                 <option value="4">已超时</option>
+								                 <option value="5">严重超时</option>
+								             </select>
+								    	</div>
+								    </div>
+						    	</div>
+						    	<div class="col-md-4">
+						    		<div class="form-group">
+								    	<label class="col-md-5 control-label">处理人：</label>
+										<div class="input-group col-md-7">
+									        <input class="form-control" type="text" id="isa_sto_ope_mon_handlePerson"
+									        	  data-rule="required;">
+								    	</div>
+								    </div>
+						    	</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="isa_sto_ope_mon_monitorGrid"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

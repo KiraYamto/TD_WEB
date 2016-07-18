@@ -1,0 +1,63 @@
+<div class="modal-header">
+	<h4 class="modal-title">障碍派发</h4>
+</div>
+<form class="form-horizontal" id='isa_sto_ope_myw_dis_from_distributeForm'>
+        <div class="panel-body">
+        	
+                <div class="form-group required">
+                    <label class="col-md-4 col-sm-4 control-label"><b>接单人</b></label>
+                    <div class="input-group col-md-4 col-sm-4">
+                    	<input class="form-control" type="hidden" id="isa_sto_ope_myw_dis_from_party_type" name="isa_sto_ope_myw_dis_from_party_type"/>
+                    	<input class="form-control" type="text" id="isa_sto_ope_myw_dis_from_party_id"
+                    	 data-rule="required"  name="isa_sto_ope_myw_dis_from_party_id"/>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-4 control-label"><b>抄送人</b></label>
+                    <div class="input-group col-md-4 col-sm-4">
+                    	<input class="form-control" type="text" id="isa_sto_ope_myw_dis_copy_staff_id"
+                    	 name="isa_sto_ope_myw_dis_copy_staff_id"/>
+                    	<input class="form-control" type="hidden" id="isa_sto_ope_myw_dis_copy_staff_name" name="isa_sto_ope_myw_dis_copy_staff_name"/>
+                    </div>
+                </div>
+                <div class="form-group required">
+                    <label class="col-md-4 control-label"><b>要求完成时间</b></label>
+                    <div class="input-group col-md-4">
+                        <input type="text" class="form-control" id="isa_sto_ope_myw_dis_limit_finish_time"
+                         data-rule="required"  name="isa_sto_ope_myw_dis_limit_finish_time" data-today-btn="true">
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label class="col-md-4 col-sm-4 control-label"><b>是否发送通知</b></label>
+                     <div class="col-md-4 col-sm-4 input-group ">
+                        <label class="radio-inline">
+                            <input type="radio" name="isa_sto_ope_myw_dis_is_note" class="radioItem"   value="0" data-rule="checked" checked="true">否</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="isa_sto_ope_myw_dis_is_note" class="radioItem"   value="1">是</label>
+                    </div>
+                </div>
+                 <div class="form-group" id="isa_sto_ope_myw_dis_note_type_div">
+	                    <label class="col-md-4 col-sm-4 control-label"><b>通知方式</b></label>
+	                    <div class="col-md-4 col-sm-4 input-group ">
+	                       <input type="checkbox" name="isa_sto_ope_myw_dis_note_type" id="isa_sto_ope_myw_dis_note_type" value="01">
+	                    </div>
+                </div>
+                
+                  <div class="form-group" id="isa_sto_ope_myw_dis_note_content_div">
+                  <label class="col-md-4 col-sm-4 control-label"><b>通知内容</b></label>
+                   <div class="input-group col-md-4 col-sm-4">
+                    	<textarea class="form-control" type="text" id="isa_sto_ope_myw_dis_note_content"
+                    	 name="isa_sto_ope_myw_dis_note_content" style="height:100px"/>
+                    </div>
+                </div>
+                    
+            
+        	
+        	<div class="col-md-12 text-center">
+	            <button type="button" class="btn btn-success" id="isa_sto_ope_myw_dis_payout_from__btn"><b>派发</b></button>
+	            <button type="reset" class="btn btn-danger btn-default" data-dismiss="modal" id="cancel-button"><b>取消</b></button>
+        	</div>
+        	
+        </div>
+</form>

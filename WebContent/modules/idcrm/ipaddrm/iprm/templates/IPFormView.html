@@ -1,0 +1,151 @@
+<div class="row ipaddr_mana_view_container">
+
+    <div class="col-md-3">
+    		<!-- 
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="查询..." id="ipseg-nodeName">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="ipseg-treeQry-btn">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </span>
+            </div>
+            <div id="ipsegm-treeDiv" style="padding: 0;overflow: auto">
+                <div id="ipsegm-Tree" style="padding-bottom: 5px;"></div>
+            </div>
+            <ul id="spacerm-dc-spaceres-navtree" ></ul> -->
+            <div class="input-group">
+			  <input type="text" class="form-control" placeholder="{{SEARCH_FOR}}" id="spacerm-dc-ip-dcname" >
+			  <span class="input-group-btn">
+			    <button class="btn btn-default" type="button" id="spacerm-dc-ip-search-btn">
+			         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+			    </button>
+			  </span>
+			</div>
+			<div id="ipAddrTreeDiv" >
+            	<ul id="ipsegm-Tree" ></ul>
+            </div>
+     </div>
+
+    <div class="col-md-9" style="padding: 5px;">
+    <form id="ip-segment-query-cond">
+    <div class="row" style="margin-bottom: 10px;" >
+            <div class="col-md-6" style="margin-left: 0px;width: 430px;">
+						<button type="button" class="btn btn-primary " id="ipseg-management-btn">IP地址管理</button>
+						<button type="button" class="btn btn-primary " id="ipseg-breakup-btn">拆分子网</button>
+						<button type="button" class="btn btn-primary " id="ipseg-combine-btn">合并子网</button>
+						<button type="button" class="btn btn-primary " id="ipseg-add-btn">新增</button>
+						<button type="button" class="btn btn-primary " id="ipseg-mod-btn">修改</button>
+						<button type="button" class="btn btn-primary " id="ipseg-del-btn">删除</button>
+						<button type="button" class="btn btn-primary " id="ipseg-export-btn">导出</button>
+			</div>
+			<div class="col-md-2" style="padding-right: 0;width: 120px;" >
+				<!-- <input id="ip_qry_sel_dcname" hidden="true" value="EQUALS" name="condOp.dcName">  -->
+				<input id="ip_qry_sel_dcid" hidden="true" value="EQUALS" name="condOp.dcId">	 
+	            <input id="ipseg_qry_dcid" hidden="true" value=""  name="condName.dcId"/>
+	            <input id="ipseg_qry_dcname" placeholder="请选择数据中心" value="" />
+	            
+            </div>
+            <div class="col-md-2" style="padding-right: 0;width: 50px;">
+            <button type="button" class="btn btn-primary" id="ipseg-qry-room-btn">选择</button>
+            </div>
+            <div class="col-md-2" style="padding-right: 0;">
+            	<input id="ip_qry_sel_segmcode" hidden="true" value="LIKE" name="condOp.segmCode"> 
+                <input id="ipseg_qry_segmcode" name="condName.segmCode" class="form-control" value="" placeholder="请输入IP地址段" />
+            </div>
+            <div class="col-md-2" style="padding-right: 0px;float:left;">
+                <button type="button" class="btn btn-primary" id="ipseg-query-btn">查询</button>
+                <button type="button" class="btn btn-primary" id="ipseg-morequery-btn">更多查询↓</button>
+                <!--<button type="button" class="btn btn-primary" id="frameView-clear-btn">重置搜索框</button>-->
+            </div>
+        </div>
+    
+            <div class="row" style="display:none" id="ipsegView-qryContentDiv">
+				<div class="col-md-12"> 
+				<div class="row"> 
+						<div class="col-md-2 equip-qry-title">
+							<span>起始IP地址:</span>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class="col-md-4 padding-lr-1">
+									<select id="ipseg_qry_sel_startIp" class="form-control" name="condOp.startIp">
+										<option value="EQUALS" selected>等于</option>
+										<option value="LIKE">包含</option>
+										<option value="NOT_LIKE">不包含</option>
+									</select>
+								</div>
+								<div class="col-md-8 padding-lr-1">
+									<input id="ipseg_qry_startIp" class="form-control" value="" name="condName.startIp" />
+								</div>
+							</div>
+						</div> 
+						<div class="col-md-2 equip-qry-title">
+							<span>终止IP地址:</span>
+						</div>
+						<div class="col-md-4">
+						<div class="form-group">
+							<div class="col-md-4 padding-lr-1">
+								<select id="ipseg_qry_sel_endIp" class="form-control" name="condOp.endIp">
+									<option value="EQUALS" selected>等于</option>
+									<option value="LIKE">包含</option>
+									<option value="NOT_LIKE">不包含</option>
+								</select>
+							</div>
+							<div class="col-md-8 padding-lr-1">
+								<input id="ipseg_qry_endIp" class="form-control"  value="" name="condName.endIp"/>
+							</div>
+							</div>
+						</div>
+			</div>
+			<div class="row"> 
+				<div class="col-md-2 equip-qry-title">
+							<span>业务状态:</span>
+				</div>
+				<div class="col-md-4">
+                <div class="form-group">
+                        <div class="col-md-4 padding-lr-1">
+							<select id="ipseg_qry_sel_usestate" class="form-control" name="condOp.useState">
+								<option value="EQUALS" selected>等于</option>
+							</select> 
+						</div>
+						<div class="col-md-8 padding-lr-1">
+						<!-- 
+							<select id="ipseg_qry_usestate" class="form-control frameView-value-select" attrCode='RS_BUSI_STATE' name="condName.useState">                       
+		                    </select>
+		                 -->    
+		                    <input id="ipseg_qry_usestate" name="condName.useState" attrCode='RS_BUSI_STATE' />
+	                    </div>
+					</div>
+					</div>
+					 <div class="col-md-2 equip-qry-title">
+							<span>用途:</span>
+					</div>
+					<div class="col-md-4">
+                	<div class="form-group">
+                    	<div class="col-md-4 padding-lr-1">
+							<select id="ipseg_qry_sel_segmuse" class="form-control" name="condOp.segmUse">
+								<option value="EQUALS" selected>等于</option>
+							</select>
+						</div>	
+						<div class="col-md-8 padding-lr-1">
+						<!-- 
+							<select id="ipseg_qry_segmuse" class="form-control frameView-value-select" attrCode='SEGM_USE' name="condName.segmUse">                       
+		                    </select>
+		                 -->    
+		                    <input id="ipseg_qry_segmuse" name="condName.segmUse" attrCode='SEGM_USE' />
+	                    </div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<div id="ip-segment-grid"></div>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>

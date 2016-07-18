@@ -1,0 +1,142 @@
+<div class="modal-header">
+	<h4 class="modal-title">工单详情</h4>
+</div>
+<div class="modal-body">
+	<div class="col-md-12">
+		<div class="row">
+			<!-- 左侧导航栏 -->
+			<nav id="orderdetails-nav" class="navbar navbar-default navbar-static" role="navigation">
+				<div class="container-fluid">
+		            <div id="orderdetails-tabs" class="collapse navbar-collapse">
+						<ul class="nav nav-pills nav-stacked">
+							<li id="orderdetails-tabs-a-li"  class="">
+								<a id="orderdetails-tabs-a-link" data-target="#orderdetails-tabs-a">客户信息</a>
+							</li>
+							<li id="orderdetails-tabs-b-li"  class="">
+								<a id="orderdetails-tabs-b-link" data-target="#orderdetails-tabs-b">产品信息</a>
+							</li>
+							<li id="orderdetails-tabs-c-li"  class="" role="tab">
+								<a id="orderdetails-tabs-c-link" data-target="#orderdetails-tabs-c">操作反馈</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			
+			<!-- 内容tab页 -->
+			<div data-spy="scroll" id="orderdetails-scrollspy" data-target="#orderdetails-tabs" data-offset="0" class="scrollspy-orderdetails">	
+				<!-- 客户信息 -->
+				<div id="orderdetails-tabs-a" class="orderdetails-tabs">
+					<div class="row">
+						<div class="col-md-11 orderdetails-header">
+							客户信息
+						</div>
+						<div class="col-md-11">
+							<form class="form-horizontal" id="cust-info-form">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-5 control-label">客户姓名：</label>
+										<div class="input-group col-md-7">
+											<input class="form-control" type="text" readonly="readonly" id="orderdetails-custName" name="orderdetails-custName">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-5 control-label">电话：</label>
+										<div class="input-group col-md-7">
+											<input class="form-control" type="text" readonly="readonly" id="orderdetails-phone" name="orderdetails-phone">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-5 control-label">邮箱：</label>
+										<div class="input-group col-md-7">
+											<input class="form-control" type="text" readonly="readonly" id="orderdetails-email" name="orderdetails-email">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-5 control-label">客户等级：</label>
+										<div class="input-group col-md-7">
+											<input class="form-control" type="text" readonly="readonly" id="orderdetails-custGradeId" name="orderdetails-custGradeId">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 产品信息 -->
+				<div id="orderdetails-tabs-b" class="orderdetails-tabs orderdetails-spliter">
+					<div class="row">
+						<div class="col-md-11 orderdetails-header">
+							产品信息
+						</div>
+						<div class="col-md-11">
+							<form class="form-horizontal" id="product-info-form">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-5 control-label">主体产品名称：</label>
+										<div class="input-group col-md-7">
+											<input class="form-control" type="text" readonly="readonly" id="orderdetails-prodName" name="orderdetails-prodName">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-5 control-label">数量：</label>
+										<div class="input-group col-md-7">
+											<input class="form-control" type="text" readonly="readonly" id="orderdetails-prodCount" name="orderdetails-prodCount">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						
+						<div class="col-md-12">
+							<div class="col-md-4 orderdetails-product-left-grid">
+									<div id="orderdetails-majorprod-left-grid"></div>
+							</div>
+							<div class="col-md-8 orderdetails-product-right-grid">
+									<div id="orderdetails-majorprod-right-grid"></div>
+							</div>
+						</div>
+						
+						<div class="col-md-12">
+							<div class="col-md-4 orderdetails-product-left-grid">
+									<div id="orderdetails-attachprod-left-grid"></div>
+							</div>
+							<div class="col-md-8 orderdetails-product-right-grid">
+									<div id="orderdetails-attachprod-right-grid"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 操作反馈列表 -->
+				<div id="orderdetails-tabs-c" class="orderdetails-tabs orderdetails-spliter">
+					<div class="row">
+						<div class="col-md-11 orderdetails-header">
+							操作反馈列表
+						</div>
+						<div class="col-md-12">
+							<div id="orderdetails-workorder-grid"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="orderdetails-floatBtns" style="width:88px;height:68px;position:fixed">
+	        <button type="button" class="btn btn-success" id="orderdetails-finishWorkOrder">
+	          <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> 回单
+	        </button>
+	    </div>
+			    
+	</div>
+</div>
+

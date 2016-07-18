@@ -1,0 +1,24 @@
+ul#frameFormMainView-tabs-nav{
+    width:150px;
+}
+div#frameUnitFormView {
+    float: left;
+    width: 88%;
+    width: calc(100% -  150px);
+}
+div#frameFormAddView {
+    float: left;
+    width: 88%;
+    width: calc(100% -  150px);
+}
+div#frameFormModView {
+    float: left;
+    width: 88%;
+    width: calc(100% -  150px);
+}
+#framerm-frameFormAddView-addframe .panel-body{
+    overflow-y: scroll;
+}
+#framerm-frameFormModView-addframe .panel-body{
+    overflow-y: scroll;
+}

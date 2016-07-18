@@ -1,0 +1,70 @@
+
+<div class="container-fluid">
+    <div class="row" style="border:1px" id="nms_kpi_search">
+		<form id="searchForm" class="form-horizontal" style="padding:1px;margin:0px;">
+			<div class="row" style="border: 0px solid red;">
+				<div class="col-xs-4 col-md-4 col-lg-4" style="border: 0px solid red;margin:0px;">
+					<div class="form-group">
+						<label class="col-xs-5 col-md-5 col-lg-5 control-label search_form_label" for="kpiTypeId" style="border: 0px solid red;">指标类型：</label>
+						<div class="input-group col-xs-7 col-md-7 col-lg-7 text-left">
+							<input id="kpiTypeId" name="kpiTypeId" class="form-control" data-rule="required;">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-lg-3" style="border: 0px solid red;">
+					<div class="form-group">
+						<label class="col-xs-5 col-md-5 col-lg-5 control-label search_form_label"	for="kpiCode" style="border: 0px solid red;">指标编码：</label>
+						<div class="input-group col-xs-7 search_form_field"	style="border: 0px solid red;">
+							<input id="kpiCode" name="kpiCode" class=" form-control" data-rule="required;">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-lg-3" style="border: 0px solid red;padding:0px">
+					<div class="form-group">
+						<label class="col-xs-5 col-md-5 col-lg-5 control-label search_form_label"	for="kpiName" style="border: 0px solid red;">指标名称：</label>
+						<div class="input-group col-xs-7 col-md-7 col-lg-7 search_form_field" style="border: 0px solid red;">
+							<input id="kpiName" name="kpiName" class="combobox form-control" data-rule="required;">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="border: 0px solid red;">
+	
+				<div class="col-xs-4 col-md-4 col-lg-4" style="border: 0px solid red;">
+					<div class="form-group">
+						<label class="col-xs-5 col-md-5 col-lg-5 control-label search_form_label"
+							for="catalogId" style="border: 0px solid red;">指标目录：</label>
+						<div class="input-group col-xs-7 col-md-7 col-lg-7">
+							<input id="catalogId" name="catalogId" class="combobox form-control">
+						</div>
+					</div>
+				</div>
+				
+				<div
+				style="float: left; border: 0px solid red; padding-left: 20px; padding-right: 0px; width: 200px; ">
+				<button type="button" class="btn btn-success" id="searchBtn"><span class="glyphicon glyphicon-search">查询</button>
+			<!-- 	<button type="reset" class="btn btn-danger" id="resetBtn">重置</button> -->
+			</div>
+			</div>
+		</form>    
+    </div>
+	<div class="row" style="margin-top: 5px; margin-bottom: 5px;" id="nms_kpi_actionDiv">
+		<div class="col-xs-12 col-md-12 col-lg-12" style="padding: 0 2px 0 4px;">
+			<button id="addBtn" type="button" class="btn btn-primary">
+				新增指标
+			</button>
+			<button id="modifyBtn" type="button" class="btn btn-primary">修改指标</button>
+			<button id="deleteBtn" type="button" class="btn btn-primary">删除指标</button>
+
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-xs-12 col-md-12 col-lg-12"
+			style="border: 0px solid yellow; padding: 0 1px 0 1px;">
+			<div id="performanceKpiList"></div>
+		</div>
+	</div>
+
+</div>

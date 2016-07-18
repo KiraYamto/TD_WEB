@@ -1,0 +1,146 @@
+<div class="col-md-12">
+	<div class="row">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">查询条件</h3>
+					</div>
+					<div class="panel-body">
+						<form class="form-horizontal" id="order-Qryform">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="" >定单编码:</label>
+										<div class="input-group col-md-8">
+											<div class="col-md-12">
+												<input class="form-control" type="text"
+													   id="order-orderCode" name="order-orderCode"  placeholder="{{dataCenterQry.name}}" >
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="" >客户订单编码:</label>
+										<div class="input-group col-md-8">
+											<div class="col-md-12">
+												<input class="form-control" type="text"
+													   id="order-custOrderCode" name="order-custOrderCode"  placeholder="{{dataCenterQry.name}}" >
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="" >工单编码:</label>
+										<div class="input-group col-md-8">
+											<div class="col-md-11">
+												<input class="form-control" type="text"
+													   id="order-workOrderCode" name="order-workOrderCode"  placeholder="{{dataCenterQry.name}}" >
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="" >业务号码:</label>
+										<div class="input-group col-md-8">
+											<div class="col-md-12">
+												<input class="form-control" type="text"
+													   id="order-accNbr" name="order-accNbr"  placeholder="{{dataCenterQry.name}}" >
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="" >工单状态:</label>
+										<div class="input-group col-md-8">
+											<div class="col-md-12">
+												<!--<input class="form-control" type="text"
+													   id="order-workOrderState" name="order-workOrderState"  placeholder="{{dataCenterQry.name}}" >-->
+												<select class="form-control" id="order-workOrderState" name="order-workOrderState">
+													<option value="10I">处理中</option>
+													<option value="10D">已派发</option>
+													<option value="10G">已提单</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="" >开始时间:</label>
+										<div class="input-group col-md-8">
+											<div class="col-md-11">
+												<input class="form-control" id="order-startTime" name="order-startTime" data-today-btn="true"  >
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<!--<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label" for="" >环节名称:</label>
+										<div class="input-group col-md-10">
+											<div class="col-md-11">
+												<select id="order-tacheName" name="order-tacheName" class="chosen-select" data-placeholder="请选择环节" multiple="" data-rule="required">
+
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>-->
+							<div class="row">
+								<div class="col-md-4">
+									<label class="col-md-4 control-label" for="" >所属区域:</label>
+									<div class="input-group col-md-8">
+										<input class="form-control" type="text" id="order-areaId" name="order-areaId"  placeholder="所属区域" >
+									</div>
+								</div>
+								<div class="col-md-4">
+									<label class="col-md-4 control-label" for="" >环节名称:</label>
+									<div class="input-group col-md-8">
+										<input class="form-control" type="text" id="order-tacheName" name="order-tacheName"  placeholder="环节名称" >
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="btn-group" style="margin-right: 15px">
+
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="btn-group" style="margin-right: 15px">
+										<button type="button" class="btn btn-primary pull-left" id = "order-search-btn">查询</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" style="padding: 5px;">
+				<div id = "btnDiv" class="btn-group" style="margin-left: 15px">
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="order-task-grid"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

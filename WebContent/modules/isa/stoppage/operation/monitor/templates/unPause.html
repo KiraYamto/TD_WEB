@@ -1,0 +1,87 @@
+<div>
+<div class="modal-header">
+	<h4 class="modal-title">解挂--页面对话框</h4>
+</div>
+<div class="modal-body">
+	 <form class="form-horizontal" id="isa_sto_ope_mon_unPauseForm">
+	 	<div class="panel panel-default">
+	     	<div class="panel-heading">解挂</div>
+	     	<div class="panel-body">
+     			<div class="col-md-12">
+				     <div class="form-group required">
+				         <label class="col-md-2 control-label">解挂原因：</label>
+				         <div class="input-group col-md-4">
+				             <input class="form-control" name="unPauseReasonId" id="isa_sto_ope_mon_unPauseReasonId" data-rule="required">
+				         </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				     <div class="form-group required">
+				         <label class="col-md-2 control-label">解挂人：</label>
+				         <div class="input-group col-md-4">
+				             <input class="form-control"  readonly="readonly"  name="activationStaffId" id="isa_sto_ope_activationStaffId" data-rule="required">
+				         </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				 	<div class="form-group">
+				         <label class="col-md-2 control-label">描述：</label>
+				         <div class="col-md-10 input-group clear-white">
+                         	<textarea id="isa_sto_ope_mon_activationContent" name="activationContent" class="form-control" style="height:60px"></textarea>
+                    	 </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				 	<div class="form-group">
+				         <label class="col-md-2 control-label">备注：</label>
+				         <div class="col-md-10 input-group clear-white">
+                         	<textarea id="isa_sto_ope_mon_activationMessage" name="activationMessage" class="form-control" style="height:60px"></textarea>
+                    	 </div>
+				     </div>
+				 </div>
+     		</div>
+     	</div>
+     	<div class="panel panel-default">
+     		<div class="panel-heading">发送通知</div>
+	     	<div class="panel-body">
+	     		<div class="col-md-12">
+				     <div class="form-group">
+				         <label class="col-md-2 control-label">是否发送通知：</label>
+				         <div class="radio">
+		                    <label>
+		                        <input type="radio" name="needSendNote" value="1">是
+		                    </label>
+		                    <label>
+		                        <input type="radio" name="needSendNote" value="0" checked>否
+		                    </label>
+		                </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				     <div class="form-group">
+				         <label class="col-md-2 control-label">通知方式：</label>
+				         <div class="input-group col-md-4">
+					         <select name="sendType" id="isa_sto_ope_mon_noticeWay" class="form-control">
+				                 <option value="1" selected="selected">短信通知</option>
+				                 <option value="2">Email通知</option>
+				             </select>
+				         </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				 	<div class="form-group">
+				         <label class="col-md-2 control-label">通知内容：</label>
+				         <div class="col-md-10 input-group clear-white">
+                         	<textarea id="isa_sto_ope_mon_content" name="content" class="form-control" style="height:60px"></textarea>
+                    	 </div>
+				     </div>
+				 </div>
+	     	</div>
+     	</div>
+     	<div class="col-md-12 text-center" style="padding:0px 0px 20px 0px">
+        	<button type="button" class="btn btn-primary" id="isa_sto_ope_mon_unPauseSubmitBtn">确定</button>
+            <button type="button" class="btn btn-primary" id="eventreq-demand-addbtn" data-dismiss="modal">取消</button>
+        </div>
+	</form>
+</div>
+</div>

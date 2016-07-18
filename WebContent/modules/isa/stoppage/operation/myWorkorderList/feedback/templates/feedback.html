@@ -1,0 +1,62 @@
+<div class="modal-header">
+	<h4 class="modal-title">进度反馈</h4>
+</div>
+<form class="form-horizontal" id='isa_sto_ope_myw_fee_from'>
+        <div class="panel-body">
+        		
+        		
+       			 <div class="form-group  required">
+					<div class="col-md-12">
+						<div id="isa_sto_ope_myw_fee_grid"></div>
+					</div>
+				</div>
+        		
+        		
+                <div class="form-group required">
+                    <label class="col-md-4 col-sm-4 control-label"><b>反馈简要</b></label>
+                    <div class="input-group col-md-4 col-sm-4">
+                    	<input class="form-control" type="text" id="isa_sto_ope_myw_fee_trackreason"
+                    	 data-rule="required"  name="isa_sto_ope_myw_fee_trackreason"/>
+                    </div>
+                </div>
+                
+                 
+                <div class="form-group required">
+                    <label class="col-md-4 col-sm-4 control-label"><b>描述</b></label>
+                    <div class="col-md-4 col-sm-4 input-group ">
+                        <textarea id="isa_sto_ope_myw_fee_content" name="isa_sto_ope_myw_fee_content" 
+                         data-rule="required" class="form-control" style="height:70px"></textarea>
+                    </div>
+                </div>
+            
+                <div class="form-group ">
+                	
+                    <label class="col-md-4 col-sm-4 control-label"><b>备注</b></label>
+                    <div class="input-group col-md-4 col-sm-4">
+                    	<textarea id="isa_sto_ope_myw_fee_message" name="isa_sto_ope_myw_fee_message" 
+                          class="form-control" style="height:70px"></textarea>
+                    </div>
+                </div>
+	            <div class="form-group">
+	                <label class="col-md-4 col-sm-4 control-label"><b>附件上传</b></label>
+	                 <div class="input-group col-md-4 col-sm-4">
+	                    <input id="isa_sto_ope_myw_fee_attachmentName" name="fileName"
+	                     class="form-control" readonly="readonly" style="width:90%">
+							<span class="btn btn-primary fileinput-button" style="width:3%">..
+	                            <input class="js-fileupload" id="isa_sto_ope_myw_dis_attachmentBtn"  title=" ">
+	                        </span>
+	                       <!-- <span class="input-group-btn" id="XXX">
+	                       		<input class="js-fileupload" id="isa_sto_ope_myw_dis_attachmentBtn"  title=" ">
+	                       		<button class="js-fileupload" type="button" id="isa_sto_ope_myw_dis_attachmentBtn">..</button>
+	                       </span> -->
+	                        <input id="isa_sto_ope_myw_fee_attachmentId" hidden="true" name="fileId"/>
+	                </div>
+	            </div>
+        	
+        	<div class="col-md-12 text-center">
+	            <button type="button" class="btn btn-success" id="isa_sto_ope_myw_fee_btn"><b>确定</b></button>
+	            <button type="reset" class="btn btn-danger btn-default" data-dismiss="modal" id="cancel-button"><b>取消</b></button>
+        	</div>
+        	
+        </div>
+</form>

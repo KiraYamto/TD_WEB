@@ -1,0 +1,69 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">代理人信息</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<!--<div class="panel-heading">信息详情查看</div>-->
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="agent-form">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">代理人：</label>
+
+										<div class="input-group col-md-10">
+												<input class="form-control" type="text" placeholder="请选择代理人" id="agent" /><!-- data-url="#agency-demodialog"> -->
+											
+										</div>
+										
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">开始时间：</label>
+
+										<div class="input-group col-md-10">
+											<input
+													class="form-control" type="text"
+													id="agent-starttime" name="agent-starttime" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">开始时间：</label>
+
+										<div class="input-group col-md-10">
+											<input
+													class="form-control" type="text" id="agent-endtime"
+													name="agent-endtime" data-rule="required;">
+										</div>
+									</div>
+								</div>
+<div id="agency-demodialog" class="ui-dialog">
+	<div class="modal-header">
+		<h4 class="modal-title">选择代理人</h4>
+	</div>
+	<div class="modal-body" style="overflow: auto">
+		<div id="agency-agent-tree"></div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-info" id="agency-agent-choose">选择</button>
+		<button type="button" class="btn btn-default" id="agency-agent-Close">关闭</button>
+	</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" id="save-button">确定</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	</div>
+</div>

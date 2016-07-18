@@ -1,0 +1,84 @@
+<div class="col-md-12">	
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">查询条件</h3>
+                </div>
+                <div class="panel-body">
+		            <form class="form-horizontal" id="common-template-Qryform">
+		                <div class="col-md-6">
+			        		<div class="form-group required">
+			        			<label class="col-md-4 control-label">模块编码:</label> 	    			
+				    		    <div class="input-group col-md-8">
+				    		        <input class="form-control" type="text" id="common-template-moudleCode" name="moudleCode" value="demo-test"
+				    		         placeholder="请输入模块编码" data-rule="required">
+			        			</div>   
+		    	        	</div>
+		    	        </div>
+		    	        <div class="col-md-6">
+			        		<div class="form-group required">
+			        			<label class="col-md-4 control-label">模板编码:</label> 	    			
+				    		    <div class="input-group col-md-8">
+				    		        <input class="form-control" type="text"id="common-template-formCode" name="templateCode"   value="demotest"
+		    	        			   placeholder="请输入模板编码" data-rule="required">
+			        			</div>   
+		    	        	</div>
+		    	        </div>
+		    	        <div class="col-md-6">
+			        		<div class="form-group required">
+			        			<label class="col-md-4 control-label">操作:</label> 	    			
+				    		    <div class="input-group col-md-8">
+				    		        <input class="form-control" type="text" id="common-template-action" name="action" value="insert"
+				    		         placeholder="请选择操作" data-rule="required">
+			        			</div>   
+		    	        	</div>
+		    	        </div>
+		    	        <div class="col-md-6">
+			        		<div class="form-group">
+			        			<label class="col-md-4 control-label">弹窗宽度:</label> 	    			
+				    		    <div class="input-group col-md-8">
+				    		        <input class="form-control" type="text" id="common-template-dlgWidth" name="dlgWidth" value="1200"
+				    		         placeholder="请输入弹窗高度">
+			        			</div>   
+		    	        	</div>
+		    	        </div>
+		    	        <div class="col-md-6">
+			        		<div class="form-group">
+			        			<label class="col-md-4 control-label">弹窗高度:</label> 	    			
+				    		    <div class="input-group col-md-8">
+				    		        <input class="form-control" type="text" id="common-template-dlgHeight" name="dlgHeight" value="500"
+				    		         placeholder="请输入操作弹窗宽度">
+			        			</div>   
+		    	        	</div>
+		    	        </div>
+			        </form> 
+			        <div class="col-md-12">注意：
+			            <ol>
+					      <li>表单的组件ID=模块编码+组件code。</li>
+					      <li>在当前页面同时显示预览和弹窗预览时，为避免ID重复导致无法预览,请<strong>修改</strong>模块编码。</li>
+					      <li>新增才显示默认值。</li>
+					    </ol>
+		            </div>
+	        </div>
+	    </div>
+	</div>		
+	<div class="row">
+		<div class="col-md-12 text-left">	
+		    <button type="button" class="btn btn-primary " id = "common-template-preview-btn">预览</button>
+		    <button type="button" class="btn btn-primary " id = "common-template-previewDlg-btn">弹窗预览</button>
+		</div>
+	</div>
+	<hr/>
+	<div class="row">
+    	<div class="col-md-12">
+		    <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h3 class="panel-title">预览结果</h3>
+		        </div>
+		        <div class="panel-body" id="common-template-preview"> 
+		        </div>
+		    </div>		
+	    </div>
+	</div>			
+</div>

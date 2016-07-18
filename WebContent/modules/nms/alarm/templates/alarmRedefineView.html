@@ -1,0 +1,50 @@
+<div id="nms_alarm_operation_redefine_view" class="dialog-md">
+	<div class="modal-header">
+		<h4 class="modal-title">告警重定义</h4>
+	</div>
+	<div class="modal-body">
+		<form id="nms_alarm_operation_redefineForm" class="form-horizontal">
+			<div class="form-group form-separation" style="margin-top:10px;">
+				<label for="alarmTitle" class="col-xs-3 control-label form_label" style="padding:0px;">告警标题：</label>
+				<div class="col-xs-5 form_field" style="padding:0px;">
+					<input id="alarmTitle" name="title" type="text" readonly class="form-control" >
+				</div>
+			</div>
+			<div class="form-group form-separation" style="margin-top:10px;">
+				<label for="nms_alarm_operation_sendOrder_emsId" class="col-xs-3 control-label form_label" style="padding:0px;">设备类型：</label>
+				<div class="col-xs-5 form_field" style="padding:0px;">
+					<input id="nms_alarm_operation_sendOrder_emsName" name="emsName" type="text" readonly class="form-control" >
+				</div>
+			</div>					
+			<div class="form-group form-separation" style="margin-top:10px;">
+				<label for="alarmObject" class="col-xs-3 control-label form_label" style="padding:0px;">告警对象：</label>
+				<div class="col-xs-5 form_field" style="padding:0px;">
+					<input id="alarmObject" name="objectName" type="text" readonly class="form-control" >
+				</div>
+			</div>		
+			<div class="form-group form-separation" style="margin-top:10px;">
+				<label for="alarmLevel" class="col-xs-3 control-label form_field" style="padding:0px;">告警级别：</label>
+				<div class="col-xs-5 form_field" style="padding:0px;">
+					<input id="nms_alarm_operation_redefine_alarmLevelId" name="alarmLevelId" type="text" class="form-control" >
+				</div>
+			</div>					
+			
+			<div class="form-group form-separation" style="margin-top:10px; margin-bottom:15px;">
+				<label for="firstAlarmTime" class="col-xs-3 control-label form_label" style="padding:0px;">告警产生时间：</label>
+				<div class="col-xs-5 form_field" style="padding:0px;">
+					<input id="firstAlarmTime" name="firstAlarmTime" type="text" readonly class="form-control" >
+				</div>
+			</div>	
+			<div class="form-group form-separation" style="margin-top:10px;">
+				<label for="nms_alarm_operation_sendOrder_description" class="col-xs-3 control-label" style="padding:0px;">告警描述：</label>
+				<div class="col-xs-8" style="padding:0px;">
+					<textarea id="nms_alarm_operation_sendOrder_description" name="description" readonly="readonly" class="form-control" rows="3" cols="30"></textarea>
+				</div>
+			</div>						
+		</form>
+	</div>
+	<div class="modal-footer" style="text-align:center;">
+		<button id="nms_alarm_operation_redefine_conform_btn" type="button" class="btn btn-primary">确认</button>
+		<button id="nms_alarm_operation_redefine_cancel_btn" type="button" class="btn btn-default" data-dismiss="modal" >取消</button>
+	</div>
+</div>

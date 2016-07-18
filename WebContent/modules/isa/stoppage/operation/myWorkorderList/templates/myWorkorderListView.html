@@ -1,0 +1,620 @@
+<div class="col-md-12">
+	<div class="row">
+		<div id="operation-tabs" class="ui-tabs ui-tabs ui-tabs-collapsible">
+			<ul class="ui-tabs-nav" role="tablist">
+				<li id="operation-tabs-receive-li" class="ui-state-default ui-tabs-active" 
+					role="tab" tabindex="0" aria-controls="tabs-a" aria-labelledby="ui-id-pending" 
+					aria-selected="true" aria-expanded="true" style="display: list-item;">
+					<a id="operation-tabs-receive-link" class="ui-tabs-anchor" role="presentation" 
+						tabindex="-1">待接收区</a>
+				</li>
+				<li id="operation-tabs-pending-li" class="ui-state-default" 
+					role="tab" tabindex="0" aria-controls="tabs-a" aria-labelledby="ui-id-pending" 
+					aria-selected="false" aria-expanded="false" >
+					<a id="operation-tabs-pending-link" class="ui-tabs-anchor" role="presentation" 
+						tabindex="-1">待处理区</a>
+				</li>
+				<li id="operation-tabs-processed-li"  class="ui-state-default" 
+					role="tab" tabindex="-1" aria-controls="tabs-b" aria-labelledby="ui-id-processed" 
+					aria-selected="false" aria-expanded="false">
+					<a id="operation-tabs-processed-link" class="ui-tabs-anchor" role="presentation" 
+						tabindex="-1" >已处理区</a>
+				</li>
+				<li id="operation-tabs-copyTo-li"  class="ui-state-default" 
+					role="tab" tabindex="-1" aria-controls="tabs-b" aria-labelledby="ui-id-copyTo" 
+					aria-selected="false" aria-expanded="false">
+					<a id="operation-tabs-copyTo-link" class="ui-tabs-anchor" role="presentation" 
+						tabindex="-1">抄送区</a>
+				</li>
+			</ul>
+			<!-- 待接收区start -->
+		<div id="operation-tabs-receive" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+			<form name="form-receive" id="form-receive" class="form-horizontal" onSubmit="return false;" >
+				<div class="row">
+					<div class="col-md-5 wrap" style="padding: 9px; text-align:left">
+						<div class="btn-group" style="margin-left: 15px">
+								<button type="button" class="btn btn-success" 
+									id = "operation_signIn_btn" style="margin-right:10px;">签收</button>
+								<!-- <button type="button" class="btn btn-success" 
+									id = "operation_workOrderInfo_btntab0" style="margin-right:10px;">详情</button> -->
+								
+						</div>
+					</div>
+					<div  class="col-md-5" style="padding: 9px;">
+						<div class="row">
+							<div  class="col-md-3" >
+								<div id='divaccept' name='divaccept' ></div>
+								<div id='operation_colse_sound'>
+									<button type='button' class='btn btn-success' 
+									id = 'operation_colse_btntab0' style='margin-left:20px;' value='0'>关闭声音</button>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="checkbox">
+									<label>
+	                            	<input type="checkbox"  id="isa_sto_ope_myw_pending_autoQryOrdertab0" 
+	                            	name ="isa_sto_ope_myw_pending_autoQryOrdertab0" />每
+		                            <input type="text" style="width:50px;height:20px" value='5' 
+		                            id="isa_sto_ope_myw_pending_minuteRefreshtab0" name="isa_sto_ope_myw_pending_minuteRefreshtab0"/>分钟自动刷新
+	                        	</label>
+								</div>
+							</div>
+							<div class="col-md-4"  text-align:center">
+								<div class="form-group">
+									<div class="row">
+										<input id="operation_fault_numbertab0" name="operation_fault_numbertab0" class="form-control" type="text" placeholder="输入故障编号"></input>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="iomTaskManagement-searchBtnDivtab0" class="col-md-2" style="padding: 9px;">
+						<div class="row">
+							<button id="operation-sel-btntab0" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> 查询</button>
+							<button id="isa_operation_sel_btn_advSearchBtntab0" class="btn btn-success" type="button" expand="true">高级查询 <span class="glyphicon glyphicon-chevron-down"></span></button>
+						</div>
+					</div>
+					
+				</div>
+			
+				
+				    <div class="row isa_operation_sel_advSearchFields_rowtab0">
+					    <div class="col-md-4">
+					    	<div class="form-group">
+							  	<label class="col-md-5 control-label">派发开始时间：</label>
+								<div class="input-group col-md-7">
+							        <input class="form-control" type="hidden" id="operation_distribute_severity_date_valuetab0"
+							        	 name="operation_distribute_severity_date_valuetab0" data-rule="required;">
+							        <input class="form-control" type="text" id="operation_distribute_starttimetab0"
+							        	 name="operation_distribute_starttimetab0" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">派发结束时间：</label>
+								<div class="input-group col-md-7">
+							        <input class="form-control" type="text" id="operation_distribute_endtimetab0"
+							        	 name="operation_distribute_endtimetab0" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">产品类型：</label>
+								<div class="input-group col-md-5 combobox">
+							        <input class="combobox form-control" type="text" id="operation_product_typetab0"
+							        	 name="operation_product_typetab0" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    </div>
+				   <div class="row isa_operation_sel_advSearchFields_rowtab0">
+				   		<div class="col-md-4">
+				   			<div class="form-group">
+								<label class="col-md-5 control-label">问题类型：</label>
+								<div class="input-group col-md-7">
+							        <input class="form-control" type="text" id="operation_question_typetab0"
+							        	 name="operation_question_typetab0" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">受理渠道：</label>
+								<div class="input-group col-md-7  combobox">
+							        <input class="form-control" type="text" id="operation_acceptance_channeltab0"
+							        	 name="operation_acceptance_channeltab0" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">故障级别：</label>
+								<div class="input-group col-md-5">
+							        <input class="form-control" type="text" id="operation_warning_sourcetab0"
+							        	 name="operation_warning_sourcetab0" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+					</div>
+				   <div class="row isa_operation_sel_advSearchFields_rowtab0">
+					  <div class="col-md-4">
+				   			<div class="form-group">
+								<label class="col-md-5 control-label">故障标题：</label>
+								<div class="input-group col-md-7">
+							        <input class="form-control" type="text" id="operation_fault_titletab0"
+							        	 name="operation_fault_titletab0" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">时限状态：</label>
+								<div class="input-group col-md-7">
+							        <input class="form-control" type="text" id="operation_fault_limit_datetab0"
+							        	 name="operation_fault_limit_datetab0" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">派发人员：</label>
+								<div class="input-group col-md-5">
+							        <input class="form-control" type="text" id="operation_distribute_stafftab0"
+							        	 name="operation_distribute_stafftab0" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+					</div>
+				   
+				</form>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12">
+								<div id="operation-myoperation-grid-pendingtab0"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 待处理区start -->
+			<div id="operation-tabs-pending" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+			<form name="form-pending" id="form-pending" class="form-horizontal" onSubmit="return false;" >
+				<div class="row">
+					<div class="col-md-6 wrap" style="padding: 9px; text-align:left">
+						<div class="btn-group" style="margin-left: 15px">
+								<button type="button" class="btn btn-success" 
+									id = "operation_workOrderInfo_btn" style="margin-right:10px;">详情</button>
+								<button type="button" class="btn btn-success" 
+									id = "operation_distribute_btn" style="margin-right:10px;">工单派发</button>
+								<button type="button" class="btn btn-success" 
+									id = "operation_distribute_dis_filing_btn" style="margin-right:10px;">预处理结单</button> 
+								<button type="button" class="btn btn-success" 
+									id = "operation_trans_btn" style="margin-right:10px;">转派</button>
+								<button type="button" class="btn btn-success" 
+									id = "operation_adddispatchreason_btn" style="margin-right:10px;">加派</button>
+								<button type="button" class="btn btn-success" 
+									id = "operation_feedback_btn"style="margin-right:10px;">反馈</button>
+								<button type="button" class="btn btn-success" 
+									id = "operation_back_order_btn"style="margin-right:10px;">退单</button>
+								<button type="button" class="btn btn-success" 
+									id = "operation_finish_btn" style="margin-right:10px;">结单</button>
+								 <button type="button" class="btn btn-success pull-left" 
+									id = "operation_hangUp_btn" style="margin-right:10px;">挂起申请</button>
+								<button type="button" class="btn btn-success" 
+									id = "operation_recover_btn" style="margin-right:10px;">恢复确认</button>
+								<button type="button" class="btn btn-success" 
+									id = "operation_upgrade_btn" style="margin-right:10px;">升级通知</button>
+						</div>
+					</div>
+					<div  class="col-md-4" style="padding: 9px;">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="checkbox">
+									<label>
+	                            	<input type="checkbox"  id="isa_sto_ope_myw_pending_autoQryOrder" 
+	                            	name ="isa_sto_ope_myw_pending_autoQryOrder" />每
+		                            <input type="text" style="width:50px;height:20px" value='5' 
+		                            id="isa_sto_ope_myw_pending_minuteRefresh" name="isa_sto_ope_myw_pending_minuteRefresh"/>分钟自动刷新
+	                        	</label>
+								</div>
+							</div>
+							<div class="col-md-4"  text-align:center">
+								<div class="form-group">
+									<div class="row">
+										<input id="operation_fault_number" name="operation_fault_number" class="form-control" type="text" placeholder="输入故障编号"></input>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="iomTaskManagement-searchBtnDiv" class="col-md-2" style="padding: 9px;">
+						<div class="row">
+							<button id="operation-sel-btn" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> 查询</button>
+							<button id="isa_operation_sel_btn_advSearchBtn" class="btn btn-success" type="button" expand="true">高级查询 <span class="glyphicon glyphicon-chevron-down"></span></button>
+						</div>
+					</div>
+					
+				</div>
+			
+				
+				    <div class="row isa_operation_sel_advSearchFields_row">
+					    <div class="col-md-4">
+					    	<div class="form-group">
+							  	<label class="col-md-5 control-label">派发开始时间：</label>
+								<div class="input-group col-md-7">
+							        <input class="form-control" type="hidden" id="operation_distribute_severity_date_value"
+							        	 name="operation_distribute_severity_date_value" data-rule="required;">
+							        <input class="form-control" type="text" id="operation_distribute_starttime"
+							        	 name="operation_distribute_starttime" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">派发结束时间：</label>
+								<div class="input-group col-md-7">
+							        <input class="form-control" type="text" id="operation_distribute_endtime"
+							        	 name="operation_distribute_endtime" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">产品类型：</label>
+								<div class="input-group col-md-5 combobox">
+							        <input class="combobox form-control" type="text" id="operation_product_type"
+							        	 name="operation_product_type" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    </div>
+				   <div class="row isa_operation_sel_advSearchFields_row">
+				   		<div class="col-md-4">
+				   			<div class="form-group">
+								<label class="col-md-5 control-label">问题类型：</label>
+								<div class="input-group col-md-7">
+							        <input class="form-control" type="text" id="operation_question_type"
+							        	 name="operation_question_type" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">受理渠道：</label>
+								<div class="input-group col-md-7  combobox">
+							        <input class="form-control" type="text" id="operation_acceptance_channel"
+							        	 name="operation_acceptance_channel" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">故障级别：</label>
+								<div class="input-group col-md-5">
+							        <input class="form-control" type="text" id="operation_warning_source"
+							        	 name="operation_warning_source" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+					</div>
+				   <div class="row isa_operation_sel_advSearchFields_row">
+					  <div class="col-md-4">
+				   			<div class="form-group">
+								<label class="col-md-5 control-label">故障标题：</label>
+								<div class="input-group col-md-7"> 
+							        <input class="form-control" type="text" id="operation_fault_title"
+							        	 name="operation_fault_title" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">时限状态：</label>
+								<div class="input-group col-md-7">
+							        <input class="form-control" type="text" id="operation_fault_limit_date"
+							        	 name="operation_fault_limit_date" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+				    	<div class="col-md-4">
+				    		<div class="form-group">
+						    	<label class="col-md-5 control-label">派发人员：</label>
+								<div class="input-group col-md-5">
+							        <input class="form-control" type="text" id="operation_distribute_staff"
+							        	 name="operation_distribute_staff" data-rule="required;">
+						    	</div>
+					    	</div>
+				    	</div>
+					</div>
+				   
+				</form>
+				<!-- 待处理区end -->
+				
+							
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12">
+								<div id="operation-myoperation-grid-pending"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div id="operation-tabs-processed" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+				<form name="form-processed" id="form-processed"  class="form-horizontal" onSubmit="return false;">
+				<!-- 已处理区start -->
+				<div class="row">
+					<div class="col-md-6" style="padding: 9px;  text-align:left">
+						<div class="btn-group" style="margin-left: 15px;">
+								<button type="button" class="btn btn-success" 
+									id = "ope_pro_workOrderInfo_btn" style="margin-right:10px;">详情</button>
+						</div>
+					</div>
+					<div  class="col-md-4">
+						<div class="row">
+							<div class="col-md-6">
+							</div>
+							<div class="col-md-4"  style="padding: 9px;  text-align:center">
+								<div class="form-group">
+									<div class="row">
+										<input id="ope_pro_fau_number" name="ope_pro_fau_number" class="form-control" type="text" placeholder="输入故障编号"></input>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="isa_ope_pro_sel_searchBtnDiv" class="col-md-2"  style="padding: 9px;">
+						<div class="form-group">
+							<div class="row">
+								<button id="ope_pro_sel_btn" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> 查询</button>
+								<button id="isa_ope_pro_sel_btn_advSearchBtn" class="btn btn-success" type="button" expand="true">高级查询 <span class="glyphicon glyphicon-chevron-down"></span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <div class="row isa_ope_pro_sel_advSearchFields_row">
+				    <div class="col-md-4">
+				    	<div class="form-group">
+						  	<label class="col-md-5 control-label">开始时间：</label>
+							<div class="input-group col-md-7">
+						        <input class="form-control" type="text" id="ope_pro_dis_startTime"
+						        	 name="ope_pro_dis_startTime" data-rule="required;">
+					    	</div>
+				    	</div>
+			    	</div>
+			    	<div class="col-md-4">
+			    		<div class="form-group">
+					    	<label class="col-md-5 control-label">结束时间：</label>
+							<div class="input-group col-md-7">
+						        <input class="form-control" type="text" id="ope_pro_dis_endTime"
+						        	 name="ope_pro_dis_endTime" data-rule="required;">
+					    	</div>
+				    	</div>
+			    	</div>
+			    	<div class="col-md-4">
+			    		<div class="form-group">
+					    	<label class="col-md-5 control-label combobox">产品类型：</label>
+							<div class="input-group col-md-5">
+						        <input class="form-control" type="text" id="ope_pro_pro_type"
+						        	 name="ope_pro_pro_type" data-rule="required;">
+					    	</div>
+				    	</div>
+			    	</div>
+			    </div>
+			   <div class="row isa_ope_pro_sel_advSearchFields_row">
+			   		<div class="col-md-4">
+			   			<div class="form-group">
+							<label class="col-md-5 control-label combobox">问题类型：</label>
+							<div class="input-group col-md-7">
+						        <input class="form-control" type="text" id="ope_pro_que_type"
+						        	 name="ope_pro_que_type" data-rule="required;">
+					    	</div>
+				    	</div>
+			    	</div>
+			    	<div class="col-md-4">
+			    		<div class="form-group">
+					    	<label class="col-md-5 control-label combobox">受理渠道：</label>
+							<div class="input-group col-md-7">
+						        <input class="form-control" type="text" id="ope_pro_acc_channel"
+						        	 name="ope_pro_acc_channel" data-rule="required;">
+					    	</div>
+				    	</div>
+			    	</div>
+			    	<div class="col-md-4 ">
+			    		<div class="form-group">
+					    	<label class="col-md-5 control-label combobox">故障级别：</label>
+							<div class="input-group col-md-5">
+						        <input class="form-control" type="text" id="ope_pro_warn_source"
+						        	 name="ope_pro_warn_source" data-rule="required;">
+					    	</div>
+				    	</div>
+			    	</div>
+				</div>
+			   <div class="row isa_ope_pro_sel_advSearchFields_row">
+			  		<div class="col-md-4">
+			  			<div class="form-group">
+							<label class="col-md-5 control-label">故障标题：</label>
+							<div class="input-group col-md-7"> 
+						        <input class="form-control" type="text" id="ope_pro_fau_title"
+						        	 name="ope_pro_fau_title" data-rule="required;">
+					    	</div>
+				    	</div>
+			    	</div>
+			    	<div class="col-md-4">
+			    		<div class="form-group">
+							<label class="col-md-5 control-label">时限状态：</label>
+							<div class="input-group col-md-7">
+						        <input class="form-control" type="text" id="ope_pro_fau_limit_date"
+						        	 name="ope_pro_fau_limit_date" data-rule="required;">
+					    	</div>
+				    	</div>
+			    	</div>
+			    	<div class="col-md-4">
+			    	</div>
+				</div>
+			</form>
+				<!-- 已处理区end -->
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12">
+								<div id="operation-myoperation-grid-processed"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<div id="operation-tabs-copyTo" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+				<!-- 抄送区start -->
+				<form name="form-copyTo" id="form-copyTo" class="form-horizontal" onSubmit="return false;">
+					<div class="row">
+						<div class="col-md-6" style="padding: 9px; text-align:left">
+							<div class="btn-group" style="margin-left: 15px">
+									<button type="button" class="btn btn-success" 
+										id = "ope_pro_workOrderInfo_btn4Copy" style="margin-right:10px;">详情</button>
+							</div>
+						</div>
+						<div  class="col-md-4">
+							<div class="row">
+								<div class="col-md-6">
+								</div>
+								<div class="col-md-4"  style="padding: 9px;  text-align:center">
+									<div class="form-group">
+										<div class="row">
+											<input id="ope_copy_fau_number" name="ope_copy_fau_number" class="form-control" type="text" placeholder="输入故障编号"></input>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="isa_ope_copy_sel_searchBtnDiv" class="col-md-2" style="padding: 9px;">
+							<div class="row">
+								<button id="ope_copy_sel_btn" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> 查询</button>
+								<button id="isa_ope_copy_sel_btn_advSearchBtn" class="btn btn-success" type="button" expand="true">高级查询 <span class="glyphicon glyphicon-chevron-down"></span></button>
+							</div>
+						</div>
+					</div>
+				
+				
+					    <div class="row isa_ope_copy_sel_advSearchFields_row">
+						    <div class="col-md-4">
+						    	<div class="form-group">
+								  	<label class="col-md-5 control-label">开始时间：</label>
+									<div class="input-group col-md-7">
+								        <input class="form-control" type="text" id="ope_copy_dis_startTime"
+								        	 name="ope_copy_dis_startTime" data-rule="required;">
+							    	</div>
+						    	</div>
+					    	</div>
+					    	<div class="col-md-4">
+					    		<div class="form-group">
+							    	<label class="col-md-5 control-label">结束时间：</label>
+									<div class="input-group col-md-7">
+								        <input class="form-control" type="text" id="ope_copy_dis_endTime"
+								        	 name="ope_copy_dis_endTime" data-rule="required;">
+							    	</div>
+						    	</div>
+					    	</div>
+					    	<div class="col-md-4">
+					    		<div class="form-group">
+							    	<label class="col-md-5 control-label combobox">产品类型：</label>
+									<div class="input-group col-md-5">
+								        <input class="form-control" type="text" id="ope_copy_pro_type"
+								        	 name="ope_copy_pro_type" data-rule="required;">
+							    	</div>
+						    	</div>
+					    	</div>
+					    </div>
+					   <div class="row isa_ope_copy_sel_advSearchFields_row">
+					   		<div class="col-md-4">
+					   			<div class="form-group">
+									<label class="col-md-5 control-label combobox">问题类型：</label>
+									<div class="input-group col-md-7">
+								        <input class="form-control" type="text" id="ope_copy_que_type"
+								        	 name="ope_copy_que_type" data-rule="required;">
+							    	</div>
+						    	</div>
+					    	</div>
+					    	<div class="col-md-4">
+					    		<div class="form-group">
+							    	<label class="col-md-5 control-label combobox">受理渠道：</label>
+									<div class="input-group col-md-7">
+								        <input class="form-control" type="text" id="ope_copy_acc_channel"
+								        	 name="ope_copy_acc_channel" data-rule="required;">
+							    	</div>
+						    	</div>
+					    	</div>
+					    	<div class="col-md-4">
+					    		<div class="form-group">
+							    	<label class="col-md-5 control-label combobox">故障级别：</label>
+									<div class="input-group col-md-5">
+								        <input class="form-control" type="text" id="ope_copy_warn_source"
+								        	 name="ope_copy_warn_source" data-rule="required;">
+							    	</div>
+						    	</div>
+					    	</div>
+						</div>
+					   <div class="row isa_ope_copy_sel_advSearchFields_row">
+					  		<div class="col-md-4">
+					  			<div class="form-group">
+									<label class="col-md-5 control-label">故障标题：</label>
+									<div class="input-group col-md-7">
+								        <input class="form-control" type="text" id="ope_copy_fau_title"
+								        	 name="ope_copy_fau_title" data-rule="required;">
+							    	</div>
+						    	</div>
+					    	</div>
+					    	<div class="col-md-4">
+					    		<div class="form-group">
+									<label class="col-md-5 control-label">时限状态：</label>
+									<div class="input-group col-md-7">
+								        <input class="form-control" type="text" id="ope_copy_fau_limit_date"
+								        	 name="ope_copy_fau_limit_date" data-rule="required;">
+							    	</div>
+						    	</div>
+					    	</div>
+					    	<div class="col-md-4">
+						    	
+					    	</div>
+						</div>
+						<!-- <div class="panel-footer text-right">
+				            <button type="button" class="btn btn-primary" id="ope_copy_sel_btn" data-extstate="4">查询</button>
+				            <button type="reset" class="btn btn-primary">重置</button>
+				        </div> -->
+					</form>
+				<!-- 抄送区end -->
+				
+				<!-- <div class="row">
+					<div class="col-md-12" style="padding: 5px;">
+						<div class="btn-group" style="margin-left: 15px">
+						<button type="button" class="btn btn-primary pull-left" id = "operation-read-btn">阅读</button>
+							</div>
+					</div>
+				</div> -->
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12">
+								<div id="operation-myoperation-grid-copyTo"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+</div>

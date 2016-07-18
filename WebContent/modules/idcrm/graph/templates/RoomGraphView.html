@@ -1,0 +1,42 @@
+<div class="modal-header">
+	<h4 class="modal-title">机房平面图</h4>
+</div>
+<div class="modal-body">
+	<ul class="idcrm-graph-contextmenu" id="idcrm-graph-contextmenu">	
+		<li><a id="idcrm-graph-copyBtn">复制机柜编码</a></li>
+		<li><a>新增机柜</a></li>
+		<li><a>修改机柜</a></li>
+	</ul>
+	<center>
+	    <div class="col-md-12 text-left">	
+		    <button type="button" class="btn btn-primary" id = "graph-frameused-btn">机柜使用状态</button>		
+			<button type="button" class="btn btn-primary " id = "graph-emptyframeunitcount-btn">空闲机位情况</button>
+			<button type="button" class="btn btn-primary " id = "graph-emptyframeunitsearch-btn">空闲机位查询</button>
+		</div>
+        <div class="col-md-12">
+			<button type="button" class="btn btn-default" id="idcrm-graph-centerButton" >居中显示</button>
+			<button type="button" class="btn btn-default" id="idcrm-graph-fullScreenButton" >全屏显示</button>
+			<button type="button" class="btn btn-default" id="idcrm-graph-zoomOutButton" > 放 大 </button>
+			<button type="button" class="btn btn-default" id="idcrm-graph-zoomInButton" > 缩 小</button>
+		</div>
+		<div class="col-md-2 idcrm-graph-leftside" >			
+	        <ul class="list-group text-left">
+	            <li class="list-group-item">机柜使用率：<span class="badge" id="frameUsedPercent" ></span></li>	
+	            <li class="list-group-item">机柜总数：<span class="badge" id="frameTotalCount" ></span></li>		           
+	            <li class="list-group-item">空闲：<span class="badge" id="emptyCount" ></span></li>
+	            <li class="list-group-item">整柜出租：<span class="badge" id="frameAllocCount" ></span></li>
+	            <li class="list-group-item">机位出租：<span class="badge" id="frameUnitAllocCount" ></span></li>
+	        </ul>
+	        <ul class="list-group text-left">
+	            <li class="list-group-item">机柜编码：<span id="fameCode" ></span></li>
+	            <li class="list-group-item">机柜机位使用率：<span class="badge" id="frameUnitUseRate" ></span></li>
+	        </ul>
+		</div>
+		<div class="col-md-10">
+		    <div class="col-md-12 idcrm-graph-roomgraph" id="idcrm-graph-roomgraph">
+				<canvas id="idcrm-graph-canvas" class="idcrm-graph-canvas">
+				</canvas>
+			</div>
+		</div>
+	</center>
+</div>

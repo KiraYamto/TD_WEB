@@ -1,0 +1,87 @@
+<div class="modal-header">
+    <h4 class="modal-title">机柜配置</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default" style="margin:0;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">配置要求</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" id="frameConfigView-configForm">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">所属机房:</label>
+
+                                <div class="input-group col-md-7">
+                                    <input name="roomName" value=""/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">机柜功率:</label>
+
+                                <div class="input-group col-md-7">
+                                    <input name="unitPowerName" value=""/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="col-md-5 control-label">要求数量:</label>
+
+                                <div class="input-group col-md-7">
+                                    <input name="requireNum" value=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+
+        <div class="col-md-12" style="padding:0;">
+
+
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">配置机柜</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="col-md-2">
+                            <div id="frameConfigView-treeDiv"
+                                 style="padding: 0; height: 430px; overflow: auto; background-color: white;">
+                                <div id="frameConfigView-tree" style="padding-bottom: 5px;"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-10" style="padding-left: 15px;">
+                            <button type="button" class="btn btn-primary" id="frameConfigView-view-btn">查看</button>
+                            <button type="button" class="btn btn-primary" id="frameConfigView-del-btn">删除</button>
+                            <button type="button" class="btn btn-primary" id="frameConfigView-renew-btn">恢复</button>
+                        </div>
+                        <div class="col-md-10">
+                            <div id="frameConfigView-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" id="frameConfigView-confirm-btn">确定</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>

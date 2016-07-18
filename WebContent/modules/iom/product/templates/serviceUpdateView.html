@@ -1,0 +1,151 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">修改服务</h4>
+</div>
+<div class="modal-body">
+	<div class="row"><div class="col-md-12">
+	<div id="iom-service-update-tabs" class="ui-tabs ui-tabs ui-tabs-collapsible">
+		<ul class="ui-tabs-nav" role="tablist">
+				<li id="iom-service-update-tabs-a-li" class="ui-state-default ui-tabs-active" role="tab" tabindex="0" aria-controls="tabs-a" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" style="display: list-item;">
+					<a id="iom-service-update-tabs-a-link" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">基本信息</a>
+				</li>
+				<li id="iom-service-update-tabs-b-li" class="ui-state-default" role="tab" tabindex="0" aria-controls="tabs-a" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" style="display: list-item;">
+					<a id="iom-service-update-tabs-b-link" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">流程平台适配规则</a>
+				</li>
+		</ul>
+		<div id="iom-service-tabs-a" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+			<div class="row">
+					<div class="col-md-12">
+			<div class="panel panel-default">
+			
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="iom-service-update-form">
+							<div class="col-md-12">
+								<div class="col-md-6" id="iom-selectProductDiv-update">
+									<div class="form-group">
+										<label class="col-md-4 control-label">选择产品：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control" readonly="readonly" type="text" name="iom-serviceProduct-update" id="iom-serviceProduct-update" data-rule="required;" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6" >
+									<div class="form-group">
+										<label class="col-md-4 control-label">选择事件：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control" readonly="readonly" type="text"  name="iom-serviceEvent-update" id="iom-serviceEvent-update"/> 
+										</div>
+									</div>
+								</div>
+							</div>
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">服务名称：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control"  type="text" name="iom-serviceName-update" id="iom-serviceName-update" data-rule="required;" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">服务编码：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text"  name="iom-serviceCode-update" id="iom-serviceCode-update" data-rule="required;"/> 
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">服务归属：</label>
+										<div class="input-group col-md-8">
+										<input type="text"  name="iom-serviceBelong-update" id="iom-serviceBelong-update" class="form-control" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">服务版本：</label>
+										<div class="input-group col-md-8">
+												<input type="text"  class="form-control" name="iom-service-vesion-update" id="iom-service-vesion-update" data-rule="required;">
+										</div>
+									</div>
+								</div> 
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">生效日期：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control"  type="text" name="iom-service-effDate-update" id="iom-service-effDate-update"  data-rule="required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">失效日期：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control"  type="text" name="iom-service-expDate-update" id="iom-service-expDate-update"  data-rule="required;">
+										</div>
+									</div>
+								</div> 
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">备注 ：</label>
+										<div class="input-group col-md-10">
+												<textarea name="iom-service-remark-update"  id="iom-service-remark-update" class="form-control"></textarea>
+									</div></div>
+								</div>
+								<div class="col-md-12"  style="padding-left: 500px;">
+									<button type="button" class="btn btn-default" id="iom-service-update-save-button">确定</button>
+									<button type="button" class="btn btn-default" id="iom-service-update-cancel-button" data-dismiss="modal">取消</button>
+								</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div id="iom-service-update-tabs-b" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+			<div class="row">
+				<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						
+						<div class="col-md-12" style="padding: 5px;">
+							<div class="btn-group" style="margin-left: 15px">
+								<button type="button" class="btn btn-primary pull-left" style="margin-left: 10px" id = "service-update-rule-add-btn">新建</button>
+								<button type="button" class="btn btn-primary pull-left" style="margin-left: 10px" id = "service-update-rule-mod-btn">修改</button>
+								<button type="button" class="btn btn-primary pull-left" style="margin-left: 10px" id = "service-update-rule-del-btn">删除</button>
+							</div>
+						</div>
+						
+						<div class="col-md-12">
+							<div id="iom-service-update-tabs-b-grid"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+	 	</div>
+	 	
+	 	
+	</div>
+	
+		</div>
+	</div>
+		<div class="modal-footer">
+		<div class="row"><div class="col-md-12">
+			
+		</div></div>
+		</div>
+</div>

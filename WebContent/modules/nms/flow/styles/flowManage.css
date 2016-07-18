@@ -1,0 +1,28 @@
+.diamonds_green{
+	background-color:#aff07f;
+	width:18px;
+	height:18px;
+	float:left;
+	margin-left: 35px;
+}
+
+.diamonds_red{
+	background-color:#fe0000;
+	width:18px;
+	height:18px;
+	float:left;
+	margin-left: 35px;
+}
+
+
+.search_form_label{
+	padding-right:0px;
+}
+
+.search_form_field{
+	padding-left:0px;
+}
+
+.form-separation{
+	margin-top:10px;
+}

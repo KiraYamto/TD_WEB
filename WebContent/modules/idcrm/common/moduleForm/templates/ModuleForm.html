@@ -1,0 +1,300 @@
+{{! 遍历表单配置,根据inputType显示不同控件HTML}}
+{{#each entityParas as |entityPara| }}
+
+  {{#ifCond entityPara.singleRow '==' 1}}
+      <div class="col-md-12"><div class="row">
+  {{/ifCond}}
+
+  {{! 普通单行文本输入框}}
+  {{#ifCond entityPara.isHidden '==' 1}}
+       <div class="hide" > 
+           <input class="form-control" type="text"    
+                        {{#if entityPara.code}}
+                            id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                        {{/if}}
+           >
+       </div>
+  {{else ifCond entityPara.inputType '==' 'Input'}}
+      <div class="col-md-{{entityPara.width}} module-form-col" >     
+         {{#if entityPara.isRequired}}
+            <div class="form-group required" >
+         {{else}}
+            <div class="form-group">
+         {{/if}} 
+      	        {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+      	        <div class="input-group col-md-{{entityPara.inputWidth}}">
+                    <input class="form-control" type="text"   
+                    {{#if entityPara.code}}
+                        id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                    {{/if}}
+                    {{#if entityPara.placeHolder}}
+                        placeholder="{{entityPara.placeHolder}}"
+                    {{/if}}
+                    {{#if entityPara.dataRule}}
+                        data-rule="{{entityPara.dataRule}}"
+                    {{/if}}
+                    {{#unless entityPara.editable}}
+                        readonly="readonly"
+                    {{/unless}}
+      	            >
+      	        </div>
+      	    </div>
+     </div>
+ {{! 有清除图标（X）的输入框}}
+ {{else ifCond entityPara.inputType '==' 'ClearInput'}}
+      <div class="col-md-{{entityPara.width}} module-form-col"> 
+         {{#if entityPara.isRequired}}
+            <div class="form-group required">
+         {{else}}
+            <div class="form-group">
+         {{/if}}
+                {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+                <div class="input-group col-md-{{entityPara.inputWidth}}" >
+                    <input class="form-control" type="text"   
+                    {{#if entityPara.code}}
+                        id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                    {{/if}}
+                    {{#if entityPara.placeHolder}}
+                        placeholder="{{entityPara.placeHolder}}"
+                    {{/if}}
+                    {{#if entityPara.dataRule}}
+                        data-rule="{{entityPara.dataRule}}"
+                    {{/if}}
+                    {{#unless entityPara.editable}}
+                        readonly="readonly"
+                    {{/unless}}
+                    >
+                </div>
+            </div>
+     </div> 
+  {{! 时间控件}}
+  {{else ifCond entityPara.inputType '==' 'DateTimePicker'}}
+     <div class="col-md-{{entityPara.width}} module-form-col"> 
+         {{#if entityPara.isRequired}}
+            <div class="form-group required">
+         {{else}}
+            <div class="form-group">
+         {{/if}}
+
+                {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+                <div class="input-group col-md-{{entityPara.inputWidth}}">
+                    <input class="form-control" type="text"   
+                    {{#if entityPara.code}}
+                        id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                    {{/if}}
+                    {{#if entityPara.placeHolder}}
+                        placeholder="{{entityPara.placeHolder}}"
+                    {{/if}}
+                    {{#if entityPara.dataRule}}
+                        data-rule="{{entityPara.dataRule}}"
+                    {{/if}}
+                    {{#unless entityPara.editable}}
+                        readonly="readonly"
+                    {{/unless}}
+                    >
+                </div>
+            </div>
+     </div> 
+  {{! 下拉文本框}}
+  {{else ifCond entityPara.inputType '==' 'Combobox'}}
+     <div class="col-md-{{entityPara.width}} module-form-col"> 
+         {{#if entityPara.isRequired}}
+            <div class="form-group required">
+         {{else}}
+            <div class="form-group">
+         {{/if}}
+                {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+                <div class="input-group col-md-{{entityPara.inputWidth}}">
+                    <input class="form-control" type="text"   
+                    {{#if entityPara.code}}
+                        id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                    {{/if}}
+                    {{#if entityPara.placeHolder}}
+                        placeholder="{{entityPara.placeHolder}}"
+                    {{/if}}
+                    {{#if entityPara.dataRule}}
+                        data-rule="{{entityPara.dataRule}}"
+                    {{/if}}
+                    {{#unless entityPara.editable}}
+                        readonly="readonly"
+                    {{/unless}}
+                    >
+                </div>
+            </div>
+    </div>
+    {{! 多选文本框}}
+  {{else ifCond entityPara.inputType '==' 'MultiSelect'}}
+     <div class="col-md-{{entityPara.width}} module-form-col"> 
+         {{#if entityPara.isRequired}}
+            <div class="form-group required">
+         {{else}}
+            <div class="form-group">
+         {{/if}}
+                {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+                <div class="input-group col-md-{{entityPara.inputWidth}}">
+                    <select class="chosen-select" type="text"   multiple="multiple"
+                    {{#if entityPara.code}}
+                        id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                    {{/if}}
+                    {{#if entityPara.placeHolder}}
+                        placeholder="{{entityPara.placeHolder}}"
+                    {{/if}}
+                    {{#if entityPara.dataRule}}
+                        data-rule="{{entityPara.dataRule}}"
+                    {{/if}}
+                    {{#unless entityPara.editable}}
+                        readonly="readonly"
+                    {{/unless}}
+                    >
+                    </select>
+                </div>
+            </div>
+    </div>
+  {{! 多行文本框}}
+  {{else ifCond entityPara.inputType '==' 'Textarea'}}
+     <div class="col-md-{{entityPara.width}} module-form-col"> 
+         {{#if entityPara.isRequired}}
+            <div class="form-group required">
+         {{else}}
+            <div class="form-group">
+         {{/if}}
+                {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+                <div class="input-group col-md-{{entityPara.inputWidth}}">
+                     <textarea class="form-control"
+                    {{#if entityPara.height}}
+                        rows="{{entityPara.height}}" 
+                    {{/if}}            
+                    {{#if entityPara.code}}
+                        id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                    {{/if}}
+                    {{#if entityPara.placeHolder}}
+                        placeholder="{{entityPara.placeHolder}}"
+                    {{/if}}
+                    {{#if entityPara.dataRule}}
+                        data-rule="{{entityPara.dataRule}}"
+                    {{/if}}
+                    {{#unless entityPara.editable}}
+                        readonly="readonly"
+                    {{/unless}}
+                    ></textarea>
+                </div>
+          </div>
+     </div> 
+  {{! 密码输入框}}
+  {{else ifCond entityPara.inputType '==' 'Password'}}
+      <div class="col-md-{{entityPara.width}} module-form-col">
+          {{#if entityPara.isRequired}}
+            <div class="form-group required">
+         {{else}}
+            <div class="form-group">
+         {{/if}}
+             {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+             <div class="input-group col-md-{{entityPara.inputWidth}}">
+                 <input class="form-control" type="password" 
+                     {{#if entityPara.code}}
+                         id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                     {{/if}}
+                     {{#if entityPara.placeHolder}}
+                         placeholder="{{entityPara.placeHolder}}"
+                     {{/if}}
+                     {{#if entityPara.dataRule}}
+                         data-rule="{{entityPara.dataRule}}"
+                     {{/if}}
+                     {{#unless entityPara.editable}}
+                        readonly="readonly"
+                     {{/unless}}
+                 >
+             </div>
+          </div>
+      </div> 
+{{! 弹窗}}
+{{else ifCond entityPara.inputType '==' 'PopEdit'}}
+      <div class="col-md-{{entityPara.width}} module-form-col"> 
+          {{#if entityPara.isRequired}}
+            <div class="form-group required">
+         {{else}}
+            <div class="form-group">
+         {{/if}}
+                {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+                <div class="input-group popedit col-md-{{entityPara.inputWidth}}">
+                    <input class="form-control" type="text" 
+                    {{#if entityPara.code}}
+                        id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                    {{/if}}
+                    {{#if entityPara.placeHolder}}
+                        placeholder="{{entityPara.placeHolder}}"
+                    {{/if}}
+                    {{#if entityPara.dataRule}}
+                        data-rule="{{entityPara.dataRule}}"
+                    {{/if}}
+                    >
+                </div>
+          </div>
+       </div> 
+{{! 上传}}
+{{else ifCond entityPara.inputType '==' 'FileUpload'}}
+      <div class="col-md-{{entityPara.width}} module-form-col"> 
+          {{#if entityPara.isRequired}}
+            <div class="form-group required">
+         {{else}}
+            <div class="form-group">
+         {{/if}}
+                {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+                <div class="input-group col-md-{{entityPara.inputWidth}}">
+                    <input class="form-control" readonly="readonly" style="width:85%"
+                    {{#if entityPara.code}}
+                        id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                    {{/if}}
+                    {{#if entityPara.placeHolder}}
+                        placeholder="{{entityPara.placeHolder}}"
+                    {{/if}}
+                    {{#if entityPara.dataRule}}
+                        data-rule="{{entityPara.dataRule}}"
+                    {{/if}}
+                    >
+                    <span class="btn btn-primary fileinput-button">附件
+                       <input class="js-fileupload" type="file" 
+                        {{#unless entityPara.editable}}
+                           disabled="disabled"
+                        {{/unless}}
+                       >
+                    </span>
+                </div>
+          </div>
+      </div> 
+{{! 开关按钮}}
+{{else ifCond entityPara.inputType '==' 'SwitchButton'}}
+      <div class="col-md-{{entityPara.width}} module-form-col"> 
+          {{#if entityPara.isRequired}}
+            <div class="form-group required">
+         {{else}}
+            <div class="form-group">
+         {{/if}}
+                {{#if entityPara.name}}<label class="col-md-{{entityPara.labelWidth}} control-label text-right module-form-collabel">{{entityPara.name}}：</label>{{/if}}
+                <div class="input-group col-md-{{entityPara.inputWidth}}">
+                    <input type="checkbox" class="switch-btn" 
+                    {{#if entityPara.code}}
+                        id="{{entityPara.uniCmpId}}" name="{{entityPara.code}}"
+                    {{/if}}
+                    {{#if entityPara.placeHolder}}
+                        placeholder="{{entityPara.placeHolder}}"
+                    {{/if}}
+                    {{#if entityPara.dataRule}}
+                        data-rule="{{entityPara.dataRule}}"
+                    {{/if}}
+                    >
+                </div>
+          </div>
+    </div> 
+{{! 线}}
+{{else ifCond entityPara.inputType '==' 'Line'}}
+    <div class="col-md-{{entityPara.width}} module-form-col"> 
+        <hr/>
+    </div> 
+{{/ifCond}}
+
+{{#ifCond entityPara.singleRow '==' 1}}
+    </div></div>
+{{/ifCond}}
+
+{{/each}}

@@ -1,0 +1,55 @@
+<div class="modal-header">
+	<h4 class="modal-title">预处理结单</h4>
+</div>
+<div class="modal-body" style="overflow: auto">
+	<form class="form-horizontal" id='isa_sto_myw_pre_form'>
+		<div class="col-md-6">
+			<div class="form-group required">
+				<label class="col-md-4 control-label"><b>故障恢复时间</b></label>
+				<div class="col-md-5 input-group">
+					<input id="isa_sto_myw_pre_recoveryTime" name="faultRecoverDate" class="form-control" data-rule="required">
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-6">
+			<div class="form-group required">
+				<label class="col-md-3 control-label"><b>故障分类</b></label>
+				<div class="col-md-5 input-group">
+					<input id="isa_sto_myw_pre_faultPhenomenaId" name="faultPhenomenaId" class="form-control" data-rule="required">
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-12">
+			<div class="form-group required">
+				<label class="col-md-2 col-sm-4 control-label"><b>故障处理描述</b></label>
+				<div class="col-md-8 col-sm-8 input-group clear-white">
+					<textarea id="isa_sto_myw_pre_faultHandDescription" name="faultDesc"
+						class="form-control" style="height:100px" data-rule="required"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="form-group">
+				<label class="col-md-2 control-label"><b>附件上传</b></label>
+				<div class="input-group col-md-8">
+					<input id="isa_sto_myw_pre_attachmentName" class="form-control" readonly="readonly" style="width:97%" name="fileName"> 
+					<span class="btn btn-primary fileinput-button" style="width:3%">.. 
+						<input type="button" id="isa_sto_myw_pre_attachmentBtn">
+					</span> 
+					<input id="isa_sto_myw_pre_attachmentId" hidden="true" name="fileId" />
+				</div>
+			</div>
+		</div>
+
+
+	</form>
+</div>
+
+<div class="modal-footer">
+	<div class="col-md-12 text-center">
+		<button type="button" class="btn btn-success" id="isa_sto_myw_pre_sumbitBtn"><b>确定</b></button>
+	    <button type="reset" class="btn btn-danger btn-default" data-dismiss="modal" id="cancel-button"><b>取消</b></button>
+    </div>
+</div>

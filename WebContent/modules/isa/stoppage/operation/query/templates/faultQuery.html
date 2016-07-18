@@ -1,0 +1,127 @@
+<div class="col-md-12">
+	<div class="row">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div id="isaQry-panel-body" class="panel-body">
+						<form class="form-horizontal" id="isa_fault_query_queryForm">
+							<div class="row isa-btn-row">
+								<div class="col-md-8" id="isa-BtnDiv">
+									<button type="button" class="btn btn-success" id = "isa_fault_query_detailBtn">详情</button>
+								</div>
+								
+								<div class="col-md-2">
+									<div class="row">
+										<div class="col-md-10">
+											<div class="row">
+												<input id="isa_fault_query_orderCode" name="orderCode" class="form-control" type="text" placeholder="输入故障编号"></input>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="row">
+										<button id="isa_fault_query_queryBtn" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> 查询</button>
+										<button id="isa_sto_ope_qry_advSearchBtn" class="btn btn-success" type="button" expand="false">高级查询 <span class="glyphicon glyphicon-chevron-down"></span></button>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row isa-advSearchFields-row">
+								<div class="col-md-4">
+									<div class="form-group">
+									  	<label class="col-md-5 control-label">开始时间：</label>
+										<div class="input-group col-md-7">
+									        <input class="form-control" type="text" id="isa_fault_query_beginTime"
+									        	 name="beginTime" data-rule="required;">
+								    	</div>
+							    	</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+								    	<label class="col-md-5 control-label">结束时间：</label>
+										<div class="input-group col-md-7">
+									        <input class="form-control" type="text" id="isa_fault_query_endTime"
+									        	 name="endTime" data-rule="required;">
+								    	</div>
+							    	</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+								    	<label class="col-md-5 control-label">产品类型：</label>
+										<div class="input-group col-md-7 combobox">
+									        <input class="combobox form-control" type="text" id="isa_fault_query_faultKindId"
+									        	 name="faultKindId" data-rule="required;">
+								    	</div>
+								    </div>
+								</div>
+							</div>
+							
+							<div class="row isa-advSearchFields-row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-5 control-label">故障分类：</label>
+										<div class="input-group col-md-7 combobox">
+									        <input class="form-control" type="text" id="isa_fault_query_faultPhenomenaId"
+									        	 name="faultPhenomenaId" data-rule="required;">
+								    	</div>
+								    </div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+								    	<label class="col-md-5 control-label">受理渠道：</label>
+										<div class="input-group col-md-7  combobox">
+									        <input class="form-control" type="text" id="isa_fault_query_faultSourceId"
+									        	 name="faultSourceId" data-rule="required;">
+								    	</div>
+								    </div>
+								</div>
+								<!-- <div class="col-md-4">
+									<div class="form-group">
+								    	<label class="col-md-5 control-label">告警源：</label>
+										<div class="input-group col-md-7">
+									        <input class="form-control" type="text" id="isa_fault_query_alarmSourceId"
+									        	 name="alarmSourceId" data-rule="required;">
+								    	</div>
+								    </div>
+								</div> -->
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-5 control-label">故障标题：</label>
+										<div class="input-group col-md-7"> 
+									        <input class="form-control" type="text" id="isa_fault_query_orderTitle"
+									        	 name="orderTitle" data-rule="required;">
+								    	</div>
+								    </div>
+								</div>
+							</div>
+							
+							<div class="row isa-advSearchFields-row">
+								<div class="col-md-4">
+									<div class="form-group">
+								    	<label class="col-md-5 control-label">处理状态：</label>
+										<div class="input-group col-md-7">
+									        <input class="form-control" type="text" id="isa_fault_query_extState"
+									        	 name="extState" data-rule="required;">
+								    	</div>
+								    </div>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>		
+				
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="isa_fault_query_queryGrid"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

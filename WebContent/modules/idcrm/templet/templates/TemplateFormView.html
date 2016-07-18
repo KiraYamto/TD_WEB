@@ -1,0 +1,77 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">新增模板</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="template-form">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">模板名称：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="模板名称" id="template-tmplName" name="tmplName">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">资源类型：</label>
+
+										<div class="input-group col-md-8">
+											<input name="rsTypeId" id="template-rsTypeId" class="form-control" placeholder="资源类型" readonly="readonly">
+									        </input>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									
+									<div class="form-group">
+										<label class="col-md-4 control-label">厂商：</label>
+
+										<div class="input-group col-md-8">
+											<input name="vendor" id="template-vendor" class="form-control" placeholder="厂商">
+									        </input>
+				    	    		   	</div> 
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">型号：</label>
+
+										<div class="input-group col-md-8">
+											<input name="model" id="template-model" class="form-control" placeholder="型号">
+									        </input>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">说明：</label>
+
+										<div class="input-group col-md-10">
+											<textarea name="description" id="template-description" class="form-control" placeholder="说明" type="text">
+									        </textarea>
+										</div>
+									</div>
+								</div>
+							</form>
+							 <hr class="hr-border" />
+							<form class="form-horizontal" id="template-info-form">
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" id="save-button">保存</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	</div>
+</div>

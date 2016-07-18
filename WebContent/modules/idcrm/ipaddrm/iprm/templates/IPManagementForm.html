@@ -1,0 +1,57 @@
+<div class="modal-header">
+	<h4 class="modal-title" id="ne_equip_title" >IP地址管理</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+	<form id="ip-addr-query-cond">
+	<div class="form-group">
+		<input type="hidden" id="ipseg_addr_id" name="ID">
+		<div class="col-md-4">
+				<label class="col-md-4 control-label padding-0">IP地址：</label>
+				<div class="input-group col-md-8">
+					<input class="form-control" type="text" id="ip_addr_ipcode" name="iPCode" />
+                </div>
+		</div>
+		<div class="col-md-4">
+			<label class="col-md-4 control-label padding-0">业务状态：</label>
+			<div class="input-group col-md-8" >
+                <input id="ip_addr_usestate" name="ipAddrUseState" attrCode='RS_BUSI_STATE' />
+            </div>
+		</div>
+		<div class="col-md-4">
+				<label class="col-md-4 control-label padding-0">关联客户：</label>
+				<input id="ip_addr_custcode" value="" type="hidden" name="custCode" />
+				<div class="input-group col-md-8">
+                              	<div class="col-md-12 padding-0">
+                                <div class="col-md-9 padding-0">
+                    <input class="form-control" id="ip_addr_custname" width="1" value=""  name="custName" />
+                    </div>
+                    <div class="col-md-3 ">
+                    <button type="button" class="btn btn-primary" id="ipaddr-cust-btn">选择</button>
+                    </div></div>
+				</div>
+		</div>
+	</div>
+	</form>
+	</div></div></div></div>
+		<div class="col-md-10"  style="padding: 5px;">
+			<div class="row">
+				<div class="col-md-12" style="padding: 5px;">
+					<div class="btn-group" style="margin-left: 15px">
+						<button type="button" class="btn btn-primary pull-left" id="ipaddr-mod-btn" style="margin-left: 5px">修改</button>
+						<!--  <button type="button" class="btn btn-primary pull-left" id="ipaddr-del-btn" style="margin-left: 5px">删除</button>-->
+						<button type="button" class="btn btn-primary pull-left" id="ipaddr-export-btn" style="margin-left: 5px">导出</button>
+						<button type="button" class="btn btn-primary pull-left" id="ipaddr-keep-btn" style="margin-left: 5px">保留</button>
+						<button type="button" class="btn btn-primary pull-left" id="ipaddr-rel-btn" style="margin-left: 5px">释放</button>
+						<button type="button" class="btn btn-primary pull-left" id="ipaddr-qry-btn" style="margin-left: 5px">查询</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+				<div id="ipaddr-grid"></div>
+		</div>
+</div>

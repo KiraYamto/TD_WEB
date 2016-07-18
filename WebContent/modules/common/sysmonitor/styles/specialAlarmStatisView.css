@@ -1,0 +1,45 @@
+#cloud_sysMonitor_specialAlarmStatisView_container {
+	height: 100%;
+	width: 100%;
+	background-color: #323943;
+	color: #FFFFFF;
+}
+
+#cloud_sysMonitor_specialAlarmStatisView_container>.row>.title {
+	line-height: 30px;
+	padding: 4px 0 0 10px;
+	font-size: 16px;
+}
+
+#cloud_sysMonitor_specialAlarmStatisView_container>.row .networkEquipment{
+	background-color: #199C33;
+	box-shadow: 1px 1px 3px #199C33;
+}
+
+#cloud_sysMonitor_specialAlarmStatisView_container>.row .physicalHost {
+		background-color: #198CA1;
+		box-shadow: 1px 1px 3px #198CA1;
+}
+
+#cloud_sysMonitor_specialAlarmStatisView_container>.row .powerEnvNetwork{
+		background-color: #998121;
+		box-shadow: 1px 1px 3px #998121;
+}
+
+#cloud_sysMonitor_specialAlarmStatisView_container .box {
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+}
+
+#cloud_sysMonitor_specialAlarmStatisView_container > .row .text{
+	text-align:center;
+	vertical-align: middle;
+	border:0px solid red;
+}
+
+#cloud_sysMonitor_specialAlarmStatisView_container>.row .value{
+	text-align:center;
+	vertical-align: middle;
+	border:0px solid red;
+}

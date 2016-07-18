@@ -1,0 +1,106 @@
+.widget-tabs{
+	font-weight: bold;
+}   
+   
+   
+.widget-tabs > li{
+	
+	-webkit-filter: none; filter: none; text-decoration: none; list-style: none; float: left; position: relative; white-space: nowrap; background: none;
+}
+
+.widget-tabs > li > a{
+	float: left; text-decoration: none; padding: 10px 15px; cursor: pointer; color: #000000; background: none; border: none; outline: none;
+}
+.widget-tabs:after{
+	clear: both;
+	content: " ";
+    display: table;
+}
+.widget-tabs{
+	border-bottom:#D8D8D8 solid 1px;
+}
+
+
+.widget-tabs > li.active{
+	
+	border-bottom:#6BAB72 solid 2px;
+	
+	
+}
+
+.widget-tabs > li.active,.widget-tabs > li.active > a,.widget-tabs > li:hover > a,#com-portal-notice-add:hover,#com-portal-notice-viewhis:hover{
+	color:#337ab7;
+}
+
+
+
+#com-portal-notice-grid .ui-jqgrid-labels{
+	display:none;
+}
+
+#com-portal-notice-grid .ui-jqgrid-view .ui-jqgrid-bdiv .ui-jqgrid-btable tr.jqgrow td
+,#com-portal-notice-grid .ui-jqgrid-view .ui-jqgrid-bdiv
+,#com-portal-notice-grid.ui-jqgrid
+,#com-portal-notice-grid .ui-jqgrid-view .ui-jqgrid-hdiv{
+	border:none;
+}
+
+
+#com-portal-notice-grid .jqgrow{
+	background-color: transparent;
+	/* color:#ADADAD; */
+}
+
+#com-portal-notice-grid .jqgrow:hover{
+	background-color: #ddedf7;
+	
+}
+#com-portal-notice-grid .ui-jqgrid-pager{
+	border:none;
+}
+
+#com-portal-notice-grid .ui-jqgrid-pager .ui-pg-control .pagination > li > a {
+	    margin: 0px;
+}
+
+#com-portal-notice-grid .ui-jqgrid-pager .pgtext,#com-portal-notice-grid .ui-jqgrid-pager .pagination:last-child{
+	display:none;
+}
+
+#portal-tabItem .gs-w{
+	border: #E7E7E7 solid 1px;
+	
+}
+#portal-widget-canlendar{
+	border:none !important;
+}
+
+#com-portal-calendar >.fc-toolbar{
+	background-color: #F5F5F5;
+	    padding: 5px;
+	    border-top: #E7E7E7 solid 1px;
+    border-right: #E7E7E7 solid 1px;
+    border-left: #E7E7E7 solid 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#com-portal-calendar .fc-center h2{
+	font-size: 14px;
+	padding-top: 6px;
+	    font-weight: bold;
+}  
+
+
+#com-portal-calendar .fc-button{
+	height: 1.8em;
+}
+
+
+#com-portal-calendar .fc-widget-header th{
+	padding-top:5px;
+	padding-bottom:5px;
+	
+}
+
+

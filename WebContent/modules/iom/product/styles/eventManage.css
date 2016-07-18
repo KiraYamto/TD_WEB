@@ -1,0 +1,22 @@
+	div#iom-event-rMenu {
+	position:absolute; 
+	visibility:hidden; 
+	top:0;
+	background-color: #E0E0E0;
+	text-align: left;
+	padding: 2px;
+	}
+	div#iom-event-rMenu ul {
+		margin: 0;
+		padding: 0;
+	}
+	div#iom-event-rMenu ul li{
+		margin: 1px 0;
+		padding: 0 5px;
+		cursor: pointer;
+		list-style: none outside none;
+		background-color: #E2E8EC;
+	}
+	#iom-event-eventCatalog .curSelectedNode{
+		background-color: #E2E8EC;
+	}

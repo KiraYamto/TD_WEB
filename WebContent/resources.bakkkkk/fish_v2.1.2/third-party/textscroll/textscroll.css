@@ -1,0 +1,23 @@
+/**
+         * fish-desktop v2.1.2
+         *
+         * Copyright 2013-2016, ZTESoft, Inc.
+         * All rights reserved.
+         *
+         * This source code is licensed under the LGPLV3-style license found in the
+         * LICENSE file in the root directory of this source tree. 
+         *
+         */
+.ts-lieven {
+  background: #F0F2F3;
+}
+.ts-li {
+  list-style: none;
+  overflow: hidden;
+}
+.ts-ul {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  overflow: hidden;
+}

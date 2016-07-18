@@ -1,0 +1,795 @@
+<div class="modal-header">
+	<h4 class="modal-title">定单详情</h4>
+</div>
+<div class="modal-body">
+	<div class="col-md-12" style = "width:99%; height: 99%;">
+		<div class="row">
+			<div id="orderDetails-tabs" class="ui-tabs ui-tabs ui-tabs-collapsible">
+				<ul class="ui-tabs-nav" role="tablist">
+					<li id="orderDetails-tabs-a-li" class="ui-state-default ui-tabs-active" role="tab" tabindex="0" aria-controls="tabs-a" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" style="display: list-item;">
+						<a id="orderDetails-tabs-a-link" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">基本信息</a>
+					</li>
+					<li id="orderDetails-tabs-b-li"  class="ui-state-default" role="tab" tabindex="-1" aria-controls="tabs-b" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false">
+						<a id="orderDetails-tabs-b-link" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">客户信息</a>
+					</li>
+					<li id="orderDetails-tabs-c-li"  class="ui-state-default" role="tab" tabindex="-2" aria-controls="tabs-c" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false">
+						<a id="orderDetails-tabs-c-link" class="ui-tabs-anchor" role="presentation" tabindex="-2" id="ui-id-3">产品信息</a>
+					</li>
+					<li id="orderDetails-tabs-d-li"  class="ui-state-default" role="tab" tabindex="-3" aria-controls="tabs-d" aria-labelledby="ui-id-4" aria-selected="false" aria-expanded="false">
+						<a id="orderDetails-tabs-d-link" class="ui-tabs-anchor" role="presentation" tabindex="-3" id="ui-id-4">接入信息</a>
+					</li>
+					<li id="orderDetails-tabs-e-li"  class="ui-state-default" role="tab" tabindex="-4" aria-controls="tabs-e" aria-labelledby="ui-id-5" aria-selected="false" aria-expanded="false">
+						<a id="orderDetails-tabs-e-link" class="ui-tabs-anchor" role="presentation" tabindex="-4" id="ui-id-5">工单列表</a>
+					</li>
+				</ul>
+				<!-- 基本信息 -->
+				<div id="orderDetails-tabs-a" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-12">
+									<form class="form-horizontal" id="base-info-form">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">客户订单编码：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-custOrderCode" data-url="#orderDetails-demodialog">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">定单编码：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderCode" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">开通期限：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-activeLimit" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">申请日期：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-acceptDate" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">定单状态：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderStateName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">定单类型：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderTypeName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">定单分类：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderClassName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">归属区域：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-areaName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">服务：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-serviceName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">执行系统：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-executeSystem" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">处理级别：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderPriorityName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">完成期限：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-limitDate" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">告警期限：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-alertDate" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">服务定单类型：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-soType" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">客户类型：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-custTypeName0" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">客户等级：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-custGradeId0" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">通知收费：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-needChargeFlag" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">预定单激活时间：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-activeDate" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">业务号码：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-accNbr" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">业务开通等级：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderPriority" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">保障服务等级：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-maintenanceGradeName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">网络服务等级：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-networkGradeName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">受理人：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-acceptStaff" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">受理部门：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-acceptOrg" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">客户预约日期：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-bespDate" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">绑定号码：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-bindNbr" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">计费号码：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-chargeNbr" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">证件类型：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-certTypeName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">证件号码：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-certNbr" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">客户名称：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderCustName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">导购工号：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-otherChannelLogid" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">联系电话：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-isaleContactPhone" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">合同号：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-agreementCode" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">97标准地址：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-stdAddrName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">营业地址：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-firstAddrName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">割接工程名称：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-cutoverProjName" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">联系信息：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-contact" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">客户经理：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-cumanager" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">客户经理电话：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-custManagerTel" data-rule="required;">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">CRM产品实例标识：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-crmProdInstId" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label">揽装人：</label>
+													<div class="input-group col-md-7">
+														<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-cheater" data-rule="required;">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label class="col-md-5 control-label"></label>
+													<div class="input-group col-md-7">
+
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">客户地址：</label>
+												<div class="input-group col-md-10">
+													<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderCustAddr" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">装机地址：</label>
+												<div class="input-group col-md-10">
+													<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderAddrName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">备注：</label>
+												<div class="input-group col-md-10">
+													<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-comments" data-rule="required;">
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">改单原因：</label>
+												<div class="input-group col-md-10">
+													<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-changeReasonName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">附件：</label>
+												<div class="input-group col-md-10">
+													<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-affixDocTitle" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="col-md-2 control-label">销售品：</label>
+												<div class="input-group col-md-10">
+													<input class="form-control" type="text" readonly="readonly" name="order-baseinfo-orderOfferName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- 客户信息 -->
+				<div id="orderDetails-tabs-b" class="ui-tabs-panel" aria-live="polite" aria-labelledby="ui-id-2" role="tabpanel" aria-expanded="false" aria-hidden="true">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-12" style="text-decoration:underline;">
+									当前客户信息：
+								</div>
+								<div class="col-md-12">
+									<form class="form-horizontal" id="cust-info-form">
+										<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-5 control-label">客户名称：</label>
+											<div class="input-group col-md-7">
+												<input class="form-control" type="text" readonly="readonly" name="order-custinfo-custName" data-url="#orderDetails-demodialog">
+											</div>
+										</div>
+									</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户编码：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-custCode" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户类型：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-custTypeName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户等级：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-custGradeId" data-url="#orderDetails-demodialog">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">EMAIL：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-email" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户分类：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-custSortName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户品牌：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-custBrandName" data-url="#orderDetails-demodialog">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户分群：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-custGroupName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户行业：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-custProfessionName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">小户名：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-userAlias" data-url="#orderDetails-demodialog">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">地址：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-address" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">邮政编码：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-custinfo-zipcode" data-rule="required;">
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-12" style="text-decoration:underline;">
+									当前联系人：
+								</div>
+								<div class="col-md-12" >
+									<div id="order-custinfo-current-grid"></div>
+								</div>
+								<div class="col-md-12" style="text-decoration:underline;">
+									原客户信息：
+								</div>
+								<div class="col-md-12">
+									<form class="form-horizontal" id="oldcust-info-form">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户名称：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-custName" data-url="#orderDetails-demodialog">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户编码：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-custCode" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户类型：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-custTypeName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户等级：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-custGradeId" data-url="#orderDetails-demodialog">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">EMAIL：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-email" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户分类：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-custSortName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户品牌：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-custBrandName" data-url="#orderDetails-demodialog">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户分群：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-custGroupName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">客户行业：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-custProfessionName" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">小户名：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-userAlias" data-url="#orderDetails-demodialog">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">地址：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-address" data-rule="required;">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="col-md-5 control-label">邮政编码：</label>
+												<div class="input-group col-md-7">
+													<input class="form-control" type="text" readonly="readonly" name="order-oldcust-zipcode" data-rule="required;">
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-12" style="text-decoration:underline;">
+									原联系人：
+								</div>
+								<div class="col-md-12" >
+									<div id="order-custinfo-old-grid"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 产品信息 -->
+				<div id="orderDetails-tabs-c" class="ui-tabs-panel" aria-live="polite" aria-labelledby="ui-id-3" role="tabpanel" aria-expanded="false" aria-hidden="true">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="product-info-form">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">主体产品名称：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" readonly="readonly" name="order-productinfo-prodName" data-url="#orderDetails-demodialog">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">旧产品：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" readonly="readonly" name="order-productinfo-oldProdName" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">新接入方式：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" readonly="readonly" name="order-productinfo-newAccType" data-url="#orderDetails-demodialog">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">当前接入方式：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" readonly="readonly" name="order-productinfo-curAccType" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">新终端：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" readonly="readonly" name="order-productinfo-newDevice" data-url="#orderDetails-demodialog">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">当前终端：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" readonly="readonly" name="order-productinfo-curDevice" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">定单状态：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" readonly="readonly" name="order-productinfo-orderState" data-url="#orderDetails-demodialog">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label"></label>
+										<div class="input-group col-md-8">
+
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-md-4" style="padding-right: 1px;">
+							<div class="col-md-12" style="padding-right: 1px;">
+								<div id="order-productinfo-majarprod-left-grid"></div>
+							</div>
+						</div>
+						<div class="col-md-8"  style="padding-left: 1px;">
+							<div class="col-md-12" style="padding-left:1px;">
+								<div id="order-productinfo-majarprod-right-grid"></div>
+							</div>
+						</div>
+						<div class="col-md-4" style="padding-right: 1px;">
+							<div class="col-md-12" style="padding-right: 1px;">
+								<div id="order-productinfo-attachprod-left-grid"></div>
+							</div>
+						</div>
+						<div class="col-md-8"  style="padding-left: 1px;">
+							<div class="col-md-12" style="padding-left:1px;">
+								<div id="order-productinfo-attachprod-right-grid"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- 接入信息 -->
+				<div id="orderDetails-tabs-d" class="ui-tabs-panel" aria-live="polite" aria-labelledby="ui-id-4" role="tabpanel" aria-expanded="false" aria-hidden="true">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="order-accessinfo-grid"></div>
+						</div>
+					</div>
+
+				</div>
+				<!-- 工单列表 -->
+				<div id="orderDetails-tabs-e" class="ui-tabs-panel" aria-live="polite" aria-labelledby="ui-id-5" role="tabpanel" aria-expanded="false" aria-hidden="true">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="order-workorder-grid"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

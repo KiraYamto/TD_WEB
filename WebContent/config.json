@@ -1,0 +1,11 @@
+{
+    "autoprefixer": {
+        "browsers": [
+            "Chrome >= 20",
+            "Firefox >= 24",
+            "Explorer >= 8",
+            "Opera >= 12",
+            "Safari >= 6"
+        ]
+    }
+}

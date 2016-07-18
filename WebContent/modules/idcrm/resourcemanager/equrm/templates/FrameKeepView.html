@@ -1,0 +1,76 @@
+<div class="modal-header">
+	<h4 class="modal-title" id="frame_keep_title" >机柜保留</h4>
+</div>
+<div class="modal-body">
+	<hr />
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form class="form-horizontal" id="frame-keep-form">
+					<div class="form-group">
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">预留方式：</label>
+								<div class="col-md-4" style="padding: 5px;">
+									<select id="frame_keep_type" class="equip-qry-select" name="reservedObject"> 
+										<option selected="selected">请选择</option>
+										<option value="440001">客户</option>
+										<option value="440002">自用</option>                     
+	                    			</select>
+                    			</div>
+						</div>
+						<div class="col-md-4">
+							<label class="col-md-4 control-label">客户：</label>
+							<input id="frame_keep_custcode" value="" type="hidden" name="custCode" />
+							<div class="input-group col-md-8">
+			                              	<div class="col-md-12 padding-0">
+			                                <div class="col-md-9 padding-0">
+			                    <input id="frame_keep_custname" width="1" value=""  name="custName" disabled/>
+			                    </div>
+			                    <div class="col-md-3 ">
+			                    <button  type="button" disabled="disabled" class="btn btn-primary" id="frame-keep-choose-btn">选择</button>
+			                    </div></div>
+							</div>
+						</div>
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">到期日期：</label>
+								<div class="input-group col-md-8">
+										<input class="form-control" type="text" placeholder="创建时间" id="frame_keep_reserveddate" name="reservedDate">
+								</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">联系人：</label>
+								<div class="input-group col-md-8">
+									<input class="form-control" placeholder="联系人" type="text" id="frame_keep_adminname" name="adminName" />
+								</div> 
+						</div>
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">联系方式：</label>
+								<div class="input-group col-md-8">
+									<!--<input type="hidden" name="segmCode">-->
+									<input type="hidden" name="ID">
+									<input class="form-control" placeholder="联系方式" type="text" id="frame_keep_admintel" name="adminTel">
+								</div>
+						</div>
+					</div>
+					<div class="form-group">
+							<div class="col-md-12">
+								<label class="col-md-1 control-label">备注：</label>
+								<div class="input-group col-md-11">
+									<textarea class="form-control" placeholder="备注" type="text"  id="frame_keep_remark" rows="3" name="remark"></textarea>
+								</div>
+							</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" id="frame-keep-save-button">确定</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>
+</div>

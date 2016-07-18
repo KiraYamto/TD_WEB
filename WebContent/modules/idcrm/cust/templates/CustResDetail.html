@@ -1,0 +1,142 @@
+<!-- <div style="overflow:scroll; overflow-x: hidden; height:100%;">  -->
+<div class="modal-header">
+	<h4 class="modal-title" id="ip_addr_title" >客户资源详情</h4>
+</div>
+<div class="modal-body" style="overflow:scroll; overflow-x: hidden; height:86%;">
+
+	<div class="col-md-12">
+	
+	    <div class="row"> 
+	    	
+	        <div class="col-md-12" style="padding: 0px;">
+	        <div class="row">
+	         <div class="col-md-12">
+	          <div class="panel panel-default">
+			    <div class="panel-heading">
+			        <h3 class="panel-title">客户信息</h3>
+			    </div>
+			    <div class="panel-body">
+					 <form id="cust_detail_info_form">
+			            <div class="row">
+			                <div class="col-md-2 equip-qry-title">                  
+			                    <span>客户名称：</span>
+			                </div>
+			                <div class="col-md-2" style="padding: 5px;">
+			                	<!-- 
+			                	<div class="col-xs-3 cust-qry-select-cond" >
+			                    <select id="equip_net_name_cond" class="form-control" name="condOp.eqName">
+			                        <option value="EQUALS" selected>等于</option>
+			                        <option value="LIKE">包含</option>
+			                        <option value="NOT_LIKE">不包含</option>
+			                    </select>
+			                    </div>
+			                     -->
+			                    <div class="cust-qry-input-cond" >
+			                    <input class="form-control" value="" name="custName"/>
+			                    </div>
+			                </div>
+			                <div class="col-md-2 equip-qry-title">
+			                    <span>客户编码：</span>
+			                </div>
+			                <div class="col-md-2" style="padding: 5px;">
+			                    <div class="cust-qry-input-cond" >
+			                    <input id="custCode" class="form-control" value="" name="custCode"/>
+			                    </div>
+			                </div>
+			                
+			                <div class="col-md-2 equip-qry-title">
+			                    <span>客户等级：</span>
+			                </div>
+			                <div class="col-md-2" style="padding: 5px;">
+			                    <div class="cust-qry-input-cond" >
+			                    <select id="custGradeId" class="form-control" attrCode='CUST_GRADE' name="custGradeId">                       
+			                    </select>
+			                    </div>
+			                </div>
+			             </div>
+			             <div class="row">
+			                <div class="col-md-2 equip-qry-title">
+			                    <span>客户类型：</span>
+			                </div>
+			                <div class="col-md-2" style="padding: 5px;">
+			                    <div class="cust-qry-input-cond" >
+			                    <select id="custType" class="form-control" attrCode='CUST_TYPE' name="custType">                       
+			                    </select>
+			                    </div>                  
+			                </div>
+			                <div class="col-md-2 equip-qry-title">
+			                    <span>联系人：</span>
+			                </div>
+			                <div class="col-md-2" style="padding: 5px;">
+			                    <div class="cust-qry-input-cond" >
+			                    <input id="lindName" class="form-control" value=""  name="lindName"/>
+			                    </div>
+			                </div>
+			                <div class="col-md-2 equip-qry-title">
+			                    <span>联系方式：</span>
+			                </div>
+			                <div class="col-md-2" style="padding: 5px;">
+			                    <div class="cust-qry-input-cond" >
+			                    <input id="lindMobile" class="form-control" value=""  name="lindMobile"/>
+			                    </div>
+			                </div>
+			            </div>
+						
+			            </form>
+					</div>
+				  </div>
+				  </div>
+				  </div>
+				  
+				<div class="row">
+					<div class="col-md-12">
+						<div id="cust_res_eqStation">
+							<a class="btn btn-primary" data-toggle="collapse"
+								href="#collapseExample" aria-expanded="false"
+								aria-controls="collapseExample"> 机柜/机位 </a>
+							
+							<div class="collapse in" id="collapseExample">
+								<div id="cust_res_frame_grid"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div id="cust_res_eqBroadPort">
+							<a class="btn btn-primary" data-toggle="collapse"
+								href="#custResBroadbandPort" aria-expanded="false"
+								aria-controls="custResBroadbandPort"> 带宽/端口 </a>
+							
+							<div class="collapse in" id="custResBroadbandPort">
+								<div id="cust_res_eqBroadPort_grid"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div id="cust_res_ipAddr">
+							<a class="btn btn-primary" data-toggle="collapse"
+								href="#custResIpAddr" aria-expanded="false"
+								aria-controls="custResIpAddr"> IP地址 </a>
+							
+							<div class="collapse in" id="custResIpAddr">
+								<div id="cust_res_ipAddr_grid"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+	        </div>
+	    </div>
+	
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" id="cust-save-button">确定</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>
+

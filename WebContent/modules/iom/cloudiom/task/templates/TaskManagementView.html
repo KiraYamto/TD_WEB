@@ -1,0 +1,111 @@
+<div class="col-md-12">
+	<!-- 此tab导航和实际的内容页并没有关联，因为各内容页展示的东西基本一致，所以只需要捕捉这个导航条的点击事件然后修改内容页的部分内容即可，避免了重复代码 -->
+	<div id="iomTaskManagement-tab" class="row ui-tabs">
+		<ul class="ui-tabs-nav">
+			<li>
+				<a id="iomTaskManagement-tabs-pendingReceive-link" class="ui-tabs-anchor" data-target="iomTacheLimit-tabs-pendingReceive">待接单区</a>
+			</li>
+			<li>
+				<a id="iomTaskManagement-tabs-pendingDeal-link" class="ui-tabs-anchor" data-target="iomTacheLimit-tabs-pendingDeal">待处理区</a>
+			</li>
+			<li>
+				<a id="iomTaskManagement-tabs-dealed-link" class="ui-tabs-anchor" data-target="iomTacheLimit-tabs-dealed">已处理区</a>
+			</li>
+		</ul>
+		<!-- 虚拟的内容页，用于tab初始化 -->
+		<div id="iomTacheLimit-tabs-pendingReceive" class="ui-tabs-panel"></div>
+		<div id="iomTacheLimit-tabs-pendingDeal" class="ui-tabs-panel"></div>
+		<div id="iomTacheLimit-tabs-dealed" class="ui-tabs-panel"></div>
+	</div>
+	
+	<!-- 实际的内容页 -->
+	<div class="row">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="iomTaskManagement-panel" class="panel panel-default">
+					<div id="iomTaskManagement-panel-body" class="panel-body">
+						<form class="form-horizontal" id="iomTaskManagement-Qryform">
+							<div class="row iomTaskManagement-btn-row">
+									<div id="iomTaskManagement-operBtnDiv" class="col-md-6">
+										<button id="iomTaskManagement-orderDetailsBtn" class="btn btn-success" type="button">工单详情</button>
+										<button id="iomTaskManagement-checkFlowBtn" class="btn btn-success" type="button">查看流程</button>
+										<button id="iomTaskManagement-getWorkOrder" class="btn btn-success" type="button">提单</button>
+										<button id="iomTaskManagement-finishWorkOrder" class="btn btn-success" type="button">回单</button>
+										<button id="iomTaskManagement-returnWorkOrder" class="btn btn-success" type="button">退单</button>
+										<button id="iomTaskManagement-fileUpload" class="btn btn-success" type="button">附件上传</button>
+									</div>
+									<div id="iomTaskManagement-searchCodeDiv" class="col-md-4">
+										<div class="row">
+											<div class="col-md-5">
+												<div class="row">
+													<input id="iomTaskManagement-orderCode" name="iomTaskManagement-orderCode" class="form-control" type="text" placeholder="输入定单编码"></input>
+												</div>
+											</div>
+											<div id="iomTaskManagement-workOrderCode-container" class="col-md-5">
+												<div class="row">
+													<input id="iomTaskManagement-workOrderCode" name="iomTaskManagement-workOrderCode" class="form-control" type="text" placeholder="输入工单编码"></input>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="iomTaskManagement-searchBtnDiv" class="col-md-2">
+										<div class="row">
+											<button id="iomTaskManagement-searchBtn" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> 查询</button>
+											<button id="iomTaskManagement-advSearchBtn" class="btn btn-success" type="button" expand="false">高级查询 <span class="glyphicon glyphicon-chevron-down"></span></button>
+										</div>
+									</div>
+							</div>
+							<div class="row iomTaskManagement-advSearchFields-row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-5 control-label" for="iomTaskManagement-startTime">开始:</label>
+										<div class="input-group col-md-7">
+											<input class="form-control col-md-12" id="iomTaskManagement-startTime" name="iomTaskManagement-startTime" data-today-btn="true">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-5 control-label" for="iomTaskManagement-endTime">结束:</label>
+										<div class="input-group col-md-7">
+											<input class="form-control col-md-12" id="iomTaskManagement-endTime" name="iomTaskManagement-endTime" data-today-btn="true">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-5 control-label" for="iomTaskManagement-tache" >环节:</label>
+										<div class="input-group col-md-7">
+											<input class="form-control col-md-12" id="iomTaskManagement-tache" name="iomTaskManagement-tache">
+											</input>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-2 control-label"></label>
+										<div class="input-group col-md-10">
+											<label class="checkbox-inline control-label"> 
+												<input id="iomTaskManagement-historySearch" class="form-control" type="checkbox">
+												历史单
+											</label>
+											<label class="checkbox-inline control-label"> 
+												<input id="iomTaskManagement-fuzzySearch" class="form-control" type="checkbox">
+												模糊查询
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="iomTaskManagement-grid"></div>
+			</div>
+		</div>
+	</div>
+</div>

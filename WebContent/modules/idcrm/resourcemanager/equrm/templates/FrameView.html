@@ -1,0 +1,215 @@
+<div class="row frame_mana_view_container">
+    <div class="col-md-3">
+
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="查找..." id="frameView-nodeName">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="frameView-treeQry-btn">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+              </span>
+        </div>
+        <div id="frameView-navTreeDiv" >
+		   <ul id="frameView-navTree" ></ul>
+		</div>
+    </div>
+
+    <div class="col-md-9" style="padding: 5px;">
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-6" style="padding-left: 15px;">
+                <button type="button" class="btn btn-primary" id="frameView-unitmgr-btn">机位管理</button>
+                <button type="button" class="btn btn-primary" id="frameView-add-btn">新建</button>
+                <!--<button type="button" class="btn btn-primary" id="frameView-bathadd-btn">批量新建</button>-->
+                <button type="button" class="btn btn-primary" id="frameView-mod-btn">修改</button>
+                <button type="button" class="btn btn-primary" id="frameView-del-btn">删除</button>
+                <button type="button" class="btn btn-primary" id="frameView-keep-btn">预留</button>
+                <button type="button" class="btn btn-primary" id="frameView-rel-btn">释放</button>
+                <button type="button" class="btn btn-primary" id="frameView-export-btn">导出</button>
+                <button type="button" class="btn btn-primary" id="frameView-show2d-btn">2D展示</button>
+                <button type="button" class="btn btn-primary" id="frameView-3dedit-btn">3D编辑</button>
+            </div>
+            <div class="col-md-2" style="padding-right: 0;">
+                <form id="frameView-dcOrRoomSel-form">
+                    <div class="input-group">
+                        <input class="form-control" type="text" placeholder="请选择机房" id="frameView-dcRoomSel" name="roomName" style="margin-left: 0px;">
+                        <input type="hidden" id="frame_dcRoomId" name="roomId">
+                        <input type="hidden" id="frame_dataCenterId" name="dataCenterId">
+                        <input type="hidden" id="frame_dataCenterName" name="dataCenterName">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2" style="padding-right: 0;">
+                    <input id="equip_code" name="code" class="form-control" value="" placeholder="机柜编码" />
+                </div>
+            <div class="col-md-2" style="padding-right: 20px;">
+                <button type="button" class="btn btn-primary" id="frameView-query-btn">查询</button>
+                <button type="button" class="btn btn-primary" id="frameView-morequery-btn">更多↓</button>
+                <!--<button type="button" class="btn btn-primary" id="frameView-clear-btn">重置搜索框</button>-->
+            </div>
+        </div>
+
+        <div class="row" id="frameView-qryContentDiv">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="form-horizontal" id="frame-qryform">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">机柜名称:</label>
+                                <div class="input-group col-md-8">
+                                    <div class="col-md-3 frameView-qry-select">
+                                        <select class="form-control" id="equip_name_cond">
+                                            <option value="=" selected>等于</option>
+                                            <option value="like">包含</option>
+                                            <option value="not like">不包含</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input id="equip_name" name="name" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--<div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">机柜编码:</label>
+                                <div class="input-group col-md-8">
+                                    <div class="col-md-3 frameView-qry-select">
+                                        <select class="form-control" id="equip_code_cond">
+                                            <option value="=" selected>等于</option>
+                                            <option value="like">包含</option>
+                                            <option value="not like">不包含</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input id="equip_code" name="code" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">机柜型号:</label>
+                                    <div class="input-group col-md-8">
+                                        <div class="col-md-3 frameView-qry-select">
+                                            <select class="form-control" id="equip_model_cond">
+                                                <option value="=" selected>等于</option>
+                                                <option value="like">包含</option>
+                                                <option value="not like">不包含</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <select id="equip_model" name="model" class="form-control">
+												<option value="" selected>请选择</option>
+                                                <option value="419001">NE5000E</option>
+                                                <option value="419002">S12510</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--<div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">所属中心/机房:</label>
+                                    <div class="input-group col-md-8">
+                                        <div class="col-md-3 frameView-qry-select">
+                                            <select class="form-control" id="equip_room_cond">
+                                                <option value="=" selected>等于</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-9">
+                                            <input class="form-control" type="text" placeholder="请选择数据中心/机房" id="dcRoomSel" data-url="#dcRoom-dialog"
+                                                    style="margin-left: 15px;">
+                                            <input type="hidden" id="frame_dcRoomId">
+                                            <input type="hidden" id="frame_dataCenterId">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">使用类型:</label>
+                                    <div class="input-group col-md-8">
+                                        <div class="col-md-3 frameView-qry-select">
+                                            <select class="form-control" id="equip_rentingMode_cond">
+                                                <option value="=" selected>等于</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-9">
+                                            <select class="form-control frameView-value-select" id="equip_rentingMode" name="rentingMode" style="width:174px;">
+                                                <option value="" selected>请选择</option>
+                                                <option value="408001">出租</option>
+                                                <option value="408002">自用</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">分配状态:</label>
+                                    <div class="input-group col-md-8">
+                                        <div class="col-md-3 frameView-qry-select">
+                                            <select class="form-control" id="equip_allocationStateId_cond">
+                                                <option value="=" selected>等于</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-9">
+                                            <select class="form-control frameView-value-select" id="equip_allocationStateId" name="allocationStateId" style="width:174px;">
+                                                <option value="">请选择</option>
+                                                <option value="417001">整柜分配</option>
+                                                <option value="417002">机位分配</option>
+                                                <option value="417003">未分配</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="frameView-grid"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="dcRoom-dialog" class="ui-dialog">
+    <div class="modal-header">
+        <h4 class="modal-title">选择数据中心/机房</h4>
+    </div>
+    <div class="modal-body" style="overflow: auto">
+        <div id="frameView-dcRoomTree"></div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-info" id="frame-dcRoomSelConfirm">确定</button>
+        <button type="button" class="btn btn-default" id="frame-dcRoomSelClose">取消</button>
+    </div>
+</div>
+
+<div id="rMenu" style="display:none;" class="popover fade right in">
+
+    <div class="arrow" style="top: 15%;"></div>
+    <div class="popover-content">
+        <ul>
+            <li style="color: red"><a id="frameView-rMenu-add-btn">增加机柜</a></li>
+            <li style="color: red"><a id="frameView-rMenu-mod-btn">修改机柜</a></li>
+            <li style="color: red"><a id="frameView-rMenu-del-btn">删除机柜</a></li>
+        </ul>
+    </div>
+</div>
+
+

@@ -1,0 +1,87 @@
+<div class="modal-header">
+	<h4 class="modal-title">增加环节时限</h4>
+</div>
+<div class="modal-body">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="col-md-12">
+				<form class="form-horizontal" id="iomTacheLimit-form">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="col-md-3 control-label">环节名称：</label>
+								<div class="input-group col-md-9">
+									<input class="form-control" type="text" readonly="readonly"
+										name="iomTacheLimit-tacheName" id="iomTacheLimit-tacheName"/>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-6 control-label">完成时限值：</label>
+								<div class="input-group col-md-6">
+									<input class="form-control" type="text"
+										name="iomTacheLimit-finishLimit" id="iomTacheLimit-finishLimit"
+										data-rule="完成时限值:required;"/>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-6 control-label">告警时限值：</label>
+								<div class="input-group col-md-6">
+									<input class="form-control" type="text"
+										name="iomTacheLimit-alertLimit" id="iomTacheLimit-alertLimit"
+										data-rule="告警时限值:required;match[lt, iomTacheLimit-finishLimit]">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-6 control-label">时间单位：</label>
+								<div class="input-group col-md-6">
+									<select class="form-control" type="text"
+										name="iomTacheLimit-timeUnit" id="iomTacheLimit-timeUnit"
+										data-rule="时间单位:required;"> 
+										<option value="DAY">天</option>
+										<option value="HOR">时</option>
+										<option value="MIN">分钟</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-6 control-label">是否只计算工作日：</label>
+								<div class="input-group col-md-6">
+									<select type="text" name="iomTacheLimit-isWorkingDays"
+										id="iomTacheLimit-isWorkingDays" class="form-control"
+										data-rule="是否只计算工作日:required;">
+										<option value="Y">是</option>
+										<option value="N">否</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<div class="row">
+		<div class="col-md-12">
+			<button type="button" class="btn btn-default"
+				id="iomTacheLimit-save-button">确定</button>
+			<button type="button" class="btn btn-default"
+				id="iomTacheLimit-cancel-button" data-dismiss="modal">取消</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,192 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">人员信息</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="com-staffmgr-staffinfo-form">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">组织：</label>
+
+										<div class="input-group col-md-10" id="com-staffmgr-staffinfo-org" style="padding-top: 4px;">
+										</div>
+										
+									</div>
+								</div>
+								<div class="col-md-12" id="com-staffmgr-staffinfo-job-col">
+									<div class="form-group">
+										<label class="col-md-2 control-label">职位：</label>
+
+										<div class="input-group col-md-10">
+												<input type="text" id="com-staffmgr-staffinfo-job" name="orgId" class="form-control">
+												
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="col-md-12" id="com-staffmgr-staffinfo-job-isdefault-col">
+									<div class="form-group">
+										<label class="col-md-2 control-label">是否默认职位：</label>
+
+										<div class="input-group col-md-10">
+												<input type="checkbox"  id="com-staffmgr-staffinfo-job-isdefault"  class="switch-btn" checked="" data-on-text="<span class='glyphicon glyphicon-ok'></span>" data-off-text="<span class='glyphicon glyphicon-remove'></span>">
+												
+										</div>
+										
+										
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">{{STAFFORG_STAFF_NAME}}：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入{{STAFFORG_STAFF_NAME}}" id="com-staffmgr-staffinfo-staffname" name="staffName" data-rule="required;"/>
+										</div>
+										
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">{{STAFFORG_USER_ACCOUNT}}：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入{{STAFFORG_USER_ACCOUNT}}" id="com-staffmgr-staffinfo-username" name="userName" data-rule="required;"/>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6" id="com-staffmgr-staffinfo-password-col" >
+									<div class="form-group">
+										<label class="col-md-4 control-label">密码：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="password" placeholder="请输入密码" id="com-staffmgr-staffinfo-password" name="password" data-rule="required;"/>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6" id="com-staffmgr-staffinfo-comfirmpassword-col" >
+									<div class="form-group">
+										<label class="col-md-4 control-label">确认密码：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="password" placeholder="请输入确认密码" id="com-staffmgr-staffinfo-comfirmpassword" name="comfirmpassword" data-rule="required;match(password);"/>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">民族：</label>
+
+										<div class="input-group col-md-8">
+												
+							                    <select id="com-staffmgr-staffinfo-nationId" name="nationId">
+							                    	<OPTION selected value=0>未知</OPTION><OPTION value=10>白族</OPTION><OPTION value=11>保安族</OPTION><OPTION value=12>布朗族</OPTION><OPTION value=13>布依族</OPTION><OPTION value=14>藏族</OPTION><OPTION value=15>朝鲜族</OPTION><OPTION value=16>达斡尔族</OPTION><OPTION value=17>傣族</OPTION><OPTION value=18>德昂族</OPTION><OPTION value=19>东乡族</OPTION><OPTION value=20>侗族</OPTION><OPTION value=21>独龙族</OPTION><OPTION value=22>俄罗斯族</OPTION><OPTION value=23>鄂伦春族</OPTION><OPTION value=24>鄂温克族</OPTION><OPTION value=25>高山族</OPTION><OPTION value=26>哈尼族</OPTION><OPTION value=27>哈萨克族</OPTION><OPTION value=28>汉族</OPTION><OPTION value=29>赫哲族</OPTION><OPTION value=30>回族</OPTION><OPTION value=31>基诺族</OPTION><OPTION value=32>京族</OPTION><OPTION value=33>景颇族</OPTION><OPTION value=34>柯尔克孜族</OPTION><OPTION value=35>拉祜族</OPTION><OPTION value=36>黎族</OPTION><OPTION value=37>傈僳族</OPTION><OPTION value=38>珞巴族</OPTION><OPTION value=39>满族</OPTION><OPTION value=40>毛南族</OPTION><OPTION value=41>门巴族</OPTION><OPTION value=42>蒙古族</OPTION><OPTION value=43>苗族</OPTION><OPTION value=44>仫佬族</OPTION><OPTION value=45>纳西族</OPTION><OPTION value=46>怒族</OPTION><OPTION value=47>普米族</OPTION><OPTION value=48>羌族</OPTION><OPTION value=49>撒拉族</OPTION><OPTION value=50>畲族</OPTION><OPTION value=51>水族</OPTION><OPTION value=52>塔吉克族</OPTION><OPTION value=53>塔塔尔族</OPTION><OPTION value=54>土家族</OPTION><OPTION value=55>土族</OPTION><OPTION value=56>佤族</OPTION><OPTION value=57>维吾尔族</OPTION><OPTION value=58>乌孜别克族</OPTION><OPTION value=59>锡伯族</OPTION><OPTION value=60>瑶族</OPTION><OPTION value=61>彝族</OPTION><OPTION value=62>仡佬族</OPTION><OPTION value=63>裕固族</OPTION><OPTION value=64>壮族</OPTION><OPTION value=65>阿昌族</OPTION><OPTION value=99>其他</OPTION>
+							                    </select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">证件号：</label>
+
+										<div class="input-group col-md-10">
+											<input class="form-control" type="text" placeholder="请输入证件号" id="com-staffmgr-staffinfo-certNo" name="certNo" />
+										
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">邮箱地址：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入邮箱" id="com-staffmgr-staffinfo-email" name="email" data-rule="required;email;"/>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">办公电话：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入办公电话" id="com-staffmgr-staffinfo-officetel" name="officeTel" data-rule="tel;"/>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">移动电话：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="手机号码" id="com-staffmgr-staffinfo-mobtel" name="mobileTel" data-rule="mobile;"/>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">通信方式：</label>
+
+										<div class="input-group col-md-8">
+												<select id="com-staffmgr-staffinfo-valcommode" name="validCommMode" class="form-control" data-rule="required;">
+								                    <option value="" selected="selected">请选择有效通信方式</option>
+								                    <option value="1">邮箱</option>
+								                    <option value="2">移动电话</option>
+								                    <option value="3">邮件及手机</option>
+							                    </select>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">最大登录人：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="最大登录人" id="com-staffmgr-staffinfo-logonnumber" name="logonNumber" data-rule="required;integer;"/>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">联系地址1：</label>
+
+										<div class="input-group col-md-10">
+												<input class="form-control" type="text" placeholder="联系地址1" id="com-staffmgr-staffinfo-address1" name="address1" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">联系地址2：</label>
+
+										<div class="input-group col-md-10">
+												<input class="form-control" type="text" placeholder="联系地址2" id="com-staffmgr-staffinfo-address2" name="address2" />
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-primary" id="com-staffmgr-staffinfo-save">确定</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+jdbcUrl = jdbc:mysql://121.42.173.39:3307/idcdb?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+user = root
+password =
+devMode = true
+oracleDrive = oracle.jdbc.driver.OracleDriver
+
+#####业务配置######
+KU_TYPE_ID=101,102,103
+
+#####登录地址配置页面#######
+sh=login_sh.html
+xp=login_xp.html

@@ -1,0 +1,105 @@
+<div class="modal-header">
+	<h4 class="modal-title" id="ip_addr_title" >IP修改</h4>
+</div>
+<div class="modal-body">
+	<hr />
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form class="form-horizontal" id="ip-addr-info-form">
+						<div class="form-group">
+							<div class="col-md-4">
+								<input type="hidden" id="ip_addr_id" name="ID">
+								<input type="hidden" id="ip_addr_iPCode" name="iPCode">
+								<input type="hidden" id="ip_addr_segmId" name="segmId">
+								<input type="hidden" id="ip_addr_areaId" name="areaId">
+								<label class="col-md-4 control-label">地址名称：</label>
+								<div class="input-group col-md-8">
+									<!-- <input type="hidden" name="ID"> -->
+									<input class="form-control" placeholder="地址名称" type="text" id="ip_addr_ipName" name="iPName">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label class="col-md-4 control-label">掩码：</label>
+								<div class="input-group col-md-8">
+									<!-- <input type="hidden" name="ID"> -->
+									<input class="form-control" placeholder="掩码" type="text" id="ip_addr_ipMark" name="iPMark">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label class="col-md-4 control-label">子网：</label>
+								<div class="input-group col-md-8">
+									<!-- <input type="hidden" name="ID"> -->
+									<input class="form-control" placeholder="子网" type="text" id="ip_addr_ipMark" name="subnet">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-4">
+								<label class="col-md-4 control-label">网关：</label>
+								<div class="input-group col-md-8">
+									<input class="form-control" placeholder="网关" type="text" id="ip_addr_gateway" name="gateway">
+                    			</div>
+							</div>
+							<div class="col-md-4">
+								<label class="col-md-4 control-label">业务类型：</label>
+								<div class="input-group col-md-8">
+									<select id="ip_addr_serviceTypeId" class="equip-qry-select" attrCode='SERVICE_TYPE_ID' name="serviceTypeId">                       
+	                    			</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label class="col-md-4 control-label">地址性质：</label>
+								<div class="input-group col-md-8">
+									<select id="ip_addr_ipType" class="equip-qry-select" attrCode='SEGM_TYPE' name="iPTyep">                       
+	                    			</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							
+							<div class="col-md-4">
+								<label class="col-md-4 control-label">地址用途：</label>
+								<div class="input-group col-md-8">
+									<select id="ip_add_ipuse" class="equip-qry-select" attrCode='SEGM_USE' name="iPUse">                       
+	                    			</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label class="col-md-4 control-label">占用状态：</label>
+								<div class="col-md-4" style="padding: 5px;">
+									<select id="ip_add_usestate" class="equip-qry-select" attrCode='RS_BUSI_STATE' name="useState">                       
+	                    			</select>
+                    			</div>
+							</div>
+							<div class="col-md-4">
+								<label class="col-md-4 control-label">V4/V6：</label>
+								<div class="col-md-4" style="padding: 5px;">
+									<select id="ip_add_version" class="equip-qry-select" attrCode='IP_VERSION' name="iPVersion">                       
+	                    			</select>
+                    			</div>
+							</div>
+							
+						</div>
+						<div class="form-group">
+							<div class="form-group">
+								<div class="col-md-12">
+									<label class="col-md-1 control-label">描述：</label>
+									<div class="input-group col-md-11">
+										<textarea class="form-control" placeholder="描述" type="text"  id="ip_addr_description" rows="3" name="description"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" id="ip-save-button">确定</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>
+</div>

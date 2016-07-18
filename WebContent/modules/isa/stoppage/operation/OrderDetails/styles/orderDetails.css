@@ -1,0 +1,34 @@
+.scrollspy-orderdetails {
+	position: relative;
+	height: 480px;
+	margin-top: 0px;
+	overflow: auto;
+}
+#orderdetails-tabs-a h5 {
+	font-weight: bold;
+	text-decoration:underline;
+}
+.scrollspy-orderdetails .row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.orderdetails-tabs {
+	
+}
+#orderdetails-nav {
+	float:left;
+	height: 480px;
+}
+#orderdetails-scrollspy .orderdetails-spliter {
+	padding-top: 30px;
+	margin-top: 30px;
+	border-top: 3px dotted #e7e7e7;
+}
+.orderdetails-product-left-grid {
+	padding-right: 0px;
+	margin-top:10px;
+}
+.orderdetails-product-right-grid {
+	padding-left: 0px;
+	margin-top:10px;
+}

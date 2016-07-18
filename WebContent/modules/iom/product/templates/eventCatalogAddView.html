@@ -1,0 +1,51 @@
+
+<div class="modal-header">
+	<h4 class="modal-title" id="iom_event_popTitle">增加目录</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<form class="form-horizontal" id="iom-eventCatalog-form">
+		<div class="col-md-12">
+			<div class="col-md-8">
+					<div class="form-group">
+						<label class="col-md-6 control-label">父目录：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" name="iom-eventParentCatalogtName"
+								id="iom-eventParentCatalogtName" readonly="readonly" />
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-8">
+					<div class="form-group">
+						<label class="col-md-6 control-label">目录名称：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" name="iom-eventCatalogName"
+								id="iom-eventCatalogName" data-rule="名称:required;" />
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-8">
+					<div class="form-group">
+						<label class="col-md-6 control-label">目录编码：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" name="iom-eventCatalogCode"
+								id="iom-eventCatalogCode" data-rule="名称:required;"/>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="col-md-12" style="padding-left: 200px;">
+				<button type="button" class="btn btn-success"
+					id="iom-eventCatalog-save-button">确定</button>
+				<button type="button" class="btn btn-success"
+					id="iom-eventCatalog-cancel-button" data-dismiss="modal">取消</button>
+			</div>
+			</div>
+		</form>
+
+	</div> 
+</div>

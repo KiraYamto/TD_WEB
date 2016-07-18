@@ -1,0 +1,30 @@
+#operation-tabItem{
+	padding: 0px;
+}
+.wrap{margin:0 auto}
+
+#operation-tabs-pending .btn {
+    padding: 3px 8px;
+    font-size: 13px;
+    line-height: 1.4285;
+    border-radius: 4px;
+}
+.isaTaskManagement-workOrderState-icon-1 {
+	margin-left: 20px;
+	color: #EA421B;
+}
+.isaTaskManagement-workOrderState-icon-2 {
+	margin-left: 5px;
+	color: #DBAA00;
+}
+.isaTaskManagement-workOrderState-icon-3 {
+	margin-left: 5px;
+	color: #ABCA02;
+}
+.isaTaskManagement-workOrderState-icon-4 {
+	margin-left: 5px;
+	color: #0085FF;
+}
+#operation_fault_number {
+	margin-left: 15px;
+}

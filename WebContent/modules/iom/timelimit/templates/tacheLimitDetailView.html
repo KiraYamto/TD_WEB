@@ -1,0 +1,88 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">环节时限详情</h4>
+</div>
+<div class="modal-body">
+	<div id="iomTacheLimit-applyRule-tabs" class="ui-tabs">
+		<ul class="ui-tabs-nav">
+			<li>
+				<a id="iomTacheLimit-applyRule-tabs-a-link" class="ui-tabs-anchor" data-target="iomTacheLimit-tabs-a">环节时限适用规则</a>
+			</li>
+		</ul>
+		
+		<div id="iomTacheLimit-applyRule-tabs-a" class="ui-tabs-panel">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="iomTacheLimit-applyRule-grid"></div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-horizontal" id="iomTacheLimit-applyRule-form">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label class="col-md-3 control-label">服务：</label>
+									<div class="input-group col-md-9">
+										<input class="form-control" type="text" readonly="readonly"
+											name="iomTacheLimit-applyRule-service" id="iomTacheLimit-applyRule-service"
+											data-rule="服务:required;"/>
+										<span id="iomTacheLimit-applyRule-selectService" class="input-group-addon clear-input-icon-right">
+											<span class="glyphicon glyphicon-new-window"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+		
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-md-6 control-label">定单处理等级：</label>
+									<div class="input-group col-md-6">
+										<input class="form-control" type="text"
+											name="iomTacheLimit-applyRule-orderPriority" id="iomTacheLimit-applyRule-orderPriority"
+											data-rule="定单处理等级:required;"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-md-6 control-label">客户类型：</label>
+									<div class="input-group col-md-6">
+										<input class="form-control" type="text"
+											name="iomTacheLimit-applyRule-custType" id="iomTacheLimit-applyRule-custType"
+											data-rule="客户类型:required;"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label class="col-md-3 control-label">其他条件：</label>
+									<div class="input-group col-md-9">
+										<textarea class="form-control" type="text"
+											name="iomTacheLimit-applyRule-otherConds" id="iomTacheLimit-applyRule-otherConds">
+										</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div id="iomTacheLimit-applyRule-btnGroup" class="col-md-12">
+					<button id="iomTacheLimit-applyRule-add" class="btn btn-success" type="button"><span class="glyphicon glyphicon-plus"></span> 添加</button>
+					<button id="iomTacheLimit-applyRule-save" class="btn btn-success" type="button"><span class="glyphicon glyphicon-save"></span>保存修改</button>
+					<button id="iomTacheLimit-applyRule-del" class="btn btn-success" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>

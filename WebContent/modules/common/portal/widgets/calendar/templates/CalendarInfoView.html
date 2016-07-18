@@ -1,0 +1,74 @@
+<div class="modal-header">
+	<h4 class="modal-title">工作项</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="com-portal-calendarinfo-form">
+								
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">工作项标题：</label>
+
+										<div class="input-group col-md-10">
+												<input type="text" id="com-portal-calendarinfo-title" name="title" data-rule="required;" class="form-control" >
+												
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">开始时间：</label>
+
+										<div class="input-group col-md-8">
+											<input
+													class="form-control" type="text"
+													id="com-portal-calendarinfo-starttime" name="startTime" data-rule="required;" readonly="">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">结束时间：</label>
+
+										<div class="input-group col-md-8">
+											<input
+													class="form-control" type="text" id="com-portal-calendarinfo-endtime"
+													name="endTime" data-rule="required;match[gt, startTime];"  readonly="">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">工作内容：</label>
+
+										<div class="input-group col-md-10 clear-white">
+													<textarea id="com-portal-calendarinfo-workcontent" class="form-control" name="workContent" ></textarea>
+										</div>
+									</div>
+								</div>
+								
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer clearfix">
+		<div class="pull-left">
+			<button type="button" class="btn btn-default" id="com-portal-calendarinfo-delete">删除</button>
+		</div>
+		
+		<div class="pull-right">
+			<button type="button" class="btn btn-primary" id="com-portal-calendarinfo-save">保存</button>
+			
+			<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		</div>
+	</div>
+</div>

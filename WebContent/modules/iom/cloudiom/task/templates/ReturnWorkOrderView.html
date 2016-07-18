@@ -1,0 +1,58 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">退单</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<form class="form-horizontal" id="workorder-returnorder-form">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="col-md-2 control-label">工单编码：</label>
+
+						<div class="input-group col-md-10">
+							<span id="workorder-returnorder-workordercodes"></span>
+							 <!-- <select class="chosen-select" id="workorder-returnorder-workordercodes" data-placeholder="Choose a Country..." multiple="" data-rule="required">
+                                    
+                             </select> -->
+							
+
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="col-md-2 control-label">执行人：</label>
+
+						<div class="input-group col-md-10">
+							{{staffName}}
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="col-md-2 control-label">异常原因：</label>
+
+						<div class="input-group col-md-10">
+							<input class="form-control" id="workorder-returnorder-reason" type="text" data-rule="required;">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="col-md-2 control-label">异常原因描述：</label>
+
+						<div class="input-group col-md-10">
+						 <textarea id="workorder-returnorder-reasondesc" class="form-control" data-rule="required;"></textarea>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="submit" class="btn btn-default save-button">确定</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	</div>
+</div>

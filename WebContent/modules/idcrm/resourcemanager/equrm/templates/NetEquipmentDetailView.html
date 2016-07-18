@@ -1,0 +1,169 @@
+<div class="modal-header">
+    <h4 id="ne_equip_title" class="modal-title">设备信息</h4>
+</div>
+<div class="modal-body">    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">设备信息</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" id="net-equip-form-detail-1">                      
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">设备名称：</label>
+								<input type="hidden" name="id">
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text"  name="eqName">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">设备编码：</label>
+
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text" name="eqCode">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">所属机房：</label>
+
+                                <div class="input-group col-md-8">                                
+                                    <input class="form-control" type="text"  name="roomName" >
+                               </div>
+                        	</div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">序列号：</label>
+
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text"   name="serialNo">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">设备型号：</label>
+
+                                <div class="input-group col-md-8">
+                                     <input class="form-control" type="text"  name="modelName">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">使用类型：</label>
+
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text"  name="serviceStateName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">厂家：</label>
+
+                                <div class="input-group col-md-8">                                    
+									<input class="form-control" type="text"  name="vendorName">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">设备类型：</label>
+
+                                <div class="input-group col-md-8">                                    
+									<input class="form-control" type="text"  name="rsTypeName">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">网管IP地址：</label>
+
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text"   name="eqIpAddress">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">使用状态：</label>
+
+                                <div class="input-group col-md-8">                                    
+									<input class="form-control" type="text"  name="useStateName">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">状态：</label>
+
+                                <div class="input-group col-md-8">                                    
+									<input class="form-control" type="text"   name="stateName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-md-1 control-label padding-0">备注：</label>
+
+                                <div class="input-group col-md-11">
+                                    <textarea class="form-control" type="text" name="comments"                                          rows="4"></textarea>
+
+                                </div>
+                            </div>
+                        </div>                       
+                    </form>
+
+                </div>
+         </div>        
+         <div class="panel panel-default">
+                <div class="panel-heading">关联位置</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" id="net-equip-form-detail-2">  
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">机柜名称：</label>
+								<input type="hidden" name="id">
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text"  name="frameName">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">机柜编码：</label>
+
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text"   name="frameCode">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">所属机房：</label>
+
+                                <div class="input-group col-md-8">                                  
+                                    <input class="form-control" type="text"    name="frameRoomName" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">机柜型号：</label>
+
+                                <div class="input-group col-md-8">
+                                    <input class="form-control" type="text"   name="frameModel">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-md-4 control-label padding-0">机位序号：</label>
+
+                                <div class="input-group col-md-8">
+                                     <input class="form-control" type="text"  name="unitPostionNum">
+                                </div>
+                            </div>
+                        </div>                       
+                    </form>
+               </div>
+           </div>
+    </div>
+</div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" id="save-button">确定</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>

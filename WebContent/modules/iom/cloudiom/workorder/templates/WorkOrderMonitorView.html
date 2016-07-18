@@ -1,0 +1,129 @@
+<div id="iomWorkOrderMonitor" class="col-md-12">
+	<div id="iomWorkOrderMonitor-charts" class="row">
+		<div class="col-md-6 iomWorkOrderMonitor-100Height">
+			<div id="iomWorkOrderMonitor-productBarChart" class="col-md-12"></div>
+		</div>
+		<div class="col-md-3 iomWorkOrderMonitor-100Height">
+			<div id="iomWorkOrderMonitor-notFinishedPieChart" class="col-md-12"></div>
+		</div>
+		<div class="col-md-3 iomWorkOrderMonitor-100Height">
+			<div id="iomWorkOrderMonitor-finishedPieChart" class="col-md-12"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div id="iomWorkOrderMonitor-panel-body" class="panel-body">
+						<form class="form-horizontal" id="iomWorkOrderMonitor-Qryform">
+							<div class="row iomWorkOrderMonitor-btn-row">
+									<div id="iomWorkOrderMonitor-operBtnDiv" class="col-md-6">
+										<button id="iomWorkOrderMonitor-orderDetailsBtn" class="btn btn-success" type="button">工单详情</button>
+										<button id="iomWorkOrderMonitor-checkFlowBtn" class="btn btn-success" type="button">查看流程</button>
+										<button id="iomWorkOrderMonitor-getWorkOrder" class="btn btn-success" type="button">提单</button>
+										<button id="iomWorkOrderMonitor-finishWorkOrder" class="btn btn-success" type="button">回单</button>
+										<button id="iomWorkOrderMonitor-returnWorkOrder" class="btn btn-success" type="button">退单</button>
+									</div>
+									<div id="iomWorkOrderMonitor-searchCodeDiv" class="col-md-4">
+										<div class="row">
+											<div class="col-md-5">
+												<div class="row">
+													<input id="iomWorkOrderMonitor-orderCode" name="iomWorkOrderMonitor-orderCode" class="form-control" type="text" placeholder="输入定单编码"></input>
+												</div>
+											</div>
+											<div id="iomWorkOrderMonitor-workOrderCode-container" class="col-md-5">
+												<div class="row">
+													<input id="iomWorkOrderMonitor-workOrderCode" name="iomWorkOrderMonitor-workOrderCode" class="form-control" type="text" placeholder="输入工单编码"></input>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="iomWorkOrderMonitor-searchBtnDiv" class="col-md-2">
+										<div class="row">
+											<button id="iomWorkOrderMonitor-searchBtn" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> 查询</button>
+											<button id="iomWorkOrderMonitor-advSearchBtn" class="btn btn-success" type="button" expand="false">高级查询 <span class="glyphicon glyphicon-chevron-down"></span></button>
+										</div>
+									</div>
+							</div>
+							<div class="row iomWorkOrderMonitor-advSearchFields-row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-5 control-label" for="iomWorkOrderMonitor-startTime">开始:</label>
+										<div class="input-group col-md-7">
+											<input class="form-control col-md-12" id="iomWorkOrderMonitor-startTime" name="iomWorkOrderMonitor-startTime" data-today-btn="true">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-5 control-label" for="iomWorkOrderMonitor-endTime">结束:</label>
+										<div class="input-group col-md-7">
+											<input class="form-control col-md-12" id="iomWorkOrderMonitor-endTime" name="iomWorkOrderMonitor-endTime" data-today-btn="true">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-5 control-label" for="iomWorkOrderMonitor-tache" >环节:</label>
+										<div class="input-group col-md-7">
+											<input class="form-control col-md-12" id="iomWorkOrderMonitor-tache" name="iomWorkOrderMonitor-tache">
+											</input>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-2 control-label"></label>
+										<div class="input-group col-md-10">
+											<label class="checkbox-inline control-label"> 
+												<input id="iomWorkOrderMonitor-historySearch" class="form-control" type="checkbox">
+												历史单
+											</label>
+											<label class="checkbox-inline control-label"> 
+												<input id="iomWorkOrderMonitor-fuzzySearch" class="form-control" type="checkbox">
+												模糊查询
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row iomWorkOrderMonitor-advSearchFields-row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-5 control-label" for="iomWorkOrderMonitor-orderState" >定单状态:</label>
+										<div class="input-group col-md-7">
+												<select class="form-control col-md-12" id="iomWorkOrderMonitor-orderState" name="iomWorkOrderMonitor-orderState">
+												<option value="10F">已竣工</option>
+												<option value="10I">流程未启动</option>
+												<option value="10N">正常执行中</option>
+												<option value="10P">缓装</option>
+												<option value="10U">待审核</option>
+												<option value="10W">待装</option>
+												<option value="1BP">挂起</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="col-md-5 control-label" for="iomWorkOrderMonitor-workOrderState" >工单状态:</label>
+										<div class="input-group col-md-7">
+											<input class="form-control col-md-12" id="iomWorkOrderMonitor-workOrderState" name="iomWorkOrderMonitor-workOrderState">
+											</input>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="iomWorkOrderMonitor-grid"></div>
+			</div>
+		</div>
+	</div>
+</div>

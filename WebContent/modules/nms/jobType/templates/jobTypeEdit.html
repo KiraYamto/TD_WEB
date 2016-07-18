@@ -1,0 +1,94 @@
+<div class="container-fluid">
+	<div class="modal-header  row">
+        <label class="modal-title"  id="headtitle">配置任务类型</label>
+    </div>
+	<form class="form-horizontal" id="perform">
+		<div class="row" style="border: 0px solid red;">
+			<div class="col-xs-12 col-md-12 col-lg-12" style="border: 0px solid red;">
+				<div class="form-group required" style="border: 0px solid red;padding-top:10px">
+					<label class="col-md-4 control-label">任务类型名称:</label>
+					<div class="input-group ">
+			              <input id="name" name="name" class="easyui-textbox form-control" data-options="required:true" placeholder="请输入任务类型名称"/>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+	    <div class="row" style="border: 0px solid red;">
+	    	<div class="col-xs-12 col-md-12 col-lg-12" style="border: 0px solid red;">
+				<div class="form-group required" style="border: 0px solid red;">
+					<label class="col-md-4 control-label">采集类型:</label>
+					<div class="input-group ">
+                           <select id="collectType2" name="collectType" class="form-control"  data-options="required:true"  placeholder="请选择采集类型"/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="border: 0px solid red;">
+			<div class="col-xs-12 col-md-12 col-lg-12" style="border: 0px solid red;">
+				<div class="form-group required" style="border: 0px solid red;">
+					<label class="col-md-4 control-label">采集方式:</label>
+					<div class="input-group ">
+						<select id="collectMode2" name="collectMode"  class="form-control"  data-options="required:true"     placeholder="请选择采集方式" /> 
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="border: 0px solid red;">	
+		    <div class="col-xs-12 col-md-12 col-lg-12" style="border: 0px solid red;">		
+				<div class="form-group required" style="border: 0px solid red;">
+					<label class="col-md-4 control-label">任务程序实现类:</label>
+					<div class="input-group ">
+			            <textarea id="implClass" name="implClass"  style="resize:none;" class="border-radius easyui-validatebox  form-control" data-options="required:true" ></textarea >
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row" style="border: 0px solid red;">
+			<div class="col-xs-12 col-md-12 col-lg-12" style="border: 0px solid red;">
+				<div class="form-group" style="border: 0px solid red;">
+					<label class="col-md-4 control-label">优先级最大值:</label>
+					<div class="input-group ">
+						<input id="priorityMax" name="priorityMax" class="easyui-numberbox form-control"  />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="border: 0px solid red;">
+			<div class="col-xs-12 col-md-12 col-lg-12" style="border: 0px solid red;">
+				<div class="form-group" style="border: 0px solid red;">
+					<label class="col-md-4 control-label">优先级最小值:</label>
+					<div class="input-group ">
+						<input id="priorityMin" name="priorityMin" class="easyui-numberbox form-control"/>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="border: 0px solid red;">
+			<div class="col-xs-12 col-md-12 col-lg-12" style="border: 0px solid red;">
+				<div class="form-group" style="border: 0px solid red;">
+					<label class="col-md-4 control-label">备注:</label>
+					<div class="input-group ">
+					    <textarea id="description" name="description" class="border-radius form-control" style="resize:none;"/>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+			<div class="col-xs-9 col-xs-offset-3" style="padding: 0 2px 0 4px;">
+				<div style="float: center; border: 0px solid red; padding-left: 0px; padding-right: 0px; width: 200px; text-align: right;">
+					<button type="button" class="btn btn-danger" id="closeBtn">取消</button>
+					<button type="button" class="btn btn-success" id="saveBtn">保存</button>
+					
+				</div>
+			</div>
+		</div>
+	</form>
+
+</div>

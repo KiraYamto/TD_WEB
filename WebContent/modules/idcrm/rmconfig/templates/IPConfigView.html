@@ -1,0 +1,61 @@
+<div class="modal-header">
+	<h4 class="modal-title">{{title.dialog}}</h4>
+</div>
+<div class="modal-footer">
+    <div class="col-md-12 text-left" >	
+	    <button type="button" class="btn btn-default" id="rmconfig-ip-savebtn">{{operBtn.ok}}</button>
+	    <button type="button" class="btn btn-default" data-dismiss="modal">{{operBtn.cancle}}</button>
+	</div>
+</div>
+<div class="modal-body">
+	<div class="row">
+	    <div class="col-md-12">
+			<div class="panel panel-default">
+			    <div class="panel-heading">
+                    <h3 class="panel-title">{{title.cfgRequire}}</h3>
+                </div>
+				<div class="panel-body">
+					<form class="form-horizontal rmconfig-ip-form" id="rmconfig-ip-form">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-4 control-label">{{configRequire.roomName}}：</label>
+
+								<div class="input-group col-md-8">
+										<input class="form-control" type="text"  id="rmconfig-ip-roomname" name="roomName" >
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-4 control-label">{{configRequire.requireNum}}：</label>
+								<div class="input-group col-md-8">
+									<input class="form-control" type="text" 
+											id="rmconfig-ip-requireNum" name="requireNum" >
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+		    </div>
+	    </div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 rmconfig-ip-side" >	
+		    <ul id="rmconfig-ip-navtree" ></ul>
+		</div>
+		<div class="col-md-9">		
+			<div class="row">
+				<div class="col-md-12 text-left">	
+				    <button type="button" class="btn btn-primary"  id = "rmconfig-ip-showbtn">{{operBtn.showPort}}</button>		
+					<button type="button" class="btn btn-primary" id = "rmconfig-ip-delPortbtn">{{operBtn.deletePort}}</button>
+					<button type="button" class="btn btn-primary hide" id = "rmconfig-ip-resetPortbtn">{{operBtn.resetPort}}</button>
+				</div>
+			</div>
+			<div class="row rmconfig-ip-row">
+		    	<div class="col-md-12">
+				   <div id="rmconfig-ip-cfgresult"></div>			
+			    </div>
+			</div>			
+		</div>
+	</div>
+</div>

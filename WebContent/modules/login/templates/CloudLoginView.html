@@ -1,0 +1,53 @@
+<nav class="login-header">
+	<img src="./resources/images/login/logo.png" style="">
+</nav>
+<div class="login-maincontainer">
+	<div class="login-main-bgcontainer">
+		<img class="login-bg" src="./resources/images/login/bg.png" style="">
+		
+		<div class="login-form" >
+		 <div class="login-form-wrapper">
+            <div class="login-title canChoose" style="display:none">
+                 {{LOGIN_LOGIN}}
+                <span class="login-lan" data-toggle="dropdown"></span>
+                <ul class="dropdown-menu loginUl" role="menu">
+                </ul>
+            </div>
+            <p class="error-msg" id="errorMessageSpan"></p>
+            <div class="form-horizontal ui-validation" id="loginForm" autocomplete="off">
+                <!-- <div class="input-group login-form__input-group">
+                    <span  class="error-msg" />
+                </div> -->
+                <form id="loginform" >
+                <div class="input-group login-form__input-group">
+                    <span class="glyphicon glyphicon-user form-control-feedback icon__left"></span>
+                    <input class="form-control jstoggleFocus" id="inputUserName" name="inputUserName" placeholder="{{LOGIN_USERNAME}}" data-rule="required;" autocomplete="off">
+                    <span class="glyphicon glyphicon-remove-sign form-control-feedback icon__right delUserName"></span>
+                </div>
+                <div class="input-group login-form__input-group">
+                    <span class="glyphicon glyphicon-lock form-control-feedback icon__left"></span>
+                    <input type="password" class="form-control jstoggleFocus" id="inputPassword" name="inputPassword" placeholder="{{LOGIN_PASSWORD}}"  data-rule="required;" autocomplete="off">
+                    <span class="glyphicon glyphicon-remove-sign form-control-feedback icon__right delPwd"></span>
+                </div>
+                <div class="input-group login-form__input_code js-verify-code ">
+                    <div class="col-md-8">
+                        <input id="verificationCode" class="form-control jstoggleFocus " placeholder="{{LOGIN_VERIFY_CODE}}" />
+                    </div>
+                    <div class="col-md-4">
+                        <img id="imgVerifyCode" class="form-control" style="height: 30px;
+    width: auto;cursor:pointer;padding: 1px;"/>
+                    </div>
+                </div>
+                <div class="margin-top_s" style="text-align:left;">
+                    <input type="checkbox" id="checkRememberMe"><label for="checkRememberMe" style="cursor:pointer">{{LOGIN_REMEMBER_ME}}</label>
+                    <!--<a class="pull-right link_primary">Forgot password ?</a>-->
+                </div>
+                <button id="btnLogin" type="submit" class="btn btn_minwidth btn-block btn-primary margin-top_s" onclick="return false;">
+                    {{LOGIN_LOGIN}}
+                </button>
+                </form>
+            </div>
+        	</div>
+        </div>
+    </div>
+</div>

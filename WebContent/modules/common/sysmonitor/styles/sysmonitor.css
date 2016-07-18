@@ -1,0 +1,81 @@
+.sysmonitor-title {
+	font-size:18px;
+	height:30px;
+}
+
+
+.sysmonitorwidget-iommonitor-noramlorder{
+	background-color: #0085ff;
+	
+}
+
+.sysmonitorwidget-iommonitor-noramlorder:hover{
+	
+	
+	background-color:  #339dff;
+	transform:scale(1.2);
+	/* background-color:  #1a91ff; */
+	
+}
+
+
+.sysmonitorwidget-iommonitor-alarmorder{
+	background-color: #ffc600;
+	
+}
+
+.sysmonitorwidget-iommonitor-alarmorder:hover{
+	background-color:  #ffd133;
+	transform:scale(1.2)
+	/* #ffcc1a */
+	
+}
+
+.sysmonitorwidget-iommonitor-overorder{
+	background-color: #e03662;
+	
+}
+
+.sysmonitorwidget-iommonitor-overorder:hover{
+	background-color: #e76285;
+	transform:scale(1.2)
+	/* #e34c73 */
+	
+}
+
+.sysmonitorwidget-alarmmonitor-netdev{
+	
+	background-color: #00cc33;
+	
+}
+
+.sysmonitorwidget-alarmmonitor-netdev:hover{
+	
+	background-color: #00ff40;
+	transform:scale(1.2);
+}
+
+
+.sysmonitorwidget-alarmmonitor-host{
+	background-color: #0099FF;
+	
+	
+}
+
+.sysmonitorwidget-alarmmonitor-host:hover{
+	
+	background-color: #33adff;
+	transform:scale(1.2);
+}
+
+.sysmonitorwidget-alarmmonitor-netmonitor{
+	background-color: #FF9900;
+	
+}
+
+.sysmonitorwidget-alarmmonitor-netmonitor:hover{
+	background-color: #ffad33;
+	transform:scale(1.2);
+}
+
+ 

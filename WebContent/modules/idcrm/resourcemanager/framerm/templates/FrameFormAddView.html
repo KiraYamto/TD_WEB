@@ -1,0 +1,47 @@
+<div class="panel panel-default" id="framerm-frameFormAddView-addframe">
+    <div class="panel-body">
+        <div class="col-md-12">
+            <form id="framerm-frameFormAddView-form">
+                <div class="form-group required">
+                    <div class="col-md-4">
+                        <label class="col-md-4 control-label text-right module-form-collabel">起始行列：</label>
+
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" id="framerm-frameFormAddView-startRowId" name="startRowId" data-rule="required">
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" placeholder="列号"
+                                   id="framerm-frameFormAddView-startColumnId" name="startColumnId" data-rule="列号:required; digits"
+                                   data-msg-digits="{0}只能使用纯数字" data-msg-required="{0}不能为空">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-md-4 control-label text-right module-form-collabel">结束行列：</label>
+
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" id="framerm-frameFormAddView-endRowId" name="endRowId" data-rule="required">
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" placeholder="列号"
+                                   id="framerm-frameFormAddView-endColumnId" name="endColumnId" data-rule="列号:required; digits"
+                                   data-msg-digits="{0}只能使用纯数字" data-msg-required="{0}不能为空">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="module-form-col">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="text-center">
+            <button type="button" class="btn btn-default" id="framerm-frameFormAddView-confirm">确定</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>

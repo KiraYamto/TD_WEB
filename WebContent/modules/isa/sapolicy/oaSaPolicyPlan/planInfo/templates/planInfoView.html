@@ -1,0 +1,90 @@
+<div class="modal-header">
+	<h4 class="modal-title">策略方案管理</h4>
+</div>
+<form class="form-horizontal" id='isa_sap_oas_pla_planInfoForm'>
+	<input class="form-control" type="hidden" id="isa_sap_oas_pla_plan_id" name="isa_sap_oas_pla_plan_id"/>
+	<input class="form-control" type="hidden" id="isa_sap_oas_pla_area_id" name="isa_sap_oas_pla_area_id"/>
+	<input class="form-control" type="hidden" id="isa_sap_oas_pla_area_name" name="isa_sap_oas_pla_area_name"/>
+        <div class="panel-body">
+        	
+        	
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-md-2 control-label"><b>适用环节</b></label>
+                    <div class="col-md-8 input-group">
+                        <input class="form-control" type="text" id="isa_sap_oas_pla_tache"   name="isa_sap_oas_pla_tache"
+                           readonly="readonly"/>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+        		 <div class="form-group  required">
+                    <label class="col-md-2 control-label"><b>策略方案名称</b></label>
+                    <div class="col-md-8 input-group">
+                        <input id="isa_sap_oas_pla_plan_name" name="isa_sap_oas_pla_plan_name"
+                        data-rule="required" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+        	</div>
+            <div class="col-md-12">
+        		 <div class="form-group  required">
+                    <label class="col-md-2 control-label"><b>优先级</b></label>
+                    <div class="col-md-8 input-group">
+                        <input id="isa_sap_oas_pla_priority" name="isa_sap_oas_pla_priority"
+                        data-rule="required" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+        	</div>
+        	
+        	 <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-md-2 control-label"><b>策略元素</b></label>
+                    <div class="col-md-8 input-group">
+                        <input class="form-control" type="text" id="isa_sap_oas_pla_ele"   name="isa_sap_oas_pla_ele"
+                          class="form-control" />
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+            
+            
+        	 <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-md-2 col-sm-2 control-label"><b>状态</b></label>
+                     <div class="col-md-10 col-sm-8 input-group ">
+                        <label class="radio-inline">
+                            <input type="radio" name="isa_sap_oas_pla_state" class="radioItem"   value="1" data-rule="checked" checked="true">启用</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="isa_sap_oas_pla_state" class="radioItem"   value="0">停用</label>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-md-2 col-sm-2 control-label"><b>备注</b></label>
+                    <div class="col-md-8 col-sm-8 input-group clear-white">
+                        <textarea id="isa_sap_oas_pla_memo" name="isa_sap_oas_pla_memo" 
+                         class="form-control" style="height:80px"></textarea>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+            
+        	
+        	<div class="col-md-12 text-center">
+	            <button type="button" class="btn btn-success" id="isa_sap_oas_pla_btn"><b>确定</b></button>
+	            <button type="reset" class="btn btn-danger btn-default" data-dismiss="modal" id="cancel-button"><b>取消</b></button>
+        	</div>
+        	
+        </div>
+</form>

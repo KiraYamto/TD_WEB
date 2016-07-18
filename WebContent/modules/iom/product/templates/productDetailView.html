@@ -1,0 +1,98 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">产品详情</h4>
+</div>
+<div class="modal-body">
+	<div class="row"><div class="col-md-12">
+	<div id="iom-product-tabs" class="ui-tabs ui-tabs ui-tabs-collapsible">
+		<ul class="ui-tabs-nav" role="tablist">
+				<li id="iom-product-tabs-a-li" class="ui-state-default ui-tabs-active" role="tab" tabindex="0" aria-controls="tabs-a" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" style="display: list-item;">
+					<a id="iom-product-tabs-a-link" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">基本信息</a>
+				</li>
+				<li id="iom-product-tabs-b-li"  class="ui-state-default" role="tab" tabindex="-1" aria-controls="tabs-b" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false">
+					<a id="iom-product-tabs-b-link" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">产品特征关系</a>
+				</li> 
+		</ul>
+		<div id="iom-product-tabs-a" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+			<div class="row">
+					<div class="col-md-12">
+			<div class="panel panel-default">
+			
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="iom-product-form">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">产品名称：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control" readonly="readonly" type="text" name="iom-productName-detail" id="iom-productName-detail"  data-rule="产品名称:required;" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">产品编码：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" readonly="readonly" name="iom-productCode-detail" id="iom-productCode-detail"/> 
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">产品类型：</label>
+										<div class="input-group col-md-8">
+										<input type="text" readonly="readonly" name="iom-productType-detail" id="iom-productType-detail" class="form-control" data-rule="产品类型:required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">CRM产品编码：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control" readonly="readonly" type="text" name="iom-CrmProductCode-detail" id="iom-CrmProductCode-detail">
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">备注说明 ：</label>
+										<div class="input-group col-md-10">
+												<textarea name="iom-product-remark-detail" readonly="readonly" id="iom-product-remark-detail" class="form-control"></textarea>
+									</div></div>
+								</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="iom-product-tabs-b" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+			<div class="row">
+				<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="iom-product-tabs-b-grid"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+	 	</div>	
+	</div>
+	
+		</div>
+	</div>
+		<div class="modal-footer">
+		<div class="row"><div class="col-md-12">
+			<button type="button" class="btn btn-success" id="iom-productDetail-cancel-button" data-dismiss="modal">关闭</button>
+		</div></div>
+		</div>
+</div>

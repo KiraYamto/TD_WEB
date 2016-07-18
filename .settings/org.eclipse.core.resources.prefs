@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//WebContent/modules/common=UTF-8
+encoding//WebContent/modules/common/templates/HeaderView.html=UTF-8
+encoding//WebContent/modules/common/templates/MainView.html=UTF-8
+encoding//WebContent/modules/orderMonitor/templates/OrderMonitorView.html=UTF-8
+encoding//WebContent/newPages/diagious/css/layout.css=UTF-8
+encoding//WebContent/newPages/diagious/templates/OneKeySpeedView.html=UTF-8
+encoding//WebContent/newPages/diagious/templates/OneKeyView.html=UTF-8
+encoding/<project>=UTF-8

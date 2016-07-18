@@ -1,0 +1,61 @@
+
+<div class="container-fluid">
+	<div class="row" style="margin-top: 5px; margin-bottom: 5px;" id="nms_actionDiv">
+		<div class="col-md-3 col-lg-3" style="padding: 0 2px 0 4px;">
+			<button id="nms_jobinfo_addBtn" type="button" class="btn btn-primary">
+				新增
+			</button>
+			<button id="nms_jobinfo_modifyBtn" type="button" class="btn btn-primary">修改</button>
+			<button id="nms_jobinfo_deleteBtn" type="button" class="btn btn-primary">删除</button>
+			<button id="nms_jobinfo_startBtn" type="button" class="btn btn-primary">激活</button>
+			<button id="nms_jobinfo_stopBtn" type="button" class="btn btn-primary">挂起</button>
+
+		</div>
+
+		 <form id="nms_jobinfo_searchForm" class="form-horizontal  col-md-9">
+			<div class="row" style="border: 0px solid red;">
+				<div class="col-xs-3 col-md-3 col-lg-3" style="border: 0px solid red;">
+					<div class="form-group">
+						<label class="col-xs-5 col-md-5 col-lg-5 control-label search_form_label"  style="border: 0px solid red;padding-left:10px;">任务名称：</label>
+						<div class="input-group col-xs-7 col-md-7 col-lg-7 text-left">
+							<input id="nms_jobInfo_jobName" name="jobName" class="form-control" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-4" style="border: 0px solid red;">
+					<div class="form-group ">
+						<label class="col-xs-4 col-md-4 col-lg-4 control-label search_form_label"	for="kpiCode" style="border: 0px solid red;">任务类型：</label>
+			            <div class="input-group col-md-8">			            	
+							<input name="jobTypeId" class="form-control" id="nms_jobinfo_jobTypeName" type="text" readonly="readonly" placeholder="请选择任务类型" />
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-md-4" style="border: 0px solid red;">
+					<div class="form-group ">
+							<label class="col-md-4 col-lg-4 control-label "	for="kpiName" style="border: 0px solid red;">采集器：</label>
+							<div class="input-group col-md-8 col-lg-8 search_form_field" style="border: 0px solid red;">
+								<input id="nms_jobinfo_collector" name="collectorId" class="combobox form-control" />
+							</div>
+					</div>
+			   </div>
+
+			   	<div class="col-md-1"	style="float: left; border: 0px solid red; padding-left: 30px; ">
+			   		<div class="row">
+					    <button type="button" class="btn btn-success" id="nms_jobinfo_searchBtn" ><span class="glyphicon glyphicon-search"></span>查询</button>				   
+			   		</div>
+
+				</div>
+			</div>
+	   </form>
+	</div>
+
+
+	<div class="row">
+		<div class="col-xs-12 col-md-12 col-lg-12"
+			style="border: 0px solid yellow; padding: 0 1px 0 1px;">
+			<div id="jobInfoGrid" ></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,80 @@
+<div class="col-md-12">
+	<div id="dutyModule" class="row">
+		<!-- 左边组织树目录-->
+		<div class="col-md-2" id="divLeft">
+			<div class="panel  panel-default" id="divLeft-panel">
+				<div class="panel-heading">
+					<h3 class="panel-title">部门名称</h3>
+				</div>
+				<div style="padding: 0;overflow: auto" id="leftTree">
+					<div class="ztree" id="orgTree" style="padding-bottom: 5px;"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 右边区域-->
+		<div class="col-md-10" id="divRight">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<button type="submit" name="search" id="search-btn"
+							class="btn btn-flat">
+							<i class="fa fa-search"></i>
+						</button>
+						值班模板列表
+					</h3>
+				</div>
+
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12" style="padding: 5px;">
+							<div class="btn-group" style="margin-left: 15px">
+								<button type="button" class="btn btn-primary pull-left"
+									id="operation-add-btn">新增</button>
+								<button type="button" class="btn btn-primary pull-left"
+									id="operation-update-btn">修改</button>
+								<button type="button" class="btn btn-primary pull-left"
+									id="operation-delete-btn">删除</button>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-12">
+									<div id="operation-dutymodule-grid-pending"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<button type="submit" name="search" id="search-btn"
+							class="btn btn-flat">
+							<i class="fa fa-search"></i>
+						</button>
+						班次列表
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-12">
+									<div id="operation-dutyperiod-grid-pending"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+

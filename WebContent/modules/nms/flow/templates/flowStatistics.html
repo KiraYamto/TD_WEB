@@ -1,0 +1,40 @@
+
+<div class="container-fluid">
+	<div class="row">
+            <button id="nms_flow_curr_port" type="button" class="btn btn-success">当前流量Top10</button>
+            <button id="nms_flow_week_his_port" type="button" class="btn btn-info">历史流量周报Top10</button>
+	</div>
+
+	<form id="nms_flow_statistics_searchForm" class="form-horizontal">
+		<div class="row" style="border: 0px solid red;padding-top:5px;">
+			<div class="col-xs-4" style="border: 0px solid red;">
+				<div class="form-group">
+					<label class="col-xs-5 control-label search_form_label"	for="nms_flow_statistics_beginTime" style="border: 0px solid red;">开始时间：</label>
+					<div class="input-group col-xs-7 search_form_field"	style="border: 0px solid red;">
+						<input id="nms_flow_statistics_beginTime" name="nms_flow_statistics_beginTime" class=" form-control">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4" style="border: 0px solid red;">
+				<div class="form-group">
+					<label class="col-xs-5 control-label search_form_label" for="nms_flow_statistics_endTime" style="border: 0px solid red;">结束时间：</label>
+					<div class="input-group col-xs-7 search_form_field"	style="border: 0px solid red;">
+						<input id="nms_flow_statistics_endTime" name="nms_flow_statistics_endTime" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-3" style="border: 0px solid red;">
+				<div style="float: right; border: 0px solid red; padding-left: 0px; padding-right: 0px; width: 86px; text-align: right;">
+					<button type="button" class="btn btn-success" id="nms_flow_statistics_searchBtn">查询</button>
+					<button type="button" class="btn btn-danger" id="nms_flow_statistics_resetBtn">重置</button>
+				</div>			
+			</div>				
+		</div>
+	</form>
+	
+	<div class="row">
+		<div class="col-xs-12" style="padding: 5px 1px 0 1px;height:260px;">
+			<div id="nms_flow_port_statistics"></div>
+		</div>
+	</div>	
+</div>

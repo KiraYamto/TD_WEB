@@ -1,0 +1,69 @@
+<div class="modal-header">
+	<h4 class="modal-title">故障单增派</h4>
+</div>
+<form class="form-horizontal" id='isa_sto_ope_myw_add_from'>
+        <div class="panel-body">
+        		
+                <div class="form-group  required">
+                    <label class="col-md-4 control-label"><b>增派原因</b></label>
+                    <div class="input-group col-md-4">
+                        <input type="text" class="form-control" id="isa_sto_ope_myw_add_reason" name="isa_sto_ope_myw_add_reason"
+                         data-rule="combobox:required" data-msg-required="{0}不能为空" class="form-control" />
+                    </div>
+                </div>
+        		
+                <div class="form-group  required">
+                    <label class="col-md-4 col-sm-4 control-label"><b>处理人</b></label>
+                    <div class="input-group col-md-4 col-sm-4">
+                    	<input class="form-control" type="hidden" id="isa_sto_ope_myw_add_party_type" name="isa_sto_ope_myw_add_party_type"/>
+                    	<input class="form-control" type="text" id="isa_sto_ope_myw_add_party_id"
+                    	 data-rule="required"  name="isa_sto_ope_myw_add_party_id"/>
+                    </div>
+                </div>
+                
+                 
+                <div class="form-group  required">
+                    <label class="col-md-4 col-sm-4 control-label"><b>描述</b></label>
+                    <div class="col-md-4 col-sm-4 input-group ">
+                        <textarea id="isa_sto_ope_myw_add_desc" name="2`" 
+                         data-rule="required" class="form-control" style="height:100px"></textarea>
+                    </div>
+                </div>
+           
+                
+                
+                 <div class="form-group">
+                    <label class="col-md-4 col-sm-4 control-label"><b>是否发送通知</b></label>
+                     <div class="col-md-4 col-sm-4 input-group ">
+                        <label class="radio-inline">
+                            <input type="radio" name="isa_sto_ope_myw_add_is_note" class="radioItem"   value="0" data-rule="checked" checked="true">否</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="isa_sto_ope_myw_add_is_note" class="radioItem"  value="1">是</label>
+                    </div>
+                </div>
+                
+                 <div class="form-group" id="isa_sto_ope_myw_add_is_note_type_div">
+                    <label class="col-md-4 col-sm-4 control-label"><b>通知方式</b></label>
+                    <div class="col-md-4 col-sm-4 input-group ">
+                       <input type="checkbox" name="isa_sto_ope_myw_add_is_note_type" id="isa_sto_ope_myw_add_is_note_type" value="01">
+                    </div>
+                </div>
+           
+            
+                <div class="form-group" id="isa_sto_ope_myw_add_note_content_div">
+                	
+                    <label class="col-md-4 col-sm-4 control-label"><b>通知内容</b></label>
+                    <div class="input-group col-md-4 col-sm-4">
+                    	<textarea id="isa_sto_ope_myw_add_note_content" name="isa_sto_ope_myw_add_note_content" 
+                         class="form-control" style="height:100px"></textarea>
+                    </div>
+                </div>
+            
+        	
+        	<div class="col-md-12 text-center">
+	            <button type="button" class="btn btn-success" id="isa_sto_ope_myw_add_btn"><b>确定</b></button>
+	            <button type="reset" class="btn btn-danger btn-default" data-dismiss="modal" id="cancel-button"><b>取消</b></button>
+        	</div>
+        	
+        </div>
+</form>

@@ -1,0 +1,31 @@
+<div id="app" class="container-fluid">
+	<div class="row" id="pageContent">
+		<!-- 左边组织树目录-->
+		<div class="col-md-2" id="divLeft">
+			<div class="panel  panel-default" id="divLeft-panel">
+				<div class="panel-heading">
+					<h3 class="panel-title">组织名称</h3>
+				</div>
+				<div style="padding: 0;overflow: auto" id="leftTree">
+					<div class="ztree" id="orgTree" style="padding-bottom: 5px;"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 右边区域-->
+		<div class="col-md-10" id="divRight">
+			<div class="panel  panel-default" id="divRight-panel">
+				<div>
+					<div id="dispOrgGrid"></div>
+				</div>
+				<div class="panel-footer">
+					<center>
+						<!-- 新增转派目标配置 -->
+						<button class="btn btn-primary" type="button" id="insert">新增</button>
+						<!-- 删除转派目标配置 -->
+						<button class="btn btn-danger" type="button" id="delete">删除</button>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

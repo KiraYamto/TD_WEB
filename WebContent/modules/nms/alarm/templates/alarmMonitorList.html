@@ -1,0 +1,59 @@
+<div class="container-fluid" >
+	<div class="row" style="padding:0 2px 0 2px; height:32px; border-top:1px solid #E6E6E6; border-left:1px solid #E6E6E6; border-right:1px solid #E6E6E6; background-color:#F5F5F5;">
+		<div class="col-xs-12" style="border:0px solid red; padding-left:0px;"  >
+			<div id="nms_alarm_monitor_filterLabel">
+			
+			
+				<!-- <div class="toolbar-label toolbar-label-select-bg">华为告警</div>
+				<div class="toolbar-label toolbar-label-normar-bg">中兴告警</div>
+				<div class="toolbar-label toolbar-label-normar-bg">大面积告警</div>	 -->			
+			</div>
+			<div class="btn-separator" style="margin-left:2px; margin-right:6px;"></div>
+			<div id="nms_alarm_monitor_emergencyAlarm" class="toolbar-alarm-level-label alarm-level-emergency" title="紧急告警">0</div>	
+			<div id="nms_alarm_monitor_importantAlarm" class="toolbar-alarm-level-label alarm-level-important alarm-level-opacity" title="重要告警">0</div>
+			<div id="nms_alarm_monitor_minorAlarm" class="toolbar-alarm-level-label alarm-level-minor alarm-level-opacity" title="次要告警">0</div>
+			<div id="nms_alarm_monitor_promptAlarm" class="toolbar-alarm-level-label alarm-level-prompt alarm-level-opacity" title="警告告警">0</div>
+			<div id="nms_alarm_monitor_unknowAlarm" class="toolbar-alarm-level-label alarm-level-unknow alarm-level-opacity" title="不确定告警">0</div>
+			
+			<div class="btn-separator" style="margin-left:2px; margin-right:6px;"></div>		
+
+			<div class="monitor-switch"> 
+				<div style="float:left; width:30px; margin-top:5px;  border:0px solid yellow;">
+					<label for="nms_alarm_monitor_switch_checkbox" class="normal_font" style="padding-left:2px;">监控</label>
+				</div>
+				<div style="float:left; margin:4px 0 0 0px; width:15px; height:16px; border:0px solid red; ">
+					<input type="checkbox" id="nms_alarm_monitor_switch_checkbox" style="width:15px;height:15px;">	
+				</div>
+			</div>
+			
+			<div class="btn-separator" style="margin-left:10px;"></div>		
+			<div class="normal_font" style="float:left; margin:8px 0 0 5px;" title="告警新增监控列表最大显示数量">告警</div>
+			<div style="float:left; margin:3px 0 0 5px; width:70px; overflow:auto;  border:0px solid red;" title="告警新增监控列表最大显示数量">
+				<input id="nms_alarm_monitor_toolbar_addShowMaxNum">
+			</div>
+			
+			<div class="btn-separator" style="margin-left:10px;"></div>		
+			<div class="normal_font" style="float:left; margin:8px 0 0 5px;" title="告警清除监控列表最大显示数量">清除</div>
+			<div style="float:left; margin:3px 0 0 5px; width:70px; overflow:auto;"  title="告警清除监控列表最大显示数量">
+				<input id="nms_alarm_monitor_toolbar_clearShowMaxNum">
+			</div>
+		</div>
+	</div>
+	
+	<!-- 告警新增区域 -->
+	<div class="row" style="border-top:1px solid #E6E6E6; border-left:1px solid #E6E6E6; border-right:1px solid #E6E6E6; overflow:hidden;"  >
+		<div id="alarmAddArea" class="col-xs-12" style="padding:0px;">
+			<div id="alarmAddGrid"></div>
+		</div>
+	</div>
+	
+	<!-- 告警清除区域 -->
+	<div class="row" style="border-top:1px solid #E6E6E6; border-left:1px solid #E6E6E6; border-right:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6;">
+		<div id="historyAlarmGridTitle" class="col-xs-12 panel-header" style="border-bottom:1px solid #D3D3D3; height:28px; padding:5px 0 0 5px; font-weight:bold; font-size:12px;">
+			历史告警  <i id="toggleBtn" class="fa fa-angle-double-down" style="font-size:16px; cursor:pointer; float:right;" />
+		</div>
+		<div id="alarmCleanArea" class="col-xs-12" style="padding:0px">	
+			<div id="alarmCleanGrid"></div>
+		</div>
+	</div>	
+</div>

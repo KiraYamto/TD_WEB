@@ -1,0 +1,82 @@
+<div class="container col-md-12">
+	<div class="row">
+		<div id="iomIndex" class="col-md-12">
+
+			<div id="iomIndex-leftContainer" class="col-md-6">
+				<div id="iomIndex-leftPanel">
+					<div class="iomIndex-panelHeader col-md-12">在途单</div>
+					<div id="iomIndex-statSquareGroup" class="row">
+						<div class="col-md-12 iomIndex-100Height">
+							<div id="iomIndex-statSquareNormal" class="iomIndex-statSquare col-md-3">
+								<h5>正常</h5>
+								<div id="iomIndex-statSquareNormalValue" class="iomIndex-statSquareValue">0</div>
+							</div>
+							<div id="iomIndex-statSquareAlert" class="iomIndex-statSquare col-md-3">
+								<h5>预警</h5>
+								<div id="iomIndex-statSquareAlertValue" class="iomIndex-statSquareValue">0</div>
+							</div>
+							<div id="iomIndex-statSquareOvertime" class="iomIndex-statSquare col-md-3">
+								<h5>超时</h5>
+								<div id="iomIndex-statSquareOvertimeValue" class="iomIndex-statSquareValue">0</div>
+							</div>
+							<div id="iomIndex-statSquareSevereOT" class="iomIndex-statSquare col-md-3">
+								<h5>严重超时</h5>
+								<div id="iomIndex-statSquareSevereOTValue" class="iomIndex-statSquareValue">0</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="iomIndex-pieChartGroup">
+						<div id="iomIndex-iomOrder" class="col-md-12">
+							<div class="row">
+								<div class="iomIndex-panelHeader col-md-12">业务开通单</div>
+							</div>
+							<div class="iomIndex-pieChartRow row">
+								<div id="iomIndex-cloudHostChart" class="col-md-4"></div>
+								<div id="iomIndex-physicalMachineChart" class="col-md-4"></div>
+								<div id="iomIndex-idcChart" class="col-md-4"></div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="iomIndex-lineChartGroup">
+						<div class="iomIndex-100Height col-md-12">
+							<div class="iomIndex-100Height row">
+								<div id="iomIndex-newOrdersChart" class="col-md-12"></div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div id="iomIndex-topRightContainer" class="col-md-6">
+				<div id="iomIndex-topRightPanel">
+					<div class="iomIndex-panelHeader" class="col-md-12">常用功能</div>
+					<div id="iomIndex-btnGroup" class="col-md-12">
+						<div class="iomIndex-btn col-md-4">
+							<span target="#/busiManagement/iomTaskManagement" class="glyphicon glyphicon-tasks iomIndex-btnIcon"></span>
+							<span>任务管理</span>
+						</div>
+						<div class="iomIndex-btn col-md-4">
+							<span target="#/busiManagement/iomWorkOrderMonitor" class="glyphicon glyphicon-list iomIndex-btnIcon"></span>
+							<span>工单监控</span>
+						</div>
+						<div class="iomIndex-btn col-md-4">
+							<span target="#/busiManagement/flowManager/flowDefManagerView" class="glyphicon glyphicon-warning-sign iomIndex-btnIcon"></span>
+							<span>流程建模</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="iomIndex-bottomRightContainer" class="col-md-6">
+				<div id="iomIndex-bottomRightPanel">
+					<div class="iomIndex-panelHeader">即时待办信息</div>
+					<div id="iomIndex-grid"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

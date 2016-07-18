@@ -1,0 +1,169 @@
+/*
+ * Skin: Red
+ * ---------
+ */
+ @main-hn-color: #DDDDDD;
+ @red-hn-color:#B31212;
+ @header-hn-height:58px;
+.skin-red-light {
+.first-sidebar(@main-hn-color; @red-hn-color);
+
+
+
+  //Navbar
+  .main-header {
+    .sidebar-toggle {
+      color: @red-hn-color;
+      &:hover {
+        background-color: darken(@main-hn-color, 5%);
+      }
+    }
+    .navbar {
+      .navbar-variant(@main-hn-color; @red-hn-color);
+
+      @media (max-width: @screen-header-collapse) {
+        .dropdown-menu {
+          li {
+            &.divider {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+            a {
+              color: #fff;
+              &:hover {
+                background: darken(@main-hn-color, 5%);
+              }
+            }
+          }
+        }
+      }
+      .fa,.glyphicon{
+      	font-size: 20px;
+      }
+      .nav > li > a:hover, 
+.nav > li > a:active, 
+.nav > li > a:focus, 
+.nav .open > a, 
+.nav .open > a:hover, 
+.nav .open > a:focus, 
+.nav > .active > a 
+{
+	background: darken(@main-hn-color, 5%);
+    color: @red-hn-color;
+}
+
+
+
+    }
+    //Logo
+    .logo {
+      .logo-variant(@main-hn-color);
+    }
+
+	>div >.navbar{
+	 	background: linear-gradient(#FDFDFD,#dddddd);
+	 	border-bottom: 2px solid @red-hn-color;
+	 	min-height:  @header-hn-height;
+	 }
+	 
+	 .logo {
+      background: linear-gradient(#FDFDFD,#dddddd);
+       height: @header-hn-height;
+       line-height: @header-hn-height;
+    }
+
+
+.com-navigation{
+    
+      li:not(:last-child){
+      	border-right: #C8C7C7 solid 1px;
+      }
+    }
+
+
+
+
+    .hidden-xs{
+    color:black;
+    
+    }
+    .navbar-custom-menu
+    {
+    	.messages-menu{
+        border-left: 1px solid #D8D7D7;
+        }
+    }
+    li.user-header {
+      background-color:@main-hn-color;
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+  }
+
+  //Create the sidebar skin
+  .skin-light-sidebar(@main-hn-color);
+  
+  .first-sidebar > ul li {
+  &.active,&.active:hover,&:hover{
+    background-color: lighten(@main-hn-color,5%);
+    }
+}
+
+
+.main-sidebar,.sidebar-menu > li > .treeview-menu{
+background-color:lighten(@main-hn-color,5%);
+}
+
+.main-content-tabs>.ui-tabs-nav>li>a{
+	color:@red-hn-color;
+}
+
+.ui-tabs.main-content-tabs > .ui-tabs-nav li.ui-tabs-active{
+	background-color: @main-hn-color;
+}
+
+.ui-tabs.main-content-tabs > .ui-tabs-nav li.ui-tabs-active a{
+	background-color: @main-hn-color;
+}
+
+.first-sidebar > ul .bottom-slider{
+	    border-bottom:  #C8C7C7 solid 1px;
+}
+
+
+
+.content-wrapper > .row > div > .main-content-tabs > .ui-tabs-nav, .right-side > .row > div > .main-content-tabs > .ui-tabs-nav, .main-footer > .row > div > .main-content-tabs > .ui-tabs-nav {
+    background-color: #EDEDED;
+}
+.btn {
+  .button-size(3px; 6px; @common-font-size; @line-height-base; (@common-radius+1));
+  
+}
+	
+	
+	.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+
+.btn-primary {
+  .button-variant(#fff; #D80303; transparent);
+}
+
+  .ui-dialog{
+  .modal-title{
+	color: @red-hn-color;
+	font-weight: 900;
+}
+}
+
+}

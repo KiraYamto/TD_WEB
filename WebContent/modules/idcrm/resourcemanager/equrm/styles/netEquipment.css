@@ -1,0 +1,21 @@
+.equip-qry-title {
+    padding: 5px;
+    text-align: right;
+}
+.equip-qry-select {
+    width: 120px;
+}
+.equip-qry-select-cond {
+    width: 60px;
+}
+.padding-0{
+	padding:0px;
+}
+.padding-lr-1 {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+.equip-board-title {
+	padding-bottom: 10px;
+	text-align: left;
+}

@@ -1,0 +1,45 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">新建排班模板</h4>
+</div>
+<div class="row" id="pageContent">
+	<form class="form-horizontal" id="demand-form">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group required">
+					<label class="col-md-4 control-label">模板名称：</label>
+					<div class="input-group col-md-6">
+						<input name="dutyModuleName" class="form-control"
+							id="dutyModuleName">
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="col-md-4 control-label">班次数：</label>
+					<div class="input-group col-md-6">
+						<input type="text" id="dutyNum" name="dutyNum"
+							class="form-control" data-rule="required">
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="dutyGrid"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-footer text-center">
+		<button class="btn btn-primary" id="save-button" type="button">确定</button>
+		<button class="btn btn-default" id="cancel-button" type="button"
+			data-dismiss="modal">取消</button>
+	</div>
+</div>

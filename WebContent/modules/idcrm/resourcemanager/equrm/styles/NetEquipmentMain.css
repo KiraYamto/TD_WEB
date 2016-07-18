@@ -1,0 +1,8 @@
+#netequip-main-tabs .ui-tabs-nav.netequip-main-tabs-nav{
+	width:150px;
+}
+#netequip-main-tabs.ui-tabs-left > .ui-tabs-panel {
+  float: left;
+  width: 88%;
+  width: calc(100% -  150px);
+}

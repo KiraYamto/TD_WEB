@@ -1,0 +1,111 @@
+<div class="modal-header">
+	<h4 class="modal-title">添加按钮</h4>
+</div>
+<div class="col-md-12" style="overflow-x:hidden;overflow-y:auto;height:500px" >
+	<div id="tacheAddButton" class="row">
+		<table class="col-md-12">
+			<tr>
+				<td class="col-md-3">
+					<div class="panel  panel-default" id="divRight-panel" style="height:250px" >
+						<div class="panel-heading" >
+							<h3 class="panel-title">按钮目录</h3>
+						</div>
+						<div id="leftTree">
+							<ul class="ztree" id="buttonCatalog"></ul>
+						</div>
+					</div>
+				</td>
+				<td class="col-md-9">
+					<div class="panel  panel-default" id="divRight-panel" style="height:250px" >
+						<div class="panel-heading">
+							<h3 class="panel-title">按钮动作表识</h3>
+						</div>
+						<div ">
+							<div id="isa-buttonGrid"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="col-md-12">
+			<form  class="form-horizontal">
+				<div class="row  ">
+					<div class="col-md-4 text-right" > 
+                    	 <label class="control-label" ><b>按钮名称:</b></label>
+                    </div>
+                    <div class="col-md-4" >
+                        <input id="buttonName"  name="buttonName"  class="form-control" >
+                    </div>
+                    <div class="col-md-4  text-left"  >
+                    	<button type="button" class="btn btn-primary " id = "tacheQrybtn">模糊查询</button>
+                    </div>
+                    <div class="col-md-12 form-group" style="height: 10px;"></div>
+                    <div class="col-md-6 form-group">
+	                    <label class="col-md-4 control-label "><b>显示名称</b></label>
+	                    <div class="col-md-8 input-group">
+	                        <input id="showName" name="showName"  class="form-control" >
+	                    </div>
+		            </div>
+		            <div class="col-md-6 form-group">
+	                    <label class="col-md-4 control-label"><b>备注</b></label>
+		                    <div class="col-md-8 input-group">
+		                        <input id="remarts" name="remarts"  class="form-control" readonly="readonly">
+		                    </div>
+		                </div>
+		             <div class="form-group col-md-6">
+		                    <label class="col-md-4 control-label" ><b>工单状态</b></label>
+		                    	<div class="col-md-8 input-group">
+			                         <select name="workOrderState" id="workOrderState" class="form-control">
+					                    <option value="" selected="selected">全部</option>
+					                    <option value="1">未处理</option>
+					                    <option value="2">已处理</option>
+					                    <option value="3">已完成</option>
+					                    <option value="4">已作废</option>
+					                    <option value="5">抢单人处理</option>
+				                  	</select>
+			                    </div>
+	                   	 </div>
+		                <div class="form-group col-md-6">
+		                    <label class="col-md-4 control-label"><b>工单执行人角色</b></label>
+		                    <div class="col-md-8 input-group">
+		                         <select name="workOrderExeJob" id="workOrderExeJob" class="form-control">
+				                    <option value="" selected="0">全部</option>
+				                    <option value="1">主办</option>
+				                    <option value="2">协办</option>
+			                  	</select>
+		                    </div>
+		                </div>
+		                <div class="form-group col-md-12 ">
+		                    <label class="col-md-2  control-label " ><b>SQL组件</b></label>
+		                    <div class="col-md-10    input-group" >
+		                    	<!-- readonly="readonly" -->
+		                        <textarea id="SQLAss" name="SQLAss"  class="form-control"  style="width:600px;height:60px"></textarea>
+		                    </div>
+		                </div>
+		                <div class="form-group col-md-6">
+		                    <label class="col-md-4 control-label" ><b>显示顺序</b></label>
+		                    <div class="col-md-8 input-group">
+		                        <input id="showSequence" name="showSequence"  class="form-control" >
+		                    </div>
+		                </div>
+						<div class="btn-group text-right col-md-6"  >
+							<button type="button" class="btn btn-primary pull-right"  id = "tacheAddbtnList">添加</button>
+						</div>
+				</div >
+	            </form>
+			</div>
+		<div class="panel-default col-md-12 " id="divRight-panel" style="height:250px" >
+			<div class="panel-heading">
+				<h3 class="panel-title">按钮列表</h3>
+			</div>
+			<div ">
+				<div id="tacheGridList"></div>
+			</div>
+		</div>
+		<div class="col-md-12 text-center">
+            <button type="button" class="btn btn-success" id="isa_sto_addtache_submitBtn"><b>提交</b></button>
+            <button type="reset" class="btn btn-danger" id="isa_tache_cancelBtn"><b>取消</b></button>
+       	</div>
+				
+	</div>
+</div>

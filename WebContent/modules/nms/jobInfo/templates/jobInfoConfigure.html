@@ -1,0 +1,166 @@
+<div class="container-fluid">
+	<div class="modal-header  row" style="height:30px;">
+        <label class="modal-title"  id="headtitle" style="padding:0;margin:0">配置采集任务</label>
+    </div>
+     <div class="row">
+        <div class="col-md-5" style="padding:1px 1px 1px 1px;" id="nms_jobInfo_leftdiv">
+       		<div class="panel  panel-default row" style="margin:0;border:1;padding:0;" id="nms_jobInfo_leftPanel">
+				<div  class="jobInfo-panelHeader" style="height:30px;">	基本信息</div>
+				<form id="nms_jobInfo_baseInfo" class="form-horizontal" style="margin:10px;padding:10px;">
+				    <div class="col-md-12">
+						<div class="form-group  " >
+							<label class="col-md-5 control-label" >任务名称:</label>
+							<div class="input-group col-md-7" >
+								<input id="nms_jobInfo_baseInfo_id"  class="form-control" name="id"  type="hidden" />
+								<input id="nms_jobInfo_baseInfo_name" class="form-control" name="name" class="form-control" data-rule="required;"  />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group " >
+							<label class="col-md-5 control-label" >任务类型:</label>
+							<div class="input-group col-md-7" >
+								<input id="nms_jobInfo_baseInfo_jobType" class="form-control" name="typeId" data-rule="required;"  />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group " >
+							<label class="col-md-5 control-label">采集器:</label>
+							<div class="input-group col-md-7" >
+								<input id="nms_jobInfo_baseInfo_collectorId" class="form-control" name="collectorId" data-rule="required;" />
+							</div>
+						</div>					
+					</div>
+
+<!-- 					<div class="form-group" >
+						<div class="col-md-5" style="padding-left:50px;">&nbsp;&nbsp;&nbsp;监听端口:</div>
+						<div class="input-group col-md-7" style="padding-left:5px">
+							<input id="nms_jobInfo_baseInfo_listenPort" style="width:182px;" name="listenPort"  data-options="required:true" />
+						</div>
+					</div> -->
+					<div class="col-md-12">
+						<div class="form-group" >
+							<div class="col-md-5 control-label" >状态:</div>
+							<div class="input-group col-md-7" >
+					           <input type="radio" id="nms_jobInfo_status0"  name="status" value="0"/>未激活 
+					           <input type="radio" id="nms_jobInfo_status1"   name="status" value="1" checked="checked"/>激活 							
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">					
+						<div class="form-group" >
+							<div class="col-md-5 control-label" >任务执行表达式:</div>
+							<div class="input-group col-md-7" >
+								<input id="nms_jobInfo_baseInfo_scheduleCron"  class="form-control" name="scheduleCron"  data-options="required:true" />
+							</div>
+						</div>	
+					</div>
+					<div class="col-md-12">	
+						<div class="form-group" >
+							<div class="col-md-5 control-label" >任务开始时间:</div>
+							<div class="input-group col-md-7" >							
+									 <input id="nms_jobInfo_baseInfo_starTime" class="form-control"  name="startTime" />						
+							</div>
+						</div>	
+					</div>
+					<div class="col-md-12">	
+						<div class="form-group" >
+							<div class="col-md-5 control-label" >任务结束时间:</div>
+							<div class="input-group col-md-7" >
+									<input id="nms_jobInfo_baseInfo_endTime" class="form-control" name="endTime" />
+								
+							</div>
+						</div>		
+					</div>
+					<div class="col-md-12">						
+						<div class="form-group" >
+							<div class="col-md-5 control-label" >优先级:</div>
+							<div class="input-group col-md-7" >
+								<input id="nms_jobInfo_baseInfo_priority" class="form-control" name="priority" type="text" />
+							</div>
+						</div>	
+					</div>
+					<div class="col-md-12">	
+						<div class="form-group" >
+							<div class="col-md-5 control-label" >任务参数:</div>
+							<div class="input-group col-md-7" >
+								<textarea id="nms_jobInfo_baseInfo_jobParams" class="form-control" style="resize:none;" name="jobParams"></textarea>
+							</div>
+						</div>		
+					</div>
+					<div class="col-md-12">																						
+						<div class="form-group" >
+							<div class="col-md-5 control-label" >备注:</div>
+							<div class="input-group col-md-7" >
+								<textarea id="nms_jobInfo_baseInfo_mark" class="form-control" style="resize:none;" name="mark" ></textarea>
+							</div>
+						</div>		
+					</div>														
+				</form>				
+			</div>	
+        </div>
+        <div class="col-md-7" style="padding:1px 1px 4px 0px" id="nms_jobInfo_rightdiv">
+       		<div class="panel  panel-default"  id="nms_jobInfo_rightForm">
+				<div class="jobInfo-panelHeader" style="height:30px;">选择采集点	</div>	
+				<form id="nms_jobInfo_elementForm" class="form-horizontal" style="margin-top:10px;padding:1px">
+  						<div class="col-md-5" style="padding-left:0px;">
+	  						<div class="col-md-5 control-label" >网元名称:</div>
+							<div class="col-md-7" >
+								<input id="nms_jobInfo_MeName" class="form-control" name="name" type="text"/>
+							</div>
+  						</div>
+  						<div class="col-md-5" >
+							<div class="col-md-5 control-label" >生产厂家:</div>
+							<div class="col-md-7">
+								<input id="nms_jobInfo_vendorId" class="form-control" name="vendorId" type="text"  />
+							</div>
+  						</div>	  						
+  						<button type="button" class="btn btn-success" id="nms_jobInfo_searchElementBtn" >查 询</button>  
+                 </form>	
+                 <form id="nms_jobInfo_emsForm" class="form-horizontal" style="display:none">						
+  						<div class="col-md-6" style="margin-top:10px;">
+							<div class="col-md-5 control-label">生产厂家：</div>
+							<div class="input-group col-md-7">
+								<input id="nms_jobInfo_emsvendorId" name="vendorId" type="text" />
+							</div>
+  						</div>
+  						 <button type="button" style="margin-top:10px;" class="btn btn-success" id="nms_jobInfo_searchEmsBtn" >查 询</button>
+  						         
+				</form>
+				<div  id="nms_jobInfo_collectorInfoGrid" class="row" style="margin:2px;">
+					
+				</div>
+				<div class="jobInfo-panelHeader" style="height:30px;">选择采集指标	</div>
+				<form id ="nms_jobInfo_searchKpiForm" class="form-horizontal" style="margin-top:10px;padding:1px" >
+					<div class="form-group col-md-5">
+						<label class="col-md-5 control-label" >指标目录:</label>
+						<div class="input-group col-md-7">
+							<input id="nms_jobInfo_catalogId" class="form-control" name="catalogId"    class="form-control"   placeholder="请选择指标目录" /> 
+
+						</div>
+					</div>
+					<div class="form-group  col-md-5">
+						<label class="col-md-5 control-label" >指标类型:</label>
+						<div class="input-group col-md-7">
+							<input id="nms_jobInfo_kpiTypeId" class="form-control" name="kpiTypeId"    class="form-control"   placeholder="请选择指标类型" data-rule="required;"/> 
+
+						</div>
+					</div>   
+					<button type="button" class="btn btn-success" id="nms_jobInfo_searchKpiBtn" style="margin-left:30px;">查 询</button>              
+			        
+			    </form>
+			    <div id="nms_jobInfo_kpiInfoGrid" class="row" style="margin:2px;"/>
+			</div>	
+        </div>
+     </div>
+	<div class="row" >
+		<div class="col-md-6" >
+			<div  class="pull-right">				
+                     <button type="button" class="btn btn-success" id="nms_jobInfo_saveBtn"  style="margin:0px 20px 0px 0px;">保 存
+                     </button>	
+                     <button type="button" class="btn btn-danger" id="nms_jobInfo_closeBtn">取 消</button>
+			</div>
+		</div>
+	</div>
+</div>

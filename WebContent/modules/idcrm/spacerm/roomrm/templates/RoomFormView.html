@@ -1,0 +1,152 @@
+<div class="modal-header">
+	<h4 class="modal-title">机房信息</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal spacerm-room-form" id="spacerm-room-form">
+							        <div class="col-md-4">
+									    <div class="form-group required">
+											<label class="col-md-4 control-label">{{DC_ROOM.DC_NAME}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{DC_ROOM.DC_NAME}}"
+														id="spacerm-room-dcId" name="basicInfo-dcId" data-rule="required;">
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-4">
+										<div class="form-group required">
+											<label class="col-md-4 control-label">{{DC_ROOM.ROOM_NAME}}：</label>
+
+											<div class="input-group col-md-8">
+													<input class="form-control" type="text" placeholder="{{DC_ROOM.ROOM_NAME}}" id="spacerm-room-roomname" name="basicInfo-roomName" data-rule="required;">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-md-4">
+										<div class="form-group required">
+											<label class="col-md-4 control-label">{{DC_ROOM.ROOM_CODE}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{DC_ROOM.ROOM_CODE}}"
+														id="spacerm-room-roomcode" name="basicInfo-roomCode" data-rule="required;">
+											</div>
+										</div>
+									</div>
+                                
+									<div class="col-md-4">
+										<div class="form-group required">
+											<label class="col-md-4 control-label">{{DC_ROOM.OWNERSHIP}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{DC_ROOM.OWNERSHIP}}"
+														id="spacerm-room-ownership" name="basicInfo-ownership" data-rule="required;">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group required">
+											<label class="col-md-4 control-label">{{DC_ROOM.ROOM_LEVEL}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{DC_ROOM.ROOM_LEVEL}}"
+														id="spacerm-room-roomLevel" name="basicInfo-roomLevel" data-rule="required;">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group required">
+											<label class="col-md-4 control-label">{{DC_ROOM.ROOM_DIRECTION}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{DC_ROOM.ROOM_DIRECTION}}"
+														id="spacerm-room-roomDirection" name="basicInfo-roomDirection" data-rule="required;">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-4 control-label">{{DC_ROOM.START_DATE}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{DC_ROOM.START_DATE}}"
+														id="spacerm-room-startDate" name="basicInfo-startDate" >
+											</div>
+										</div>
+									</div>
+
+	                                <div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-4 control-label">{{RS_ADDRESS.BUILDING}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{RS_ADDRESS.BUILDING}}"
+														id="spacerm-room-building" name="addressInfo-building" >
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-4 control-label">{{RS_ADDRESS.FLOOR}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{RS_ADDRESS.FLOOR}}"
+														id="spacerm-room-floor" name="addressInfo-floor" >
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-4 control-label">{{RS_ENTITY_PROPERTY.FLOOR_AREA}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{RS_ENTITY_PROPERTY.FLOOR_AREA}}"
+														id="spacerm-room-floorArea" name="entityProsInfo-floorArea" >
+											</div>
+										</div>
+									</div>
+									<div class="col-md-8">
+										<div class="form-group">
+											<label class="col-md-2 control-label">{{DC_ROOM.ADDRESS}}：</label>
+											<div class="input-group col-md-10">
+											     <input class="form-control" type="text" placeholder="{{DC_ROOM.ADDRESS}}" id="spacerm-room-address" name="basicInfo-address" >
+											</div>
+										</div>
+								</div>
+									<div class="col-md-4 col-md-offset-4 col-md-pull-4">
+										<div class="form-group">
+											<label class="col-md-4 control-label">{{DC_ROOM.ADMIN_NAME}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{DC_ROOM.ADMIN_NAME}}"
+														id="spacerm-room-adminname" name="basicInfo-adminName">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-md-pull-4">
+										<div class="form-group">
+											<label class="col-md-4 control-label">{{DC_ROOM.ADMIN_TEL}}：</label>
+											<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{DC_ROOM.ADMIN_TEL}}"
+														id="spacerm-room-adminTel" name="basicInfo-adminTel" >
+											</div>
+										</div>
+									</div>
+									<div class="col-md-8">
+										<div class="form-group">
+											<label class="col-md-2 control-label">{{DC_ROOM.REMARK}}：</label>
+											<div class="input-group col-md-10">
+												<textarea class="form-control"name="basicInfo-remark" id="spacerm-room-remark" placeholder="{{DC_ROOM.REMARK}}"></textarea>
+											</div>
+										</div>
+									</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" id="save-button">{{OPER.OK}}</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">{{OPER.CANCLE}}</button>
+	</div>
+</div>

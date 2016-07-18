@@ -1,0 +1,204 @@
+/*登录与首页样式*/
+.skin-blue-light .main-header .logo {
+    background-color: #B31212;
+}
+.ui-dialog .modal-header {
+    background-color: #fa8420;
+}
+.panel-default > .panel-heading {
+    color: #fa8420;
+    background-color: #fafafa;
+    border-color: #e3e3e3;
+}
+.panel-default .panel-title {
+    border-bottom: 1px solid #B31212;
+    color: #B31212;
+}
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    background-color: #B31212;
+    border-color: #e3e3e3;
+}
+#navbarcollapse {
+    background-color: #B31212;
+}
+
+/*按钮样式*/
+.btn-primary {
+    color: #ffffff;
+    background-color: #fa8420;
+    border-color: #A89E9E;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #ffffff;
+    background-color: #d66200;
+    border-color: #761c19;
+}
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: #d66200;
+    border-color: #ac2925;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    color: #ffffff;
+    background-color: #d66200;
+    border-color: #ac2925;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #ffffff;
+    background-color: #ac2925;
+    border-color: #761c19;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: #fa8420;
+    border-color: #A89E9E;
+}
+.btn-primary .badge {
+    color: #fa8420;
+    background-color: #ffffff;
+}
+
+
+/*btn-info*/
+.btn-info {
+    color: #ffffff;
+    background-color: #fa8420;
+    border-color: #A89E9E;
+}
+.btn-info:focus,
+.btn-info.focus {
+    color: #ffffff;
+    background-color: #d66200;
+    border-color: #761c19;
+}
+.btn-info:hover {
+    color: #ffffff;
+    background-color: #d66200;
+    border-color: #ac2925;
+}
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+    color: #ffffff;
+    background-color: #d66200;
+    border-color: #ac2925;
+}
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open > .dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open > .dropdown-toggle.btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open > .dropdown-toggle.btn-info.focus {
+    color: #ffffff;
+    background-color: #ac2925;
+    border-color: #761c19;
+}
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+    background-image: none;
+}
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+    background-color: #fa8420;
+    border-color: #A89E9E;
+}
+.btn-info .badge {
+    color: #fa8420;
+    background-color: #ffffff;
+}
+
+/*提示框*/
+.ui-dialog {
+    border-radius: 5px;
+}
+.ui-dialog.modal-info, .ui-dialog.modal-confirm {
+    border: 2px solid #DF424E;
+}
+.modal-info .modal-header, .modal-info .modal-footer {
+    border-color: #BE26A0;
+}
+.ui-dialog .modal-header {
+    background-color: #B31212;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.ui-dialog.modal-info .modal-title, .ui-dialog.modal-confirm .modal-title, .ui-dialog.modal-info .glyphicon, .ui-dialog.modal-confirm .glyphicon {
+    color: #B31212;
+}
+ .modal-info .modal-body {
+    background-color: #fff !important;
+    color: #B31212;
+}
+.modal-body>span {
+    color: #B31212;
+}
+.glyphicon-info-sign>span {
+    color: #B31212;
+}
+.bg-aqua-active, .modal-info .modal-header, .modal-info .modal-footer {
+    background-color: #fff !important;
+}
+.bg-red, .bg-yellow, .bg-aqua, .bg-blue, .bg-light-blue, .bg-green, .bg-navy, .bg-teal, .bg-olive, .bg-lime, .bg-orange, .bg-fuchsia, .bg-purple, .bg-maroon, .bg-black, .bg-red-active, .bg-yellow-active, .bg-aqua-active, .bg-blue-active, .bg-light-blue-active, .bg-green-active, .bg-navy-active, .bg-teal-active, .bg-olive-active, .bg-lime-active, .bg-orange-active, .bg-fuchsia-active, .bg-purple-active, .bg-maroon-active, .bg-black-active, .callout.callout-danger, .callout.callout-warning, .callout.callout-info, .callout.callout-success, .alert-success, .alert-danger, .alert-error, .alert-warning, .alert-info, .label-danger, .label-info, .label-warning, .label-primary, .label-success, .modal-primary .modal-body, .modal-primary .modal-header, .modal-primary .modal-footer, .modal-warning .modal-body, .modal-warning .modal-header, .modal-warning .modal-footer, .modal-info .modal-body, .modal-info .modal-header, .modal-info .modal-footer, .modal-success .modal-body, .modal-success .modal-header, .modal-success .modal-footer, .modal-danger .modal-body, .modal-danger .modal-header, .modal-danger .modal-footer {
+    color: #B31212;
+}
+/*导航树选中颜色*/
+.skin-blue-light .treeview-menu > li.active > a {
+    font-weight: 500;
+    color: #B31212;
+}
+.btn-info, .btn-primary, .btn-danger {
+    border-radius: 3px;
+}
+

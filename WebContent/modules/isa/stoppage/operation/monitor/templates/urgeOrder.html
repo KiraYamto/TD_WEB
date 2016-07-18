@@ -1,0 +1,66 @@
+<div>
+<div class="modal-header">
+	<h4 class="modal-title">催单--页面对话框</h4>
+</div>
+<div class="modal-body">
+	 <form class="form-horizontal" id="isa_sto_ope_mon_urgeOrderForm">
+	 	<div class="panel panel-default">
+	     	<div class="panel-heading">催单</div>
+	     	<div class="panel-body">
+				 <div class="col-md-12">
+				     <div class="form-group required">
+				         <label class="col-md-2 control-label">催单人：</label>
+				         <div class="input-group col-md-4">
+				             <input class="form-control" name="urgeStaffId" id="isa_sto_ope_mon_urgeStaffId">
+				         </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				 	<div class="form-group">
+				         <label class="col-md-2 control-label">催单内容：</label>
+				         <div class="col-md-10 input-group clear-white">
+                         	<textarea id="isa_sto_ope_mon_activationContent" name="urgeContent" class="form-control" style="height:80px"></textarea>
+                    	 </div>
+				     </div>
+				 </div>
+				 <div class="col-md-6">
+				 	<div class="form-group">
+				         <label class="col-md-4 control-label">是否发送通知：</label>
+				         <div class="radio">
+				          	<label>
+		                        <input type="radio" name="needSendNote" value="0" checked>否
+		                    </label>
+		                    <label>
+		                        <input type="radio" name="needSendNote" value="1">是
+		                    </label>
+		                </div>
+				     </div>
+				  </div>
+				  <div class="col-md-6">
+				     <div class="form-group">
+				         <label class="col-md-4 control-label">通知方式：</label>
+				         <div class="input-group col-md-8">
+					         <select name="sendType" id="isa_sto_ope_mon_noticeWay" class="form-control">
+				                 <option value="1" selected="selected">短信</option>
+				                 <option value="2">Email</option>
+				             </select>
+				         </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				 	<div class="form-group">
+				         <label class="col-md-2 control-label">通知内容：</label>
+				         <div class="col-md-10 input-group clear-white">
+                         	<textarea id="isa_sto_ope_mon_activationContent" name="content" class="form-control" style="height:80px"></textarea>
+                    	 </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12 text-center" style="padding-top:10px">
+                 	<button type="button" class="btn btn-primary" id="isa_sto_ope_mon_urgeOrderSubmitBtn">确定</button>
+                 	<button type="button" class="btn btn-primary" id="eventreq-demand-addbtn" data-dismiss="modal">取消</button>
+                 </div>
+     		</div>
+     	</div>
+	</form>
+</div>
+</div>

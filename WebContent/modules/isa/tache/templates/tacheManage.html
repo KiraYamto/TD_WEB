@@ -1,0 +1,92 @@
+<div class="col-md-12">
+	<div class="row" >
+		<!-- 左边组织树目录-->
+		<div class="col-md-3" id="divLeft">
+			<div class="panel  panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">环节目录</h3>
+				</div>
+				<div style="height: 440px;" id="leftTree">
+					<ul class="ztree" id="tacheTree"></ul>
+				</div>
+
+				<div class="form-group">
+					<div style="text-align:center">
+						<label class="col-md-6 control-label"  style="text-align:right">环节名称:</label>
+						<div class="input-group col-md-6" style="text-align:left">
+							<input class="form-control " name="tacheName" id="tacheName">
+						</div>
+					</div>
+					<div style="text-align:center" calss="col-md-12">
+						<button type="button" class="btn btn-primary text-center" id="org-search-btn">模糊查询</button>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- 右边区域-->
+			<div class="col-md-9" id="divRight">
+				<div class="panel  panel-default" id="divRight-panel">
+					<div class="panel-heading">
+						<h3 class="panel-title ">环节列表</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-12" >
+							<button type="button" class="btn btn-primary pull-left" id = "isa-tacheCataModbtn">扩展环节</button>
+						</div>
+					</div>
+					<div style="height: 200px;">
+						<div id="tacheGrid"></div>
+					</div>
+			</div>
+		  <!-- 环节TAB页 -->
+				<div id="operation-tabs"
+					class="ui-tabs ui-tabs ui-tabs-collapsible">
+					<ul class="ui-tabs-nav" role="tablist">
+						<li id="tache-tabs-function-li"
+							class="ui-state-default ui-tabs-active" role="tab" tabindex="0"
+							aria-controls="tabs-a" aria-labelledby="ui-id-pending"
+							aria-selected="true" aria-expanded="true" style="display: list-item;">
+							<a id="tache-tabs-function-link" class="ui-tabs-anchor" role="presentation" tabindex="-1">环节适用功能</a>
+						</li>
+						<li id="tache-tabs-executor-li" class="ui-state-default"
+							role="tab" tabindex="-1" aria-controls="tabs-b"
+							aria-labelledby="ui-id-processed" aria-selected="false" aria-expanded="false">
+							<a id="tache-tabs-executor-link" class="ui-tabs-anchor" role="presentation" tabindex="-1">执行人范围</a>
+						</li>
+						<li id="tache-tabs-copyTo-li" class="ui-state-default"
+							role="tab" tabindex="-1" aria-controls="tabs-b"
+							aria-labelledby="ui-id-copyTo" aria-selected="false" aria-expanded="false">
+							<a id="tache-tabs-copyTo-link" class="ui-tabs-anchor" role="presentation" tabindex="-1">抄送人范围</a>
+						</li>
+					</ul>
+					<div class="row">
+					<div class="col-md-12" style="padding: 5px;">
+						<div class="btn-group" style="margin-left: 15px">
+							<button type="button" class="btn btn-primary pull-left" id = "isa-tacheAddbtn">添加</button>
+							<button type="button" class="btn btn-primary pull-left" id = "isa-tacheModbtn">修改</button>
+							<button type="button" class="btn btn-primary pull-left" id = "isa-tacheDelbtn">删除</button>
+							<button type="button" class="btn btn-primary pull-left" id = "isa-tacheMainHande">设置主办</button>
+						</div>
+					</div>
+					</div>
+					<!--  环节适用功能-->
+					<div id="tache-tabs-function-li-gird" class="ui-tabs-panel"
+						aria-expanded="false" aria-hidden="false">
+						<div id="tacheFunctionGrid"></div>
+					</div>
+
+					<!-- 执行人范围 -->
+					<div id="tache-tabs-executor-li-gird" class="ui-tabs-panel"
+						aria-expanded="false" aria-hidden="false">
+						<div id="tacheExecutorGrid"></div>
+					</div>
+
+					<!-- 抄送人范围 -->
+					<div id="tache-tabs-copyTo-li-gird" class="ui-tabs-panel"
+						aria-expanded="false" aria-hidden="false">
+						<div id="tacheCopyGrid"></div>
+					</div>
+
+				</div>	
+		</div>
+	</div>

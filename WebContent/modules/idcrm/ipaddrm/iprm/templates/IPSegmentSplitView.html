@@ -1,0 +1,39 @@
+<div class="modal-header">
+	<h4 class="modal-title" id="ne_equip_title" >IP地址段拆分</h4>
+</div>
+<div class="modal-body">
+	<form id="ipaddr-segment-split">
+	<input type="hidden" id="ipseg_addr_id" name="ID">
+	<div class="row">
+		<div class="col-md-2 equip-qry-title">
+					<span>拆分子网掩码：</span>
+		</div>
+		<div class="col-md-4" style="padding: 5px;">
+				<div class="col-md-4" style="padding: 5px;">
+					<!-- 
+					<select id="ipseg_qry_usestate" style="width: 160px;" class="equip-qry-select"  name="splitType">                       
+                    	<option value="" selected>--请选择--</option>
+						<option value="0">255.255.255.0(24)</option>
+						<option value="128">255.255.255.128(25)</option>
+						<option value="192">255.255.255.192(26)</option>
+                    </select>
+                     -->
+                    <select id="ipseg_split_type" style="width: 160px;" class="equip-qry-select" attrCode='SPLIT_TYPE' name="splitType">                       
+                    </select>
+				</div>
+		</div>
+	</div>
+	</form>
+		<div class="col-md-10"  style="padding: 5px;">
+			<div class="row">
+				<div class="col-md-12" style="padding: 5px;">
+					<div class="btn-group" style="margin-left: 15px">
+						<button type="button" class="btn btn-primary pull-left" id="ipseg-split-btn" style="margin-left: 5px">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+				<div id="ipseg-split-grid"></div>
+		</div>
+</div>

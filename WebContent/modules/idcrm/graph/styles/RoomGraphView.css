@@ -1,0 +1,27 @@
+.idcrm-graph-contextmenu {
+		border: 1px solid #FFAEB9;
+		background: #fff;
+		position: absolute;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: none;
+		cursor: pointer;
+}
+.idcrm-graph-contextmenu li{
+	margin-top:8px;
+}
+.idcrm-graph-contextmenu li a{
+	color:#000;
+}
+.idcrm-graph-roomgraph{
+    margin-top: 5px;
+	padding-bottom:20px;
+}
+.idcrm-graph-canvas{
+	height:550px;
+	border:1px solid #444;
+}
+.idcrm-graph-leftside{
+	padding-right:0px;
+}

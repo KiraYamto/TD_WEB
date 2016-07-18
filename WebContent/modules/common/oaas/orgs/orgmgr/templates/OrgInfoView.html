@@ -1,0 +1,139 @@
+<div class="modal-header">
+	<h4 class="modal-title">组织信息</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="com-orgmgr-orginfo-form">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">父组织：</label>
+
+										<div class="input-group col-md-10" id="com-orgmgr-orginfo-parentorg" style="padding-top: 4px;">
+										</div>
+										
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">组织名称：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入组织名称" id="com-orgmgr-orginfo-orgname" name="orgName" data-rule="required;"/>
+										</div>
+										
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">编号：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入编号" id="com-orgmgr-orginfo-orgcode" name="orgCode" data-rule="required;"/>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">别名：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入别名" id="com-orgmgr-orginfo-alias" name="alias" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">简称：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入简称" id="com-orgmgr-orginfo-acronym" name="acronym" />
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">组织模板：</label>
+
+										<div class="input-group col-md-8">
+												<input type="text" id="com-orgmgr-orginfo-orgTmp" name="orgTmpId" class="form-control">
+							                    
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">区域：</label>
+
+										<div class="input-group col-md-8">
+							                    <input class="form-control" type="text" placeholder="区域" name="areaId" id="com-orgmgr-orginfo-orgarea"  data-rule="required;"/>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">电话：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入电话" id="com-orgmgr-orginfo-tel" name="tel" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">传真：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="请输入传真" id="com-orgmgr-orginfo-fax" name="fax" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">生效日期：</label>
+
+										<div class="input-group col-md-8">
+													<input class="form-control" type="text"
+													id="com-orgmgr-orginfo-effectDate" name="effectDate" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">失效日期：</label>
+
+										<div class="input-group col-md-8">
+													<input class="form-control" type="text"
+													id="com-orgmgr-orginfo-expireDate" name="expireDate" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">备注：</label>
+
+										<div class="input-group col-md-10 clear-white">
+													<textarea id="com-orgmgr-orginfo-comments" class="form-control" name="comments" ></textarea>
+										</div>
+									</div>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" id="com-orgmgr-orginfo-save">确定</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	</div>
+</div>

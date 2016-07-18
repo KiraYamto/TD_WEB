@@ -1,0 +1,122 @@
+<div class="modal-header">
+	<h4 class="modal-title" id="ip_add_title" >新增IP段</h4>
+</div>
+<div class="modal-body">
+	<hr />
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form class="form-horizontal" id="ip-segment-form">
+					<input class="form-control"  type="hidden" id="ipseg_add_startip" name="startIp">
+					<input class="form-control"  type="hidden" id="ipseg_add_endip" name="endIp">
+					<input class="form-control"  type="hidden" id="ipseg_add_usestate" name="useState">
+					<div class="form-group">
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">IP地址：</label>
+								<div class="input-group col-md-8">
+									<input size="1" type="text" maxlength="3" id="ipseg_add_segmip1" name="segmIp1" />&nbsp;
+	                    			<input size='1' type="text" maxlength="3" id="ipseg_add_segmip2" name = "segmIp2"/>&nbsp;
+	                    			<input size='1' type="text" maxlength="3" id="ipseg_add_segmip3" name = "segmIp3"/>&nbsp;
+	                    			<input size='1' type="text" maxlength="3" id="ipseg_add_segmip4" name = "segmIp4"/>
+                    			</div>
+						</div>
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">数据中心：</label>
+								<input id="ipseg_add_dcid" value="" type="hidden" name="dcId" />
+								<div class="input-group col-md-8">
+                                  	<div class="col-md-12 padding-0">
+                                    <div class="col-md-9 padding-0">
+				                    <input id="ipseg_add_dcname" width="1" value=""  name="dcName" disabled/>
+				                    </div>
+				                    <div class="col-md-3 ">
+				                    <button type="button" class="btn btn-primary" id="ipseg-add-room-btn">选择</button>
+				                    </div></div>
+								</div>
+						</div>
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">子网掩码：</label>
+								<!-- <div class="input-group col-md-8">
+									<input class="form-control" placeholder="子网掩码" type="text" id="ipseg_add_ipmark" name="ipMark">
+								</div> -->
+								<select id="ipseg_add_ipmark" style="width: 160px;" class="equip-qry-select" attrCode='SPLIT_TYPE' name="ipMark">
+                    			</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">网关IP：</label>
+								<!-- <div class="input-group col-md-8">
+									<input class="form-control" placeholder="网关IP" type="text" id="ipseg_add_gateway" name="gateway" />
+								</div> -->
+								<div class="input-group col-md-8">
+									<input size="1" type="text" maxlength="3" id="ipseg_add_gateway1" name="gateway1" />&nbsp;
+	                    			<input size='1' type="text" maxlength="3" id="ipseg_add_gateway2" name = "gateway2"/>&nbsp;
+	                    			<input size='1' type="text" maxlength="3" id="ipseg_add_gateway3" name = "gateway3"/>&nbsp;
+	                    			<input size='1' type="text" maxlength="3" id="ipseg_add_gateway4" name = "gateway4"/>
+                    			</div>
+						</div>
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">IP段名称：</label>
+								<div class="input-group col-md-8">
+									<!--<input type="hidden" name="segmCode">-->
+									<input type="hidden" name="ID">
+									<input class="form-control" placeholder="IP段名称" type="text" id="ipseg_add_segmname" name="segmName" disabled>
+								</div>
+						</div>
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">IP段编码：</label>
+								<div class="input-group col-md-8">
+									<input class="form-control" placeholder="IP段编码" type="text" id="ipseg_add_segmcode" name="segmCode" disabled>
+								</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">子网个数：</label>
+								<div class="input-group col-md-8">
+									<input class="form-control" placeholder="子网个数" type="text" id="ipseg_add_sumnetnum" name="sumNetNum" disabled />
+								</div>
+						</div>
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">子网IP数：</label>
+								<div class="input-group col-md-8">
+									<input class="form-control" placeholder="子网IP数" type="text" id="ipseg_add_sumnetipnum" name="sumNetIpNum" disabled />
+								</div>
+						</div>
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">用途：</label>
+								<div class="col-md-4" style="padding: 5px;">
+									<select id="ipseg_add_segmuse" class="equip-qry-select" attrCode='SEGM_USE' name="segmUse">                       
+	                    			</select>
+                    			</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4">
+								<label class="col-md-4 control-label">地址性质：</label>
+								<div class="col-md-4" style="padding: 5px;">
+									<select id="ipseg_add_segmtype" class="equip-qry-select" attrCode='SEGM_TYPE' name="segmType">                       
+	                    			</select>
+                    			</div>
+						</div>
+					</div>
+					<div class="form-group">
+							<div class="col-md-12">
+								<label class="col-md-1 control-label">备注：</label>
+								<div class="input-group col-md-11">
+									<textarea class="form-control" placeholder="备注" type="text"  id="ipseg_add_comments" rows="3" name="comments"></textarea>
+								</div>
+							</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" id="save-button">确定</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>
+</div>

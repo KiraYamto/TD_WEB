@@ -1,0 +1,257 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">新增机历卡</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="record-form">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">所属机房：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="所属机房" id="record-room" name="room" data-url="#room-demodialog">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">设备类型：</label>
+
+										<div class="input-group col-md-8">
+											<input name="rsTypeId" id="record-rsTypeId" class="form-control" placeholder="设备类型">
+									        </input>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">所选设备：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="所选设备" id="record-rs" name="rsId" data-url="#rs-demodialog">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">设备名称：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="设备名称" id="record-rsName" name="rsName">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">设备型号：</label>
+
+										<div class="input-group col-md-8">
+											<input name="model" id="record-model" type="hidden" class="form-control" placeholder="设备型号">
+											<input name="model-name" id="record-model-name" class="form-control" placeholder="设备型号">
+									        </input>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4" id="recordCode">
+									<div class="form-group">
+										<label class="col-md-5 control-label">机历卡编码：</label>
+
+										<div class="input-group col-md-7">
+												<input class="form-control" type="hidden" placeholder="机历卡编码" id="record-roCode" name="roCode" >
+												<input class="form-control" type="text" placeholder="机历卡编码" id="record-roCode-name" name="roCode-name">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">厂商：</label>
+
+										<div class="input-group col-md-8">
+											<input name="vendor" id="record-vendor" type="hidden" class="form-control" placeholder="厂商">
+											<input name="vendor-name" id="record-vendor-name" class="form-control" placeholder="厂商">
+									        </input>
+				    	    		   	</div> 
+									</div>
+								</div>
+								<div id="updateForm" style="display: no" >
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-4 control-label">修改人：</label>
+	
+											<div class="input-group col-md-8">
+													<input class="form-control" type="text" placeholder="修改人" id="record-updateId" name="updateId">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-4 control-label">修改时间：</label>
+	
+											<div class="input-group col-md-8">
+													<input class="form-control" type="text" placeholder="修改时间" id="record-updateDate" name="updateDate">
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div id="room-demodialog" class="ui-dialog">
+									<div class="modal-header">
+										<h4 class="modal-title">机房选择</h4>
+									</div>
+									<div class="modal-body" style="overflow: auto">
+										<div id="room-tree"></div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-info" id="room-choose">确定</button>
+										<button type="button" class="btn btn-default" id="room-Close">取消</button>
+									</div>
+								</div>
+								
+								<div id="rs-demodialog" class="ui-dialog">
+									<div class="modal-header">
+										<h4 class="modal-title">设备选择</h4>
+									</div>
+									<div class="modal-body" style="overflow: auto">
+										<div class="col-md-12">
+											<div class="form-group">
+												<div class="col-md-5">
+													<label class="col-md-4 control-label">名称：</label>
+													<div class="input-group col-md-8">
+															<input class="form-control" type="text" placeholder="设备名称" id="record-rs-name" name="rsTreeName">
+													</div>
+												</div>
+												<div class="col-md-5">
+													<label class="col-md-4 control-label">编码：</label>
+													<div class="input-group col-md-8">
+															<input class="form-control" type="text" placeholder="设备编码" id="record-rs-code" name="rsTreeCode">
+															<input class="form-control" type="hidden" id="record-rs-type" name="rsTreeType">
+													</div>
+												</div>
+												<div class="col-md-2">
+													 <button type="button" class="btn btn-primary" id="record-query-btn">查询</button>
+												</div>
+											</div>
+										</div>
+										<div id="rs-tree"></div>
+										
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-info" id="rs-choose">确定</button>
+										<button type="button" class="btn btn-default" id="rs-Close">取消</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-md-12"><hr></div>
+						<div class="col-md-12">
+							<form class="form-horizontal" id="record-info-form">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">事件类型：</label>
+
+										<div class="input-group col-md-8">
+											<input name="eventCode" id="record-eventCode" class="form-control" placeholder="事件类型">
+									        </input>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<div class="form-group">
+										<label class="col-md-2 control-label">事件名称：</label>
+
+										<div class="input-group col-md-10">
+												<input class="form-control" type="text" placeholder="事件名称" id="record-eventName" name="eventName">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">配件类型：</label>
+
+										<div class="input-group col-md-8">
+											<input name="fitType" id="record-fitType" class="form-control" placeholder="配件类型">
+									        </input>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">创建人：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="创建人" id="record-creatorId" name="creatorId">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">创建时间：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="创建时间" id="record-createDate" name="createDate">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">操作人：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="操作人" id="record-oper" name="oper">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">操作时间：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="操作时间" id="record-operTime" name="operTime" data-rule="required">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">操作部门：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="操作部门" id="record-department" name="department">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-md-4 control-label">联系方式：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="联系方式" id="record-contactWay" name="contactWay">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-12">
+										<label class="col-md-1 control-label">备注：</label>
+
+										<div class="input-group col-md-11">
+												<textarea class="form-control" type="text" placeholder="备注" id="record-comments" name="comments"></textarea>
+										</div>
+									</div>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" id="save-button">保存</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	</div>
+</div>

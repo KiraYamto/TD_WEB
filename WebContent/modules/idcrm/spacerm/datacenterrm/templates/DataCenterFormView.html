@@ -1,0 +1,118 @@
+<div class="modal-header">
+	<h4 class="modal-title">数据中心信息</h4>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="spacerm-dc-form">
+								<div class="col-md-6">
+									<div class="form-group required">
+										<label class="col-md-4 control-label">{{DETAIL_FORM.DC_NAME}}：</label>
+
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text" placeholder="{{DETAIL_FORM.DC_NAME}}" id="spacerm-dc-dcname" name="dcName" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6" style="display:none;">
+									<div class="form-group required">
+										<label class="col-md-4 control-label">{{DETAIL_FORM.VCDNAME}}：</label>
+										<div class="input-group col-md-8">
+										        <input type="hidden" id="spacerm-dc-vcdId" name="vcdId">
+												<input type="text" class="form-control" readonly="readonly" id="spacerm-dc-vcdName" name="vcdName" placeholder="{{TIPS.PLS_CHOOSE}}" data-rule="required;">
+												<span class="input-group-addon">
+													<a href="javascript:void(0);" id="spacerm-dc-vdc-menuBtn" class="inforeport-add-triangle">
+														<span class="glyphicon glyphicon-triangle-bottom"></span>
+													</a>
+												</span>
+												<div class="menuContent" style="position: absolute;background-color:#fff;z-index:1051;border:1px solid #d0d0d0;" id="spacerm-dc-vdc-tree-html">
+													<ul id="spacerm-dc-vdc-tree" style="width: 200px"></ul>
+												</div>
+										</div>								
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group required">
+										<label class="col-md-4 control-label">{{DETAIL_FORM.DC_CODE}}：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" placeholder="{{DETAIL_FORM.DC_CODE}}"
+													id="spacerm-dc-dccode" name="dcCode" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group required">
+										<label class="col-md-4 control-label">{{DETAIL_FORM.DC_TYPE}}：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" placeholder="{{DETAIL_FORM.DC_TYPE}}"
+													id="spacerm-dc-dctype" name="dcType" data-rule="required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group required">
+   									   <label class="col-md-4 control-label">{{DETAIL_FORM.AREA_NAME}}：</label>
+										<div class="input-group col-md-8">
+										    <input type="hidden" id="spacerm-dc-areaId" name="areaId">
+											<input type="text" class="form-control" id="spacerm-dc-areaName" readonly="readonly" name="areaName" placeholder="{{TIPS.PLS_CHOOSE}}" data-rule="required;">
+											<span class="input-group-addon">
+												<a href="javascript:void(0);" id="spacerm-dc-area-menuBtn" class="inforeport-add-triangle">
+													<span class="glyphicon glyphicon-triangle-bottom"></span>
+												</a>
+											</span>
+											<div class="menuContent" style="position: absolute;background-color:#fff;z-index:1051;border:1px solid #d0d0d0;" id="spacerm-dc-area-tree-html">
+												<ul id="spacerm-dc-area-tree" style="width:300px;"></ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">{{DETAIL_FORM.ADDRESS}}：</label>
+										<div class="input-group col-md-10">
+										     <input class="form-control" type="text" placeholder="{{DETAIL_FORM.ADDRESS}}" id="spacerm-dc-address" name="address" >
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">{{DETAIL_FORM.ADMIN_NAME}}：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" placeholder="{{DETAIL_FORM.ADMIN_NAME}}"
+													id="spacerm-dc-adminname" name="adminName">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">{{DETAIL_FORM.ADMIN_TEL}}：</label>
+										<div class="input-group col-md-8">
+											<input class="form-control" type="text" placeholder="{{DETAIL_FORM.ADMIN_TEL}}"
+													id="spacerm-dc-adminTel" name="adminTel" >
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">{{DETAIL_FORM.REMARK}}：</label>
+										<div class="input-group col-md-10">
+											<textarea class="form-control"name="remark" id="spacerm-dc-remark" placeholder="{{DETAIL_FORM.REMARK}}"></textarea>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" id="save-button">{{OPER.OK}}</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">{{OPER.CANCLE}}</button>
+	</div>
+</div>

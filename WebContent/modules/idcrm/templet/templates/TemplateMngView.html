@@ -1,0 +1,66 @@
+<div class="col-md-12">	
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">模板管理</h3>
+            </div>
+            <div class="panel-body">
+		        <form class="form-horizontal" id="template-Qryform">
+		            <div class="col-md-6">
+			    		<div class="form-group">
+			    			<label class="col-md-4 control-label" for="" >模板名称:</label> 	    			
+						    <div class="input-group col-md-8">
+						        <div class="col-md-3 oper-input-padding">
+					      	    	<select class="form-control" id="tmplName-oper" name="condOp.tmplName">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+						            </select>
+				                </div>
+				                <div class="col-md-9">
+						          <input class="form-control" type="text"
+		    	    						id="template-mng-tmplName" name="condName.tmplName"  placeholder="模板名称" >  
+		    	    			</div>       
+			    			</div>   
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+		    	    	<div class="form-group">
+		    	    		<label class="col-md-4 control-label" for="" >资源类型:</label>
+		    	    		<div class="input-group col-md-8">
+		    	    		    <div class="col-md-3 oper-input-padding">
+		    	    				<select class="form-control" id="resType-oper" name="condOp.rsTypeId">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+		    	    		        </select>
+		    	    			</div>
+		    	    			<div class="col-md-9">
+									<input name="condName.rsTypeId" id="template-mng-rsTypeId" class="form-control" placeholder="资源类型">
+							        </input>
+		    	    		   	</div>       
+		    	    		</div>
+		    	    	</div>
+		    	    </div>
+			    </form> 
+		    </div>
+	        </div>
+	    </div>
+	</div>		
+	<div class="row">
+		<div class="col-md-12">	
+		    <button type="button" class="btn btn-primary pull-left " id = "template-search-btn">查询</button>&nbsp;		
+			<button type="button" class="btn btn-primary pull-left " id = "template-create-btn">新增</button>&nbsp;
+			<button type="button" class="btn btn-primary pull-left " id = "template-update-btn">修改</button>&nbsp;
+			<button type="button" class="btn btn-primary pull-left " id = "template-del-btn">删除</button>&nbsp;
+		</div>
+	</div>
+	<div class="row row-margin-top">
+    	<div class="col-md-12">
+		   <div id="template-grid"></div>			
+	    </div>
+	</div>			
+</div>

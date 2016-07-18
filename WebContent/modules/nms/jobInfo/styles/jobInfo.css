@@ -1,0 +1,10 @@
+/* 标题样式 */
+.jobInfo-panelHeader {
+	font-size: 15px;
+	padding: 5px 1px 10px 0px;
+	background-color: #f5f5f5;
+}
+
+.jobInfo-label{
+	padding-left:30px;
+}

@@ -1,0 +1,157 @@
+<div id="port-dialog">
+<!-- <div class="modal-header" id="port-header">
+	<h4 class="modal-title">端口管理</h4>
+</div> -->
+<div class="modal-body" id="port-body">
+	<div class="col-md-12">
+		<!-- <div class="row">
+			<div class="col-md-12" style="padding: 5px;">
+
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<form class="form-horizontal" id="portmgr-form">
+								<div class="col-md-12">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">设备类型：</label>
+											<div class="input-group col-md-6">
+												<input class="form-control" type="text" id="equipRsTypeName" name="rsTypeName" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">选择模板：</label>
+											<div class="input-group col-md-6">
+												<input id="equip_net_templateid" name="rsTemplateId" class="form-control" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+								<hr>
+								</div>
+								<div class="col-md-12">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">所属机房：</label>
+											<div class="input-group col-md-6">
+												<input class="form-control" type="text"id="equipRoomName" name="roomName" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">设备名称：</label>
+											<div class="input-group col-md-6">
+												<input class="form-control" type="text" id="equipName" name="eqName" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">设备编码：</label>
+											<div class="input-group col-md-6">
+												<input class="form-control" type="text"id="equipCode" name="eqCode" />
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-12">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">序列号：</label>
+											<div class="input-group col-md-6">
+												<input class="form-control" type="text"id="portSerialNo" name="serialNo" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">使用类型：</label>
+											<div class="input-group col-md-6">
+												<input class="form-control" type="text"id="portServiceStateName" name="serviceStateName" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">网关IP地址：</label>
+											<div class="input-group col-md-6">
+												<input class="form-control" type="text"id="portEqIpAddress" name="eqIpAddress" />
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-12">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">厂家：</label>
+											<div class="input-group col-md-6">
+												<input class="form-control" type="text"id="equipVendorName" name="vendorName" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">设备型号：</label>
+											<div class="input-group col-md-6">
+												<input class="form-control" type="text"id="equipModelName" name="modelName" />
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-md-6 control-label">模块数：</label>
+											<div class="input-group col-md-6">
+											<input class="form-control" type="text"id="equipBoardNum" name="boardNum" />
+											</div>
+										</div>
+									</div> 
+								</div>
+								
+								<div class="col-md-12">
+									<div class="col-md-2">
+										<label class="col-md-12 control-label" align="right">备注：</label>
+									</div>
+									<div class="col-md-10">
+										<div class="form-group">
+											<textarea class="col-md-12 " rows="3" cols="20" id="portComments"  name="comments" />
+										</div>
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="row">
+			<div class="col-md-12" style="padding: 5px;">
+				<div class="btn-group" style="margin-left: 15px">
+					<!-- <button type="button" class="btn btn-primary pull-left" id="port-view-btn" >网络设备正视图</button> -->
+					<!-- <button type="button" class="btn btn-primary pull-left" id="port-del-btn" style="margin-left: 5px">删除</button> -->
+					<button type="button" class="btn btn-primary pull-left" id="port-add-btn" style="margin-left: 5px">增加</button>
+					<button type="button" class="btn btn-primary pull-left" id="port-mod-btn" style="margin-left: 5px">修改</button>
+					<button type="button" class="btn btn-primary pull-left" id="port-cancel-btn" style="margin-left: 5px">取消</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" >
+			<div class="col-md-12" style="height:350px;">
+				<div id="port-grid"></div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,61 @@
+#nms_alarm_operation_view .search_form_label{
+	padding-right:0px;
+
+}
+
+#nms_alarm_operation_view .form_label, 
+#nms_alarm_operation_redefine_view .form_label,
+#nms_alarm_operation_sendOrder_view .form_label
+{
+	border:0px solid red;
+	padding:0px; 
+	height:26px; 
+	line-height:26px; 
+	vertical-align: middle;
+}
+
+#nms_alarm_operation_view .search_form_field{
+	padding-left:0px;
+}
+
+#nms_alarm_operation_view .form_field, 
+#nms_alarm_operation_redefine_view .form_field,
+#nms_alarm_operation_sendOrder_view .form_field{
+	border:0px solid red;
+	padding:0px; 
+	height:26px; 
+	line-height:26px; 
+	vertical-align: middle;
+}
+
+#nms_alarm_operation_view .form-separation{
+	margin-top:10px;
+}
+
+#nms_alarm_operation_view .nms_level_emergencyAlarm{
+	width:100%;
+	height:100%;
+	background-color:#FF0000;
+}
+
+
+
+/* 修改Fish样式 */
+#nms_alarm_operation_view .ui-jqgrid-view .ui-jqgrid-bdiv .ui-jqgrid-btable tr.jqgrow td,
+#nms_alarm_operation_view .ui-jqgrid-view .ui-jqgrid-hdiv .ui-jqgrid-htable th[id*="cb"] {
+  overflow: hidden;
+  white-space: pre;
+  border-bottom: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  padding: 0 5px 0 5px;
+}
+#nms_alarm_operation_view  .ui-jqgrid-view .ui-jqgrid-hdiv .ui-jqgrid-htable .ui-th-column {
+  height: 35px;
+  white-space: nowrap;
+  text-align: center;
+  border-right: 1px solid #e3e3e3;
+}
+
+#nms_alarm_operation_view .ui-jqgrid-view .ui-jqgrid-hdiv .ui-jqgrid-htable th {
+  padding: 0 5px 0 5px;
+}

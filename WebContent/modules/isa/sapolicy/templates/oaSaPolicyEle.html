@@ -1,0 +1,197 @@
+<div class="col-md-12">
+	<div class="row">
+		<form name="form-pending" id="form-pending" class="form-horizontal"
+			onSubmit="return false;">
+			<div class="row">
+				<label class="col-md-4  text-left">查询条件</label> <input
+					class="form-control" type="hidden"
+					id="operation_distribute_voice_accept"
+					name="operation_distribute_voice_accept" data-rule="required;">
+				<div class="col-md-8  text-right" id="divaccept"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<label class="col-md-5 control-label">元素名称：</label>
+					<div class="input-group col-md-7">
+						<input class="form-control" type="text" id="eleName"
+							name="eleName" data-rule="required;">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label class="col-md-5 control-label">组件SQL：</label>
+					<div class="input-group col-md-7">
+						<input class="form-control" type="text" id="objSql" name="objSql"
+							data-rule="required;">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label class="col-md-5 control-label">静态数据sql：</label>
+					<div class="input-group col-md-7">
+						<input class="form-control" type="text" id="staticDataSql"
+							name="staticDataSql" data-rule="required;">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<label class="col-md-5 control-label">选择页面url：</label>
+					<div class="input-group col-md-7">
+						<input class="form-control" type="text" id="urlString"
+							name="urlString" data-rule="required;">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label class="col-md-5 control-label">备注：</label>
+					<div class="input-group col-md-7">
+						<input class="form-control" type="text" id="memo" name="memo"
+							data-rule="required;">
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<label class="col-md-5 control-label"></label>
+					<div class="input-group col-md-7">
+						<button type="button" class="btn btn-success"
+							id="operation-sel-btn" data-extstate="2">查询</button>
+						<button type="reset" class="btn btn-danger">重置</button>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<div class="row">
+			<div class="col-md-12" style="padding: 5px;">
+				<div class="btn-group" style="margin-left: 15px">
+					<button type="button" class="btn btn-primary pull-left"
+						id="operation_adde_btn">添加</button>
+					<button type="button" class="btn btn-primary pull-left"
+						id="operation_edit_btn">编辑</button>
+					<button type="button" class="btn btn-primary pull-left"
+						id="operation-delelte-btn">删除</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="oaSaPolicyEleGrid"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 模块 -->
+		<div id="operation-tabs" class="ui-tabs ui-tabs ui-tabs-collapsible">
+			<ul class="ui-tabs-nav" role="tablist">
+				<li id="policy-tabs-function-li"
+					class="ui-state-default ui-tabs-active" role="tab" tabindex="0"
+					aria-controls="tabs-a" aria-labelledby="ui-id-pending"
+					aria-selected="true" aria-expanded="true"
+					style="display: list-item;"><a id="policy-tabs-function-link"
+					class="ui-tabs-anchor" role="presentation" tabindex="-1">模块</a>
+				</li>
+			</ul>
+
+			<div id="policy-tabs-function-li" class="ui-tabs-panel"
+				aria-expanded="false" aria-hidden="false">
+           <form name="form-policy" id="form-policy" class="form-horizontal"
+			onSubmit="return false;">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group required">
+							<label class="col-md-3 col-sm-6 control-label"><b>元素名称</b> </label>
+							<div class="col-md-8 input-group">
+								<input id="isa_eleName" name="eleName" class="form-control"
+									data-rule="required">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group required">
+							<label class="col-md-3 col-sm-6 control-label"><b>输入类型</b> </label>
+							<div class="col-md-8 input-group">
+								<input type="text" id="isa_inputType" name="inputType"
+									class="form-control" data-rule="required">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="col-md-3 col-sm-6 control-label"><b>依赖元素</b> </label>
+							<div class="col-md-8 input-group">
+								<input type="text" id="isa_dependName" name="dependName"
+									class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-md-2 col-sm-4 control-label"><b>选择页面URL</b> </label>
+							<div class="col-md-10 col-sm-8 input-group clear-white">
+								<input type="text" id="isa_url" name="url" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-md-2 col-sm-4 control-label"><b>组件SQL</b>
+							</label>
+							<div class="col-md-10 col-sm-8 input-group clear-white">
+								<textarea id="isa_objSql" name="objSql" class="form-control"
+									style="height:100px"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-md-2 col-sm-4 control-label"><b>静态数据sql</b>
+							</label>
+							<div class="col-md-10 col-sm-8 input-group clear-white">
+								<textarea id="isa_staticDataSql" name="staticDataSql"
+									class="form-control" style="height:100px"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-md-2 col-sm-4 control-label"><b>备注</b>
+							</label>
+							<div class="col-md-10 col-sm-8 input-group clear-white">
+								<textarea id="isa_memo" name="memo" class="form-control"
+									style="height:100px"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer text-right">
+			            <button type="button" class="btn btn-success" id="submit-btn" data-extstate="2">确定</button>
+			            <button type="reset" class="btn btn-danger">取消</button>
+			        </div>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+</div>

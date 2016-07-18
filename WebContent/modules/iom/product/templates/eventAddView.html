@@ -1,0 +1,96 @@
+
+<div class="modal-header">
+	<h4 class="modal-title">增加事件</h4>
+</div>
+<div class="modal-body">
+	<div class="row"><div class="col-md-12">
+	<div id="iom-event-tabs" class="ui-tabs ui-tabs ui-tabs-collapsible">
+		<ul class="ui-tabs-nav" role="tablist">
+				<li id="iom-event-tabs-a-li" class="ui-state-default ui-tabs-active" role="tab" tabindex="0" aria-controls="tabs-a" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" style="display: list-item;">
+					<a id="iom-event-tabs-a-link" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">基本信息</a>
+				</li>
+		</ul>
+		<div id="iom-event-tabs-a" class="ui-tabs-panel" aria-expanded="false" aria-hidden="false">
+			<div class="row">
+					<div class="col-md-12">
+			<div class="panel panel-default">
+			
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form class="form-horizontal" id="iom-event-form">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">事件名称：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control"  type="text" name="iom-eventName-add" id="iom-eventName-add" data-rule="事件名称:required;" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">事件编码：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control" type="text"  name="iom-eventCode-add" id="iom-eventCode-add"/> 
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">生效日期：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control"  type="text" name="iom-event-effDate-add" id="iom-event-effDate-add"  data-rule="生效日期:required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">失效日期：</label>
+										<div class="input-group col-md-8">
+												<input class="form-control"  type="text" name="iom-event-expDate-add" id="iom-event-expDate-add"  data-rule="失效日期:required;">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">事件类型：</label>
+										<div class="input-group col-md-8">
+										<input type="text"  name="iom-eventType-add" id="iom-eventType-add" class="form-control">
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="col-md-4 control-label">CRM事件编码：</label>
+										<div class="input-group col-md-8">
+												<input type="text"  class="form-control" name="iom-event-crmEventCode-add" id="iom-event-crmEventCode-add">
+										</div>
+									</div>
+								</div>  
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="col-md-2 control-label">备注 ：</label>
+										<div class="input-group col-md-10">
+												<textarea name="iom-event-remark-add"  id="iom-event-remark-add" class="form-control"></textarea>
+									</div></div>
+								</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		</div>
+	</div>
+		<div class="modal-footer">
+		<div class="row"><div class="col-md-12">
+			<button type="button" class="btn btn-default" id="iom-event-save-button">确定</button>
+			<button type="button" class="btn btn-default" id="iom-event-cancel-button" data-dismiss="modal">取消</button>
+		</div></div>
+		</div>
+</div>

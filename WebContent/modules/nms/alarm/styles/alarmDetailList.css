@@ -1,0 +1,26 @@
+.scrollspy-alarmDetails {
+	position: relative;
+	height: 480px;
+	margin-top: 0px;
+	overflow: auto;
+}
+#nms_alarmDetail_tabs_a h5 {
+
+}
+.scrollspy-alarmDetails .row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.alarmDetail-tabs {
+	margin:10px;
+	padding:10px;
+}
+#nms_alarm_alarmdetails_nav {
+	float:left;
+	height: 480px;
+}
+#nms_alarm_alarmDetail_scrollspy .alaramdetails-spliter {
+	padding-top: 30px;
+	margin-top: 30px;
+	border-top: 3px dotted #e7e7e7;
+}

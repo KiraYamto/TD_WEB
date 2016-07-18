@@ -1,0 +1,54 @@
+
+<div class="container-fluid">
+	<div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+		<div class="col-xs-12 col-md-12 col-lg-12" style="padding: 0 2px 0 4px;">
+			<button id="addBtn" type="button" class="btn btn-primary">
+				新增
+			</button>
+			<button id="modifyBtn" type="button" class="btn btn-primary">修改</button>
+			<button id="deleteBtn" type="button" class="btn btn-primary">删除</button>
+			<div
+				style="float: right; border: 0px solid red; padding-left: 0px; padding-right: 0px; width: 200px; text-align: right;">
+				<button type="submit" class="btn btn-success" id="searchBtn">查询</button>
+				<button type="reset" class="btn btn-danger" id="resetBtn">重置</button>
+			</div>
+		</div>
+	</div>
+
+	<form id="searchForm" class="form-horizontal">
+		<div class="row" style="border: 0px solid red;">
+			<div class="col-xs-4 col-md-4 col-lg-4" style="border: 0px solid red;">
+				<div class="form-group">
+					<label class="col-xs-5 col-md-5 col-lg-5 control-label search_form_label" for="kpiTypeId" style="border: 0px solid red;">任务类型名称：</label>
+					<div class="input-group col-xs-7 col-md-7 col-lg-7 text-left">
+						<input id="jobTypeName" name="jobTypeName" class="form-control" data-rule="required;"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4 col-md-4 col-lg-4" style="border: 0px solid red;">
+				<div class="form-group">
+					<label class="col-xs-5 col-md-5 col-lg-5 control-label search_form_label"	for="kpiCode" style="border: 0px solid red;">采集方式：</label>
+					<div class="input-group col-xs-7 search_form_field"	style="border: 0px solid red;">
+						<input id="collectMode" name="collectMode" class=" form-control" />
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4 col-md-4 col-lg-4" style="border: 0px solid red;">
+				<div class="form-group ">
+					<label class="col-xs-5 col-md-5 col-lg-5 control-label search_form_label"	for="kpiName" style="border: 0px solid red;">采集类型：</label>
+					<div class="input-group col-xs-7 col-md-7 col-lg-7 search_form_field" style="border: 0px solid red;">
+						<input id="collectType" name="collectType" class="combobox form-control" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</form>
+	<div class="row">
+		<div class="col-xs-12 col-md-12 col-lg-12"
+			style="border: 0px solid yellow; padding: 0 1px 0 1px;">
+			<div id="jobTypeList"></div>
+		</div>
+	</div>
+
+</div>

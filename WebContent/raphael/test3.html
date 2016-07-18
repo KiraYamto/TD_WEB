@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas {
+            height: 1000px;
+            width: 1100px;
+        }
+    </style>
+    <script src="./js/draw.js"></script>
+</head>
+<body>
+<div id="canvas"></div>
+
+<script language="JavaScript">
+    var paper = Raphael("canvas", 1100, 1000);
+    var pc1 = image(paper, pc_normal, 50, 100, "PC1");
+    var pc2 = image(paper, pc_normal, 50, 200, "PC2");
+    var pc3 = image(paper, pc_normal, 50, 300, "PC3");
+    var pc4 = image(paper, pc_normal, 50, 400, "PC4");
+    var onu = image(paper, ONU_normal, 200, 250, "ONU");
+    var olt = image(paper, OLT_normal, 350, 250, "OLT");
+    var bras = image(paper, BRAS_normal, 500, 250, "BRAS");
+    var network = image(paper, network_normal, 650, 250, "NETWORK");
+
+    link(paper, pc1, onu);
+    link(paper, pc2, onu);
+    link(paper, pc3, onu);
+    link(paper, pc4, onu);
+    link(paper, onu, olt);
+    link(paper, olt, bras);
+    link(paper, bras, network);
+</script>
+</body>
+</html>

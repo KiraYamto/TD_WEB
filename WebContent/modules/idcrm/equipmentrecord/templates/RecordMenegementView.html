@@ -1,0 +1,250 @@
+<!-- <div class="col-md-2" id="spacerm-spaceresnavtree-div">	
+
+</div> -->
+<div class="col-md-12">	
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">机历卡管理</h3>
+            </div>
+            <div class="panel-body">
+		        <form class="form-horizontal" id="record-Qryform">
+		            <div class="col-md-6">
+			    		<div class="form-group">
+			    			<label class="col-md-4 control-label" for="" >机历卡编号:</label> 	    			
+						    <div class="input-group col-md-8">
+						        <div class="col-md-3 oper-input-padding">
+					      	    	<select class="form-control" id="roCode-oper" name="condOp.roCode">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+						            </select>
+				                </div>
+				                <div class="col-md-9">
+						          <input class="form-control" type="text"
+		    	    						id="record-mng-roCode" name="condName.roCode"  placeholder="机历卡编号" >  
+		    	    			</div>       
+			    			</div>   
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+		    	    	<div class="form-group">
+		    	    		<label class="col-md-4 control-label" for="" >设备类型:</label>
+		    	    		<div class="input-group col-md-8">
+		    	    		    <div class="col-md-3 oper-input-padding">
+		    	    				<select class="form-control" id="resType-oper" name="condOp.rsTypeId">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+		    	    		        </select>
+		    	    			</div>
+		    	    			<div class="col-md-9">
+									<input name="condName.rsTypeId" id="record-mng-rsTypeId" class="form-control" placeholder="设备类型">
+							          <!--  <option value="" selected="selected">请选择</option>
+							           <option value="110001">机柜资源</option>
+							           <option value="110002">机框资源</option>
+							           <option value="110003">槽道资源</option>
+							           <option value="110004">机盘资源</option>
+							           <option value="110006">机位资源</option>
+							           <option value="120001">交换机资源</option>
+							           <option value="120002">路由器资源</option>
+							           <option value="130001">物理端口资源</option>
+							           <option value="130002">逻辑端口资源</option>
+							           <option value="210001">IP地址段资源</option>
+							           <option value="210002">IP资源</option> -->
+							        </input>
+		    	    		   	</div>       
+		    	    		</div>
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+			    		<div class="form-group">
+			    			<label class="col-md-4 control-label" for="" >设备名称:</label> 	    			
+						    <div class="input-group col-md-8">
+						        <div class="col-md-3 oper-input-padding">
+					      	    	<select class="form-control" id="rsName-oper" name="condOp.rsName">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+						            </select>
+				                </div>
+				                <div class="col-md-9">
+						          <input class="form-control" type="text"
+		    	    						id="record-mng-rsName" name="condName.rsName"  placeholder="设备名称" >  
+		    	    			</div>       
+			    			</div>   
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+		    	    	<div class="form-group">
+		    	    		<label class="col-md-4 control-label" for="" >事件类型:</label>
+		    	    		<div class="input-group col-md-8">
+		    	    		    <div class="col-md-3 oper-input-padding">
+		    	    				<select class="form-control" id="eventCode-oper" name="condOp.eventCode">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+		    	    		        </select>
+		    	    			</div>
+		    	    			<div class="col-md-9">
+									<input name="condName.eventCode" id="record-mng-eventCode" class="form-control" placeholder="事件类型">
+							             <!--  <option value="" selected="selected">请选择</option>
+							              <option value="416001">新建</option>
+								          <option value="416002">版本升级</option>
+								          <option value="416003">增加配件</option>
+								          <option value="416004">减少配件</option>
+								          <option value="416005">维护</option>
+								          <option value="416006">退网</option> -->
+							        </input>
+		    	    		   	</div>       
+		    	    		</div>
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+			    		<div class="form-group">
+			    			<label class="col-md-4 control-label" for="" >事件名称:</label> 	    			
+						    <div class="input-group col-md-8">
+						        <div class="col-md-3 oper-input-padding">
+					      	    	<select class="form-control" id="eventName-oper" name="condOp.eventName">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+						            </select>
+				                </div>
+				                <div class="col-md-9">
+						          <input class="form-control" type="text"
+		    	    						id="record-mng-eventName" name="condName.eventName"  placeholder="事件名称" >  
+		    	    			</div>       
+			    			</div>   
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+		    	    	<div class="form-group">
+		    	    		<label class="col-md-4 control-label" for="" >配件类型:</label>
+		    	    		<div class="input-group col-md-8">
+		    	    		    <div class="col-md-3 oper-input-padding">
+		    	    				<select class="form-control" id="fitType-oper" name="condOp.fitType">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+		    	    		        </select>
+		    	    			</div>
+		    	    			<div class="col-md-9">
+									<input name="condName.fitType" id="record-mng-fitType" class="form-control" placeholder="配件类型">
+							           <!-- <option value="" selected="selected">请选择</option>
+							           <option value="420001">网络设备</option>
+							           <option value="420002">机位</option>
+							           <option value="420003">端口</option> -->
+							        </input>
+		    	    		   	</div>       
+		    	    		</div>
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+			    		<div class="form-group">
+			    			<label class="col-md-4 control-label" for="" >创建人:</label> 	    			
+						    <div class="input-group col-md-8">
+						        <div class="col-md-3 oper-input-padding">
+					      	    	<select class="form-control" id="creatorId-oper" name="condOp.creatorId">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+						            </select>
+				                </div>
+				                <div class="col-md-9">
+						          <input class="form-control" type="text"
+		    	    						id="record-mng-creatorId" name="condName.creatorId"  placeholder="创建人" >  
+		    	    			</div>       
+			    			</div>   
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+		    	    	<div class="form-group">
+		    	    		<label class="col-md-4 control-label" for="" >厂商:</label>
+		    	    		<div class="input-group col-md-8">
+		    	    		    <div class="col-md-3 oper-input-padding">
+		    	    				<select class="form-control" id="vendor-oper" name="condOp.vendor">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+		    	    		        </select>
+		    	    			</div>
+		    	    			<div class="col-md-9">
+									<input name="condName.vendor" id="record-mng-vendor" class="form-control" placeholder="厂商">
+							           <!--    <option value="" selected="selected">请选择</option>
+							              <option value="418001">中兴</option>
+								          <option value="418002">华三</option>
+								          <option value="418003">华为</option> -->
+							        </input>
+		    	    		   	</div>       
+		    	    		</div>
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+			    		<div class="form-group">
+			    			<label class="col-md-4 control-label" for="" >设备型号:</label> 	    			
+						    <div class="input-group col-md-8">
+						        <div class="col-md-3 oper-input-padding">
+					      	    	<select class="form-control" id="model-oper" name="condOp.model">
+						                <option value="EQUALS">等于</option>
+						                <option value="NOT_EQUALS">不等于</option>
+						                <option value="LIKE">包含</option>
+						                <option value="NOT_LIKE">不包含</option>
+						            </select>
+				                </div>
+				                <div class="col-md-9">
+						          <input class="form-control" type="text"
+		    	    						id="record-mng-model" name="condName.model"  placeholder="设备型号" >  
+		    	    			</div>       
+			    			</div>   
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+			    		<div class="form-group">
+			    			<label class="col-md-4 control-label" for="" >开始时间:</label> 	    			
+						    <div class="input-group col-md-8">
+						          <input class="form-control" type="text"
+		    	    						id="record-mng-startDate" name="condName.startDate"  placeholder="开始时间" >  
+			    			</div>   
+		    	    	</div>
+		    	    </div>
+		    	    <div class="col-md-6">
+			    		<div class="form-group">
+			    			<label class="col-md-4 control-label" for="" >结束时间:</label> 	    			
+						    <div class="input-group col-md-8">
+						          <input class="form-control" type="text"
+		    	    						id="record-mng-endDate" name="condName.endDate"  placeholder="结束时间" >  
+			    			</div>   
+		    	    	</div>
+		    	    </div>
+
+			    </form> 
+		    </div>
+	        </div>
+	    </div>
+	</div>		
+	<div class="row">
+		<div class="col-md-12">	
+		    <button type="button" class="btn btn-primary pull-left " id = "record-search-btn">查询</button>&nbsp;		
+			<button type="button" class="btn btn-primary pull-left " id = "record-create-btn">新增</button>&nbsp;
+			<button type="button" class="btn btn-primary pull-left " id = "record-update-btn">修改</button>&nbsp;
+			<button type="button" class="btn btn-primary pull-left " id = "record-del-btn">删除</button>&nbsp;
+			<button type="button" class="btn btn-primary pull-left " id = "record-import-btn">导入</button>&nbsp;
+			<button type="button" class="btn btn-primary pull-left " id = "record-export-btn">导出</button>&nbsp;
+		</div>
+	</div>
+	<div class="row row-margin-top">
+    	<div class="col-md-12">
+		   <div id="record-grid"></div>			
+	    </div>
+	</div>			
+</div>

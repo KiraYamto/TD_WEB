@@ -1,0 +1,100 @@
+<div>
+<div class="modal-header">
+	<h4 class="modal-title">挂起--页面对话框</h4>
+</div>
+<div class="modal-body">
+	 <form class="form-horizontal" id="isa_sto_ope_mon_hangUpGrid">
+	 	<div class="panel panel-default">
+	     	<div class="panel-heading">挂起</div>
+	     	<div class="panel-body">
+     			<div class="col-md-12">
+				     <div class="form-group">
+				         <label class="col-md-3 control-label">挂起原因：</label>
+				         <div class="input-group col-md-4">
+				             <input class="form-control" name="pauseReasonId" id="isa_sto_ope_mon_hangUpReason">
+				         </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				     <div class="form-group required">
+				         <label class="col-md-3 control-label">预计解挂时间：</label>
+				         <div class="input-group col-md-4">
+				             <input class="form-control" name="pauseTime" id="isa_sto_ope_mon_preditcTime" data-rule="required">
+				         </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				     <div class="form-group required">
+				         <label class="col-md-3 control-label">请求挂起人：</label>
+				         <div class="input-group col-md-4">
+				             <input class="form-control" name="pauseStaffName" id="isa_sto_ope_requestHangUpMan" data-rule="required">
+				         </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				 	<div class="form-group">
+				         <label class="col-md-3 control-label">描述：</label>
+				         <div class="col-md-9 input-group clear-white">
+                         	<textarea id="isa_sto_ope_affectService" name="pauseContent" class="form-control" style="height:60px"></textarea>
+                    	 </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				 	<div class="form-group">
+				         <label class="col-md-3 control-label">备注：</label>
+				         <div class="col-md-9 input-group clear-white">
+                         	<textarea id="isa_sto_ope_affectService" name="pauseMessage" class="form-control" style="height:60px"></textarea>
+                    	 </div>
+				     </div>
+				 </div>
+				 <!-- <div class="col-md-12 text-center">
+                 	<button type="button" class="btn btn-primary" id="isa_sto_ope_mon_hangUpBtn">确定</button>
+                 	<button type="button" class="btn btn-primary" id="eventreq-demand-addbtn" data-dismiss="modal">取消</button>
+                 </div> -->
+     		</div>
+     	</div>
+     	<div class="panel panel-default">
+     		<div class="panel-heading">发送通知</div>
+	     	<div class="panel-body">
+	     		<div class="col-md-12">
+				     <div class="form-group">
+				         <label class="col-md-3 control-label">是否发送通知：</label>
+				         <div class="radio">
+		                    <label>
+		                        <input type="radio" name="needSendNote" value="1">是
+		                    </label>
+		                    <label>
+		                        <input type="radio" name="needSendNote" value="0" checked>否
+		                    </label>
+		                </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				     <div class="form-group">
+				         <label class="col-md-3 control-label">通知方式：</label>
+				         <div class="input-group col-md-4">
+					         <select name="sendType" id="isa_sto_ope_mon_noticeWay" class="form-control">
+				                 <option value="1" selected="selected">短信通知</option>
+				                 <option value="2">Email通知</option>
+				             </select>
+				         </div>
+				     </div>
+				 </div>
+				 <div class="col-md-12">
+				 	<div class="form-group">
+				         <label class="col-md-3 control-label">通知内容：</label>
+				         <div class="col-md-9 input-group clear-white">
+                         	<textarea id="isa_sto_ope_affectService" name="content" class="form-control" style="height:60px"></textarea>
+                    	 </div>
+				     </div>
+				 </div>
+				 
+	     	</div>
+     	</div>
+     	<div class="col-md-12 text-center" style="padding:0px 0px 20px 0px">
+        	<button type="button" class="btn btn-primary" id="isa_sto_ope_mon_hangUpBtn">确定</button>
+            <button type="button" class="btn btn-primary" id="eventreq-demand-addbtn" data-dismiss="modal">取消</button>
+        </div>
+	</form>
+</div>
+</div>

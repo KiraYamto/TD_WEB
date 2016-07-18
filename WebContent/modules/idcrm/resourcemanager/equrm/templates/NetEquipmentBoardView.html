@@ -1,0 +1,193 @@
+<!-- <div class="modal-header">
+	<h4 id="ne_equip_title" class="modal-title">网络设备槽位管理</h4>
+</div> -->
+<div class="modal-body">
+	<!-- <div class="row">
+		<form class="form-horizontal" id="boardtmgr-form">
+			<div class="col-md-12">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">设备类型：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" id="equipRsTypeName"
+								name="rsTypeName" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">选择模板：</label>
+						<div class="input-group col-md-6">
+							<input id="equip_net_templateid" name="rsTemplateId"
+								class="form-control" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<hr>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">所属机房：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" id="equipRoomName"
+								name="roomName" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">设备名称：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" id="equipName"
+								name="eqName" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">设备编码：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" id="equipCode"
+								name="eqCode" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">序列号：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" id="portSerialNo"
+								name="serialNo" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">使用类型：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" id="portServiceStateName"
+								name="serviceStateName" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">网关IP地址：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" id="portEqIpAddress"
+								name="eqIpAddress" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">厂家：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" id="equipVendorName"
+								name="vendorName" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="col-md-6 control-label">设备型号：</label>
+						<div class="input-group col-md-6">
+							<input class="form-control" type="text" id="equipModelName"
+								name="modelName" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-2">
+					<label class="col-md-12 control-label" align="right">备注：</label>
+				</div>
+				<div class="col-md-10">
+					<div class="form-group">
+						<textarea class="col-md-12 " rows="3" cols="20" id="portComments"
+							name="comments" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</div> -->
+
+	<!-- 
+	<div class="row">
+		<div class="col-md-4 equip-board-title">
+			<span>设备类型：</span>
+			<span id="equip_net_restypeid"></span>
+		</div>
+		<div class="col-md-4 equip-board-title">
+			<span>设备名称：</span>
+			<span id="net_equip_name"></span>
+		</div>
+		<div class="col-md-4 equip-board-title">
+			<span>所属机房：</span>
+			<span id="net_equip_detail_room_name"></span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 equip-board-title">
+			<span>设备编码：</span>
+			<span id="net_equip_eqCode"></span>
+		</div>
+		<div class="col-md-4 equip-board-title">
+			<span>设备型号：</span>
+			<span id="net_equip_model"></span>
+		</div>
+		<div class="col-md-4 equip-board-title">
+			<span>序列号：</span>
+			<span id="net_equip_serial_no"></span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 equip-board-title">
+			<span>使用类型：</span>
+			<span id="equip_net_service_type"></span>
+		</div>
+		<div class="col-md-4 equip-board-title">
+			<span>厂家：</span>
+			<span id="equip_net_vendor"></span>
+		</div>
+		<div class="col-md-4 equip-board-title">
+			<span>网管IP地址：</span>
+			<span id="equip_net_ip_address"></span>
+		</div>
+	</div>
+	 -->
+	 
+	<div class="row">
+		<div class="col-md-12" style="padding: 5px;">
+			<div class="btn-group" style="margin-left: 15px">
+				<button type="button" class="btn btn-primary pull-left"
+					id="equip-net-board-add-btn">新建</button>
+				<button type="button" class="btn btn-primary pull-left"
+					id="equip-net-board-mod-btn">修改</button>
+				<button type="button" class="btn btn-primary pull-left"
+					id="equip-net-board-del-btn">删除</button>
+				<!-- 
+				<button type="button" class="btn btn-primary pull-left"
+					id="equip-net-board-refresh-btn">刷新</button>  -->
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div id="equip-net-board-grid"></div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+</div>

@@ -1,0 +1,103 @@
+<div class="container-fluid">
+	<div class="modal-header  row">
+        <label class="modal-title"  id="headtitle">新增性能指标</label>
+    </div>
+	<form class="form-horizontal" id="perform">
+		<div class="row" style="border: 0px solid red;padding-top:10px">
+		   
+				<div class="form-group required col-md-11">
+					<label class="col-md-4 control-label">指标目录:</label>
+					<div class="input-group col-md-8">
+						<select id="catalogId2" name="catalogId"    class="form-control"   placeholder="请选择指标目录" data-rule="required;"/> 
+
+					</div>
+				</div>
+			
+		</div>
+		<div class="row" style="border: 0px solid red;">
+			
+				<div class="form-group required col-md-11">
+					<label class="col-md-4 control-label">指标类型:</label>
+					<div class="input-group col-md-8">
+						<select id="kpiTypeId2" name="kpiTypeId"    class="form-control"   placeholder="请选择指标类型" data-rule="required;"/> 
+
+					</div>
+				</div>
+				
+		</div>
+
+		<div class="row" style="border: 0px solid red;">
+			
+				<div class="form-group required col-md-11">
+					<label class="col-md-4 control-label">指标名称:</label>
+					<div class="input-group col-md-8">
+						<input id="kpiName" name="kpiName"   type="text" class="form-control"   placeholder="请输入指标名称" data-rule="required;"/> 
+
+					</div>
+				</div>
+			
+		 </div>
+		 <div class="row" style="border: 0px solid red;">
+			
+				<div class="form-group required col-md-11">
+					<label class="col-md-4 control-label">指标编码:</label>
+					<div class="input-group col-md-8">
+						<input id="kpiCode" name="kpiCode"   type="text" class="form-control"  placeholder="请选择指标编码" data-rule="required;"/> 
+
+					</div>
+				</div>
+			
+		</div>
+<!-- 		<div class="row" style="border: 0px solid red;">
+			<div class="col-xs-6 col-md-6 col-lg-6" style="border: 0px solid red;">
+				<div class="form-group">
+					<label class="col-md-4 control-label">预警门限值:</label>
+					<div class="input-group col-md-8">
+						<select id="prewarnValue" name="prewarnValue"   class="form-control"  placeholder="" /> 
+
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-6 col-lg-6" style="border: 0px solid red;">
+				<div class="form-group">
+					<label class="col-md-4 control-label">告警门限值:</label>
+					<div class="input-group col-md-8">
+						<select id="thresholdValue" name="thresholdValue"  class="form-control"  placeholder="" /> 
+
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="row" style="border: 0px solid red;">
+			
+				<div class="form-group col-md-11">
+					<label class="col-md-4 control-label">指标单位:</label>
+					<div class="input-group col-md-8">
+						<select id="unitId" name="unitId"   type="text" class="form-control"   placeholder="" /> 
+
+					</div>
+				</div>
+			
+		</div>
+		<div class="row" style="border: 0px solid red;">			
+				<div class="form-group col-md-11">
+					<label class="col-md-4 control-label">描述:</label>
+					<div class="input-group col-md-8">
+						<textarea id="description" name="description"   type="text" class="form-control"  placeholder="" /> 
+
+					</div>
+				</div>
+			
+		</div>
+		<div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+			<div class="col-xs-8 col-md-8 col-lg-8" style="padding: 0 2px 0 4px;">
+				<div style="float: right; border: 0px solid red; padding-left: 0px; padding-right: 0px; width: 200px; text-align: right;">
+					<button type="button" class="btn btn-success" id="savePerformanceBtn">保存</button>
+					<button type="button" class="btn btn-danger" id="closeBtn">关闭</button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+</div>

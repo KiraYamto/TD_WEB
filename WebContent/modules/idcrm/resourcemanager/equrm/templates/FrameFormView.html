@@ -1,0 +1,221 @@
+<div class="modal-header">
+    <h4 class="modal-title">机柜信息</h4>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal" id="frame-form">
+        <div class="form-group">
+
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">选择模板：</label>
+
+                <div class="col-md-8">
+                    <input class="form-control" type="text" id="frameFormSelTemplet" name="templetId">
+
+                </div>
+            </div>
+
+            <div class="col-md-4" id="frameFormView_col_frameName">
+                <label class="col-md-4 control-label">机柜名称：</label>
+
+                <div class="col-md-8">
+                    <input class="form-control" type="text" placeholder="机柜名称" name="name" id="frameFormView_frameName">
+
+                </div>
+            </div>
+
+            <div class="col-md-4" id="frameFormView_col_frameCode">
+                <label class="col-md-4 control-label">机柜编码：</label>
+
+                <div class="col-md-8">
+                    <input class="form-control" type="text" placeholder="机柜编码" name="code" id="frameFormView_frameCode">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">起始行列：</label>
+
+                <div class="col-md-4">
+                    <input class="form-control" type="text" placeholder="行号"
+                           id="frame_startRowId" name="startRowId" data-rule="行号:required; digits"
+                           data-msg-digits="{0}只能使用纯数字" data-msg-required="{0}不能为空">
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" type="text" placeholder="列号"
+                           id="frame_startColumnId" name="startColumnId" data-rule="列号:required; digits"
+                           data-msg-digits="{0}只能使用纯数字" data-msg-required="{0}不能为空">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">结束行列：</label>
+
+                <div class="col-md-4">
+                    <input class="form-control" type="text" placeholder="行号"
+                           id="frame_endRowId" name="endRowId">
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" type="text" placeholder="列号"
+                           id="frame_endColumnId" name="endColumnId">
+                </div>
+            </div>
+        </div>
+        <hr/>
+
+        <div class="form-group">
+
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">所属机房：</label>
+
+                <div class="input-group col-md-8">
+                    <input class="form-control" type="text" placeholder="请选择机房" id="addframe_dcRoomSel"
+                           data-url="#addframe_dcRoom_dialog" name="roomName">
+                    <input type="hidden" id="addframe_dcRoomId" name="roomId">
+                    <input type="hidden" id="addframe_dcId" name="dcId">
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">生产日期：</label>
+
+                <div class="input-group col-md-8">
+                    <input class="form-control" type="text" placeholder="生产日期"
+                           id="frame_productionDate" name="productionDate">
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">分配状态：</label>
+
+                <div class="input-group col-md-8">
+                    <select id="frame_allocationStateId" name="allocationStateId" class="form-control">
+                        <option value="417001">整柜分配</option>
+                        <option value="417002">机位分配</option>
+                        <option value="417003">空闲</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">机柜型号：</label>
+
+                <div class="input-group col-md-8">
+                    <select id="frame_model" name="model" class="form-control">
+                        <option value="419001">NE5000E</option>
+                        <option value="419002">S12510</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">机柜功率：</label>
+
+                <div class="input-group col-md-8">
+                    <select id="frame_unitPower2" name="unitPower" class="form-control">
+                        <option value="406001">2KW</option>
+                        <option value="406002">4KW</option>
+                        <option value="406003">6KW</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">状态：</label>
+
+                <div class="input-group col-md-8">
+                    <select id="frame_state" name="state" class="form-control" disabled>
+                        <option value="101001">新建</option>
+                        <option value="101002">在网</option>
+                        <option value="101003">故障</option>
+                        <option value="101004">封网</option>
+                        <option value="101005">退网</option>
+                    </select>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">租用性质：</label>
+
+                <div class="input-group col-md-8">
+                    <select class="form-control" type="text" placeholder="租用性质"
+                            id="frame_rentingMode" name="rentingMode">
+                        <option value="408001">整柜出租</option>
+                        <option value="408002">机位出租</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">机位数：</label>
+
+                <div class="input-group col-md-8">
+                    <input class="form-control" type="text" placeholder="机位数"
+                           id="frame_unitNum" name="unitNum">
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">整租客户：</label>
+
+                <div class="input-group col-md-8">
+                    <input class="form-control" type="text" placeholder="整租客户"
+                           id="frame_kehu" name="all">
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label class="col-md-4 control-label">厂商：</label>
+
+                <div class="input-group col-md-8">
+                    <select class="form-control" type="text" placeholder="厂商"
+                            id="frame_vendor" name="vendor">
+                        <option value="418001">中兴</option>
+                        <option value="418002">华三</option>
+                        <option value="418003">华为</option>
+                    </select>
+
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="form-group">
+            <div class="col-md-12">
+                <label class="col-md-1 control-label">备注：</label>
+
+                <div class="col-md-11">
+                    <textarea class="form-control" type="text" placeholder="备注" id="frame_notes" name="notes"
+                              rows="4"></textarea>
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" id="save-button">确定</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>
+
+<div id="addframe_dcRoom_dialog" class="ui-dialog">
+    <div class="modal-header">
+        <h4 class="modal-title">选择机房</h4>
+    </div>
+    <div class="modal-body" style="overflow: auto">
+        <div id="addframe_dcRoomTree"></div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-info" id="addframe_dcRoomSelConfirm">确定</button>
+        <button type="button" class="btn btn-default" id="addframe_dcRoomSelClose">取消</button>
+    </div>
+</div>
+
+
+

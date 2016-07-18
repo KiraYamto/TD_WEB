@@ -1,0 +1,139 @@
+﻿<div class="row" style="height: 100%">
+	<div class="col-md-3 " id="com-staffmgr-org-container"
+		style="height: 100%;padding-right: 10px;">
+		<div style="position: relative;width:100%">
+			<div class="org-grid-search-bar" style="padding: 0px 0px 5px 0px;">
+				<div class="input-group search-group"
+					id="com-staffmgr-org-grid-search" data-toggle="searchbar"></div>
+			</div>
+			<div id="com-staffmgr-org-grid" style="width:100%"></div>
+		</div>
+	</div>
+	<div class="col-md-9 "
+		id="com-staffmgr-staff-container" style="height: 100%">
+		<div style="margin-left: -15px; height: 100%">
+
+			<div class="row" id="com-staffmgr-staff-search-row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<form class="form-inline" id="com-staffmgr-staff-searchform" role="form">
+								<div class="row" style="margin-bottom: 10px;">
+									<div class="col-md-12">
+										<div class="form-group">
+											<div class="pull-left">
+												<button type="button" id="com-staffmgr-staff-details"
+													class="btn btn-success">{{STAFF_DETAILS}}</button>
+												<button type="button" id="com-staffmgr-staff-roles"
+													class="btn btn-success">{{STAFF_ROLES}}</button>
+												<button type="button" id="com-staffmgr-staff-jobs"
+													class="btn btn-success">{{STAFF_JOBS}}</button>
+												<button type="button" id="com-staffmgr-staff-auths"
+													class="btn btn-success">{{STAFF_AUTH}}</button>
+												<button type="button" id="com-staffmgr-staff-add"
+													class="btn btn-success">添加</button>
+												<button type="button" id="com-staffmgr-staff-remove"
+													class="btn btn-success">删除</button>
+
+											</div>
+										</div>
+										<div class="pull-right">
+
+
+											<div class="form-group">
+
+												<input id="com-staffmgr-staff-search-name"
+													name="com-staffmgr-staff-search-name" class="form-control"
+													type="text" placeholder="{{STAFFORG_STAFF_NAME}}" />
+											</div>
+											<div class="form-group">
+												<input id="com-staffmgr-staff-search-username"
+													name="com-staffmgr-staff-search-username"
+													class="form-control" type="text"
+													placeholder="{{STAFFORG_USER_ACCOUNT}}" />
+											</div>
+											<button type="button" class="btn btn-primary"
+												id="com-staffmgr-staff-search">
+												<span class="glyphicon glyphicon-search"></span>{{COMMON_SEARCH}}
+											</button>
+											<button type="button" class="btn btn-success"
+												id="com-staffmgr-staff-expand">
+												{{COMMON_EXPAND}}<span
+													class="glyphicon glyphicon-chevron-down"></span>
+											</button>
+											<button type="button" class="btn btn-success"
+												id="com-staffmgr-staff-collapse">
+												{{COMMON_COLLAPSE}}<span
+													class="glyphicon glyphicon-chevron-up"></span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="row" id="com-staffmgr-staff-search-moreopt">
+									<div class="col-md-12">
+										<div class="row" style="margin-bottom: 10px;">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label class="col-md-5 control-label" style="padding-left: 0px;padding-right: 0px;">{{STAFFORG_OFF_PHONE}}:</label>
+													<div class="input-group col-md-7">
+														<input class="form-control col-md-12"
+															id="com-staffmgr-staff-search-offpho"
+															name="com-staffmgr-staff-search-offpho"
+															data-today-btn="true">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<label class="col-md-5 control-label" style="padding-left: 0px;padding-right: 0px;">{{STAFFORG_TEL_PHONE}}:</label>
+													<div class="input-group col-md-7">
+														<input class="form-control col-md-12"
+															id="com-staffmgr-staff-search-telpho"
+															name="com-staffmgr-staff-search-telpho"
+															data-today-btn="true">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<!-- <div class="form-group"> -->
+													<label class="col-md-3 control-label" style="text-align: right;">范围：</label>
+													<div class="input-group col-md-9">
+														<label class="radio-inline"> <input type="radio"
+															name="orgType" value="0" data-rule="checked"
+															checked="true">本组织
+														</label> <label class="radio-inline"> <input type="radio"
+															name="orgType" value="1">包括下属组织
+														</label> <label class="radio-inline"> <input type="radio"
+															name="orgType" value="2">无职位人员
+														</label>
+													</div>
+												<!-- </div> -->
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class="row"></div>
+
+							</form>
+						</div>
+
+
+					</div>
+				</div>
+
+			</div>
+			<div class="row" id="com-staffmgr-staff-grid-row">
+				<div class="col-md-12" style="padding-right: 16px;">
+
+					<div id="com-staffmgr-staff-grid"></div>
+
+				</div>
+			</div>
+
+
+
+		</div>
+
+	</div>
+</div>

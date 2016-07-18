@@ -1,0 +1,54 @@
+<nav id="navbar"
+	class="navbar navbar-default navbar-fixed-top com-navigation">
+	<div class="container-fluid" style="padding-right: 0px">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+
+			<a class="navbar-brand logo" href="#/"> <!-- mini logo for sidebar mini 50x50 pixels -->
+				<!-- <span class="logo-mini"><b>Cloud</b></span> --> <!-- logo for regular state and mobile devices -->
+				<img src="./resources/images/main/logo.png"> <img
+				class="logo-lg" src="./resources/images/main/systemname.png">
+			</a>
+		</div>
+
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav">
+				<li id="com-system-clock"
+					style="border: none; display: none; color: #f6f6f6 !important;">
+					<div style="padding-top: 18px; padding-bottom: 15px;">
+						<span class=" glyphicon glyphicon-time"
+							style="font-size: 17px; vertical-align: sub; margin-right: 5px;"></span>
+						<span id="com-system-clock-content"
+							style="vertical-align: middle; margin-right: 15px;">time</span>
+					</div>
+				</li>
+				<!-- User Account: style can be found in dropdown.less -->
+				<li class="dropdown user user-menu">
+					<a class="dropdown-toggle" data-toggle="dropdown"> 
+						<span class="glyphicon icon-nav-user" style="vertical-align: sub;">
+						</span>
+						<span class="hidden-xs" style="vertical-align: middle;">欢迎您，{{staffName}}[{{jobName}}]</span>
+					</a>
+				</li>
+				<li class="dropdown homepage-screen">
+					<a class="control-screen" id="com-main-control-screen">
+						<span class="fa fa-arrows-alt" aria-hidden="true"></span>
+					</a>
+				</li>
+				
+				<li class="dropdown homepage-menu">
+					<a id="com-main-gohome"> 
+						<i class="glyphicon glyphicon-home" style="font-size: 17px;"></i> <!--  <span class="label label-success">4</span> -->
+					</a>
+				</li>
+				<li class="dropdown sign-out-menu"><a class="sign-out"
+					id="sign-out" > <i class="fa fa-sign-out"></i>
+
+				</a></li>
+			</ul>
+		</div>
+
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,16 @@
+#iomTacheLimit-tacheCatalog .curSelectedNode, #iomFlowLimit-serviceCatalog .curSelectedNode {
+	background-color: #e2e8ec;
+}
+#iomTacheLimit-grid *, #iomTacheLimit-applyRule-grid *, #iomFlowLimit-grid *, #iomFlowLimit-applyRule-grid * {
+	text-align: center;
+}
+#iomTacheLimit-applyRule-form, #iomFlowLimit-applyRule-form {
+	margin-top: 20px;
+	margin-bottom:20px;
+	padding-right: 50px;
+}
+#iomTacheLimit-applyRule-btnGroup, #iomFlowLimit-applyRule-btnGroup {
+	text-align:right;
+	margin-bottom:20px;
+	padding-right: 50px;
+}

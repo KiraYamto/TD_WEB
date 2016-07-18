@@ -1,0 +1,99 @@
+<div class="row spacerm-room-mng-container">
+	<div class="col-md-3" >	
+		<div class="input-group">
+		  <input type="text" class="form-control" placeholder="{{SEARCH_FOR}}" id="spacerm-room-nav-name" >
+		  <span class="input-group-btn">
+		    <button class="btn btn-default" type="button" id="spacerm-room-srnt-search-btn">
+		         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+		    </button>
+		  </span>
+		</div>
+		<div id="spacerm-room-spaceres-navtreeDiv" >
+		   <ul id="spacerm-room-spaceres-navtree" ></ul>
+		</div>
+	</div>
+	<div class="col-md-9" >	   		
+		<div class="row">
+			<div class="col-md-4 text-left">	
+			    		
+				<button type="button" class="btn btn-primary " id = "spacerm-room-create-btn">新建</button>
+				<button type="button" class="btn btn-primary " id = "spacerm-room-update-btn">修改</button>
+				<button type="button" class="btn btn-primary " id = "spacerm-room-del-btn">删除</button>
+				<button type="button" class="btn btn-primary " id = "spacerm-room-detail-btn">详情</button>
+				<button type="button" class="btn btn-primary hide" id = "spacerm-room-3Deditor-btn" >3D模型编辑</button>
+				<button type="button" class="btn btn-primary hide " id = "spacerm-room-export-btn">导出</button>
+			</div>
+			<div class="col-md-8">
+			    <form class="form-horizontal" id="spacerm-room-Qryform">
+				    <div class="col-md-3 spacerm-room-oper-input">	
+				        <div class="input-group">
+				            <input type="hidden" name="condOp.areaId" value="EQUALS"  >
+				            <input class="form-control" type="text" id="spacerm-roomqry-areaId" name="condName.areaId"  placeholder="{{roomQry.areaName}}" >
+				        </div>
+				    </div>
+				    <div class="col-md-3 spacerm-room-oper-input">
+				       <input type="hidden" name="condOp.roomName" value="LIKE" >
+				       <input class="form-control" type="text" id="spacerm-roomqry-roomname" name="condName.roomName"  placeholder="{{roomQry.roomName}}"> 
+				    </div>
+				    <div class="col-md-3 spacerm-room-oper-input">
+				        <input type="hidden" name="condOp.roomCode" value="LIKE" >
+				        <input class="form-control" type="text" id="spacerm-roomqry-roomcode" name="condName.roomCode" placeholder="{{roomQry.roomCode}}">
+				    </div>
+				    <div class="col-md-3 spacerm-room-oper-input">
+				        <button type="button" class="btn btn-primary " id = "spacerm-room-search-btn">查询</button>	
+				        <button type="button" class="btn btn-primary" id="spacerm-room-morequery-btn">更多↓</button>	
+				    </div>
+				</form>
+			</div>
+		</div>
+		<div class="row spacerm-room-row" id="spacerm-room-morequery-div" data-show="false">
+	        <div class="col-md-12">
+			        <form class="form-horizontal" id="spacerm-room-QryformMore">
+			    	    <div class="col-md-6">
+				    		<div class="form-group">
+				    			<label class="col-md-3 control-label">{{roomQry.ownership}}:</label> 	    			
+							    <div class="input-group col-md-9">
+							        <div class="col-md-4 spacerm-room-oper-input">
+						      	    	<select class="form-control" id="spacerm-roomqry-ownership-oper" name="condOp.ownership">
+							                <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+							                <option value="LIKE">包含</option>
+							                <option value="NOT_LIKE">不包含</option>
+							            </select>
+					                </div>
+					                <div class="col-md-8">
+							          <input class="form-control" type="text"
+			    	    						id="spacerm-roomqry-ownership" name="condName.ownership"  placeholder="{{roomQry.ownership}}" >  
+			    	    			</div>       
+				    			</div>   
+			    	    	</div>
+			    	    </div>
+			    	    <div class="col-md-6">
+			    	    	<div class="form-group">
+			    	    		<label class="col-md-3 control-label">{{roomQry.roomLevel}}:</label>
+			    	    		<div class="input-group col-md-9">
+			    	    		    <div class="col-md-4 spacerm-room-oper-input">
+			    	    				<select class="form-control" id="spacerm-roomqry-roomLevel-oper" name="condOp.roomLevel">
+			    	    		            <option value="EQUALS">等于</option>
+							                <option value="NOT_EQUALS">不等于</option>
+							                <option value="LIKE">包含</option>
+							                <option value="NOT_LIKE">不包含</option>
+			    	    		        </select>
+			    	    			</div>
+			    	    			<div class="col-md-8">
+			    	    		      <input class="form-control" type="text"
+			    	    						id="spacerm-roomqry-roomLevel" name="condName.roomLevel"  placeholder="{{roomQry.roomLevel}}" > 
+			    	    		   	</div>       
+			    	    		</div>
+			    	    	</div>
+			    	    </div>
+				    </form> 
+		    </div>
+		</div>
+		<div class="row spacerm-room-row">
+	    	<div class="col-md-12">
+			   <div id="spacerm-room-grid"></div>			
+		    </div>
+		</div>			
+	</div>
+</div>
